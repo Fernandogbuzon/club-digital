@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const proximosEventos = [
+  {
+    nombre: 'Torneo 3x3 ADESA 80',
+    fecha: '15 de Marzo, 2026',
+    hora: '10:00 - 18:00',
+    ubicacion: 'Pabellón Municipal de Cádiz',
+    descripcion: 'Torneo abierto de baloncesto 3x3 para todas las edades',
+    categorias: ['Sub-12', 'Sub-16', 'Senior'],
+    inscripcion: '20€ por equipo',
+    plazas: '32 equipos',
+    imagen: '🏀',
+    destacado: true
+  },
+  {
+    nombre: 'Jornada de Puertas Abiertas',
+    fecha: '22 de Marzo, 2026',
+    hora: '11:00 - 14:00',
+    ubicacion: 'Pabellón Municipal',
+    descripcion: 'Ven a conocer nuestras instalaciones y al equipo técnico',
+    categorias: ['Todas las edades'],
+    inscripcion: 'Gratuita',
+    plazas: 'Entrada libre',
+    imagen: '🚪',
+    destacado: false
+  },
+  {
+    nombre: 'Campus de Semana Santa',
+    fecha: '14-18 de Abril, 2026',
+    hora: '9:00 - 14:00',
+    ubicacion: 'Instalaciones ADESA 80',
+    descripcion: 'Campus intensivo durante la semana de vacaciones',
+    categorias: ['6-14 años'],
+    inscripcion: '80€',
+    plazas: '40 plazas',
+    imagen: '⛹️',
+    destacado: true
+  },
+  {
+    nombre: 'Clínic con Jugador Profesional',
+    fecha: '5 de Mayo, 2026',
+    hora: '17:00 - 20:00',
+    ubicacion: 'Pabellón Municipal',
+    descripcion: 'Sesión especial con jugador de ACB',
+    categorias: ['Sub-16', 'Junior'],
+    inscripcion: '15€',
+    plazas: '50 plazas',
+    imagen: '⭐',
+    destacado: false
+  }
+];
+
+const eventosRealizados = [
+  {
+    nombre: 'Torneo de Navidad 2025',
+    fecha: 'Diciembre 2025',
+    participantes: '24 equipos',
+    imagen: '🎄'
+  },
+  {
+    nombre: 'Campus de Verano 2025',
+    fecha: 'Julio 2025',
+    participantes: '120 niños',
+    imagen: '☀️'
+  },
+  {
+    nombre: 'Jornada Solidaria',
+    fecha: 'Noviembre 2025',
+    participantes: '200+ personas',
+    imagen: '❤️'
+  }
+];
+---
+
+<Layout title="Eventos - ADESA 80">
+  <!-- Hero Section -->
+  <section class="bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <h1 class="text-5xl sm:text-6xl font-black text-gray-900 mb-6">
+          Eventos y Torneos
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Participa en nuestras actividades especiales y torneos
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eventos Destacados -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="mb-12">
+      <h2 class="text-3xl font-black text-gray-900 mb-2">
+        Eventos Destacados
+      </h2>
+      <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark rounded-full"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+      {proximosEventos.filter(e => e.destacado).map((evento) => (
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl border-2 border-gray-100 hover:border-adesa-green hover:shadow-2xl transition-all group">
+          <div class="bg-linear-to-br from-adesa-green to-adesa-dark p-16 flex items-center justify-center">
+            <span class="text-9xl group-hover:scale-110 transition-transform">{evento.imagen}</span>
+          </div>
+          
+          <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="px-4 py-2 bg-adesa-green/10 text-adesa-green font-bold rounded-full text-sm">
+                Destacado
+              </span>
+              <span class="text-sm text-gray-500">{evento.fecha}</span>
+            </div>
+            
+            <h3 class="text-2xl font-black text-gray-900 mb-3">
+              {evento.nombre}
+            </h3>
+            
+            <p class="text-gray-600 mb-6">
+              {evento.descripcion}
+            </p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-3 text-sm">
+                <svg class="w-5 h-5 text-adesa-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-gray-900">{evento.hora}</span>
+              </div>
+              
+              <div class="flex items-center gap-3 text-sm">
+                <svg class="w-5 h-5 text-adesa-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                </svg>
+                <span class="text-gray-900">{evento.ubicacion}</span>
+              </div>
+              
+              <div class="flex items-center gap-3 text-sm">
+                <svg class="w-5 h-5 text-adesa-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span class="text-gray-900">{evento.plazas}</span>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-4 mb-6">
+              <p class="text-sm font-semibold text-gray-700 mb-2">Categorías:</p>
+              <div class="flex flex-wrap gap-2">
+                {evento.categorias.map((cat: string) => (
+                  <span class="px-3 py-1 bg-white text-gray-700 rounded-full text-xs font-medium border border-gray-200">
+                    {cat}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between pt-6 border-t border-gray-100">
+              <div>
+                <p class="text-sm text-gray-500 mb-1">Inscripción</p>
+                <p class="text-2xl font-black text-adesa-green">{evento.inscripcion}</p>
+              </div>
+              <button class="px-6 py-3 bg-adesa-green text-white font-semibold rounded-xl hover:bg-adesa-dark transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                Inscribirse
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Próximos Eventos -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-black text-gray-900 mb-2">
+        Próximos Eventos
+      </h2>
+      <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark rounded-full"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {proximosEventos.filter(e => !e.destacado).map((evento) => (
+        <div class="bg-white rounded-3xl p-6 shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-xl transition-all">
+          <div class="flex items-start gap-6">
+            <div class="bg-adesa-green/10 rounded-2xl p-6 shrink-0">
+              <span class="text-5xl">{evento.imagen}</span>
+            </div>
+            
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs text-gray-500">{evento.fecha}</span>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                {evento.nombre}
+              </h3>
+              
+              <p class="text-sm text-gray-600 mb-4">
+                {evento.descripcion}
+              </p>
+              
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-semibold text-adesa-green">
+                  {evento.inscripcion}
+                </span>
+                <button class="px-4 py-2 bg-adesa-green text-white font-semibold rounded-lg hover:bg-adesa-dark transition-all text-sm">
+                  Más Info
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Eventos Realizados -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-black text-gray-900 mb-2">
+          Eventos Realizados
+        </h2>
+        <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark mx-auto rounded-full mb-4"></div>
+        <p class="text-gray-600">
+          Revive algunos de nuestros eventos más destacados
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {eventosRealizados.map((evento) => (
+          <div class="bg-white rounded-3xl p-8 shadow-lg border-2 border-gray-100 text-center hover:scale-105 transition-transform">
+            <div class="text-6xl mb-4">{evento.imagen}</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">
+              {evento.nombre}
+            </h3>
+            <p class="text-sm text-gray-500 mb-2">{evento.fecha}</p>
+            <p class="text-sm text-adesa-green font-semibold">
+              {evento.participantes}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Organiza tu Evento -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-linear-to-br from-adesa-dark to-adesa-green rounded-3xl p-12 text-center text-white shadow-2xl">
+      <h2 class="text-3xl sm:text-4xl font-black mb-4">
+        ¿Quieres organizar un evento con nosotros?
+      </h2>
+      <p class="text-xl text-green-50 mb-8 max-w-2xl mx-auto">
+        Contáctanos para organizar torneos, clínics o eventos especiales
+      </p>
+      <a 
+        href="/club#contacto" 
+        class="inline-block px-8 py-4 bg-white text-adesa-green font-bold rounded-2xl hover:bg-green-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+      >
+        Contactar
+      </a>
+    </div>
+  </section>
+</Layout>

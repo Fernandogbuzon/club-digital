@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const productos = [
+  {
+    id: 1,
+    nombre: 'Camiseta Oficial Local',
+    descripcion: 'Camiseta oficial del ADESA 80 para partidos en casa',
+    precio: '35€',
+    categoria: 'Camisetas',
+    imagen: '👕',
+    color: 'Verde',
+    disponible: true
+  },
+  {
+    id: 2,
+    nombre: 'Camiseta Visitante',
+    descripcion: 'Camiseta oficial para partidos de visitante',
+    precio: '35€',
+    categoria: 'Camisetas',
+    imagen: '👕',
+    color: 'Blanco',
+    disponible: true
+  },
+  {
+    id: 3,
+    nombre: 'Sudadera ADESA 80',
+    descripcion: 'Sudadera oficial con capucha y logo bordado',
+    precio: '45€',
+    categoria: 'Ropa',
+    imagen: '🧥',
+    color: 'Verde',
+    disponible: true
+  },
+  {
+    id: 4,
+    nombre: 'Pantalón de Entrenamiento',
+    descripcion: 'Pantalón técnico para entrenamientos',
+    precio: '30€',
+    categoria: 'Ropa',
+    imagen: '👖',
+    color: 'Negro',
+    disponible: true
+  },
+  {
+    id: 5,
+    nombre: 'Balón Oficial',
+    descripcion: 'Balón oficial de baloncesto ADESA 80',
+    precio: '25€',
+    categoria: 'Accesorios',
+    imagen: '🏀',
+    color: 'Naranja',
+    disponible: true
+  },
+  {
+    id: 6,
+    nombre: 'Mochila Deportiva',
+    descripcion: 'Mochila con logo del club, ideal para entrenamientos',
+    precio: '28€',
+    categoria: 'Accesorios',
+    imagen: '🎒',
+    color: 'Verde',
+    disponible: true
+  },
+  {
+    id: 7,
+    nombre: 'Chándal Completo',
+    descripcion: 'Conjunto completo de chándal oficial',
+    precio: '65€',
+    categoria: 'Ropa',
+    imagen: '🧥',
+    color: 'Verde/Blanco',
+    disponible: true
+  },
+  {
+    id: 8,
+    nombre: 'Gorra ADESA 80',
+    descripcion: 'Gorra ajustable con bordado del logo',
+    precio: '15€',
+    categoria: 'Accesorios',
+    imagen: '🧢',
+    color: 'Verde',
+    disponible: true
+  },
+  {
+    id: 9,
+    nombre: 'Toalla Deportiva',
+    descripcion: 'Toalla de microfibra con logo del club',
+    precio: '12€',
+    categoria: 'Accesorios',
+    imagen: '🧺',
+    color: 'Blanco',
+    disponible: true
+  }
+];
+
+const categorias = [...new Set(productos.map(p => p.categoria))];
+---
+
+<Layout title="Tienda Oficial - ADESA 80">
+  <!-- Header Section -->
+  <section class="bg-linear-to-br from-adesa-green to-adesa-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-6xl font-black mb-4">
+          Tienda Oficial
+        </h1>
+        <p class="text-xl text-green-50 max-w-2xl mx-auto">
+          Equipación y merchandising del ADESA 80
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="bg-white border-b border-gray-100 sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex items-center justify-center gap-3 flex-wrap">
+        <button 
+          class="categoria-filter px-6 py-3 rounded-2xl font-semibold transition-all bg-adesa-green text-white shadow-lg"
+          data-categoria="all"
+        >
+          Todos los Productos
+        </button>
+        {categorias.map((cat: string) => (
+          <button 
+            class="categoria-filter px-6 py-3 rounded-2xl font-semibold transition-all bg-gray-100 text-gray-700 hover:bg-gray-200"
+            data-categoria={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {productos.map((producto) => (
+        <div 
+          class="producto-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-2xl transition-all"
+          data-categoria={producto.categoria}
+        >
+          <!-- Imagen del Producto -->
+          <div class="bg-gray-50 p-12 flex items-center justify-center aspect-square">
+            <div class="text-8xl group-hover:scale-110 transition-transform">
+              {producto.imagen}
+            </div>
+          </div>
+          
+          <!-- Información del Producto -->
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <div class="flex-1">
+                <span class="inline-block px-3 py-1 bg-adesa-green/10 text-adesa-green text-xs font-semibold rounded-full mb-2">
+                  {producto.categoria}
+                </span>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  {producto.nombre}
+                </h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  {producto.descripcion}
+                </p>
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-sm text-gray-500">Color:</span>
+                  <span class="text-sm font-medium text-gray-900">{producto.color}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+              <span class="text-2xl font-black text-adesa-green">
+                {producto.precio}
+              </span>
+              {producto.disponible ? (
+                <button class="px-6 py-3 bg-adesa-green text-white font-semibold rounded-xl hover:bg-adesa-dark transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                  Comprar
+                </button>
+              ) : (
+                <span class="px-6 py-3 bg-gray-100 text-gray-500 font-semibold rounded-xl cursor-not-allowed">
+                  Agotado
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Información de Envíos -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-adesa-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🚚</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Envío Rápido</h3>
+          <p class="text-gray-600">Recibe tu pedido en 3-5 días hábiles</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-adesa-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">💳</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Pago Seguro</h3>
+          <p class="text-gray-600">Transacciones 100% seguras</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-adesa-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">↩️</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Devoluciones</h3>
+          <p class="text-gray-600">30 días para devoluciones gratuitas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Contacto -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-linear-to-br from-adesa-dark to-adesa-green rounded-3xl p-12 text-center text-white shadow-2xl">
+      <h2 class="text-3xl sm:text-4xl font-black mb-4">
+        ¿Necesitas ayuda con tu pedido?
+      </h2>
+      <p class="text-xl text-green-50 mb-8 max-w-2xl mx-auto">
+        Nuestro equipo está aquí para ayudarte
+      </p>
+      <a 
+        href="/club#contacto" 
+        class="inline-block px-8 py-4 bg-white text-adesa-green font-bold rounded-2xl hover:bg-green-50 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+      >
+        Contactar
+      </a>
+    </div>
+  </section>
+
+  <!-- Script para filtros -->
+  <script>
+    const filterButtons = document.querySelectorAll('.categoria-filter');
+    const productoCards = document.querySelectorAll('.producto-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const categoria = button.getAttribute('data-categoria');
+        
+        // Update active state
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-adesa-green', 'text-white', 'shadow-lg');
+          btn.classList.add('bg-gray-100', 'text-gray-700');
+        });
+        button.classList.remove('bg-gray-100', 'text-gray-700');
+        button.classList.add('bg-adesa-green', 'text-white', 'shadow-lg');
+        
+        // Filter products
+        productoCards.forEach(card => {
+          if (categoria === 'all' || card.getAttribute('data-categoria') === categoria) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

@@ -1,228 +1,188 @@
-# 🏀 ADESA 80 - Aplicación de Resultados FAB
+# 🏀 ADESA 80 - Portal Web Oficial
 
-Una aplicación moderna y minimalista para visualizar resultados y próximos partidos de ADESA 80 desde la Federación Andaluza de Baloncesto (FAB).
+Portal web oficial del Club de Baloncesto ADESA 80 de Cádiz, España.
 
 ## ✨ Características
 
-- ✅ **Scraper automático** de la web FAB con manejo de errores
-- ✅ **Diseño minimalista** estilo Apple TV / ESPN
-- ✅ **Dos secciones claras**: Últimos Resultados + Próximos Partidos
-- ✅ **Responsive**: Optimizado para móvil, tablet y desktop
-- ✅ **Indicador de victorias**: Borde verde y badge para partidos ganados
-- ✅ **Marcadores tipo TV**: Cajas blancas con números grandes
-- ✅ **Sin gradientes ni transparencias**: Colores sólidos elegantes
-- ✅ **Hover effects**: Efectos sutiles al pasar el ratón
+- **Diseño Moderno**: Interfaz limpia y espaciosa inspirada en diseño Apple
+- **Responsive**: Totalmente adaptado a dispositivos móviles, tablets y desktop
+- **Tailwind CSS v4**: Utilizando la última versión con sintaxis actualizada
+- **Astro Framework**: SSG ultrarrápido para máximo rendimiento
+- **Colores del Club**: Paleta personalizada con el verde ADESA (#22c55e)
 
-## 🎨 Diseño
+## 🗂️ Estructura del Sitio
+
+### Páginas Principales
+
+#### 🏠 **Inicio** (`/`)
+- Hero section con lema del club
+- **Bento Grid** moderna con:
+  - Próximo partido destacado
+  - Último resultado
+  - Acceso directo a tienda
+  - Campus de verano
+  - Información del club
+- Call to action para unirse al equipo
+
+#### 🏀 **Partidos** (`/partidos`)
+- Calendario completo de próximos partidos
+- Histórico de resultados con indicadores de victoria/derrota
+- **Filtros por categoría**: Junior, Senior, Baby, etc.
+- Diseño "Instagram-Ready" para compartir en redes sociales
+- Smart merge: conserva resultados históricos
+
+#### 📰 **Noticias** (`/noticias`)
+- Grid de tarjetas con últimas novedades
+- Noticias destacadas en formato grande
+- Filtros por categoría (Resultados, Club, Campus, Eventos)
+- Newsletter para suscripción
+
+#### 🎉 **Eventos** (`/eventos`)
+- Torneos y actividades especiales
+- Eventos destacados con información completa
+- Próximos eventos y eventos realizados
+- Formularios de inscripción
+
+#### 🛍️ **Tienda** (`/tienda`)
+- Catálogo visual de equipación oficial
+- Productos organizados por categoría
+- Filtros interactivos
+- Información de envíos y devoluciones
+- Diseño limpio con imágenes sobre fondo gris claro
+
+#### 🏛️ **El Club** (`/club`)
+- Historia del ADESA 80
+- Valores y filosofía
+- Palmarés con principales logros
+- Formulario de contacto
+- Información de ubicación
+
+#### ⛹️ **Campus** (`/campus`)
+- Escuelas de verano e invierno
+- Programas por edades (Baby Basket, Infantil, Junior)
+- Información de inscripciones y horarios
+- Formulario de solicitud
+- Beneficios de entrenar con ADESA 80
+
+## 🎨 Diseño y Estilo
 
 ### Paleta de Colores
-- **Fondo**: Azul marino oscuro (`#0a0f1a`)
-- **Tarjetas**: Gris oscuro (`#161e2d`)
-- **Texto**: Blanco y gris claro
-- **Acentos**: Verde esmeralda (`#10b981`)
-- **Marcador**: Blanco sobre fondo blanco
+```css
+--color-adesa-green: #22c55e  /* Verde principal */
+--color-adesa-dark: #16a34a   /* Verde oscuro */
+```
 
 ### Tipografía
-- **Títulos**: Montserrat Bold (moderno y fuerte)
-- **Cuerpo**: Inter Regular (legible y limpio)
+- **Fuente**: Inter (Google Fonts)
+- **Estilo**: System-Sans con mucho espacio entre elementos
 
-### Grid Responsivo
-```
-Mobile (1 col) → Tablet (2 cols) → Desktop (3 cols)
-```
+### Componentes Clave
+- **Tarjetas**: `rounded-3xl` para bordes redondeados suaves
+- **Navbar**: Sticky con efecto `backdrop-blur`
+- **Gradientes**: `bg-linear-to-br` para fondos dinámicos
+- **Hover Effects**: Transiciones suaves en todos los elementos interactivos
 
-## 🚀 Quick Start
+## 🚀 Tecnologías
 
-### Requisitos
-- Node.js 18+
-- npm o yarn
+- **Astro 5.17**: Framework principal
+- **Tailwind CSS 4.1**: Estilos con sintaxis v4
+- **TypeScript**: Tipado estático
+- **Cheerio & Puppeteer**: Web scraping para actualización automática de partidos
 
-### Instalación
+## 📦 Instalación y Uso
 
 ```bash
-# Clonar o descargar el proyecto
-cd club-digital
-
 # Instalar dependencias
 npm install
 
-# Iniciar servidor de desarrollo
+# Ejecutar en desarrollo
 npm run dev
+
+# Actualizar datos de partidos (scraping)
+npm run scrape
+
+# Build para producción
+npm run build
+
+# Preview de producción
+npm run preview
 ```
 
-Abre `http://localhost:3000` en tu navegador.
-
-## 📂 Estructura del Proyecto
+## 📂 Estructura de Archivos
 
 ```
 club-digital/
 ├── src/
-│   ├── lib/
-│   │   └── scraper.js              # Web scraper FAB
-│   └── pages/
-│       └── index.astro              # Página principal
-├── public/                          # Assets estáticos
-├── package.json                     # Dependencias
-├── astro.config.mjs                 # Config Astro
-├── tsconfig.json                    # Config TypeScript
-├── DESIGN_SPECS.md                  # Especificaciones de diseño
-├── VISUAL_PREVIEW.md                # Vista previa visual
-├── DATOS_EJEMPLO.md                 # Ejemplo de datos
-├── INSTRUCCIONES.md                 # Guía de uso
-└── ROADMAP_FUTURO.md                # Plan de mejoras
+│   ├── components/
+│   │   └── MatchCard.astro
+│   ├── data/
+│   │   └── partidos.json
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   ├── index.astro          # Inicio con Bento Grid
+│   │   ├── partidos.astro       # Calendario y resultados
+│   │   ├── noticias.astro       # Noticias del club
+│   │   ├── eventos.astro        # Torneos y eventos
+│   │   ├── tienda.astro         # Merchandising
+│   │   ├── club.astro           # Historia y valores
+│   │   └── campus.astro         # Escuelas deportivas
+│   └── styles/
+│       └── tailwind.css         # Configuración Tailwind v4
+├── public/
+├── astro.config.mjs
+├── tailwind.config.mjs
+└── package.json
 ```
 
-## 🔧 Tecnologías
+## 🎯 Características Destacadas
 
-- **Framework**: Astro 5.17.1
-- **HTTP Client**: Axios 1.13.4
-- **HTML Parser**: Cheerio 1.2.0
-- **Styling**: Tailwind CSS
-- **Fuentes**: Google Fonts (Montserrat + Inter)
+### Navegación Completa
+- Navbar sticky con 7 secciones principales
+- Menú móvil responsive
+- Footer con 4 columnas y patrocinadores
+- Enlaces a redes sociales
 
-## 📊 Secciones Principales
+### Interactividad
+- Filtros dinámicos por categoría (JavaScript vanilla)
+- Formularios de contacto e inscripción
+- Efectos hover en patrocinadores (gris → color)
+- Transiciones suaves en todos los elementos
 
-### 🏆 Últimos Resultados
-- Muestra partidos ya jugados
-- Fecha, equipos y marcador
-- Indicador verde si ADESA 80 ganó
-- Badge "VICTORIA" para partidos ganados
+### Optimización
+- SSG para carga ultrarrápida
+- Imágenes optimizadas
+- CSS purged en producción
+- Prefetch de rutas
 
-### 📅 Próximos Partidos
-- Partidos programados
-- Categoría, equipos, fecha y campo
-- Organizado por grid responsivo
-- Información clara y accesible
+## 🏆 Patrocinadores
 
-## 🛠️ Scraper FAB
+Sección dedicada en el footer con logos que pasan de escala de grises a color al hover.
 
-El scraper está implementado en `src/lib/scraper.js` con:
+## 📱 Responsive Design
 
-### Características
-- Extrae datos de la web oficial de FAB
-- Manejo de errores con retry automático (3 intentos)
-- Headers realistas de navegador moderno
-- Soporte para HTTPS y certificados autofirmados
-- Delays progresivos para evitar bloqueos
+- **Mobile First**: Diseñado primero para móviles
+- **Breakpoints**: sm, md, lg, xl
+- **Grid Adaptativo**: De 1 a 4 columnas según dispositivo
 
-### Funciones Exportadas
+## 🔄 Actualización de Datos
 
-```javascript
-// Obtener próximos partidos
-const upcomingGames = await getUpcomingGames();
+El archivo `scraper.js` permite actualizar automáticamente los datos de partidos desde la federación:
 
-// Obtener últimos resultados
-const lastResults = await getLastResults();
+```bash
+npm run scrape
 ```
-
-## 📱 Respuesta en Diferentes Pantallas
-
-### Mobile (< 768px)
-- 1 columna de tarjetas
-- Padding: 2rem
-- Fuente más pequeña
-
-### Tablet (768px - 1024px)
-- 2 columnas de tarjetas
-- Gap: 1.5rem
-
-### Desktop (> 1024px)
-- 3 columnas de tarjetas
-- Max-width: 1152px
-- Centrado automático
-
-## 🎯 Vista Previa
-
-```
-┌────────────────────────────────────────────────────────┐
-│  ADESA 80                                               │
-│  Federación Andaluza de Baloncesto • Cádiz             │
-├────────────────────────────────────────────────────────┤
-│  Últimos Resultados                                     │
-│                                                         │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌────────┐   │
-│  │ 15 Febrero 2026 │ │ 12 Febrero 2026 │ │ 10 Feb │   │
-│  │                 │ │                 │ │        │   │
-│  │ CB Cádiz        │ │ ADESA 80 Senior │ │ ADESA  │   │
-│  │  ┌──────┐┌──┐   │ │  ┌──────┐┌──┐   │ │ ┌────┐ │   │
-│  │  │ 85   ││78│   │ │  │ 92   ││86│   │ │ │ 78 │ │   │
-│  │  └──────┘└──┘   │ │  └──────┘└──┘   │ │ └────┘ │   │
-│  │ ADESA 80 B      │ │ CB Jerez        │ │ CB     │   │
-│  │ ▮ VICTORIA      │ │ ▮ VICTORIA      │ │ Huelva │   │
-│  └─────────────────┘ └─────────────────┘ └────────┘   │
-│                                                         │
-│  Próximos Partidos                                      │
-│                                                         │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌────────┐   │
-│  │ SENIOR          │ │ CADETE B        │ │ JUVENIL│   │
-│  │ ADESA 80        │ │ ADESA 80 B      │ │ ADESA  │   │
-│  │       VS        │ │        VS       │ │   VS   │   │
-│  │ CB Málaga       │ │ CB Córdoba      │ │ CB Jaén│   │
-│  │ 📌 20 Feb 2026  │ │ 📌 21 Feb 2026  │ │📌 22   │   │
-│  │ 📍 Pab. Cádiz   │ │ 📍 Pab. Sur     │ │📍 Pab. │   │
-│  └─────────────────┘ └─────────────────┘ └────────┘   │
-│                                                         │
-├────────────────────────────────────────────────────────┤
-│  © 2026 ADESA 80 • Federación Andaluza de Baloncesto   │
-└────────────────────────────────────────────────────────┘
-```
-
-## 🐛 Troubleshooting
-
-### Error 403 del scraper
-El scraper incluye manejo automático. Si persiste:
-1. Verifica tu conexión a internet
-2. Revisa los logs en la consola
-3. La web FAB puede requerir JavaScript (Playwright como alternativa)
-
-### Tarjetas se ven desordenadas
-1. Limpia caché del navegador (Ctrl+Shift+Del)
-2. Recarga la página (F5)
-3. Reinicia el servidor (`npm run dev`)
-
-### Datos no se cargan
-1. Abre las DevTools (F12)
-2. Revisa la consola para errores
-3. Verifica que la URL de FAB esté activa
-
-## 📈 Mejoras Futuras
-
-Ver [ROADMAP_FUTURO.md](./ROADMAP_FUTURO.md) para:
-- Filtros por categoría
-- Estadísticas de victorias
-- Modal de detalles
-- PWA instalable
-- Notificaciones push
-- Compartir en redes
-
-## 📚 Documentación Adicional
-
-- [DESIGN_SPECS.md](./DESIGN_SPECS.md) - Especificaciones de diseño
-- [VISUAL_PREVIEW.md](./VISUAL_PREVIEW.md) - Vista previa visual
-- [DATOS_EJEMPLO.md](./DATOS_EJEMPLO.md) - Estructura de datos
-- [INSTRUCCIONES.md](./INSTRUCCIONES.md) - Guía de ejecución
-
-## 🤝 Contribuir
-
-Las contribuciones son bienvenidas. Por favor:
-1. Fork el proyecto
-2. Crea una rama para tu feature
-3. Commit tus cambios
-4. Push a la rama
-5. Abre un Pull Request
 
 ## 📄 Licencia
 
-Este proyecto está bajo licencia MIT. Consulta el archivo LICENSE para más detalles.
+© 2026 ADESA 80. Todos los derechos reservados.
 
-## 📧 Contacto
+## 🤝 Contribuir
 
-Para preguntas o sugerencias sobre ADESA 80:
-- 📱 Web: https://www.andaluzabaloncesto.org
-- 🏀 Club: ADESA 80 (Cádiz)
+Para contribuir al proyecto, contacta con el equipo de ADESA 80:
+- Email: info@adesa80.com
+- Ubicación: Cádiz, España
 
 ---
 
-**Última actualización**: Febrero 2026
-**Versión**: 1.0.0
-**Estado**: ✅ Producción
+Desarrollado con ❤️ y 🏀 para la familia ADESA 80

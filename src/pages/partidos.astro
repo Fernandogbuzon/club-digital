@@ -1,0 +1,279 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MatchCard from '../components/MatchCard.astro';
+import partidos from '../data/partidos.json';
+
+// Función para parsear fecha DD/MM/YYYY
+function parseFecha(fechaStr: string): Date {
+  const [dia, mes, anio] = fechaStr.split('/').map(Number);
+  return new Date(anio, mes - 1, dia);
+}
+
+// Obtener categorías únicas
+const categorias = [...new Set(partidos.map((p: any) => p.categoria))].sort();
+
+// Separar resultados y próximos partidos
+const resultados = partidos
+  .filter((p: any) => p.es_resultado)
+  .sort((a: any, b: any) => parseFecha(b.fecha).getTime() - parseFecha(a.fecha).getTime());
+
+const proximos = partidos
+  .filter((p: any) => !p.es_resultado)
+  .sort((a: any, b: any) => parseFecha(a.fecha).getTime() - parseFecha(b.fecha).getTime());
+---
+
+<Layout title="Partidos y Resultados - ADESA 80">
+  <!-- Header Section -->
+  <section class="bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+          Partidos y Resultados
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Sigue todos los partidos del ADESA 80 en todas las categorías
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Próximos Partidos -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="mb-12">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-2">
+            Próximos Partidos
+          </h2>
+          <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark rounded-full"></div>
+        </div>
+        
+        <!-- Filtros por categoría -->
+        <div class="hidden md:flex gap-2">
+          <button 
+            class="categoria-filter px-4 py-2 rounded-xl font-medium transition-all bg-adesa-green text-white"
+            data-categoria="all"
+          >
+            Todas
+          </button>
+          {categorias.map((cat: string) => (
+            <button 
+              class="categoria-filter px-4 py-2 rounded-xl font-medium transition-all bg-gray-100 text-gray-700 hover:bg-gray-200"
+              data-categoria={cat}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Mobile Filter -->
+      <div class="md:hidden mb-6">
+        <select 
+          id="mobileFilter"
+          class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl font-medium text-gray-900 focus:border-adesa-green focus:outline-none focus:ring-2 focus:ring-adesa-green/20 transition-all"
+        >
+          <option value="all">Todas las categorías</option>
+          {categorias.map((cat: string) => (
+            <option value={cat}>{cat}</option>
+          ))}
+        </select>
+      </div>
+
+      {proximos.length > 0 ? (
+        <div id="proximosGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {proximos.map((partido: any) => (
+            <div 
+              class="partido-card bg-white rounded-3xl p-6 shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-xl transition-all"
+              data-categoria={partido.categoria}
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-adesa-green/10 text-adesa-green font-semibold rounded-full text-sm">
+                  {partido.categoria}
+                </span>
+                <span class="text-sm text-gray-500">{partido.fecha}</span>
+              </div>
+              
+              <div class="mb-4">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-adesa-green rounded-lg flex items-center justify-center">
+                      <span class="text-white font-bold text-xs">A80</span>
+                    </div>
+                    <span class="font-bold text-gray-900">ADESA 80</span>
+                  </div>
+                  <span class="text-2xl font-black text-gray-300">VS</span>
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-gray-900">{partido.rival}</span>
+                    <div class="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center">
+                      <span class="text-gray-600 text-xs">🏀</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t border-gray-100">
+                <div class="flex items-center justify-between text-sm">
+                  <div class="flex items-center gap-1 text-gray-600">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{partido.hora || 'Por confirmar'}</span>
+                  </div>
+                  <div class="flex items-center gap-1 text-gray-600">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    </svg>
+                    <span class="text-xs">{partido.pabellon}</span>
+                  </div>
+                </div>
+                {partido.ubicacion && (
+                  <div class="mt-2">
+                    <span class={`px-2 py-1 rounded-full text-xs font-medium ${
+                      partido.ubicacion === 'Local' 
+                        ? 'bg-adesa-green/10 text-adesa-green' 
+                        : 'bg-gray-100 text-gray-600'
+                    }`}>
+                      {partido.ubicacion}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-gray-500 text-lg">No hay próximos partidos programados</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Últimos Resultados -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-2 text-center">
+          Últimos Resultados
+        </h2>
+        <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark mx-auto rounded-full"></div>
+      </div>
+
+      {resultados.length > 0 ? (
+        <div id="resultadosGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {resultados.slice(0, 12).map((partido: any) => {
+            const victoria = parseInt(partido.marcador_local) > parseInt(partido.marcador_visitante);
+            return (
+              <div 
+                class={`resultado-card bg-white rounded-3xl p-6 shadow-lg transition-all ${
+                  victoria 
+                    ? 'border-2 border-adesa-green hover:shadow-adesa-green/20' 
+                    : 'border-2 border-gray-200 hover:shadow-xl'
+                }`}
+                data-categoria={partido.categoria}
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-3 py-1 bg-gray-100 text-gray-700 font-semibold rounded-full text-sm">
+                    {partido.categoria}
+                  </span>
+                  <span class="text-sm text-gray-500">{partido.fecha}</span>
+                </div>
+                
+                <div class="mb-4">
+                  <div class="flex items-center justify-between">
+                    <div class="text-center flex-1">
+                      <div class={`w-10 h-10 mx-auto mb-2 rounded-lg flex items-center justify-center ${
+                        victoria ? 'bg-adesa-green' : 'bg-gray-300'
+                      }`}>
+                        <span class="text-white font-bold text-sm">A80</span>
+                      </div>
+                      <p class="font-bold text-gray-900 text-sm mb-1">ADESA 80</p>
+                      <p class="text-3xl font-black text-gray-900">{partido.marcador_local}</p>
+                    </div>
+                    
+                    <div class="px-4">
+                      <span class="text-2xl text-gray-300">-</span>
+                    </div>
+                    
+                    <div class="text-center flex-1">
+                      <div class={`w-10 h-10 mx-auto mb-2 rounded-lg flex items-center justify-center ${
+                        !victoria ? 'bg-gray-400' : 'bg-gray-200'
+                      }`}>
+                        <span class="text-xs">🏀</span>
+                      </div>
+                      <p class="font-bold text-gray-900 text-sm mb-1">{partido.rival}</p>
+                      <p class="text-3xl font-black text-gray-900">{partido.marcador_visitante}</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="pt-4 border-t border-gray-100 text-center">
+                  {victoria ? (
+                    <span class="inline-block px-4 py-2 bg-adesa-green/10 text-adesa-green font-bold rounded-full text-sm">
+                      ✓ Victoria
+                    </span>
+                  ) : (
+                    <span class="inline-block px-4 py-2 bg-gray-100 text-gray-600 font-medium rounded-full text-sm">
+                      Derrota
+                    </span>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-gray-500 text-lg">No hay resultados disponibles</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Script para filtros -->
+  <script>
+    // Desktop filters
+    const filterButtons = document.querySelectorAll('.categoria-filter');
+    const partidoCards = document.querySelectorAll('.partido-card');
+    const resultadoCards = document.querySelectorAll('.resultado-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const categoria = button.getAttribute('data-categoria') || 'all';
+        
+        // Update active state
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-adesa-green', 'text-white');
+          btn.classList.add('bg-gray-100', 'text-gray-700');
+        });
+        button.classList.remove('bg-gray-100', 'text-gray-700');
+        button.classList.add('bg-adesa-green', 'text-white');
+        
+        // Filter cards
+        filterCards(categoria);
+      });
+    });
+    
+    // Mobile filter
+    const mobileFilter = document.getElementById('mobileFilter');
+    if (mobileFilter) {
+      mobileFilter.addEventListener('change', (e) => {
+        const categoria = (e.target as HTMLSelectElement).value || 'all';
+        filterCards(categoria);
+      });
+    }
+    
+    function filterCards(categoria: string) {
+      const allCards = [...partidoCards, ...resultadoCards];
+      
+      allCards.forEach(card => {
+        if (categoria === 'all' || card.getAttribute('data-categoria') === categoria) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</Layout>

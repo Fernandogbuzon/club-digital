@@ -1,0 +1,307 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MatchCard from '../components/MatchCard.astro';
+import partidos from '../data/partidos.json';
+
+// Función para parsear fecha DD/MM/YYYY
+function parseFecha(fechaStr: string): Date {
+  const [dia, mes, anio] = fechaStr.split('/').map(Number);
+  return new Date(anio, mes - 1, dia);
+}
+
+// Obtener categorías únicas
+const categorias = [...new Set(partidos.map((p: any) => p.categoria))].sort();
+
+// Separar resultados (con marcador) y próximos (sin marcador)
+const resultados = partidos
+  .filter((p: any) => p.es_resultado)
+  .sort((a: any, b: any) => parseFecha(b.fecha).getTime() - parseFecha(a.fecha).getTime());
+
+// Próximos partidos: filtrar solo uno por categoría (el más cercano)
+const proximosMap = new Map();
+const hoy = new Date();
+
+partidos
+  .filter((p: any) => !p.es_resultado)
+  .sort((a: any, b: any) => parseFecha(a.fecha).getTime() - parseFecha(b.fecha).getTime())
+  .forEach((partido: any) => {
+    if (!proximosMap.has(partido.categoria)) {
+      proximosMap.set(partido.categoria, partido);
+    }
+  });
+
+const proximos = Array.from(proximosMap.values())
+  .sort((a: any, b: any) => parseFecha(a.fecha).getTime() - parseFecha(b.fecha).getTime());
+---
+
+<Layout title="ADESA 80 - Club de Baloncesto">
+  <!-- Hero Section -->
+  <section class="relative bg-linear-to-br from-adesa-dark via-adesa-green to-green-400 text-white overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div class="text-center">
+        <div class="inline-flex items-center justify-center w-32 h-32 bg-white/10 backdrop-blur-md rounded-3xl mb-8 border-4 border-white/20 shadow-2xl">
+          <span class="text-6xl font-black text-white">A80</span>
+        </div>
+        
+        <h1 class="text-5xl sm:text-7xl font-black mb-6 tracking-tight">
+          ADESA 80
+        </h1>
+        
+        <p class="text-xl sm:text-2xl text-green-50 mb-8 max-w-2xl mx-auto font-medium">
+          Pasión, compromiso y excelencia en cada cancha
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="#proximos" 
+            class="px-8 py-4 bg-white text-adesa-green font-bold rounded-xl hover:bg-green-50 transition-all hover:scale-105 shadow-lg"
+          >
+            Ver Próximos Partidos
+          </a>
+          <a 
+            href="#resultados" 
+            class="px-8 py-4 bg-green-700/30 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-green-700/50 transition-all border-2 border-white/30"
+          >
+            Ver Resultados
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+        <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#fafafa"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  {(proximos.length > 0 || resultados.length > 0) && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="bg-white rounded-2xl shadow-md p-6">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+          <!-- Filtro por categoría -->
+          <div class="flex flex-col gap-2 w-full md:w-auto">
+            <label for="categoriaFilter" class="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+              Categoría
+            </label>
+            <select 
+              id="categoriaFilter"
+              class="px-4 py-3 border-2 border-gray-200 rounded-xl font-medium text-gray-900 focus:border-adesa-green focus:outline-none focus:ring-2 focus:ring-adesa-green/20 transition-all min-w-[280px] bg-white cursor-pointer"
+            >
+              <option value="todas">Todas las categorías</option>
+              {categorias.map((cat: string) => (
+                <option value={cat}>{cat}</option>
+              ))}
+            </select>
+          </div>
+
+          <!-- Filtro Local/Visitante -->
+          <div class="flex flex-col gap-2 w-full md:w-auto">
+            <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+              Tipo de partido
+            </label>
+            <div class="inline-flex rounded-xl overflow-hidden border-2 border-gray-200">
+              <button 
+                data-filter="todos"
+                class="filter-btn px-6 py-3 font-semibold transition-all bg-adesa-dark text-white"
+              >
+                Todos
+              </button>
+              <button 
+                data-filter="local"
+                class="filter-btn px-6 py-3 font-semibold transition-all bg-white text-gray-700 hover:bg-gray-50"
+              >
+                Local
+              </button>
+              <button 
+                data-filter="visitante"
+                class="filter-btn px-6 py-3 font-semibold transition-all bg-white text-gray-700 hover:bg-gray-50"
+              >
+                Visitante
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Próximos Partidos -->
+  {proximos.length > 0 && (
+    <section id="proximos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+          Próximos Partidos
+        </h2>
+        <div class="w-24 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark mx-auto rounded-full"></div>
+      </div>
+
+      <div 
+        id="proximosGrid" 
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {proximos.map((partido: any) => (
+          <MatchCard partido={partido} />
+        ))}
+      </div>
+
+      <div id="noProximosMsg" class="hidden text-center py-12 text-gray-400">
+        <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p class="text-lg font-medium">No hay partidos que coincidan con los filtros</p>
+      </div>
+    </section>
+  )}
+
+  <!-- Últimos Resultados -->
+  {resultados.length > 0 && (
+    <section id="resultados" class="bg-gray-50 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+            Últimos Resultados
+          </h2>
+          <div class="w-24 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark mx-auto rounded-full"></div>
+        </div>
+
+        <div 
+          id="resultadosGrid" 
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {resultados.map((partido: any) => (
+            <MatchCard partido={partido} />
+          ))}
+        </div>
+
+        <div id="noResultadosMsg" class="hidden text-center py-12 text-gray-400">
+          <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p class="text-lg font-medium">No hay resultados que coincidan con los filtros</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Call to Action -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-linear-to-br from-adesa-dark to-adesa-green rounded-3xl p-12 text-center text-white shadow-2xl">
+      <h2 class="text-3xl sm:text-4xl font-black mb-4">
+        ¿Quieres formar parte del equipo?
+      </h2>
+      <p class="text-xl text-green-50 mb-8 max-w-2xl mx-auto">
+        Únete a la familia ADESA 80 y vive la pasión del baloncesto
+      </p>
+      <a 
+        href="#equipo" 
+        class="inline-block px-8 py-4 bg-white text-adesa-green font-bold rounded-xl hover:bg-green-50 transition-all hover:scale-105 shadow-lg"
+      >
+        Más Información
+      </a>
+    </div>
+  </section>
+
+  {partidos.length === 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+      <div class="bg-white rounded-3xl p-12 shadow-lg">
+        <svg class="w-24 h-24 mx-auto mb-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          No hay datos disponibles
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Ejecuta el scraper para cargar los partidos de ADESA 80
+        </p>
+        <div class="bg-gray-900 text-green-400 rounded-xl p-4 max-w-md mx-auto font-mono text-left">
+          <code>npm run scrape</code>
+        </div>
+      </div>
+    </section>
+  )}
+</Layout>
+
+<script>
+  const categoriaFilter = document.getElementById('categoriaFilter') as HTMLSelectElement;
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const proximosGrid = document.getElementById('proximosGrid');
+  const resultadosGrid = document.getElementById('resultadosGrid');
+  const noProximosMsg = document.getElementById('noProximosMsg');
+  const noResultadosMsg = document.getElementById('noResultadosMsg');
+
+  let currentCategoria = 'todas';
+  let currentTipo = 'todos';
+
+  function filtrarPartidos() {
+    const allCards = document.querySelectorAll('.match-card');
+    
+    allCards.forEach(card => {
+      const cardElement = card as HTMLElement;
+      const cardCategoria = cardElement.dataset.categoria || '';
+      const cardTipo = cardElement.dataset.tipo || '';
+      
+      const categoriaMatch = currentCategoria === 'todas' || cardCategoria === currentCategoria;
+      const tipoMatch = currentTipo === 'todos' || cardTipo === currentTipo;
+      
+      if (categoriaMatch && tipoMatch) {
+        cardElement.style.display = 'flex';
+      } else {
+        cardElement.style.display = 'none';
+      }
+    });
+
+    // Mostrar/ocultar mensajes de "sin resultados"
+    if (proximosGrid) {
+      const visibleProximos = proximosGrid.querySelectorAll('.match-card:not([style*="display: none"])').length;
+      if (visibleProximos === 0) {
+        proximosGrid.style.display = 'none';
+        noProximosMsg?.classList.remove('hidden');
+      } else {
+        proximosGrid.style.display = 'grid';
+        noProximosMsg?.classList.add('hidden');
+      }
+    }
+
+    if (resultadosGrid) {
+      const visibleResultados = resultadosGrid.querySelectorAll('.match-card:not([style*="display: none"])').length;
+      if (visibleResultados === 0) {
+        resultadosGrid.style.display = 'none';
+        noResultadosMsg?.classList.remove('hidden');
+      } else {
+        resultadosGrid.style.display = 'grid';
+        noResultadosMsg?.classList.add('hidden');
+      }
+    }
+  }
+
+  // Filtro por categoría
+  categoriaFilter?.addEventListener('change', (e) => {
+    currentCategoria = (e.target as HTMLSelectElement).value;
+    filtrarPartidos();
+  });
+
+  // Filtro por tipo (Local/Visitante)
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-adesa-dark', 'text-white');
+        b.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-50');
+      });
+      
+      btn.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-50');
+      btn.classList.add('bg-adesa-dark', 'text-white');
+      
+      currentTipo = (btn as HTMLElement).dataset.filter || 'todos';
+      filtrarPartidos();
+    });
+  });
+</script>
