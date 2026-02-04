@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const FEDERACION_URL = 'https://www.andaluzabaloncesto.org/cadiz/resultados-club-196/adesa-80';
-const JSON_PATH = path.join(__dirname, 'src', 'data', 'partidos.json');
+const EQUIPOS_DIR = path.join(__dirname, 'src', 'data', 'equipos');
 
 /**
  * Parsea fecha en formato DD/MM/YYYY a objeto Date
@@ -18,60 +18,108 @@ function parseFecha(fechaStr) {
 }
 
 /**
- * Formatea fecha para comparación
+ * Normaliza el nombre del equipo para generar el nombre de archivo
  */
-function formatFecha(fecha) {
-  const dia = String(fecha.getDate()).padStart(2, '0');
-  const mes = String(fecha.getMonth() + 1).padStart(2, '0');
-  const anio = fecha.getFullYear();
-  return `${dia}/${mes}/${anio}`;
+function normalizarNombreEquipo(equipo) {
+  return equipo
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
 }
 
 /**
- * Carga el JSON existente o retorna array vacío
+ * Genera el nombre del equipo combinando categoría y competición
  */
-function cargarPartidosExistentes() {
-  try {
-    if (fs.existsSync(JSON_PATH)) {
-      const data = fs.readFileSync(JSON_PATH, 'utf-8');
-      return JSON.parse(data);
-    }
-  } catch (error) {
-    console.log('⚠️  No se pudo cargar el JSON existente, creando uno nuevo...');
+function generarNombreEquipo(categoria, competicion) {
+  // Paso A: Toma el texto de la categoría antes del primer guion
+  const categoriaPrincipal = categoria.split(' - ')[0].trim();
+  
+  // Paso B: Si la competición termina en 'A' o 'B', añade esa letra
+  let sufijo = '';
+  const matchSufijo = competicion.match(/\s([AB])\s*$/);
+  if (matchSufijo) {
+    sufijo = ` ${matchSufijo[1]}`;
   }
-  return [];
+  
+  return categoriaPrincipal + sufijo;
 }
 
 /**
- * Guarda los partidos en el JSON
- */
-function guardarPartidos(partidos) {
-  const dir = path.dirname(JSON_PATH);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  fs.writeFileSync(JSON_PATH, JSON.stringify(partidos, null, 2), 'utf-8');
-  console.log(`✅ Guardados ${partidos.length} partidos en ${JSON_PATH}`);
-}
-
-/**
- * Genera ID único para un partido
+ * Genera ID único para un partido, eliminando valores undefined
  */
 function generarId(partido) {
-  const normalizado = `${partido.fecha}_${partido.local}_${partido.visitante}_${partido.categoria}`
+  const fecha = partido.fecha || '';
+  const local = partido.ubicacion === 'Local' ? 'adesa_80' : partido.rival;
+  const visitante = partido.ubicacion === 'Visitante' ? 'adesa_80' : partido.rival;
+  const categoria = partido.categoria || '';
+  
+  const normalizado = `${fecha}_${local}_${visitante}_${categoria}`
     .replace(/\s+/g, '_')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase();
+    .toLowerCase()
+    .replace(/undefined/g, '');
+  
   return normalizado;
 }
 
 /**
- * Busca si un partido ya existe
+ * Guarda los partidos agrupados por equipo en archivos individuales
  */
-function buscarPartidoExistente(partidos, nuevoPartido) {
-  const nuevoId = generarId(nuevoPartido);
-  return partidos.findIndex(p => generarId(p) === nuevoId);
+function guardarPartidosPorEquipo(partidos) {
+  // Crear directorio si no existe
+  if (!fs.existsSync(EQUIPOS_DIR)) {
+    fs.mkdirSync(EQUIPOS_DIR, { recursive: true });
+  }
+  
+  // Agrupar partidos por equipo
+  const partidosPorEquipo = {};
+  
+  partidos.forEach(partido => {
+    const nombreEquipo = partido.equipo || 'sin-equipo';
+    if (!partidosPorEquipo[nombreEquipo]) {
+      partidosPorEquipo[nombreEquipo] = [];
+    }
+    
+    // Generar ID correcto sin undefined
+    partido.id = generarId(partido);
+    
+    // Ajustar marcadores si el rival es DESCANSA
+    if (partido.rival === 'DESCANSA') {
+      partido.marcador_local = null;
+      partido.marcador_visitante = null;
+      partido.es_resultado = false;
+    }
+    
+    partidosPorEquipo[nombreEquipo].push(partido);
+  });
+  
+  // Guardar cada equipo en su archivo
+  let archivosCreados = 0;
+  
+  Object.entries(partidosPorEquipo).forEach(([nombreEquipo, partidosEquipo]) => {
+    const nombreArchivo = normalizarNombreEquipo(nombreEquipo) + '.json';
+    const rutaArchivo = path.join(EQUIPOS_DIR, nombreArchivo);
+    
+    // Ordenar partidos por fecha
+    partidosEquipo.sort((a, b) => {
+      try {
+        const fechaA = parseFecha(a.fecha);
+        const fechaB = parseFecha(b.fecha);
+        return fechaB - fechaA;
+      } catch {
+        return 0;
+      }
+    });
+    
+    fs.writeFileSync(rutaArchivo, JSON.stringify(partidosEquipo, null, 2), 'utf-8');
+    console.log(`✅ ${nombreArchivo}: ${partidosEquipo.length} partidos`);
+    archivosCreados++;
+  });
+  
+  console.log(`\n📁 Total de archivos creados: ${archivosCreados}`);
 }
 
 /**
@@ -143,106 +191,188 @@ async function scrapePartidos() {
     const partidos = await page.evaluate(() => {
       const resultados = [];
       
-      // Buscar todas las secciones de categorías
-      const categorias = document.querySelectorAll('.pestana-subdesplegable');
+      // Buscar todas las competiciones principales (nivel superior)
+      const competicionesPrincipales = document.querySelectorAll('.pestana-desplegable');
       
-      console.log('Categorías encontradas:', categorias.length);
+      console.log('Competiciones principales encontradas:', competicionesPrincipales.length);
       
-      categorias.forEach(categoriaHeader => {
-        // Extraer nombre exacto de la categoría desde el h4
-        const categoriaH4 = categoriaHeader.querySelector('h4');
-        if (!categoriaH4) return;
-        
-        const categoriaNombre = categoriaH4.textContent
-          .replace(/<span.*<\/span>/g, '')
-          .trim();
-        
-        // Buscar el contenedor de partidos de esta categoría
-        const contenedorId = categoriaHeader.id.replace('pestana_', 'capa_');
-        const contenedor = document.getElementById(contenedorId);
-        
-        if (!contenedor) {
-          console.log('No se encontró contenedor para:', contenedorId);
+      competicionesPrincipales.forEach(competicionHeader => {
+        // Extraer el nombre de la competición principal
+        const competicionH4 = competicionHeader.querySelector('h4');
+        if (!competicionH4) {
+          console.log('⚠️ Competición sin H4 encontrada, saltando...');
           return;
         }
         
-        // Buscar todas las filas de partidos en las tablas
-        const filas = contenedor.querySelectorAll('tbody tr');
+        const competicionNombre = competicionH4.textContent
+          .replace(/<span.*<\/span>/g, '')
+          .trim();
         
-        console.log(`Filas encontradas en ${categoriaNombre}:`, filas.length);
+        if (!competicionNombre) {
+          console.log('⚠️ Competición con nombre vacío, saltando...');
+          return;
+        }
         
-        filas.forEach(fila => {
-          const celdas = fila.querySelectorAll('td');
-          if (celdas.length < 6) return;
-          
-          const localText = celdas[0].textContent.trim();
-          const visitanteText = celdas[3].textContent.trim();
-          
-          // Filtrar solo partidos de ADESA 80
-          if (!localText.includes('ADESA 80') && !visitanteText.includes('ADESA 80')) {
+        // Determinar sufijo (A, B, etc.) desde el nombre de la competición
+        let sufijoCompeticion = '';
+        const matchSufijo = competicionNombre.match(/\s([AB])\s*$/);
+        if (matchSufijo) {
+          sufijoCompeticion = ` ${matchSufijo[1]}`;
+        }
+        
+        console.log(`Procesando competición: ${competicionNombre}, sufijo: "${sufijoCompeticion}"`);
+        
+        // Obtener el contenedor de esta competición
+        const competicionId = competicionHeader.id.replace('pestana_', 'capa_');
+        const competicionContenedor = document.getElementById(competicionId);
+        
+        if (!competicionContenedor) {
+          console.log('⚠️ No se encontró contenedor para:', competicionId);
+          return;
+        }
+        
+        // Buscar todas las subcategorías dentro de esta competición
+        const categorias = competicionContenedor.querySelectorAll('.pestana-subdesplegable');
+        
+        console.log(`Categorías encontradas en ${competicionNombre}:`, categorias.length);
+        
+        // REFUERZO: Variable persistente para categoría actual
+        let categoriaActual = null;
+        let categoriaLimpiaActual = null;
+        let equipoActual = null;
+        
+        categorias.forEach(categoriaHeader => {
+          // Extraer nombre de la categoría
+          const categoriaH4 = categoriaHeader.querySelector('h4');
+          if (!categoriaH4) {
+            console.log('⚠️ Categoría sin H4 encontrada, saltando...');
             return;
           }
           
-          // Determinar si ADESA es local o visitante
-          const adesaEsLocal = localText.includes('ADESA 80');
-          const rival = adesaEsLocal ? visitanteText : localText;
-          const ubicacion = adesaEsLocal ? 'Local' : 'Visitante';
+          let categoriaNombre = categoriaH4.textContent
+            .replace(/<span.*<\/span>/g, '')
+            .trim();
           
-          // Extraer puntos
-          const puntosLocalText = celdas[1].textContent.trim();
-          const puntosVisitanteText = celdas[2].textContent.trim();
-          
-          const puntosLocal = puntosLocalText && !isNaN(parseInt(puntosLocalText)) 
-            ? parseInt(puntosLocalText) 
-            : null;
-          const puntosVisitante = puntosVisitanteText && !isNaN(parseInt(puntosVisitanteText))
-            ? parseInt(puntosVisitanteText) 
-            : null;
-          
-          // Determinar marcadores para ADESA
-          let marcadorLocal = null;
-          let marcadorVisitante = null;
-          
-          if (puntosLocal !== null && puntosVisitante !== null) {
-            if (adesaEsLocal) {
-              marcadorLocal = puntosLocal;
-              marcadorVisitante = puntosVisitante;
-            } else {
-              marcadorLocal = puntosVisitante;
-              marcadorVisitante = puntosLocal;
-            }
+          if (!categoriaNombre) {
+            console.log('⚠️ Categoría con nombre vacío, saltando...');
+            return;
           }
           
-          // Extraer fecha y hora
-          const fechaHoraElement = celdas[4].querySelector('strong');
-          let fecha = '';
-          let hora = '';
-          
-          if (fechaHoraElement) {
-            const fechaHoraHTML = fechaHoraElement.innerHTML;
-            const partes = fechaHoraHTML.split('<br>');
-            
-            fecha = partes[0].trim();
-            
-            if (partes.length > 1 && partes[1].trim()) {
-              hora = partes[1].trim();
-            }
+          // Añadir sufijo si existe y no está ya en el nombre
+          if (sufijoCompeticion && !categoriaNombre.includes(sufijoCompeticion.trim())) {
+            categoriaNombre = categoriaNombre + sufijoCompeticion;
           }
           
-          const pabellon = celdas[5].textContent.trim();
+          // REFUERZO: Actualizar variables persistentes
+          categoriaActual = categoriaNombre;
           
-          const esResultado = marcadorLocal !== null && marcadorVisitante !== null;
+          // Generar nombre del equipo: categoría antes del primer guion + sufijo A/B
+          const categoriaPrincipal = categoriaNombre.split(' - ')[0].trim();
+          equipoActual = categoriaPrincipal + sufijoCompeticion;
           
-          resultados.push({
-            categoria: categoriaNombre,
-            rival: rival,
-            ubicacion: ubicacion,
-            marcador_local: marcadorLocal ? String(marcadorLocal) : null,
-            marcador_visitante: marcadorVisitante ? String(marcadorVisitante) : null,
-            fecha: fecha,
-            hora: hora,
-            pabellon: pabellon,
-            es_resultado: esResultado
+          console.log(`📋 Categoría actual: ${categoriaActual}`);
+          console.log(`🏀 Equipo generado: ${equipoActual}`);
+          
+          // Buscar el contenedor de partidos de esta categoría
+          const contenedorId = categoriaHeader.id.replace('pestana_', 'capa_');
+          const contenedor = document.getElementById(contenedorId);
+          
+          if (!contenedor) {
+            console.log('⚠️ No se encontró contenedor para:', contenedorId);
+            return;
+          }
+          
+          // Buscar todas las filas de partidos en las tablas
+          const filas = contenedor.querySelectorAll('tbody tr');
+          
+          console.log(`Filas encontradas en ${categoriaActual}:`, filas.length);
+          
+          filas.forEach((fila, index) => {
+            const celdas = fila.querySelectorAll('td');
+            if (celdas.length < 6) {
+              console.log(`⚠️ Fila ${index} con menos de 6 celdas, saltando...`);
+              return;
+            }
+            
+            const localText = celdas[0].textContent.trim();
+            const visitanteText = celdas[3].textContent.trim();
+            
+            // Filtrar solo partidos de ADESA 80
+            if (!localText.includes('ADESA 80') && !visitanteText.includes('ADESA 80')) {
+              return;
+            }
+            
+            // Determinar si ADESA es local o visitante
+            const adesaEsLocal = localText.includes('ADESA 80');
+            const rival = adesaEsLocal ? visitanteText : localText;
+            const ubicacion = adesaEsLocal ? 'Local' : 'Visitante';
+            
+            // Extraer puntos DIRECTAMENTE de la tabla (SIN inversión)
+            const puntosLocalText = celdas[1].textContent.trim();
+            const puntosVisitanteText = celdas[2].textContent.trim();
+            
+            // CORRECCIÓN CRÍTICA: Los marcadores reflejan la posición en la tabla web
+            // marcador_local = puntos del equipo que jugó en casa
+            // marcador_visitante = puntos del equipo que jugó fuera
+            // NO importa si ADESA es local o visitante, los campos son POSICIONALES
+            const marcadorLocal = puntosLocalText && !isNaN(parseInt(puntosLocalText)) 
+              ? String(parseInt(puntosLocalText))
+              : null;
+            const marcadorVisitante = puntosVisitanteText && !isNaN(parseInt(puntosVisitanteText))
+              ? String(parseInt(puntosVisitanteText))
+              : null;
+            
+            // LOG DE DEPURACIÓN
+            if (marcadorLocal && marcadorVisitante) {
+              console.log(`🔍 ${localText} (${marcadorLocal}) vs ${visitanteText} (${marcadorVisitante}) - Ubicación ADESA: ${ubicacion}`);
+            }
+            
+            // Extraer fecha y hora
+            const fechaHoraElement = celdas[4].querySelector('strong');
+            let fecha = '';
+            let hora = '';
+            
+            if (fechaHoraElement) {
+              const fechaHoraHTML = fechaHoraElement.innerHTML;
+              const partes = fechaHoraHTML.split('<br>');
+              
+              fecha = partes[0].trim();
+              
+              if (partes.length > 1 && partes[1].trim()) {
+                hora = partes[1].trim();
+              }
+            }
+            
+            const pabellon = celdas[5].textContent.trim();
+            
+            const esResultado = marcadorLocal !== null && marcadorVisitante !== null;
+            
+            // VALIDACIÓN CRÍTICA: Usar variables persistentes
+            const categoriaFinal = categoriaActual || 'Categoría por definir';
+            const competicionFinal = competicionNombre || 'Competición por definir';
+            const equipoFinal = equipoActual || 'Equipo por definir';
+            
+            // DEPURACIÓN: Log del partido procesado
+            console.log(`✅ Procesando partido para el equipo: ${equipoFinal} (${categoriaFinal})`);
+            
+            // VALIDACIÓN ANTES DE GUARDAR
+            if (!equipoFinal || equipoFinal === 'Equipo por definir') {
+              console.log(`⚠️ ADVERTENCIA: Partido sin equipo válido. Rival: ${rival}, Fecha: ${fecha}`);
+            }
+            
+            resultados.push({
+              categoria: categoriaFinal,
+              competicion: competicionFinal,
+              equipo: equipoFinal,
+              rival: rival,
+              ubicacion: ubicacion,
+              marcador_local: marcadorLocal ? String(marcadorLocal) : null,
+              marcador_visitante: marcadorVisitante ? String(marcadorVisitante) : null,
+              fecha: fecha,
+              hora: hora,
+              pabellon: pabellon,
+              es_resultado: esResultado
+            });
           });
         });
       });
@@ -263,64 +393,26 @@ async function scrapePartidos() {
 }
 
 /**
- * Función principal: Smart Merge
+ * Función principal: Scrape y generación de archivos por equipo
  */
 async function main() {
   try {
     console.log('\n═══════════════════════════════════════════════');
-    console.log('   🏀 SCRAPER ADESA 80 - Sistema Inteligente');
+    console.log('   🏀 SCRAPER ADESA 80 - Archivos por Equipo');
     console.log('═══════════════════════════════════════════════\n');
     
-    // 1. Cargar partidos existentes
-    const partidosExistentes = cargarPartidosExistentes();
-    console.log(`📁 Partidos en base de datos: ${partidosExistentes.length}`);
+    // 1. Scrape partidos
+    const partidos = await scrapePartidos();
     
-    // 2. Scrape nuevos partidos
-    const partidosNuevos = await scrapePartidos();
-    
-    if (partidosNuevos.length === 0) {
+    if (partidos.length === 0) {
       console.log('⚠️  No se encontraron partidos. Verifica la URL o la estructura HTML.');
       return;
     }
     
-    // 3. Smart Merge: actualizar o agregar
-    let actualizados = 0;
-    let agregados = 0;
+    console.log(`\n📊 Total partidos extraídos: ${partidos.length}`);
     
-    partidosNuevos.forEach(nuevoPartido => {
-      const index = buscarPartidoExistente(partidosExistentes, nuevoPartido);
-      
-      if (index >= 0) {
-        // Actualizar partido existente (mantener el ID original)
-        nuevoPartido.id = partidosExistentes[index].id;
-        partidosExistentes[index] = nuevoPartido;
-        actualizados++;
-      } else {
-        // Agregar nuevo partido
-        nuevoPartido.id = generarId(nuevoPartido);
-        partidosExistentes.push(nuevoPartido);
-        agregados++;
-      }
-    });
-    
-    console.log(`\n📈 ESTADÍSTICAS:`);
-    console.log(`   ✏️  Actualizados: ${actualizados}`);
-    console.log(`   ➕ Agregados: ${agregados}`);
-    console.log(`   📊 Total: ${partidosExistentes.length}`);
-    
-    // 4. Ordenar por fecha (más recientes primero para resultados)
-    partidosExistentes.sort((a, b) => {
-      try {
-        const fechaA = parseFecha(a.fecha);
-        const fechaB = parseFecha(b.fecha);
-        return fechaB - fechaA;
-      } catch {
-        return 0;
-      }
-    });
-    
-    // 5. Guardar
-    guardarPartidos(partidosExistentes);
+    // 2. Guardar partidos por equipo
+    guardarPartidosPorEquipo(partidos);
     
     console.log('\n🎉 Scraping completado con éxito!\n');
     console.log('═══════════════════════════════════════════════\n');
