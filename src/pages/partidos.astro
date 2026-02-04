@@ -415,7 +415,7 @@ const partidosJSON = JSON.stringify(partidos);
             return (
               <div 
                 class={`resultado-card bg-white rounded-3xl p-6 shadow-lg transition-all duration-300 ${
-                  esVictoria ? 'border-2 border-adesa-green' : 'border-2 border-gray-200'
+                  esVictoria ? 'border-2 border-adesa-green' : 'border-2 border-red-500'
                 }`}
                 data-categoria={partido.equipo}
                 data-ubicacion={partido.ubicacion}
@@ -442,7 +442,11 @@ const partidosJSON = JSON.stringify(partidos);
                         {partido.ubicacion === 'Local' ? 'ADESA 80' : partido.rival}
                       </p>
                       {partido.marcador_local && partido.marcador_visitante && (
-                        <p class="text-3xl font-black text-gray-900">
+                        <p class={`text-3xl ${
+                          partido.ubicacion === 'Local'
+                            ? (esVictoria ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
+                            : 'font-black text-gray-900'
+                        }`}>
                           {partido.marcador_local}
                         </p>
                       )}
@@ -459,7 +463,11 @@ const partidosJSON = JSON.stringify(partidos);
                         {partido.ubicacion === 'Local' ? partido.rival : 'ADESA 80'}
                       </p>
                       {partido.marcador_local && partido.marcador_visitante && (
-                        <p class="text-3xl font-black text-gray-900">
+                        <p class={`text-3xl ${
+                          partido.ubicacion === 'Visitante'
+                            ? (esVictoria ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
+                            : 'font-black text-gray-900'
+                        }`}>
                           {partido.marcador_visitante}
                         </p>
                       )}

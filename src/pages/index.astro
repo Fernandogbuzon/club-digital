@@ -255,7 +255,7 @@ const ultimoResultado: any = resultadosPasados[0];
         
         return (
         <div class={`bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl border-2 ${
-          haGanadoAdesa ? 'border-adesa-green' : 'border-gray-100'
+          haGanadoAdesa ? 'border-adesa-green' : 'border-red-500'
         }`} style="min-height: 300px; display: grid; grid-template-rows: auto 1fr auto; transition: box-shadow 0.3s ease-in-out;">
           
           <!-- Fila Superior: Meta (Categoría + Fecha) -->
@@ -274,7 +274,11 @@ const ultimoResultado: any = resultadosPasados[0];
                   {nombreLocal}
                 </p>
                 {ultimoResultado.marcador_local && ultimoResultado.marcador_visitante && (
-                  <p class="text-4xl font-black text-gray-900">
+                  <p class={`text-4xl ${
+                    esAdesaLocal
+                      ? (puntosAdesa > puntosRival ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
+                      : 'font-black text-gray-900'
+                  }`}>
                     {ultimoResultado.marcador_local}
                   </p>
                 )}
@@ -291,7 +295,11 @@ const ultimoResultado: any = resultadosPasados[0];
                   {nombreVisitante}
                 </p>
                 {ultimoResultado.marcador_local && ultimoResultado.marcador_visitante && (
-                  <p class="text-4xl font-black text-gray-900">
+                  <p class={`text-4xl ${
+                    !esAdesaLocal
+                      ? (puntosAdesa > puntosRival ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
+                      : 'font-black text-gray-900'
+                  }`}>
                     {ultimoResultado.marcador_visitante}
                   </p>
                 )}
