@@ -7,11 +7,11 @@
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
+    "fecha": "01/03/2026",
     "hora": "",
     "pabellon": "SALA BARRIO 512",
     "es_resultado": false,
-    "id": "22/02/2026_eleka_cb_puerto_real_adesa_80_cadete_masculino_-_regular_-_unico"
+    "id": "01/03/2026_eleka_cb_puerto_real_adesa_80_cadete_masculino_-_regular_-_unico"
   },
   {
     "categoria": "Cadete Masculino - REGULAR - ÚNICO",
@@ -21,11 +21,25 @@
     "ubicacion": "Local",
     "marcador_local": null,
     "marcador_visitante": null,
+    "fecha": "21/02/2026",
+    "hora": "",
+    "pabellon": "PDVO. MUNICIPAL",
+    "es_resultado": false,
+    "id": "21/02/2026_adesa_80_tecnohelp_centurias_cadete_masculino_-_regular_-_unico"
+  },
+  {
+    "categoria": "Cadete Masculino - REGULAR - ÚNICO",
+    "competicion": "Comp. Copa Andalucía A",
+    "equipo": "Cadete Masculino A",
+    "rival": "ISAVAL CBA",
+    "ubicacion": "Local",
+    "marcador_local": null,
+    "marcador_visitante": null,
     "fecha": "14/02/2026",
     "hora": "",
     "pabellon": "PDVO. MUNICIPAL",
     "es_resultado": false,
-    "id": "14/02/2026_adesa_80_tecnohelp_centurias_cadete_masculino_-_regular_-_unico"
+    "id": "14/02/2026_adesa_80_isaval_cba_cadete_masculino_-_regular_-_unico"
   },
   {
     "categoria": "Cadete Masculino - REGULAR - ÚNICO",
@@ -40,20 +54,6 @@
     "pabellon": "PDVO. MUNICIPAL",
     "es_resultado": false,
     "id": "11/02/2026_adesa_80_ubjerez_gris_cadete_masculino_-_regular_-_unico"
-  },
-  {
-    "categoria": "Cadete Masculino - REGULAR - ÚNICO",
-    "competicion": "Comp. Copa Andalucía A",
-    "equipo": "Cadete Masculino A",
-    "rival": "ISAVAL CBA",
-    "ubicacion": "Local",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "07/02/2026",
-    "hora": "18:30",
-    "pabellon": "PDVO. MUNICIPAL",
-    "es_resultado": false,
-    "id": "07/02/2026_adesa_80_isaval_cba_cadete_masculino_-_regular_-_unico"
   },
   {
     "categoria": "Cadete Masculino - REGULAR - ÚNICO",

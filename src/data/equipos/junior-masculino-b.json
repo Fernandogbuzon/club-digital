@@ -7,11 +7,25 @@
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "08/03/2026",
+    "fecha": "15/03/2026",
     "hora": "",
     "pabellon": "PAB. DEL PARQUE",
     "es_resultado": false,
-    "id": "08/03/2026_ipss_cbsfdo_adesa_80_junior_masculino_-_2ª_fase_-_grupo_2_b"
+    "id": "15/03/2026_ipss_cbsfdo_adesa_80_junior_masculino_-_2ª_fase_-_grupo_2_b"
+  },
+  {
+    "categoria": "Junior Masculino - 2ª FASE - GRUPO 2 B",
+    "competicion": "Comp. Copa Andalucía B",
+    "equipo": "Junior Masculino B",
+    "rival": "GYMNÁSTICA P.",
+    "ubicacion": "Local",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "07/03/2026",
+    "hora": "",
+    "pabellon": "PDVO. MUNICIPAL",
+    "es_resultado": false,
+    "id": "07/03/2026_adesa_80_gymnastica_p._junior_masculino_-_2ª_fase_-_grupo_2_b"
   },
   {
     "categoria": "Junior Masculino - 2ª FASE - GRUPO 2 B",
@@ -31,29 +45,15 @@
     "categoria": "Junior Masculino - 2ª FASE - GRUPO 2 B",
     "competicion": "Comp. Copa Andalucía B",
     "equipo": "Junior Masculino B",
-    "rival": "GYMNÁSTICA P.",
-    "ubicacion": "Local",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "21/02/2026",
-    "hora": "",
-    "pabellon": "PDVO. MUNICIPAL",
-    "es_resultado": false,
-    "id": "21/02/2026_adesa_80_gymnastica_p._junior_masculino_-_2ª_fase_-_grupo_2_b"
-  },
-  {
-    "categoria": "Junior Masculino - 2ª FASE - GRUPO 2 B",
-    "competicion": "Comp. Copa Andalucía B",
-    "equipo": "Junior Masculino B",
     "rival": "MONTERA GAFISUR",
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "15/02/2026",
+    "fecha": "22/02/2026",
     "hora": "",
     "pabellon": "PAB. SAMUEL AGUILAR",
     "es_resultado": false,
-    "id": "15/02/2026_montera_gafisur_adesa_80_junior_masculino_-_2ª_fase_-_grupo_2_b"
+    "id": "22/02/2026_montera_gafisur_adesa_80_junior_masculino_-_2ª_fase_-_grupo_2_b"
   },
   {
     "categoria": "Junior Masculino - 2ª FASE - GRUPO 2 B",

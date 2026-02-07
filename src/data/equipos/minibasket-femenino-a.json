@@ -35,25 +35,11 @@
     "ubicacion": "Local",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "14/03/2026",
+    "fecha": "21/03/2026",
     "hora": "",
     "pabellon": "PDVO. MUNICIPAL",
     "es_resultado": false,
-    "id": "14/03/2026_adesa_80_cbportuense_edase_minibasket_femenino_-_regular_-_unico"
-  },
-  {
-    "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
-    "competicion": "Comp. Copa Andalucía A",
-    "equipo": "Minibasket Femenino A",
-    "rival": "CD SAN FELIPE NERI",
-    "ubicacion": "Local",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "11/03/2026",
-    "hora": "18:00",
-    "pabellon": "PDVO. MUNICIPAL",
-    "es_resultado": false,
-    "id": "11/03/2026_adesa_80_cd_san_felipe_neri_minibasket_femenino_-_regular_-_unico"
+    "id": "21/03/2026_adesa_80_cbportuense_edase_minibasket_femenino_-_regular_-_unico"
   },
   {
     "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
@@ -63,11 +49,25 @@
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "08/03/2026",
+    "fecha": "15/03/2026",
     "hora": "",
     "pabellon": "PAB. ANDRÉS MATEO",
     "es_resultado": false,
-    "id": "08/03/2026_suzuki_camposur_cba_adesa_80_minibasket_femenino_-_regular_-_unico"
+    "id": "15/03/2026_suzuki_camposur_cba_adesa_80_minibasket_femenino_-_regular_-_unico"
+  },
+  {
+    "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
+    "competicion": "Comp. Copa Andalucía A",
+    "equipo": "Minibasket Femenino A",
+    "rival": "CD SAN FELIPE NERI",
+    "ubicacion": "Local",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "07/03/2026",
+    "hora": "18:00",
+    "pabellon": "PDVO. MUNICIPAL",
+    "es_resultado": false,
+    "id": "07/03/2026_adesa_80_cd_san_felipe_neri_minibasket_femenino_-_regular_-_unico"
   },
   {
     "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
@@ -77,11 +77,11 @@
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "14/02/2026",
+    "fecha": "21/02/2026",
     "hora": "",
     "pabellon": "COMPLEJO DEPORTIVO DE LA BAHÍA",
     "es_resultado": false,
-    "id": "14/02/2026_ondomus_centurias_adesa_80_minibasket_femenino_-_regular_-_unico"
+    "id": "21/02/2026_ondomus_centurias_adesa_80_minibasket_femenino_-_regular_-_unico"
   },
   {
     "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
@@ -91,11 +91,11 @@
     "ubicacion": "Local",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "07/02/2026",
-    "hora": "10:30",
+    "fecha": "14/02/2026",
+    "hora": "",
     "pabellon": "PDVO. MUNICIPAL",
     "es_resultado": false,
-    "id": "07/02/2026_adesa_80_ubjerez_gris_minibasket_femenino_-_regular_-_unico"
+    "id": "14/02/2026_adesa_80_ubjerez_gris_minibasket_femenino_-_regular_-_unico"
   },
   {
     "categoria": "Minibasket Femenino - REGULAR - ÚNICO",

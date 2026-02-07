@@ -70,6 +70,20 @@
     "id": "22/03/2026_adesa_80_cb_trebujena_premini_mixto_-_regular_-_grupo_b"
   },
   {
+    "categoria": "PreMini Mixto - REGULAR - GRUPO B",
+    "competicion": "Liga Pre-Minibasket",
+    "equipo": "PreMini Mixto",
+    "rival": "CADIZ CB GADES",
+    "ubicacion": "Visitante",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "14/03/2026",
+    "hora": "",
+    "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
+    "es_resultado": false,
+    "id": "14/03/2026_cadiz_cb_gades_adesa_80_premini_mixto_-_regular_-_grupo_b"
+  },
+  {
     "categoria": "PreMini Mixto - REGULAR - ÚNICO",
     "competicion": "Comp. 1º Año",
     "equipo": "PreMini Mixto",
@@ -87,15 +101,15 @@
     "categoria": "PreMini Mixto - REGULAR - GRUPO B",
     "competicion": "Liga Pre-Minibasket",
     "equipo": "PreMini Mixto",
-    "rival": "CADIZ CB GADES",
+    "rival": "GYMNASTICA PORTUENSE",
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "07/03/2026",
+    "fecha": "08/03/2026",
     "hora": "",
-    "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
+    "pabellon": "ANGELITA ALTA \"A\"",
     "es_resultado": false,
-    "id": "07/03/2026_cadiz_cb_gades_adesa_80_premini_mixto_-_regular_-_grupo_b"
+    "id": "08/03/2026_gymnastica_portuense_adesa_80_premini_mixto_-_regular_-_grupo_b"
   },
   {
     "categoria": "PreMini Mixto - REGULAR - ÚNICO",
@@ -115,15 +129,15 @@
     "categoria": "PreMini Mixto - REGULAR - GRUPO B",
     "competicion": "Liga Pre-Minibasket",
     "equipo": "PreMini Mixto",
-    "rival": "GYMNASTICA PORTUENSE",
-    "ubicacion": "Visitante",
+    "rival": "SERFLUID CBSFDO",
+    "ubicacion": "Local",
     "marcador_local": null,
     "marcador_visitante": null,
     "fecha": "22/02/2026",
     "hora": "",
-    "pabellon": "ANGELITA ALTA \"A\"",
+    "pabellon": "PDVO. MUNICIPAL",
     "es_resultado": false,
-    "id": "22/02/2026_gymnastica_portuense_adesa_80_premini_mixto_-_regular_-_grupo_b"
+    "id": "22/02/2026_adesa_80_serfluid_cbsfdo_premini_mixto_-_regular_-_grupo_b"
   },
   {
     "categoria": "PreMini Mixto - REGULAR - ÚNICO",
@@ -134,24 +148,10 @@
     "marcador_local": null,
     "marcador_visitante": null,
     "fecha": "07/02/2026",
-    "hora": "10:30",
+    "hora": "",
     "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
     "es_resultado": false,
     "id": "07/02/2026_karting_kr24-mergablo_adesa_80_premini_mixto_-_regular_-_unico"
-  },
-  {
-    "categoria": "PreMini Mixto - REGULAR - GRUPO B",
-    "competicion": "Liga Pre-Minibasket",
-    "equipo": "PreMini Mixto",
-    "rival": "SERFLUID CBSFDO",
-    "ubicacion": "Local",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "07/02/2026",
-    "hora": "12:30",
-    "pabellon": "PDVO. MUNICIPAL",
-    "es_resultado": false,
-    "id": "07/02/2026_adesa_80_serfluid_cbsfdo_premini_mixto_-_regular_-_grupo_b"
   },
   {
     "categoria": "PreMini Mixto - REGULAR - GRUPO B",

@@ -3,6 +3,20 @@
     "categoria": "Junior Masculino - REGULAR - ÚNICO",
     "competicion": "Comp. Copa Andalucía A",
     "equipo": "Junior Masculino A",
+    "rival": "STROG SHIPPING ULB",
+    "ubicacion": "Visitante",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "15/02/2026",
+    "hora": "",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": false,
+    "id": "15/02/2026_strog_shipping_ulb_adesa_80_junior_masculino_-_regular_-_unico"
+  },
+  {
+    "categoria": "Junior Masculino - REGULAR - ÚNICO",
+    "competicion": "Comp. Copa Andalucía A",
+    "equipo": "Junior Masculino A",
     "rival": "AIRWIFI - MERGABLO",
     "ubicacion": "Visitante",
     "marcador_local": null,
@@ -12,20 +26,6 @@
     "pabellon": "PDVO. MPAL. \"TORRE DE GUZMAN\"",
     "es_resultado": false,
     "id": "11/02/2026_airwifi_-_mergablo_adesa_80_junior_masculino_-_regular_-_unico"
-  },
-  {
-    "categoria": "Junior Masculino - REGULAR - ÚNICO",
-    "competicion": "Comp. Copa Andalucía A",
-    "equipo": "Junior Masculino A",
-    "rival": "STROG SHIPPING ULB",
-    "ubicacion": "Visitante",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "08/02/2026",
-    "hora": "13:00",
-    "pabellon": "PAB. MPAL. LA LINEA",
-    "es_resultado": false,
-    "id": "08/02/2026_strog_shipping_ulb_adesa_80_junior_masculino_-_regular_-_unico"
   },
   {
     "categoria": "Junior Masculino - REGULAR - ÚNICO",

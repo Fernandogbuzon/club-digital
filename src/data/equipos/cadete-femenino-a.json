@@ -7,11 +7,11 @@
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
+    "fecha": "01/03/2026",
     "hora": "",
     "pabellon": "PAB. DEL PARQUE",
     "es_resultado": false,
-    "id": "22/02/2026_sd_candray_motorecambios_del_sur_adesa_80_cadete_femenino_-_regular_-_unico"
+    "id": "01/03/2026_sd_candray_motorecambios_del_sur_adesa_80_cadete_femenino_-_regular_-_unico"
   },
   {
     "categoria": "Cadete Femenino - REGULAR - ÚNICO",
@@ -21,11 +21,11 @@
     "ubicacion": "Local",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "14/02/2026",
+    "fecha": "21/02/2026",
     "hora": "",
     "pabellon": "PDVO. MUNICIPAL",
     "es_resultado": false,
-    "id": "14/02/2026_adesa_80_cd_san_felipe_neri_cadete_femenino_-_regular_-_unico"
+    "id": "21/02/2026_adesa_80_cd_san_felipe_neri_cadete_femenino_-_regular_-_unico"
   },
   {
     "categoria": "Cadete Femenino - REGULAR - ÚNICO",
@@ -35,11 +35,11 @@
     "ubicacion": "Visitante",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "08/02/2026",
-    "hora": "10:30",
+    "fecha": "15/02/2026",
+    "hora": "",
     "pabellon": "PAB. Dr. JUAN CARLOS MATEO",
     "es_resultado": false,
-    "id": "08/02/2026_noatum_logistic_cba_adesa_80_cadete_femenino_-_regular_-_unico"
+    "id": "15/02/2026_noatum_logistic_cba_adesa_80_cadete_femenino_-_regular_-_unico"
   },
   {
     "categoria": "Cadete Femenino - REGULAR - ÚNICO",
