@@ -21,28 +21,25 @@ const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
 </head>
 <body class="font-sans antialiased">
   <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 bg-linear-to-br from-adesa-green to-adesa-dark rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl">A80</span>
-          </div>
-          <span class="text-xl font-bold text-gray-900">ADESA 80</span>
+        <div class="flex items-center">
+          <img src="/logo-adesa-sin-fondo.png" alt="ADESA 80" class="h-12 w-auto">
         </div>
         
         <div class="hidden md:flex items-center space-x-8">
-          <a href="/" class="text-gray-700 hover:text-adesa-green font-medium transition-colors">Inicio</a>
-          <a href="/noticias" class="text-gray-700 hover:text-adesa-green font-medium transition-colors">Noticias</a>
-          <a href="/partidos" class="text-gray-700 hover:text-adesa-green font-medium transition-colors">Partidos</a>
-          <a href="/eventos" class="text-gray-700 hover:text-adesa-green font-medium transition-colors">Eventos</a>
-          <a href="/tienda" class="text-gray-700 hover:text-adesa-green font-medium transition-colors">Tienda</a>
-          <a href="/club" class="text-gray-700 hover:text-adesa-green font-medium transition-colors">Club</a>
-          <a href="/campus" class="text-gray-700 hover:text-adesa-green font-medium transition-colors">Campus</a>
+          <a href="/" class="text-white hover:text-adesa-green font-medium transition-colors">Inicio</a>
+          <a href="/noticias" class="text-white hover:text-adesa-green font-medium transition-colors">Noticias</a>
+          <a href="/partidos" class="text-white hover:text-adesa-green font-medium transition-colors">Partidos</a>
+          <a href="/eventos" class="text-white hover:text-adesa-green font-medium transition-colors">Eventos</a>
+          <a href="/tienda" class="text-white hover:text-adesa-green font-medium transition-colors">Tienda</a>
+          <a href="/club" class="text-white hover:text-adesa-green font-medium transition-colors">Club</a>
+          <a href="/campus" class="text-white hover:text-adesa-green font-medium transition-colors">Campus</a>
         </div>
 
-        <button id="menuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
-          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button id="menuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
@@ -50,15 +47,15 @@ const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <div id="mobileMenu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
       <div class="px-4 py-3 space-y-2">
-        <a href="/" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-adesa-green font-medium transition-colors">Inicio</a>
-        <a href="/noticias" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-adesa-green font-medium transition-colors">Noticias</a>
-        <a href="/partidos" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-adesa-green font-medium transition-colors">Partidos</a>
-        <a href="/eventos" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-adesa-green font-medium transition-colors">Eventos</a>
-        <a href="/tienda" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-adesa-green font-medium transition-colors">Tienda</a>
-        <a href="/club" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-adesa-green font-medium transition-colors">Club</a>
-        <a href="/campus" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-green-50 hover:text-adesa-green font-medium transition-colors">Campus</a>
+        <a href="/" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Inicio</a>
+        <a href="/noticias" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Noticias</a>
+        <a href="/partidos" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Partidos</a>
+        <a href="/eventos" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Eventos</a>
+        <a href="/tienda" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Tienda</a>
+        <a href="/club" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Club</a>
+        <a href="/campus" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Campus</a>
       </div>
     </div>
   </nav>
@@ -96,11 +93,8 @@ const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <div class="flex items-center space-x-3 mb-4">
-            <div class="w-10 h-10 bg-linear-to-br from-adesa-green to-adesa-dark rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-xl">A80</span>
-            </div>
-            <span class="text-xl font-bold">ADESA 80</span>
+          <div class="flex items-center mb-4">
+            <img src="/logo-adesa-sin-fondo.png" alt="ADESA 80" class="h-12 w-auto">
           </div>
           <p class="text-gray-400">Club de Baloncesto con tradición y pasión por el deporte.</p>
         </div>
