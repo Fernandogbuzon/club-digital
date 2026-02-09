@@ -212,27 +212,27 @@ const partidosJSON = JSON.stringify(partidos);
   <section class="bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="bg-white/80 backdrop-blur-md rounded-3xl border border-gray-200/50 p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-        <!-- Fila Superior: Selector de Equipo (Apple Custom Style) -->
-        <div class="mb-8">
-          <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Seleccionar Equipo</label>
-          <select 
-            id="filtroEquipoMaestro"
-            class="select-maestro w-full px-5 py-4 border-2 border-gray-200/60 rounded-2xl font-medium text-gray-900 focus:border-adesa-green focus:shadow-md focus:outline-none focus:ring-4 focus:ring-adesa-green/10 transition-all duration-300 bg-white hover:bg-gray-50 appearance-none cursor-pointer shadow-sm hover:shadow-md"
-            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;"
-          >
-            <option value="all">Todos los equipos</option>
-            {equiposUnicos.map((equipo: string) => (
-              <option value={equipo} class="py-3 px-4 hover:bg-gray-100">{equipo}</option>
-            ))}
-          </select>
-        </div>
-        
-        <!-- Fila Inferior: Filtros Rápidos (Pills Ultra-Limpias) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Filtros en una sola línea centrados -->
+        <div class="flex flex-col lg:flex-row gap-6 items-center justify-center">
+          <!-- Selector de Equipo -->
+          <div class="w-full lg:w-80 flex-shrink-0">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 text-center">Seleccionar Equipo</label>
+            <select 
+              id="filtroEquipoMaestro"
+              class="select-maestro w-full px-5 py-4 border-2 border-gray-200/60 rounded-2xl font-medium text-gray-900 focus:border-adesa-green focus:shadow-md focus:outline-none focus:ring-4 focus:ring-adesa-green/10 transition-all duration-300 bg-white hover:bg-gray-50 appearance-none cursor-pointer shadow-sm hover:shadow-md"
+              style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;"
+            >
+              <option value="all">Todos los equipos</option>
+              {equiposUnicos.map((equipo: string) => (
+                <option value={equipo} class="py-3 px-4 hover:bg-gray-100">{equipo}</option>
+              ))}
+            </select>
+          </div>
+          
           <!-- Género -->
-          <div>
-            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Género</label>
-            <div class="flex flex-wrap gap-2">
+          <div class="flex-shrink-0">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 text-center">Género</label>
+            <div class="flex flex-wrap gap-2 justify-center">
               <button class="filtro-genero-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-adesa-green text-white shadow-md hover:shadow-lg hover:scale-105" data-genero="all">Todos</button>
               <button class="filtro-genero-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-genero="masculino">Masculino</button>
               <button class="filtro-genero-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-genero="femenino">Femenino</button>
@@ -241,9 +241,9 @@ const partidosJSON = JSON.stringify(partidos);
           </div>
           
           <!-- Ubicación -->
-          <div>
-            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Ubicación</label>
-            <div class="flex flex-wrap gap-2">
+          <div class="flex-shrink-0">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 text-center">Ubicación</label>
+            <div class="flex flex-wrap gap-2 justify-center">
               <button class="filtro-ubicacion-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-adesa-green text-white shadow-md hover:shadow-lg hover:scale-105" data-ubicacion="all">Todos</button>
               <button class="filtro-ubicacion-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-ubicacion="Local">Local</button>
               <button class="filtro-ubicacion-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-ubicacion="Visitante">Visitante</button>
@@ -288,10 +288,10 @@ const partidosJSON = JSON.stringify(partidos);
   <!-- Próximos Partidos -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" style="min-height: 400px;">
     <div class="mb-8">
-      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-2">
+      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-2 text-center">
         Próximos Partidos
       </h2>
-      <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark rounded-full"></div>
+      <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark mx-auto rounded-full"></div>
     </div>
     
     <!-- Mensaje de estado vacío (oculto por defecto) -->
