@@ -52,15 +52,21 @@ function parseFecha(fechaStr: string, horaStr: string): Date {
 partidos.sort((a, b) => parseFecha(a.fecha, a.hora).getTime() - parseFecha(b.fecha, b.hora).getTime());
 
 // ── Abreviaciones ────────────────────────────────────────────────────────────
-function abreviarCategoria(cat: string): string {
+function abreviarCategoria(cat: string, comp: string): string {
   const parte = cat.split(' - ')[0];
-  return parte
+  let abbr = parte
     .replace(/Senior/i, 'Sen').replace(/Junior/i, 'Jun')
     .replace(/Cadete/i, 'Cad').replace(/Infantil/i, 'Inf')
     .replace(/Minibasket/i, 'Mini').replace(/PreMini/i, 'Pre-Mini')
     .replace(/Babybasket/i, 'Baby')
     .replace(/Masculino/i, 'Masc').replace(/Femenino/i, 'Fem')
     .trim();
+  // Suffix de competición
+  const cl = comp.toLowerCase();
+  if (cl.includes('copa andalucia a') || cl.includes('copa andalucía a')) abbr += ' A';
+  else if (cl.includes('copa andalucia b') || cl.includes('copa andalucía b')) abbr += ' B';
+  else if (cl.includes('1 año') || cl.includes('1 ano')) abbr += ' 1ºAÑO';
+  return abbr;
 }
 
 const DIAS = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
@@ -101,7 +107,7 @@ const mesActualKey = `${ahora.getFullYear()}-${String(ahora.getMonth()).padStart
 const partidosJSON = JSON.stringify(partidos.map(p => ({
   ...p,
   _ts: parseFecha(p.fecha, p.hora).getTime(),
-  _catCorta: abreviarCategoria(p.categoria),
+  _catCorta: abreviarCategoria(p.categoria, p.competicion),
   _header: formatHeaderLine(p),
   _fechaCorta: fechaCorta(p.fecha),
 })));
@@ -155,10 +161,10 @@ const mesesJSON = JSON.stringify(mesesArr);
 
   /* ─── Card ─── */
   .mc {
-    flex: 0 0 220px;
-    height: 150px;
+    flex: 0 0 290px;
+    height: 185px;
     scroll-snap-align: center;
-    border-radius: 10px;
+    border-radius: 12px;
     background: #ffffff;
     display: flex;
     flex-direction: column;
@@ -179,17 +185,29 @@ const mesesJSON = JSON.stringify(mesesArr);
     background: #fafafa;
     flex-shrink: 0;
   }
+  .mc-cat {
+    font-size: 12px;
+    font-weight: 800;
+    color: #222;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .mc-info {
-    font-size: 8.5px;
+    font-size: 10px;
     font-weight: 600;
-    color: #666;
+    color: #777;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.3;
+    margin-top: 1px;
   }
   .mc-label {
-    font-size: 8px;
+    font-size: 8.5px;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: #999;
@@ -201,9 +219,28 @@ const mesesJSON = JSON.stringify(mesesArr);
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 12px;
+    justify-content: center;
+    padding: 0 10px;
     min-height: 0;
+    gap: 0;
+  }
+  .mc-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mc-center-vs {
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mc-right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* ─── Scores ─── */
@@ -213,42 +250,60 @@ const mesesJSON = JSON.stringify(mesesArr);
     gap: 0;
   }
   .mc-score {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 900;
-    font-size: 34px;
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 50px;
     line-height: 1;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
   }
   .mc-sep {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 32px;
     color: #d1d5db;
-    margin: 0 3px;
+    margin: 0 1px;
     line-height: 1;
   }
-  .s-win { color: #16a34a; }
+  .s-win { color: #15803d; }
   .s-loss { color: #dc2626; }
   .s-neutral { color: #111827; }
 
   /* ─── Future date ─── */
+  .mc-future-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
   .mc-future {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 900;
-    font-size: 26px;
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
     color: #111827;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     line-height: 1;
     text-transform: uppercase;
+  }
+  .mc-time {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #6b7280;
+    line-height: 1;
+    letter-spacing: 0.02em;
   }
 
   /* ─── Countdown ─── */
   .mc-countdown {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-    color: #16a34a;
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #15803d;
     line-height: 1;
     letter-spacing: -0.01em;
+    display: block;
+    text-align: center;
+    width: 100%;
   }
   .mc-live {
     font-weight: 900;
@@ -263,36 +318,38 @@ const mesesJSON = JSON.stringify(mesesArr);
     50% { opacity: 0.3; }
   }
 
-  /* ─── VS + Rival ─── */
-  .mc-right {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
-  }
   .mc-vs {
-    font-size: 14px;
-    font-weight: 800;
-    color: #c0c0c0;
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #b0b0b0;
+    letter-spacing: 0.02em;
   }
-  .mc-rival-circle {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #f3f4f6;
-    border: 2px solid #e5e7eb;
+  .mc-rival-name {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 8px;
-    font-weight: 800;
-    color: #374151;
     text-align: center;
-    line-height: 1.1;
-    padding: 2px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #374151;
+    line-height: 1.2;
+    padding: 4px;
     text-transform: uppercase;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
+    max-width: 90px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .mc-rival-logo {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #fff;
+    border: 2px solid #e5e7eb;
     flex-shrink: 0;
+    padding: 3px;
   }
 
   /* ─── Footer button ─── */
@@ -321,7 +378,7 @@ const mesesJSON = JSON.stringify(mesesArr);
     color: #fff;
   }
   .mc-btn-green {
-    background: #16a34a;
+    background: #15803d;
     color: #fff;
   }
   .mc-btn-red {
@@ -345,17 +402,19 @@ const mesesJSON = JSON.stringify(mesesArr);
   }
   .mn-btn:hover { color: #ddd; }
   .mn-btn.active {
-    color: #22c55e;
+    color: #16a34a;
     font-weight: 800;
     font-size: 13px;
   }
 
   @media (max-width: 640px) {
-    .mc { flex: 0 0 190px; height: 140px; }
-    .mc-score { font-size: 28px; }
-    .mc-future { font-size: 22px; }
-    .mc-countdown { font-size: 18px; }
-    .mc-rival-circle { width: 36px; height: 36px; font-size: 7px; }
+    .mc { flex: 0 0 240px; height: 165px; }
+    .mc-score { font-size: 38px; }
+    .mc-future { font-size: 30px; }
+    .mc-time { font-size: 17px; }
+    .mc-countdown { font-size: 26px; }
+    .mc-rival-name { font-size: 9px; max-width: 70px; }
+    .mc-rival-logo { width: 64px; height: 64px; }
     .mn-btn { font-size: 10px; padding: 2px 5px; }
   }
 </style>
@@ -408,9 +467,7 @@ const mesesJSON = JSON.stringify(mesesArr);
       let headerInfo = p._header;
       let headerLabel = '';
 
-      if (isPlayed) {
-        headerLabel = '- RESULTADO -';
-      } else if (isLive) {
+      if (isLive) {
         headerLabel = '';
       }
 
@@ -439,7 +496,8 @@ const mesesJSON = JSON.stringify(mesesArr);
       } else if (isUrgent) {
         leftHTML = `<span class="mc-countdown" data-countdown="${ts}"></span>`;
       } else {
-        leftHTML = `<span class="mc-future">${p._fechaCorta}</span>`;
+        const horaStr = p.hora && p.hora.includes(':') ? p.hora : '';
+        leftHTML = `<div class="mc-future-block"><span class="mc-future">${p._fechaCorta}</span>${horaStr ? `<span class="mc-time">${horaStr}</span>` : ''}</div>`;
       }
 
       // ── Footer button ──
@@ -455,18 +513,107 @@ const mesesJSON = JSON.stringify(mesesArr);
       // ── Rival ──
       const initials = rivalInitials(p.rival);
       const rivalClean = p.rival.replace(/^- /, '').replace(/ - $/, '').trim();
+      const rivalLower = rivalClean.toLowerCase();
+
+      // Mapa de logos: nombre parcial → archivo en /logos/
+      const logoMap = [
+        // UBJerez
+        [r => r.includes('ubjerez') || r.includes('ubj') || (r.includes('jerez') && r.includes('bcto')), 'ubjerez.png'],
+        // CB Portuense
+        [r => r.includes('portuense') || r.includes('cbp '), 'cbportuense.png'],
+        // Gymnástica Portuense
+        [r => r.includes('gymnastica') || r.includes('gymnástica'), 'gymnastica.png'],
+        // CB San Fernando / CBSFDO
+        [r => r.includes('cbsfdo') || r.includes('cb san fernando') || r.includes('san fernando'), 'cbsanfernando.png'],
+        // Centurias (CD Centurias San Roque)
+        [r => r.includes('centurias'), 'sanroque.png'],
+        // CBA (CB Algeciras)
+        [r => r.startsWith('cba') || r.includes(' cba'), 'cbalgeciras.png'],
+        // CB Gades
+        [r => r.includes('gades'), 'cbgades.png'],
+        // CBC Cádiz (CB Ciudad de Cádiz)
+        [r => r.includes('cbc cádiz') || r.includes('cbc cadiz'), 'cbciudaddecadiz.png'],
+        // AD Marianistas
+        [r => r.includes('marianistas'), 'admarianistas.png'],
+        // Mergablo
+        [r => r.includes('mergablo'), 'cdmergablo.png'],
+        // CB Chipiona
+        [r => r.includes('chipiona'), 'chipionacb.png'],
+        // CB Puerto Real
+        [r => r.includes('puerto real'), 'puertoreal.png'],
+        // CB Medina Sidonia
+        [r => r.includes('medina'), 'cbmedinasidonia.png'],
+        // SD Candray
+        [r => r.includes('candray'), 'candray.png'],
+        // C.A.B.U.
+        [r => r.includes('c.a.b.u') || r.includes('cabu') || r.includes('carbu'), 'cabu.png'],
+        // CB Cimbis
+        [r => r.includes('cimbis'), 'cbcimbis.png'],
+        // Urbaluz / UZ Red Devils
+        [r => r.includes('urbaluz') || r.includes('uz red'), 'urbaluz.png'],
+        // CD San Felipe Neri
+        [r => r.includes('san felipe') || r.includes('neri'), 'sanfelipeneri.png'],
+        // ADCarteia
+        [r => r.includes('carteia'), 'ADCarteia.png'],
+        // CB Algeciras / CD UDEA Algeciras
+        [r => r.includes('algeciras') && !r.includes('udea'), 'cbalgeciras.png'],
+        [r => r.includes('udea'), 'cdudeaalgeciras.png'],
+        // Arcos
+        [r => r.includes('arcos'), 'arcos.png'],
+        // CB Chiclana / Ituci
+        [r => r.includes('chiclana') || r.includes('ituci'), 'cbchiclana.png'],
+        // Deportes Alcalá / Alcalá de los Gazules
+        [r => r.includes('alcalá') || r.includes('alcala') || r.includes('gazules'), 'alcaladelosgazules.png'],
+        // CB Rota
+        [r => r.includes('rota'), 'cbrota.png'],
+        // Los Barrios
+        [r => r.includes('barrios'), 'losbarrios.png'],
+        // San Roque
+        [r => r.includes('san roque'), 'sanroque.png'],
+        // CP Don Bosco
+        [r => r.includes('don bosco'), 'cpdonbosco.png'],
+        // EBM Vejer
+        [r => r.includes('vejer'), 'ebmvejer.png'],
+        // Xerez CD
+        [r => r.includes('xerez'), 'xerezcd.png'],
+        // ULB / Unión Linense
+        [r => r.includes('ulb') || r.includes('linense'), 'ulblinense.png'],
+        // CD Barbate
+        [r => r.includes('barbate'), 'cdbarbate.png'],
+        // Prado del Rey
+        [r => r.includes('prado'), 'cbpradodelrey.png'],
+        // CB Sancti Petri
+        [r => r.includes('sancti petri'), 'sanctipetri.png'],
+        // Montera
+        [r => r.includes('montera'), 'cdmergablo.png'],
+        // ADC La Algaida
+        [r => r.includes('algaida'), 'adcalgaida.png'],
+        // GABBA
+        [r => r.includes('gabba'), 'cbalgeciras.png'],
+      ];
+
+      let logoFile = null;
+      for (const [matcher, file] of logoMap) {
+        if (matcher(rivalLower)) { logoFile = file; break; }
+      }
+      
+      let rivalBubble;
+      if (logoFile) {
+        rivalBubble = `<img src="/logos/${logoFile}" alt="${rivalClean}" class="mc-rival-logo" title="${rivalClean}">`;
+      } else {
+        rivalBubble = `<div class="mc-rival-name" title="${rivalClean}">${rivalClean}</div>`;
+      }
 
       div.innerHTML = `
         <div class="mc-head">
-          <div class="mc-info">${p._catCorta} · ${headerInfo}</div>
+          <div class="mc-cat">${p._catCorta}</div>
+          <div class="mc-info">${headerInfo}</div>
           ${headerLabel ? `<div class="mc-label">${headerLabel}</div>` : ''}
         </div>
         <div class="mc-body">
-          <div>${leftHTML}</div>
-          <div class="mc-right">
-            <span class="mc-vs">VS.</span>
-            <div class="mc-rival-circle" title="${rivalClean}">${initials}</div>
-          </div>
+          <div class="mc-left">${leftHTML}</div>
+          <div class="mc-center-vs"><span class="mc-vs">VS.</span></div>
+          <div class="mc-right-side">${rivalBubble}</div>
         </div>
         ${btnHTML}
       `;
@@ -507,12 +654,20 @@ const mesesJSON = JSON.stringify(mesesArr);
     });
 
     document.getElementById('nav-prev').addEventListener('click', () => {
-      const i = meses.findIndex(m => m.key === activeMonthKey);
-      if (i > 0) scrollToMonth(meses[i-1].key, meses[i-1].firstIdx);
+      const cards = track.querySelectorAll('.mc');
+      const tr = track.getBoundingClientRect();
+      const cx = tr.left + tr.width / 2;
+      let ci = 0, cd = Infinity;
+      cards.forEach((c, i) => { const d = Math.abs(c.getBoundingClientRect().left + c.getBoundingClientRect().width / 2 - cx); if (d < cd) { cd = d; ci = i; } });
+      if (ci > 0) cards[ci - 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     });
     document.getElementById('nav-next').addEventListener('click', () => {
-      const i = meses.findIndex(m => m.key === activeMonthKey);
-      if (i < meses.length - 1) scrollToMonth(meses[i+1].key, meses[i+1].firstIdx);
+      const cards = track.querySelectorAll('.mc');
+      const tr = track.getBoundingClientRect();
+      const cx = tr.left + tr.width / 2;
+      let ci = 0, cd = Infinity;
+      cards.forEach((c, i) => { const d = Math.abs(c.getBoundingClientRect().left + c.getBoundingClientRect().width / 2 - cx); if (d < cd) { cd = d; ci = i; } });
+      if (ci < cards.length - 1) cards[ci + 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     });
 
     // Detect visible month on scroll

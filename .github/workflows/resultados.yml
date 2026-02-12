@@ -1,0 +1,101 @@
+name: ⚡ Resultados Rápidos ADESA 80
+
+on:
+  # Horario de partidos — cada 10 minutos
+  schedule:
+    # Viernes 17:00–23:50 UTC+1 → 16:00–22:50 UTC
+    - cron: '*/10 16-22 * * 5'
+    # Sábado 9:00–22:50 UTC+1 → 8:00–21:50 UTC
+    - cron: '*/10 8-21 * * 6'
+    # Domingo 9:00–22:50 UTC+1 → 8:00–21:50 UTC
+    - cron: '*/10 8-21 * * 0'
+    # Entre semana 18:00–22:50 UTC+1 → 17:00–21:50 UTC (por si hay partidos)
+    - cron: '*/10 17-21 * * 1-4'
+
+  # Lanzar manualmente desde GitHub
+  workflow_dispatch:
+
+concurrency:
+  group: scraper-resultados
+  cancel-in-progress: true
+
+jobs:
+  actualizar-resultados:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 📥 Checkout código
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Instalar dependencias Python
+        run: |
+          pip install playwright playwright-stealth
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: 🔍 Comprobar partidos pendientes
+        id: check
+        run: |
+          RESULT=$(python scraper_resultados.py --check 2>&1)
+          echo "$RESULT"
+          if echo "$RESULT" | grep -q "No hay partidos pendientes"; then
+            echo "pendientes=false" >> $GITHUB_OUTPUT
+            echo "✅ No hay partidos pendientes"
+          else
+            echo "pendientes=true" >> $GITHUB_OUTPUT
+            NPEND=$(echo "$RESULT" | grep -oP '\d+(?= partido\(s\) pendiente)')
+            echo "num_pendientes=$NPEND" >> $GITHUB_OUTPUT
+            echo "⚠️ $NPEND partido(s) pendiente(s)"
+          fi
+
+      - name: ⚡ Scraping rápido de resultados
+        if: steps.check.outputs.pendientes == 'true'
+        run: |
+          # xvfb para pantalla virtual (Cloudflare necesita modo headed)
+          sudo apt-get install -y xvfb > /dev/null 2>&1
+          xvfb-run --auto-servernum --server-args="-screen 0 1366x768x24" \
+            python scraper_resultados.py 2>&1 || true
+
+      - name: 📊 Verificar cambios en JSONs
+        id: cambios
+        run: |
+          if git diff --quiet src/data/; then
+            echo "hay_cambios=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ No hay cambios en los datos"
+          else
+            echo "hay_cambios=true" >> $GITHUB_OUTPUT
+            echo "✅ Se detectaron resultados nuevos"
+            git diff --stat src/data/
+          fi
+
+      - name: 💾 Commit y push resultados
+        if: steps.cambios.outputs.hay_cambios == 'true'
+        run: |
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          git add src/data/
+          
+          TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
+          
+          git commit -m "⚡ Resultados actualizados - ${TIMESTAMP}" \
+                     -m "Actualización automática de resultados de partidos ADESA 80"
+          
+          git push
+
+      - name: 📝 Resumen
+        if: always()
+        run: |
+          echo "### ⚡ Scraper Rápido de Resultados" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Fecha:** $(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M') (España)" >> $GITHUB_STEP_SUMMARY
+          echo "**Pendientes:** ${{ steps.check.outputs.pendientes }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Resultados nuevos:** ${{ steps.cambios.outputs.hay_cambios || 'N/A' }}" >> $GITHUB_STEP_SUMMARY
