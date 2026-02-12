@@ -1,0 +1,117 @@
+{
+  "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
+  "competicion": "Comp 1 Año",
+  "ultima_actualizacion": "2026-02-12T18:33:23.118104",
+  "clasificacion": [
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 10,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 0,
+      "puntos_favor": 553,
+      "puntos_contra": 240,
+      "diferencia": 313,
+      "puntos": 20,
+      "posicion": 1
+    },
+    {
+      "equipo": "CADIZ CB GADES BLV PROYECT 2025",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 548,
+      "puntos_contra": 338,
+      "diferencia": 210,
+      "puntos": 19,
+      "posicion": 2
+    },
+    {
+      "equipo": "ENSO - MERGABLO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 3,
+      "puntos_favor": 592,
+      "puntos_contra": 428,
+      "diferencia": 164,
+      "puntos": 17,
+      "posicion": 3
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 4,
+      "puntos_favor": 493,
+      "puntos_contra": 527,
+      "diferencia": -34,
+      "puntos": 16,
+      "posicion": 4
+    },
+    {
+      "equipo": "CB TREBUJENA",
+      "partidos_jugados": 9,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 3,
+      "puntos_favor": 473,
+      "puntos_contra": 412,
+      "diferencia": 61,
+      "puntos": 15,
+      "posicion": 5
+    },
+    {
+      "equipo": "C.A.B.U. 5ºF",
+      "partidos_jugados": 9,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 4,
+      "puntos_favor": 428,
+      "puntos_contra": 420,
+      "diferencia": 8,
+      "puntos": 14,
+      "posicion": 6
+    },
+    {
+      "equipo": "CD ADC LA ALGAIDA",
+      "partidos_jugados": 10,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 7,
+      "puntos_favor": 325,
+      "puntos_contra": 431,
+      "diferencia": -106,
+      "puntos": 13,
+      "posicion": 7
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 359,
+      "puntos_contra": 420,
+      "diferencia": -61,
+      "puntos": 12,
+      "posicion": 8
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 10,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 9,
+      "puntos_favor": 356,
+      "puntos_contra": 504,
+      "diferencia": -148,
+      "puntos": 11,
+      "posicion": 9
+    },
+    {
+      "equipo": "Deportes Alcalá",
+      "partidos_jugados": 10,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 10,
+      "puntos_favor": 67,
+      "puntos_contra": 474,
+      "diferencia": -407,
+      "puntos": 10,
+      "posicion": 10
+    }
+  ]
+}

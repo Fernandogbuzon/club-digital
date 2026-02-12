@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 25,
+    "marcador_visitante": 13,
+    "fecha": "27/09/2025",
+    "hora": "09:50",
+    "pabellon": "PAB. DEL PARQUE Pista 2",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Femenino - +40 - GRUPO B",
+    "equipo": "PALMA SPORT +40",
+    "rival": "PASEK +40",
+    "ubicacion": "Local",
+    "id": "27092025_palma-sport-40_pasek-40_senior-femenino-40-grupo-b"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 25,
+    "marcador_visitante": 13,
+    "fecha": "27/09/2025",
+    "hora": "09:50",
+    "pabellon": "PAB. DEL PARQUE Pista 2",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 27/09/2025",
+    "categoria": "Senior Femenino - +40 - GRUPO B",
+    "equipo": "PALMA SPORT +40",
+    "rival": "PASEK +40",
+    "ubicacion": "Local",
+    "id": "27092025_palma-sport-40_pasek-40_senior-femenino-40-grupo-b"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 21,
+    "marcador_visitante": 2,
+    "fecha": "27/09/2025",
+    "hora": "14:50",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 27/09/2025",
+    "categoria": "Senior Femenino - +40 - GRUPO B",
+    "equipo": "PALMA SPORT +40",
+    "rival": "PONTEVEDRA +40",
+    "ubicacion": "Local",
+    "id": "27092025_palma-sport-40_pontevedra-40_senior-femenino-40-grupo-b"
+  }
+]

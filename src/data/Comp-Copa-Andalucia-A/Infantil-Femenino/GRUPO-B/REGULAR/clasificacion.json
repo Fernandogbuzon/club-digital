@@ -1,0 +1,73 @@
+{
+  "categoria": "Infantil Femenino - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:27:17.239477",
+  "clasificacion": [
+    {
+      "equipo": "SD CANDRAY E3 INGENIA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 0,
+      "puntos_favor": 806,
+      "puntos_contra": 420,
+      "diferencia": 386,
+      "puntos": 22,
+      "posicion": 1
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 11,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 2,
+      "puntos_favor": 734,
+      "puntos_contra": 588,
+      "diferencia": 146,
+      "puntos": 20,
+      "posicion": 2
+    },
+    {
+      "equipo": "FASE INMOBILIARIA CBA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 4,
+      "puntos_favor": 565,
+      "puntos_contra": 561,
+      "diferencia": 4,
+      "puntos": 18,
+      "posicion": 3
+    },
+    {
+      "equipo": "CB SAN FERNANDO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 616,
+      "puntos_contra": 721,
+      "diferencia": -105,
+      "puntos": 14,
+      "posicion": 4
+    },
+    {
+      "equipo": "GYMNÁSTICA PORTUENSE",
+      "partidos_jugados": 11,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 9,
+      "puntos_favor": 443,
+      "puntos_contra": 665,
+      "diferencia": -222,
+      "puntos": 13,
+      "posicion": 5
+    },
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 11,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 10,
+      "puntos_favor": 461,
+      "puntos_contra": 670,
+      "diferencia": -209,
+      "puntos": 12,
+      "posicion": 6
+    }
+  ]
+}

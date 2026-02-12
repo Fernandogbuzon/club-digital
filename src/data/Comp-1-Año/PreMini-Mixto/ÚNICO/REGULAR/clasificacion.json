@@ -1,0 +1,73 @@
+{
+  "categoria": "PreMini Mixto - REGULAR - ÚNICO",
+  "competicion": "Comp 1 Año",
+  "ultima_actualizacion": "2026-02-12T18:38:06.357307",
+  "clasificacion": [
+    {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 1
+    },
+    {
+      "equipo": "CB PORTUENSE 2017 AYUDATPYMES",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 2
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 3
+    },
+    {
+      "equipo": "CARPE DIEM CBSFDO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 4
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI 2017",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 5
+    },
+    {
+      "equipo": "KARTING KR24-MERGABLO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 6
+    }
+  ]
+}

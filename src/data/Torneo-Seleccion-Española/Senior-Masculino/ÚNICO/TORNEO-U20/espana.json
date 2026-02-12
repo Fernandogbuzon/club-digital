@@ -1,0 +1,62 @@
+[
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 73,
+    "marcador_visitante": 65,
+    "fecha": "06/07/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 06/07/2025",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "ESPAÑA",
+    "rival": "FRANCIA",
+    "ubicacion": "Local",
+    "id": "06072025_espana_francia_senior-masculino-torneo-u20-unico"
+  },
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 62,
+    "marcador_visitante": 43,
+    "fecha": "05/07/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "Jornada 2 - 05/07/2025",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "ESPAÑA",
+    "rival": "LITUANIA",
+    "ubicacion": "Local",
+    "id": "05072025_espana_lituania_senior-masculino-torneo-u20-unico"
+  },
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 69,
+    "marcador_visitante": 52,
+    "fecha": "04/07/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "ESPAÑA",
+    "rival": "BÉLGICA",
+    "ubicacion": "Local",
+    "id": "04072025_espana_belgica_senior-masculino-torneo-u20-unico"
+  },
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 69,
+    "marcador_visitante": 52,
+    "fecha": "04/07/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 04/07/2025",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "ESPAÑA",
+    "rival": "BÉLGICA",
+    "ubicacion": "Local",
+    "id": "04072025_espana_belgica_senior-masculino-torneo-u20-unico"
+  }
+]

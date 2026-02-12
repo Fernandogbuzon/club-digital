@@ -1,0 +1,73 @@
+{
+  "categoria": "Cadete Mixto - 2ª FASE - GRUPO 4",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:29:23.345043",
+  "clasificacion": [
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 5,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 0,
+      "puntos_favor": 373,
+      "puntos_contra": 237,
+      "diferencia": 136,
+      "puntos": 10,
+      "posicion": 1
+    },
+    {
+      "equipo": "COPICENTRO CBA AMARILLO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 300,
+      "puntos_contra": 191,
+      "diferencia": 109,
+      "puntos": 9,
+      "posicion": 2
+    },
+    {
+      "equipo": "RECUPERA-T MERGABLO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 333,
+      "puntos_contra": 249,
+      "diferencia": 84,
+      "puntos": 9,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 5,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 3,
+      "puntos_favor": 272,
+      "puntos_contra": 251,
+      "diferencia": 21,
+      "puntos": 7,
+      "posicion": 4
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 5,
+      "puntos_favor": 191,
+      "puntos_contra": 310,
+      "diferencia": -119,
+      "puntos": 5,
+      "posicion": 5
+    },
+    {
+      "equipo": "CD MONTERA BALONCESTO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 5,
+      "puntos_favor": 125,
+      "puntos_contra": 356,
+      "diferencia": -231,
+      "puntos": 5,
+      "posicion": 6
+    }
+  ]
+}

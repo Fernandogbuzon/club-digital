@@ -1,0 +1,95 @@
+{
+  "categoria": "Minibasket Femenino - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:31:59.597615",
+  "clasificacion": [
+    {
+      "equipo": "TU COLADA PERFECTA CB PUERTO REAL",
+      "partidos_jugados": 10,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 0,
+      "puntos_favor": 589,
+      "puntos_contra": 253,
+      "diferencia": 336,
+      "puntos": 20,
+      "posicion": 1
+    },
+    {
+      "equipo": "Gazul Forestal Alcalá",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 489,
+      "puntos_contra": 167,
+      "diferencia": 322,
+      "puntos": 19,
+      "posicion": 2
+    },
+    {
+      "equipo": "CBA",
+      "partidos_jugados": 9,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 2,
+      "puntos_favor": 402,
+      "puntos_contra": 236,
+      "diferencia": 166,
+      "puntos": 16,
+      "posicion": 3
+    },
+    {
+      "equipo": "SD CANDRAY AMARILLO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 3,
+      "puntos_favor": 280,
+      "puntos_contra": 326,
+      "diferencia": -46,
+      "puntos": 13,
+      "posicion": 4
+    },
+    {
+      "equipo": "AMOR DE DIOS",
+      "partidos_jugados": 9,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 7,
+      "puntos_favor": 332,
+      "puntos_contra": 446,
+      "diferencia": -114,
+      "puntos": 11,
+      "posicion": 5
+    },
+    {
+      "equipo": "FENIE ENERGÍA CBC CÁDIZ",
+      "partidos_jugados": 10,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 9,
+      "puntos_favor": 360,
+      "puntos_contra": 560,
+      "diferencia": -200,
+      "puntos": 11,
+      "posicion": 6
+    },
+    {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 9,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 7,
+      "puntos_favor": 255,
+      "puntos_contra": 501,
+      "diferencia": -246,
+      "puntos": 11,
+      "posicion": 7
+    },
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 9,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 8,
+      "puntos_favor": 218,
+      "puntos_contra": 436,
+      "diferencia": -218,
+      "puntos": 10,
+      "posicion": 8
+    }
+  ]
+}

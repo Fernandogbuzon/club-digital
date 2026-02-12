@@ -1,0 +1,73 @@
+{
+  "categoria": "Infantil Femenino - REGULAR - GRUPO A",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:27:13.171859",
+  "clasificacion": [
+    {
+      "equipo": "SUMITECNIC-ULB",
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 0,
+      "puntos_favor": 761,
+      "puntos_contra": 415,
+      "diferencia": 346,
+      "puntos": 22,
+      "posicion": 1
+    },
+    {
+      "equipo": "CADIZ CB GADES RECUP. CHICHOS ANDALUCÍA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 2,
+      "puntos_favor": 561,
+      "puntos_contra": 456,
+      "diferencia": 105,
+      "puntos": 20,
+      "posicion": 2
+    },
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 11,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 534,
+      "puntos_contra": 519,
+      "diferencia": 15,
+      "puntos": 17,
+      "posicion": 3
+    },
+    {
+      "equipo": "MÁRMOLES GADES CB PUERTO REAL",
+      "partidos_jugados": 11,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 7,
+      "puntos_favor": 527,
+      "puntos_contra": 555,
+      "diferencia": -28,
+      "puntos": 15,
+      "posicion": 4
+    },
+    {
+      "equipo": "TELETRONIC CENTURIAS",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 514,
+      "puntos_contra": 605,
+      "diferencia": -91,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 11,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 11,
+      "puntos_favor": 374,
+      "puntos_contra": 721,
+      "diferencia": -347,
+      "puntos": 11,
+      "posicion": 6
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 24,
+    "marcador_visitante": 10,
+    "fecha": "27/09/2025",
+    "hora": "17:20",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Femenino - FASE FINAL +40 - ÚNICO",
+    "equipo": "PALMA SPORT +40",
+    "rival": "PUERTOLLANO +40",
+    "ubicacion": "Visitante",
+    "id": "27092025_puertollano-40_palma-sport-40_senior-femenino-fase-final-40-unico"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 24,
+    "marcador_visitante": 10,
+    "fecha": "27/09/2025",
+    "hora": "17:20",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 27/09/2025",
+    "categoria": "Senior Femenino - FASE FINAL +40 - ÚNICO",
+    "equipo": "PALMA SPORT +40",
+    "rival": "PUERTOLLANO +40",
+    "ubicacion": "Visitante",
+    "id": "27092025_puertollano-40_palma-sport-40_senior-femenino-fase-final-40-unico"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 15,
+    "marcador_visitante": 20,
+    "fecha": "27/09/2025",
+    "hora": "19:00",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 27/09/2025",
+    "categoria": "Senior Femenino - FASE FINAL +40 - ÚNICO",
+    "equipo": "PALMA SPORT +40",
+    "rival": "SAN ROQUE +40",
+    "ubicacion": "Local",
+    "id": "27092025_palma-sport-40_san-roque-40_senior-femenino-fase-final-40-unico"
+  }
+]

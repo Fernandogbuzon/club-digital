@@ -1,0 +1,40 @@
+{
+  "categoria": "Senior Femenino - +45/+50 - +50",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:41:35.361735",
+  "clasificacion": [
+    {
+      "equipo": "MQV ALFA +50",
+      "partidos_jugados": 3,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 73,
+      "puntos_contra": 54,
+      "diferencia": 19,
+      "puntos": 6,
+      "posicion": 1
+    },
+    {
+      "equipo": "GOLDEN CAB +50",
+      "partidos_jugados": 3,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 2,
+      "puntos_favor": 81,
+      "puntos_contra": 50,
+      "diferencia": 31,
+      "puntos": 4,
+      "posicion": 2
+    },
+    {
+      "equipo": "SANTANYI +50",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 28,
+      "puntos_contra": 78,
+      "diferencia": -50,
+      "puntos": 2,
+      "posicion": 3
+    }
+  ]
+}

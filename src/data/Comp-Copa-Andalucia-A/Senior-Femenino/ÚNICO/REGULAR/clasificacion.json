@@ -1,0 +1,128 @@
+{
+  "categoria": "Senior Femenino - REGULAR - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:24:58.222819",
+  "clasificacion": [
+    {
+      "equipo": "SD CANDRAY AISH UNIDAD DE REPRODUCCIÓN",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 1,
+      "puntos_favor": 800,
+      "puntos_contra": 478,
+      "diferencia": 322,
+      "puntos": 21,
+      "posicion": 1
+    },
+    {
+      "equipo": "GYMNÁSTICA P.",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 1,
+      "puntos_favor": 626,
+      "puntos_contra": 499,
+      "diferencia": 127,
+      "puntos": 21,
+      "posicion": 2
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 3,
+      "puntos_favor": 781,
+      "puntos_contra": 664,
+      "diferencia": 117,
+      "puntos": 19,
+      "posicion": 3
+    },
+    {
+      "equipo": "CADIZ CB GADES OLIMPIA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 4,
+      "puntos_favor": 673,
+      "puntos_contra": 634,
+      "diferencia": 39,
+      "puntos": 18,
+      "posicion": 4
+    },
+    {
+      "equipo": "PTP GROUP CB PUERTO REAL",
+      "partidos_jugados": 11,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 665,
+      "puntos_contra": 540,
+      "diferencia": 125,
+      "puntos": 17,
+      "posicion": 5
+    },
+    {
+      "equipo": "C.A.B.U.",
+      "partidos_jugados": 11,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 606,
+      "puntos_contra": 578,
+      "diferencia": 28,
+      "puntos": 17,
+      "posicion": 6
+    },
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 11,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 6,
+      "puntos_favor": 548,
+      "puntos_contra": 601,
+      "diferencia": -53,
+      "puntos": 16,
+      "posicion": 7
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 11,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 7,
+      "puntos_favor": 624,
+      "puntos_contra": 647,
+      "diferencia": -23,
+      "puntos": 15,
+      "posicion": 8
+    },
+    {
+      "equipo": "TRANSPORTES VALIENTE CBSFDO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 9,
+      "puntos_favor": 635,
+      "puntos_contra": 740,
+      "diferencia": -105,
+      "puntos": 13,
+      "posicion": 9
+    },
+    {
+      "equipo": "TRANSMOLIEX CBA",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 453,
+      "puntos_contra": 619,
+      "diferencia": -166,
+      "puntos": 12,
+      "posicion": 10
+    },
+    {
+      "equipo": "ABADES AREA ALCALÁ",
+      "partidos_jugados": 11,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 11,
+      "puntos_favor": 356,
+      "puntos_contra": 767,
+      "diferencia": -411,
+      "puntos": 11,
+      "posicion": 11
+    }
+  ]
+}

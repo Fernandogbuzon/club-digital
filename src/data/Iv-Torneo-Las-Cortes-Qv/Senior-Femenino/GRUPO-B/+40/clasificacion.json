@@ -1,0 +1,40 @@
+{
+  "categoria": "Senior Femenino - +40 - GRUPO B",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:41:52.544056",
+  "clasificacion": [
+    {
+      "equipo": "PALMA SPORT +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 71,
+      "puntos_contra": 28,
+      "diferencia": 43,
+      "puntos": 6,
+      "posicion": 1
+    },
+    {
+      "equipo": "PASEK +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 2,
+      "puntos_favor": 50,
+      "puntos_contra": 64,
+      "diferencia": -14,
+      "puntos": 4,
+      "posicion": 2
+    },
+    {
+      "equipo": "PONTEVEDRA +40",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 16,
+      "puntos_contra": 45,
+      "diferencia": -29,
+      "puntos": 2,
+      "posicion": 3
+    }
+  ]
+}

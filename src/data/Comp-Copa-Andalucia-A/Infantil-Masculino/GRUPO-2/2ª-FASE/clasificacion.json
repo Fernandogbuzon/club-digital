@@ -1,0 +1,73 @@
+{
+  "categoria": "Infantil Masculino - 2ª FASE - GRUPO 2",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:26:37.986211",
+  "clasificacion": [
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 1,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 0,
+      "puntos_favor": 72,
+      "puntos_contra": 53,
+      "diferencia": 19,
+      "puntos": 2,
+      "posicion": 1
+    },
+    {
+      "equipo": "CBA",
+      "partidos_jugados": 1,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 0,
+      "puntos_favor": 52,
+      "puntos_contra": 43,
+      "diferencia": 9,
+      "puntos": 2,
+      "posicion": 2
+    },
+    {
+      "equipo": "BAR CABALLITO DE MAR CB PUERTO REAL (V)",
+      "partidos_jugados": 1,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 0,
+      "puntos_favor": 62,
+      "puntos_contra": 60,
+      "diferencia": 2,
+      "puntos": 2,
+      "posicion": 3
+    },
+    {
+      "equipo": "AVATEL CENTURIAS",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 1,
+      "puntos_favor": 60,
+      "puntos_contra": 62,
+      "diferencia": -2,
+      "puntos": 1,
+      "posicion": 4
+    },
+    {
+      "equipo": "GYMNÁSTICA PORTUENSE",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 1,
+      "puntos_favor": 43,
+      "puntos_contra": 52,
+      "diferencia": -9,
+      "puntos": 1,
+      "posicion": 5
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 1,
+      "puntos_favor": 53,
+      "puntos_contra": 72,
+      "diferencia": -19,
+      "puntos": 1,
+      "posicion": 6
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "categoria": "Minibasket Mixto - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:31:32.706134",
+  "clasificacion": [
+    {
+      "equipo": "MIFISIO CB PUERTO REAL",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 474,
+      "puntos_contra": 239,
+      "diferencia": 235,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "EDM ARCOS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 359,
+      "puntos_contra": 291,
+      "diferencia": 68,
+      "puntos": 12,
+      "posicion": 2
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 7,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 5,
+      "puntos_favor": 353,
+      "puntos_contra": 370,
+      "diferencia": -17,
+      "puntos": 9,
+      "posicion": 3
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 57,
+      "puntos_contra": 343,
+      "diferencia": -286,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

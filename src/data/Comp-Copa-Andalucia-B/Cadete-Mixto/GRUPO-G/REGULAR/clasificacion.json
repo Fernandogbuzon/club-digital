@@ -1,0 +1,40 @@
+{
+  "categoria": "Cadete Mixto - REGULAR - GRUPO G",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:29:50.174575",
+  "clasificacion": [
+    {
+      "equipo": "CD DON BOSCO`88",
+      "partidos_jugados": 4,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 0,
+      "puntos_favor": 237,
+      "puntos_contra": 170,
+      "diferencia": 67,
+      "puntos": 8,
+      "posicion": 1
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI AMARILLO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 2,
+      "puntos_favor": 269,
+      "puntos_contra": 229,
+      "diferencia": 40,
+      "puntos": 8,
+      "posicion": 2
+    },
+    {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 5,
+      "puntos_favor": 197,
+      "puntos_contra": 304,
+      "diferencia": -107,
+      "puntos": 5,
+      "posicion": 3
+    }
+  ]
+}

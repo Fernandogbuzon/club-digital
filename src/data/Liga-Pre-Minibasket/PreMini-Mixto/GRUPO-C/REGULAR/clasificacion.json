@@ -1,0 +1,73 @@
+{
+  "categoria": "PreMini Mixto - REGULAR - GRUPO C",
+  "competicion": "Liga Pre Minibasket",
+  "ultima_actualizacion": "2026-02-12T18:38:32.604998",
+  "clasificacion": [
+    {
+      "equipo": "CB PORTUENSE 2016 AYUDATPYMES",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 1
+    },
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 2
+    },
+    {
+      "equipo": "C.A.B.U. 4ºM",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 3
+    },
+    {
+      "equipo": "KARTING KR24-MERGABLO",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 4
+    },
+    {
+      "equipo": "AD MARIANISTAS",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 5
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI 2016",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 6
+    }
+  ]
+}

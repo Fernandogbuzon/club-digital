@@ -1,0 +1,51 @@
+{
+  "categoria": "Infantil Mixto - REGULAR - GRUPO D",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:30:28.805734",
+  "clasificacion": [
+    {
+      "equipo": "ROSELL CB PUERTO REAL (V)",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 333,
+      "puntos_contra": 277,
+      "diferencia": 56,
+      "puntos": 13,
+      "posicion": 1
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 385,
+      "puntos_contra": 289,
+      "diferencia": 96,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "CBA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 361,
+      "puntos_contra": 336,
+      "diferencia": 25,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "CB TREBUJENA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 254,
+      "puntos_contra": 431,
+      "diferencia": -177,
+      "puntos": 8,
+      "posicion": 4
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "categoria": "PreMini Mixto - REGULAR - GRUPO A",
+  "competicion": "Liga Pre Minibasket",
+  "ultima_actualizacion": "2026-02-12T18:38:25.140789",
+  "clasificacion": [
+    {
+      "equipo": "CD ADC LA ALGAIDA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 1
+    },
+    {
+      "equipo": "AYTO. ARCOS DE LA FRONTERA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 2
+    },
+    {
+      "equipo": "CB PUERTO REAL 2017",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 3
+    },
+    {
+      "equipo": "FEDERÓPTICOS SUAZO CBC CÁDIZ",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 4
+    },
+    {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 5
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 6
+    }
+  ]
+}

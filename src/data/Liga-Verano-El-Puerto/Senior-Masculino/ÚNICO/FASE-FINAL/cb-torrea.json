@@ -1,0 +1,32 @@
+[
+  {
+    "competicion": "Liga Verano El Puerto",
+    "marcador_local": 69,
+    "marcador_visitante": 74,
+    "fecha": "27/08/2025",
+    "hora": "20:00",
+    "pabellon": "ANGELITA ALTA \"A\"",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Masculino - FASE FINAL - ÚNICO",
+    "equipo": "CB TORREÁ",
+    "rival": "ADESA 80",
+    "ubicacion": "Local",
+    "id": "27082025_cb-torrea_adesa-80_senior-masculino-fase-final-unico"
+  },
+  {
+    "competicion": "Liga Verano El Puerto",
+    "marcador_local": 69,
+    "marcador_visitante": 74,
+    "fecha": "27/08/2025",
+    "hora": "20:00",
+    "pabellon": "ANGELITA ALTA \"A\"",
+    "es_resultado": true,
+    "jornada": "SEMIFINAL Jornada 1 - 27/08/2025",
+    "categoria": "Senior Masculino - FASE FINAL - ÚNICO",
+    "equipo": "CB TORREÁ",
+    "rival": "ADESA 80",
+    "ubicacion": "Local",
+    "id": "27082025_cb-torrea_adesa-80_senior-masculino-fase-final-unico"
+  }
+]

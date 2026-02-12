@@ -1,0 +1,29 @@
+{
+  "categoria": "Junior Femenino - PLAY OFF 5º-6º - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:25:31.746409",
+  "clasificacion": [
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 138,
+      "puntos_contra": 102,
+      "diferencia": 36,
+      "puntos": 4,
+      "posicion": 1
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 102,
+      "puntos_contra": 138,
+      "diferencia": -36,
+      "puntos": 2,
+      "posicion": 2
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "categoria": "Cadete Mixto - REGULAR - GRUPO F",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:29:46.101482",
+  "clasificacion": [
+    {
+      "equipo": "KROSAKI AMR CBA 2011",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 456,
+      "puntos_contra": 310,
+      "diferencia": 146,
+      "puntos": 13,
+      "posicion": 1
+    },
+    {
+      "equipo": "CBC CÁDIZ ROJO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 440,
+      "puntos_contra": 417,
+      "diferencia": 23,
+      "puntos": 12,
+      "posicion": 2
+    },
+    {
+      "equipo": "GABBA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 390,
+      "puntos_contra": 440,
+      "diferencia": -50,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 420,
+      "puntos_contra": 539,
+      "diferencia": -119,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "categoria": "Infantil Mixto - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:30:21.699761",
+  "clasificacion": [
+    {
+      "equipo": "LA MAR DE GAMBAS CB PUERTO REAL (M)",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 476,
+      "puntos_contra": 247,
+      "diferencia": 229,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 315,
+      "puntos_contra": 369,
+      "diferencia": -54,
+      "puntos": 10,
+      "posicion": 2
+    },
+    {
+      "equipo": "EDM ARCOS ROJO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 383,
+      "puntos_contra": 444,
+      "diferencia": -61,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "UBJerez AMARILLO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 306,
+      "puntos_contra": 420,
+      "diferencia": -114,
+      "puntos": 8,
+      "posicion": 4
+    }
+  ]
+}

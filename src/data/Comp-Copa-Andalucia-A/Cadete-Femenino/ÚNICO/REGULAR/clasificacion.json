@@ -1,0 +1,117 @@
+{
+  "categoria": "Cadete Femenino - REGULAR - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:26:11.643105",
+  "clasificacion": [
+    {
+      "equipo": "SD CANDRAY MOTORECAMBIOS DEL SUR",
+      "partidos_jugados": 16,
+      "partidos_ganados": 15,
+      "partidos_perdidos": 1,
+      "puntos_favor": 1246,
+      "puntos_contra": 711,
+      "diferencia": 535,
+      "puntos": 31,
+      "posicion": 1
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 16,
+      "partidos_ganados": 14,
+      "partidos_perdidos": 2,
+      "puntos_favor": 1194,
+      "puntos_contra": 722,
+      "diferencia": 472,
+      "puntos": 30,
+      "posicion": 2
+    },
+    {
+      "equipo": "CADIZ CB GADES GRUPO ARSENIO",
+      "partidos_jugados": 16,
+      "partidos_ganados": 13,
+      "partidos_perdidos": 3,
+      "puntos_favor": 1422,
+      "puntos_contra": 630,
+      "diferencia": 792,
+      "puntos": 29,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 16,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 6,
+      "puntos_favor": 927,
+      "puntos_contra": 1025,
+      "diferencia": -98,
+      "puntos": 26,
+      "posicion": 4
+    },
+    {
+      "equipo": "NOATUM LOGISTIC CBA",
+      "partidos_jugados": 16,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 10,
+      "puntos_favor": 720,
+      "puntos_contra": 976,
+      "diferencia": -256,
+      "puntos": 22,
+      "posicion": 5
+    },
+    {
+      "equipo": "ONDOMUS CENTURIAS",
+      "partidos_jugados": 16,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 10,
+      "puntos_favor": 728,
+      "puntos_contra": 990,
+      "diferencia": -262,
+      "puntos": 22,
+      "posicion": 6
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 16,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 11,
+      "puntos_favor": 725,
+      "puntos_contra": 894,
+      "diferencia": -169,
+      "puntos": 21,
+      "posicion": 7
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 16,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 11,
+      "puntos_favor": 785,
+      "puntos_contra": 1025,
+      "diferencia": -240,
+      "puntos": 21,
+      "posicion": 8
+    },
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 16,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 13,
+      "puntos_favor": 672,
+      "puntos_contra": 1002,
+      "diferencia": -330,
+      "puntos": 19,
+      "posicion": 9
+    },
+    {
+      "equipo": "C.A.B.U.",
+      "partidos_jugados": 16,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 13,
+      "puntos_favor": 754,
+      "puntos_contra": 1198,
+      "diferencia": -444,
+      "puntos": 19,
+      "posicion": 10
+    }
+  ]
+}

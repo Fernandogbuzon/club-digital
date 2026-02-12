@@ -1,0 +1,73 @@
+{
+  "categoria": "Infantil Masculino - 2ª FASE - GRUPO 1",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:26:34.532704",
+  "clasificacion": [
+    {
+      "equipo": "CÁDIZ CB GADES LA BARRA",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 166,
+      "puntos_contra": 123,
+      "diferencia": 43,
+      "puntos": 4,
+      "posicion": 1
+    },
+    {
+      "equipo": "CBP AYUDATPYMES",
+      "partidos_jugados": 2,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 1,
+      "puntos_favor": 122,
+      "puntos_contra": 107,
+      "diferencia": 15,
+      "puntos": 3,
+      "posicion": 2
+    },
+    {
+      "equipo": "DAIKIN CB PUERTO REAL (M)",
+      "partidos_jugados": 2,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 1,
+      "puntos_favor": 97,
+      "puntos_contra": 93,
+      "diferencia": 4,
+      "puntos": 3,
+      "posicion": 3
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 2,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 1,
+      "puntos_favor": 143,
+      "puntos_contra": 148,
+      "diferencia": -5,
+      "puntos": 3,
+      "posicion": 4
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 2,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 1,
+      "puntos_favor": 102,
+      "puntos_contra": 132,
+      "diferencia": -30,
+      "puntos": 3,
+      "posicion": 5
+    },
+    {
+      "equipo": "MAXCOLCHON CBSFDO",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 124,
+      "puntos_contra": 151,
+      "diferencia": -27,
+      "puntos": 2,
+      "posicion": 6
+    }
+  ]
+}

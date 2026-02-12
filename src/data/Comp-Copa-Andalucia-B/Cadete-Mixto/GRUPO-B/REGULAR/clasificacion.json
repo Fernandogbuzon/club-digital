@@ -1,0 +1,51 @@
+{
+  "categoria": "Cadete Mixto - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:29:33.743189",
+  "clasificacion": [
+    {
+      "equipo": "SIERRA NET-CB PRADO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 479,
+      "puntos_contra": 253,
+      "diferencia": 226,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 471,
+      "puntos_contra": 308,
+      "diferencia": 163,
+      "puntos": 12,
+      "posicion": 2
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI NEGRO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 5,
+      "puntos_favor": 286,
+      "puntos_contra": 423,
+      "diferencia": -137,
+      "puntos": 9,
+      "posicion": 3
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 206,
+      "puntos_contra": 458,
+      "diferencia": -252,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

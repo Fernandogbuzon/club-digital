@@ -1,0 +1,51 @@
+{
+  "categoria": "Infantil Mixto - REGULAR - GRUPO A",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:30:18.909102",
+  "clasificacion": [
+    {
+      "equipo": "CD ADC LA ALGAIDA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 430,
+      "puntos_contra": 195,
+      "diferencia": 235,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 384,
+      "puntos_contra": 237,
+      "diferencia": 147,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "EDM ARCOS BLANCO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 234,
+      "puntos_contra": 345,
+      "diferencia": -111,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "AVATEL CENTURIAS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 186,
+      "puntos_contra": 457,
+      "diferencia": -271,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

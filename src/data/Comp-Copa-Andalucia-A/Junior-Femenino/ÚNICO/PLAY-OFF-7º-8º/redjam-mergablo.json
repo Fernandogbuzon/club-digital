@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "14/03/2026",
+    "hora": "",
+    "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
+    "es_resultado": false,
+    "jornada": "FINAL Jornada 2 - 22/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF 7º-8º - ÚNICO",
+    "equipo": "REDJAM MERGABLO",
+    "rival": "CB CIUDAD DE CÁDIZ",
+    "ubicacion": "Local",
+    "id": "14032026_redjam-mergablo_cb-ciudad-de-cadiz_junior-femenino-play-off-7-8-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "07/03/2026",
+    "hora": "",
+    "pabellon": "PAB. MIRANDILLA",
+    "es_resultado": false,
+    "jornada": "",
+    "categoria": "Junior Femenino - PLAY OFF 7º-8º - ÚNICO",
+    "equipo": "REDJAM MERGABLO",
+    "rival": "CB CIUDAD DE CÁDIZ",
+    "ubicacion": "Visitante",
+    "id": "07032026_cb-ciudad-de-cadiz_redjam-mergablo_junior-femenino-play-off-7-8-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "07/03/2026",
+    "hora": "",
+    "pabellon": "PAB. MIRANDILLA",
+    "es_resultado": false,
+    "jornada": "FINAL Jornada 1 - 15/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF 7º-8º - ÚNICO",
+    "equipo": "REDJAM MERGABLO",
+    "rival": "CB CIUDAD DE CÁDIZ",
+    "ubicacion": "Visitante",
+    "id": "07032026_cb-ciudad-de-cadiz_redjam-mergablo_junior-femenino-play-off-7-8-unico"
+  }
+]

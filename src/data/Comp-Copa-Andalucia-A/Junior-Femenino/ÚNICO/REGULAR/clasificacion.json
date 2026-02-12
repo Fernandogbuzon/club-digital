@@ -1,0 +1,95 @@
+{
+  "categoria": "Junior Femenino - REGULAR - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:25:45.555935",
+  "clasificacion": [
+    {
+      "equipo": "UBJerez GRIS - TOLDOS EL PORTAL",
+      "partidos_jugados": 15,
+      "partidos_ganados": 14,
+      "partidos_perdidos": 1,
+      "puntos_favor": 1033,
+      "puntos_contra": 623,
+      "diferencia": 410,
+      "puntos": 29,
+      "posicion": 1
+    },
+    {
+      "equipo": "CADIZ CB GADES FONTACLIMA",
+      "partidos_jugados": 15,
+      "partidos_ganados": 13,
+      "partidos_perdidos": 2,
+      "puntos_favor": 1262,
+      "puntos_contra": 579,
+      "diferencia": 683,
+      "puntos": 28,
+      "posicion": 2
+    },
+    {
+      "equipo": "SD CANDRAY RECOSUR SPORT",
+      "partidos_jugados": 15,
+      "partidos_ganados": 12,
+      "partidos_perdidos": 3,
+      "puntos_favor": 1194,
+      "puntos_contra": 860,
+      "diferencia": 334,
+      "puntos": 27,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 15,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 7,
+      "puntos_favor": 873,
+      "puntos_contra": 895,
+      "diferencia": -22,
+      "puntos": 23,
+      "posicion": 4
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 15,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 9,
+      "puntos_favor": 969,
+      "puntos_contra": 985,
+      "diferencia": -16,
+      "puntos": 21,
+      "posicion": 5
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 15,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 10,
+      "puntos_favor": 717,
+      "puntos_contra": 950,
+      "diferencia": -233,
+      "puntos": 20,
+      "posicion": 6
+    },
+    {
+      "equipo": "REDJAM MERGABLO",
+      "partidos_jugados": 15,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 13,
+      "puntos_favor": 682,
+      "puntos_contra": 1039,
+      "diferencia": -357,
+      "puntos": 17,
+      "posicion": 7
+    },
+    {
+      "equipo": "CB CIUDAD DE CÁDIZ",
+      "partidos_jugados": 15,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 15,
+      "puntos_favor": 414,
+      "puntos_contra": 1213,
+      "diferencia": -799,
+      "puntos": 15,
+      "posicion": 8
+    }
+  ]
+}

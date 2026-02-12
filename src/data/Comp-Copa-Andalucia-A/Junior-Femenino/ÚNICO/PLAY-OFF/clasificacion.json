@@ -1,0 +1,51 @@
+{
+  "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:25:26.099403",
+  "clasificacion": [
+    {
+      "equipo": "CADIZ CB GADES FONTACLIMA",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 148,
+      "puntos_contra": 106,
+      "diferencia": 42,
+      "puntos": 4,
+      "posicion": 1
+    },
+    {
+      "equipo": "UBJerez GRIS - TOLDOS EL PORTAL",
+      "partidos_jugados": 1,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 0,
+      "puntos_favor": 62,
+      "puntos_contra": 53,
+      "diferencia": 9,
+      "puntos": 2,
+      "posicion": 2
+    },
+    {
+      "equipo": "SD CANDRAY RECOSUR SPORT",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 106,
+      "puntos_contra": 148,
+      "diferencia": -42,
+      "puntos": 2,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 1,
+      "puntos_favor": 53,
+      "puntos_contra": 62,
+      "diferencia": -9,
+      "puntos": 1,
+      "posicion": 4
+    }
+  ]
+}

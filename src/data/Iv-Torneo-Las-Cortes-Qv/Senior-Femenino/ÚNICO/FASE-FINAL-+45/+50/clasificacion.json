@@ -1,0 +1,73 @@
+{
+  "categoria": "Senior Femenino - FASE FINAL +45/+50 - ÚNICO",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:41:43.561041",
+  "clasificacion": [
+    {
+      "equipo": "AURUM +45",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 52,
+      "puntos_contra": 12,
+      "diferencia": 40,
+      "puntos": 4,
+      "posicion": 1
+    },
+    {
+      "equipo": "JOAN CAPO +45",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 46,
+      "puntos_contra": 40,
+      "diferencia": 6,
+      "puntos": 4,
+      "posicion": 2
+    },
+    {
+      "equipo": "GOLDEN CAB +50",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 44,
+      "puntos_contra": 42,
+      "diferencia": 2,
+      "puntos": 4,
+      "posicion": 3
+    },
+    {
+      "equipo": "LLUC MAJOR +45",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 42,
+      "puntos_contra": 44,
+      "diferencia": -2,
+      "puntos": 2,
+      "posicion": 4
+    },
+    {
+      "equipo": "MQV ALFA +50",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 40,
+      "puntos_contra": 46,
+      "diferencia": -6,
+      "puntos": 2,
+      "posicion": 5
+    },
+    {
+      "equipo": "SANTANYI +50",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 12,
+      "puntos_contra": 52,
+      "diferencia": -40,
+      "puntos": 2,
+      "posicion": 6
+    }
+  ]
+}

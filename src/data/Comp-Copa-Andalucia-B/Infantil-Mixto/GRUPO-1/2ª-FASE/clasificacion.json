@@ -1,0 +1,95 @@
+{
+  "categoria": "Infantil Mixto - 2ª FASE - GRUPO 1",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:30:01.680149",
+  "clasificacion": [
+    {
+      "equipo": "LA MAR DE GAMBAS CB PUERTO REAL (M)",
+      "partidos_jugados": 6,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 0,
+      "puntos_favor": 398,
+      "puntos_contra": 276,
+      "diferencia": 122,
+      "puntos": 12,
+      "posicion": 1
+    },
+    {
+      "equipo": "CD ADC LA ALGAIDA",
+      "partidos_jugados": 6,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 1,
+      "puntos_favor": 361,
+      "puntos_contra": 188,
+      "diferencia": 173,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 6,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 2,
+      "puntos_favor": 342,
+      "puntos_contra": 299,
+      "diferencia": 43,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 277,
+      "puntos_contra": 381,
+      "diferencia": -104,
+      "puntos": 10,
+      "posicion": 4
+    },
+    {
+      "equipo": "AURA - MERGABLO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 291,
+      "puntos_contra": 207,
+      "diferencia": 84,
+      "puntos": 9,
+      "posicion": 5
+    },
+    {
+      "equipo": "ROSELL CB PUERTO REAL (V)",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 295,
+      "puntos_contra": 349,
+      "diferencia": -54,
+      "puntos": 8,
+      "posicion": 6
+    },
+    {
+      "equipo": "GABBA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 4,
+      "puntos_favor": 228,
+      "puntos_contra": 296,
+      "diferencia": -68,
+      "puntos": 6,
+      "posicion": 7
+    },
+    {
+      "equipo": "CBP AYUDATPYMES",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 6,
+      "puntos_favor": 160,
+      "puntos_contra": 356,
+      "diferencia": -196,
+      "puntos": 6,
+      "posicion": 8
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "categoria": "Minibasket Mixto - REGULAR - GRUPO D",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:31:38.275355",
+  "clasificacion": [
+    {
+      "equipo": "VITALDENT-CABU",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 319,
+      "puntos_contra": 36,
+      "diferencia": 283,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 305,
+      "puntos_contra": 253,
+      "diferencia": 52,
+      "puntos": 12,
+      "posicion": 2
+    },
+    {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 223,
+      "puntos_contra": 355,
+      "diferencia": -132,
+      "puntos": 8,
+      "posicion": 3
+    },
+    {
+      "equipo": "UBJerez AMARILLO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 98,
+      "puntos_contra": 301,
+      "diferencia": -203,
+      "puntos": 8,
+      "posicion": 4
+    }
+  ]
+}

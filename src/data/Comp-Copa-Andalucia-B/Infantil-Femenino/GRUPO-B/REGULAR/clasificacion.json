@@ -1,0 +1,106 @@
+{
+  "categoria": "Infantil Femenino - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:30:57.871058",
+  "clasificacion": [
+    {
+      "equipo": "OXXI-CB PRADO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 0,
+      "puntos_favor": 545,
+      "puntos_contra": 306,
+      "diferencia": 239,
+      "puntos": 20,
+      "posicion": 1
+    },
+    {
+      "equipo": "FENIE ENERGÍA CBC CÁDIZ",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 558,
+      "puntos_contra": 324,
+      "diferencia": 234,
+      "puntos": 19,
+      "posicion": 2
+    },
+    {
+      "equipo": "SD CANDRAY MAIRANDU",
+      "partidos_jugados": 10,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 3,
+      "puntos_favor": 502,
+      "puntos_contra": 383,
+      "diferencia": 119,
+      "puntos": 17,
+      "posicion": 3
+    },
+    {
+      "equipo": "C. DENTAL CONIL - MERGABLO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 413,
+      "puntos_contra": 335,
+      "diferencia": 78,
+      "puntos": 14,
+      "posicion": 4
+    },
+    {
+      "equipo": "CADIZ CB GADES ENERGYON MARKETING DIRECTO SL",
+      "partidos_jugados": 10,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 382,
+      "puntos_contra": 465,
+      "diferencia": -83,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 7,
+      "puntos_favor": 408,
+      "puntos_contra": 439,
+      "diferencia": -31,
+      "puntos": 13,
+      "posicion": 6
+    },
+    {
+      "equipo": "CB SAN FERNANDO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 4,
+      "puntos_favor": 372,
+      "puntos_contra": 400,
+      "diferencia": -28,
+      "puntos": 12,
+      "posicion": 7
+    },
+    {
+      "equipo": "CD DON BOSCO`88",
+      "partidos_jugados": 9,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 7,
+      "puntos_favor": 242,
+      "puntos_contra": 489,
+      "diferencia": -247,
+      "puntos": 11,
+      "posicion": 8
+    },
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 9,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 9,
+      "puntos_favor": 263,
+      "puntos_contra": 544,
+      "diferencia": -281,
+      "puntos": 9,
+      "posicion": 9
+    }
+  ]
+}

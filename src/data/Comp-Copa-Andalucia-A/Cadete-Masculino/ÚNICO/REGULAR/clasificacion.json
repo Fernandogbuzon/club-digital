@@ -1,0 +1,117 @@
+{
+  "categoria": "Cadete Masculino - REGULAR - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:26:22.043990",
+  "clasificacion": [
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 16,
+      "partidos_ganados": 13,
+      "partidos_perdidos": 3,
+      "puntos_favor": 1245,
+      "puntos_contra": 856,
+      "diferencia": 389,
+      "puntos": 29,
+      "posicion": 1
+    },
+    {
+      "equipo": "ISAVAL CBA",
+      "partidos_jugados": 14,
+      "partidos_ganados": 14,
+      "partidos_perdidos": 0,
+      "puntos_favor": 1262,
+      "puntos_contra": 658,
+      "diferencia": 604,
+      "puntos": 28,
+      "posicion": 2
+    },
+    {
+      "equipo": "ELEKÁ CB PUERTO REAL",
+      "partidos_jugados": 15,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 4,
+      "puntos_favor": 1096,
+      "puntos_contra": 833,
+      "diferencia": 263,
+      "puntos": 26,
+      "posicion": 3
+    },
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 14,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 3,
+      "puntos_favor": 983,
+      "puntos_contra": 712,
+      "diferencia": 271,
+      "puntos": 25,
+      "posicion": 4
+    },
+    {
+      "equipo": "CB SANCTI PETRI",
+      "partidos_jugados": 14,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 6,
+      "puntos_favor": 907,
+      "puntos_contra": 830,
+      "diferencia": 77,
+      "puntos": 22,
+      "posicion": 5
+    },
+    {
+      "equipo": "TECNOHELP CENTURIAS",
+      "partidos_jugados": 16,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 10,
+      "puntos_favor": 936,
+      "puntos_contra": 945,
+      "diferencia": -9,
+      "puntos": 22,
+      "posicion": 6
+    },
+    {
+      "equipo": "MONTIEL DE ARNÁIZ ABOGADOS CBSFDO",
+      "partidos_jugados": 15,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 10,
+      "puntos_favor": 898,
+      "puntos_contra": 947,
+      "diferencia": -49,
+      "puntos": 20,
+      "posicion": 7
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 16,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 12,
+      "puntos_favor": 973,
+      "puntos_contra": 1132,
+      "diferencia": -159,
+      "puntos": 20,
+      "posicion": 8
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 16,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 12,
+      "puntos_favor": 801,
+      "puntos_contra": 986,
+      "diferencia": -185,
+      "puntos": 20,
+      "posicion": 9
+    },
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 16,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 16,
+      "puntos_favor": 383,
+      "puntos_contra": 1585,
+      "diferencia": -1202,
+      "puntos": 16,
+      "posicion": 10
+    }
+  ]
+}

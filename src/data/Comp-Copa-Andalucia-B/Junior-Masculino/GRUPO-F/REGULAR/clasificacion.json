@@ -1,0 +1,40 @@
+{
+  "categoria": "Junior Masculino - REGULAR - GRUPO F",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:28:48.824035",
+  "clasificacion": [
+    {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 2,
+      "puntos_favor": 306,
+      "puntos_contra": 311,
+      "diferencia": -5,
+      "puntos": 8,
+      "posicion": 1
+    },
+    {
+      "equipo": "TOYOTA TOMAX CBA AMARILLO",
+      "partidos_jugados": 4,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 1,
+      "puntos_favor": 291,
+      "puntos_contra": 243,
+      "diferencia": 48,
+      "puntos": 7,
+      "posicion": 2
+    },
+    {
+      "equipo": "GYMNÁSTICA P. AMARILLO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 4,
+      "puntos_favor": 299,
+      "puntos_contra": 342,
+      "diferencia": -43,
+      "puntos": 6,
+      "posicion": 3
+    }
+  ]
+}

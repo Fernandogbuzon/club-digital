@@ -1,0 +1,40 @@
+{
+  "categoria": "Senior Femenino - +40 - GRUPO A",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:41:50.015158",
+  "clasificacion": [
+    {
+      "equipo": "STGO 2+1 +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 1,
+      "puntos_favor": 98,
+      "puntos_contra": 48,
+      "diferencia": 50,
+      "puntos": 5,
+      "posicion": 1
+    },
+    {
+      "equipo": "PUERTOLLANO +40",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 58,
+      "puntos_contra": 15,
+      "diferencia": 43,
+      "puntos": 4,
+      "posicion": 2
+    },
+    {
+      "equipo": "OLIVOS +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 3,
+      "puntos_favor": 29,
+      "puntos_contra": 122,
+      "diferencia": -93,
+      "puntos": 3,
+      "posicion": 3
+    }
+  ]
+}
