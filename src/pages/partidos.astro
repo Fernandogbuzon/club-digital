@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PartidosCarousel from '../components/PartidosCarousel.astro';
 
 // Importar todos los archivos JSON de equipos
 import seniorMasculinoA from '../data/equipos/senior-masculino-a.json';
@@ -207,6 +208,9 @@ const partidosJSON = JSON.stringify(partidos);
       </div>
     </div>
   </section>
+
+  <!-- Carrusel estilo NBA -->
+  <PartidosCarousel />
 
   <!-- PANEL DE CONTROL MAESTRO (Apple Style) -->
   <section class="bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">

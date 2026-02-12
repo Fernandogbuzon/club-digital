@@ -1,0 +1,577 @@
+---
+/**
+ * PartidosCarousel – Carrusel estilo NBA Bucks para partidos de ADESA 80
+ */
+
+// ── Importar todos los JSON de ADESA 80 con glob ────────────────────────────
+const allFiles = import.meta.glob('../data/**/adesa-80*.json', { eager: true });
+
+interface Partido {
+  competicion: string;
+  marcador_local: number | null;
+  marcador_visitante: number | null;
+  fecha: string;
+  hora: string;
+  pabellon: string;
+  es_resultado: boolean;
+  jornada: string;
+  categoria: string;
+  equipo: string;
+  rival: string;
+  ubicacion: string;
+  id: string;
+}
+
+let partidos: Partido[] = [];
+for (const path in allFiles) {
+  const data = (allFiles[path] as any).default || allFiles[path];
+  if (Array.isArray(data)) partidos.push(...data);
+}
+
+// Deduplicar por id
+const seen = new Set<string>();
+partidos = partidos.filter(p => {
+  if (seen.has(p.id)) return false;
+  seen.add(p.id);
+  return true;
+});
+
+// ── Parseo de fechas ─────────────────────────────────────────────────────────
+function parseFecha(fechaStr: string, horaStr: string): Date {
+  const [d, m, y] = fechaStr.split('/').map(Number);
+  const fecha = new Date(y, m - 1, d);
+  if (horaStr && horaStr.includes(':')) {
+    const [h, min] = horaStr.split(':').map(Number);
+    fecha.setHours(h, min, 0, 0);
+  } else {
+    fecha.setHours(12, 0, 0, 0);
+  }
+  return fecha;
+}
+
+partidos.sort((a, b) => parseFecha(a.fecha, a.hora).getTime() - parseFecha(b.fecha, b.hora).getTime());
+
+// ── Abreviaciones ────────────────────────────────────────────────────────────
+function abreviarCategoria(cat: string): string {
+  const parte = cat.split(' - ')[0];
+  return parte
+    .replace(/Senior/i, 'Sen').replace(/Junior/i, 'Jun')
+    .replace(/Cadete/i, 'Cad').replace(/Infantil/i, 'Inf')
+    .replace(/Minibasket/i, 'Mini').replace(/PreMini/i, 'Pre-Mini')
+    .replace(/Babybasket/i, 'Baby')
+    .replace(/Masculino/i, 'Masc').replace(/Femenino/i, 'Fem')
+    .trim();
+}
+
+const DIAS = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
+const MESES_NOMBRES = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+
+function formatHeaderLine(p: Partido): string {
+  const fecha = parseFecha(p.fecha, p.hora);
+  const dia = DIAS[fecha.getDay()];
+  const dd = String(fecha.getDate()).padStart(2, '0');
+  const mm = String(fecha.getMonth() + 1).padStart(2, '0');
+  const hora = p.hora || '';
+  const lugar = p.ubicacion === 'Local' ? 'en CASA' : p.pabellon || 'FUERA';
+  return hora ? `${dia}, ${dd}/${mm}, ${hora} ${lugar}` : `${dia}, ${dd}/${mm} ${lugar}`;
+}
+
+function fechaCorta(fechaStr: string): string {
+  const [d, m] = fechaStr.split('/').map(Number);
+  return `${d} ${MESES_NOMBRES[m - 1]}`;
+}
+
+// ── Meses para navegación ────────────────────────────────────────────────────
+const mesesConPartidos = new Map<string, number>();
+partidos.forEach((p, idx) => {
+  const f = parseFecha(p.fecha, p.hora);
+  const key = `${f.getFullYear()}-${String(f.getMonth()).padStart(2, '0')}`;
+  if (!mesesConPartidos.has(key)) mesesConPartidos.set(key, idx);
+});
+
+const mesesArr = Array.from(mesesConPartidos.entries()).map(([key, idx]) => {
+  const [y, m] = key.split('-').map(Number);
+  return { key, year: y, month: m, label: MESES_NOMBRES[m], firstIdx: idx };
+});
+
+const ahora = new Date();
+const mesActualKey = `${ahora.getFullYear()}-${String(ahora.getMonth()).padStart(2, '0')}`;
+
+// ── Serializar ──
+const partidosJSON = JSON.stringify(partidos.map(p => ({
+  ...p,
+  _ts: parseFecha(p.fecha, p.hora).getTime(),
+  _catCorta: abreviarCategoria(p.categoria),
+  _header: formatHeaderLine(p),
+  _fechaCorta: fechaCorta(p.fecha),
+})));
+const mesesJSON = JSON.stringify(mesesArr);
+---
+
+<!-- ═══ Carrusel de Partidos ═══ -->
+<section class="w-full bg-gray-950 py-4 select-none" id="partidos-carousel-section">
+  
+  <!-- Track del carrusel -->
+  <div class="relative">
+    <div 
+      id="carousel-track" 
+      class="flex gap-3 px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+    >
+      <!-- Tarjetas inyectadas por JS -->
+    </div>
+  </div>
+
+  <!-- Navegación de meses -->
+  <div class="flex items-center justify-center gap-0.5 mt-4 px-4" id="month-nav">
+    <button id="nav-prev" class="p-1.5 text-gray-500 hover:text-white transition-colors" aria-label="Anterior">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+      </svg>
+    </button>
+    
+    <div id="month-buttons" class="flex items-center gap-0.5 flex-wrap justify-center"></div>
+
+    <button id="nav-today" class="p-1 text-gray-500 hover:text-green-500 transition-colors ml-1" aria-label="Hoy" title="Hoy">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+      </svg>
+    </button>
+
+    <button id="nav-next" class="p-1.5 text-gray-500 hover:text-white transition-colors" aria-label="Siguiente">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<style is:global>
+  /* Hide scrollbar */
+  #carousel-track {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  #carousel-track::-webkit-scrollbar { display: none; }
+
+  /* ─── Card ─── */
+  .mc {
+    flex: 0 0 220px;
+    height: 150px;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+  }
+  .mc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  /* ─── Header ─── */
+  .mc-head {
+    padding: 7px 12px 5px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    background: #fafafa;
+    flex-shrink: 0;
+  }
+  .mc-info {
+    font-size: 8.5px;
+    font-weight: 600;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .mc-label {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #999;
+    margin-top: 1px;
+  }
+
+  /* ─── Body ─── */
+  .mc-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    min-height: 0;
+  }
+
+  /* ─── Scores ─── */
+  .mc-scores {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .mc-score {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .mc-sep {
+    font-weight: 300;
+    font-size: 24px;
+    color: #d1d5db;
+    margin: 0 3px;
+    line-height: 1;
+  }
+  .s-win { color: #16a34a; }
+  .s-loss { color: #dc2626; }
+  .s-neutral { color: #111827; }
+
+  /* ─── Future date ─── */
+  .mc-future {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: #111827;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  /* ─── Countdown ─── */
+  .mc-countdown {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: #16a34a;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .mc-live {
+    font-weight: 900;
+    font-size: 13px;
+    color: #dc2626;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    animation: mc-blink 1.2s ease-in-out infinite;
+  }
+  @keyframes mc-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ─── VS + Rival ─── */
+  .mc-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .mc-vs {
+    font-size: 14px;
+    font-weight: 800;
+    color: #c0c0c0;
+  }
+  .mc-rival-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    border: 2px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 800;
+    color: #374151;
+    text-align: center;
+    line-height: 1.1;
+    padding: 2px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+  }
+
+  /* ─── Footer button ─── */
+  .mc-foot {
+    padding: 0 10px 7px;
+    flex-shrink: 0;
+  }
+  .mc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
+    cursor: default;
+    line-height: 1;
+  }
+  .mc-btn-dark {
+    background: #111827;
+    color: #fff;
+  }
+  .mc-btn-green {
+    background: #16a34a;
+    color: #fff;
+  }
+  .mc-btn-red {
+    background: #dc2626;
+    color: #fff;
+    animation: mc-blink 1.2s ease-in-out infinite;
+  }
+
+  /* ─── Month nav ─── */
+  .mn-btn {
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #555;
+    cursor: pointer;
+    border: none;
+    background: none;
+    white-space: nowrap;
+    transition: color 0.15s;
+  }
+  .mn-btn:hover { color: #ddd; }
+  .mn-btn.active {
+    color: #22c55e;
+    font-weight: 800;
+    font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    .mc { flex: 0 0 190px; height: 140px; }
+    .mc-score { font-size: 28px; }
+    .mc-future { font-size: 22px; }
+    .mc-countdown { font-size: 18px; }
+    .mc-rival-circle { width: 36px; height: 36px; font-size: 7px; }
+    .mn-btn { font-size: 10px; padding: 2px 5px; }
+  }
+</style>
+
+<script define:vars={{ partidosJSON, mesesJSON, mesActualKey }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const partidos = JSON.parse(partidosJSON);
+    const meses = JSON.parse(mesesJSON);
+    const track = document.getElementById('carousel-track');
+    const monthButtons = document.getElementById('month-buttons');
+    const now = Date.now();
+
+    // ── Rival initials for circle ──
+    function rivalInitials(name) {
+      const clean = name.replace(/^- /, '').replace(/ - $/, '').trim();
+      // Remove common prefixes
+      const stripped = clean.replace(/^(CB|C\.B\.|C\.D\.|CD|A\.D\.|AD|C\.F\.|CF)\s*/i, '');
+      const words = stripped.split(/\s+/).filter(w => w.length > 0);
+      if (words.length === 0) return clean.substring(0, 3).toUpperCase();
+      if (words.length === 1) return words[0].substring(0, 4).toUpperCase();
+      // Take first letter of each word (max 3)
+      return words.slice(0, 3).map(w => w[0]).join('').toUpperCase();
+    }
+
+    // ── Arrow icon SVG ──
+    const arrowSvg = `<svg style="width:10px;height:10px;display:inline" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`;
+
+    // ── Create card ──
+    function createCard(p) {
+      const div = document.createElement('div');
+      div.className = 'mc';
+      div.dataset.ts = p._ts;
+
+      const ts = p._ts;
+      const isPlayed = p.es_resultado;
+      const diffMs = ts - now;
+      const diffH = diffMs / (1000 * 60 * 60);
+      const isLive = !isPlayed && diffH <= 0 && diffH > -3;
+      const isUrgent = !isPlayed && diffH > 0 && diffH <= 24;
+
+      // Victory check
+      let adesaWon = false;
+      if (isPlayed) {
+        const as = p.ubicacion === 'Local' ? p.marcador_local : p.marcador_visitante;
+        const rs = p.ubicacion === 'Local' ? p.marcador_visitante : p.marcador_local;
+        adesaWon = as > rs;
+      }
+
+      // ── Header line ──
+      let headerInfo = p._header;
+      let headerLabel = '';
+
+      if (isPlayed) {
+        headerLabel = '- RESULTADO -';
+      } else if (isLive) {
+        headerLabel = '';
+      }
+
+      // ── Left content ──
+      let leftHTML = '';
+
+      if (isPlayed) {
+        const ml = p.marcador_local;
+        const mv = p.marcador_visitante;
+        let lc, vc;
+        const isTie = ml === mv;
+        if (isTie) {
+          // Empate (incluye 0-0): ambos en negro
+          lc = 's-neutral';
+          vc = 's-neutral';
+        } else if (p.ubicacion === 'Local') {
+          lc = adesaWon ? 's-win' : 's-loss';
+          vc = 's-neutral';
+        } else {
+          lc = 's-neutral';
+          vc = adesaWon ? 's-win' : 's-loss';
+        }
+        leftHTML = `<div class="mc-scores"><span class="mc-score ${lc}">${ml}</span><span class="mc-sep">-</span><span class="mc-score ${vc}">${mv}</span></div>`;
+      } else if (isLive) {
+        leftHTML = `<span class="mc-live">EN JUEGO</span>`;
+      } else if (isUrgent) {
+        leftHTML = `<span class="mc-countdown" data-countdown="${ts}"></span>`;
+      } else {
+        leftHTML = `<span class="mc-future">${p._fechaCorta}</span>`;
+      }
+
+      // ── Footer button ──
+      let btnHTML = '';
+      if (isPlayed) {
+        btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-dark">${arrowSvg} Resultado</div></div>`;
+      } else if (isLive) {
+        btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-red">En Directo</div></div>`;
+      } else {
+        btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-green">Próximo</div></div>`;
+      }
+
+      // ── Rival ──
+      const initials = rivalInitials(p.rival);
+      const rivalClean = p.rival.replace(/^- /, '').replace(/ - $/, '').trim();
+
+      div.innerHTML = `
+        <div class="mc-head">
+          <div class="mc-info">${p._catCorta} · ${headerInfo}</div>
+          ${headerLabel ? `<div class="mc-label">${headerLabel}</div>` : ''}
+        </div>
+        <div class="mc-body">
+          <div>${leftHTML}</div>
+          <div class="mc-right">
+            <span class="mc-vs">VS.</span>
+            <div class="mc-rival-circle" title="${rivalClean}">${initials}</div>
+          </div>
+        </div>
+        ${btnHTML}
+      `;
+
+      return div;
+    }
+
+    // ── Render ──
+    partidos.forEach(p => track.appendChild(createCard(p)));
+
+    // ── Month nav ──
+    let activeMonthKey = mesActualKey;
+
+    function renderMonths() {
+      monthButtons.innerHTML = '';
+      meses.forEach(m => {
+        const btn = document.createElement('button');
+        btn.className = `mn-btn ${m.key === activeMonthKey ? 'active' : ''}`;
+        btn.textContent = m.label;
+        btn.addEventListener('click', () => scrollToMonth(m.key, m.firstIdx));
+        monthButtons.appendChild(btn);
+      });
+    }
+
+    function scrollToMonth(key, idx) {
+      activeMonthKey = key;
+      renderMonths();
+      const cards = track.querySelectorAll('.mc');
+      if (cards[idx]) cards[idx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+
+    document.getElementById('nav-today').addEventListener('click', () => {
+      let ci = 0, cd = Infinity;
+      partidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
+      activeMonthKey = mesActualKey;
+      renderMonths();
+      track.querySelectorAll('.mc')[ci]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+
+    document.getElementById('nav-prev').addEventListener('click', () => {
+      const i = meses.findIndex(m => m.key === activeMonthKey);
+      if (i > 0) scrollToMonth(meses[i-1].key, meses[i-1].firstIdx);
+    });
+    document.getElementById('nav-next').addEventListener('click', () => {
+      const i = meses.findIndex(m => m.key === activeMonthKey);
+      if (i < meses.length - 1) scrollToMonth(meses[i+1].key, meses[i+1].firstIdx);
+    });
+
+    // Detect visible month on scroll
+    let st;
+    track.addEventListener('scroll', () => {
+      clearTimeout(st);
+      st = setTimeout(() => {
+        const cards = track.querySelectorAll('.mc');
+        const tr = track.getBoundingClientRect();
+        const cx = tr.left + tr.width / 2;
+        let ci = 0, cd = Infinity;
+        cards.forEach((c, i) => {
+          const r = c.getBoundingClientRect();
+          const d = Math.abs(r.left + r.width / 2 - cx);
+          if (d < cd) { cd = d; ci = i; }
+        });
+        const p = partidos[ci];
+        if (p) {
+          const dt = new Date(p._ts);
+          const k = `${dt.getFullYear()}-${String(dt.getMonth()).padStart(2, '0')}`;
+          if (k !== activeMonthKey) { activeMonthKey = k; renderMonths(); }
+        }
+      }, 120);
+    });
+
+    // ── Countdowns ──
+    function updateCountdowns() {
+      const n = Date.now();
+      document.querySelectorAll('[data-countdown]').forEach(el => {
+        const t = parseInt(el.dataset.countdown);
+        const diff = t - n;
+        if (diff <= 0) {
+          el.className = 'mc-live';
+          el.textContent = 'EN JUEGO';
+          el.removeAttribute('data-countdown');
+          return;
+        }
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        el.textContent = h > 0 ? `${h}h ${String(m).padStart(2,'0')}m` : `${m}m ${String(s).padStart(2,'0')}s`;
+      });
+    }
+    updateCountdowns();
+    setInterval(updateCountdowns, 1000);
+
+    // ── Init scroll to today ──
+    renderMonths();
+    requestAnimationFrame(() => {
+      let ci = 0, cd = Infinity;
+      partidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
+      track.querySelectorAll('.mc')[ci]?.scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
+    });
+
+    // Drag scroll (desktop)
+    let isDown = false, sx, sl;
+    track.addEventListener('mousedown', e => { isDown = true; track.style.cursor = 'grabbing'; sx = e.pageX - track.offsetLeft; sl = track.scrollLeft; });
+    track.addEventListener('mouseleave', () => { isDown = false; track.style.cursor = ''; });
+    track.addEventListener('mouseup', () => { isDown = false; track.style.cursor = ''; });
+    track.addEventListener('mousemove', e => { if (!isDown) return; e.preventDefault(); track.scrollLeft = sl - (e.pageX - track.offsetLeft - sx) * 1.5; });
+  });
+</script>
