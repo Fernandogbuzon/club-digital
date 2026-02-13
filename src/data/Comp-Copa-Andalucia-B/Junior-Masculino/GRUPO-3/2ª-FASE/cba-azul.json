@@ -18,6 +18,21 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
+    "fecha": "28/02/2026",
+    "hora": "",
+    "pabellon": "PAB. Dr. JUAN CARLOS MATEO",
+    "es_resultado": false,
+    "jornada": "Jornada 8 - 22/02/2026",
+    "categoria": "Junior Masculino - 2ª FASE - GRUPO 3",
+    "equipo": "CBA AZUL",
+    "rival": "GYMNÁSTICA P. AMARILLO",
+    "ubicacion": "Local",
+    "id": "28022026_cba-azul_gymnastica-p-amarillo_junior-masculino-2-fase-grupo-3"
+  },
+  {
+    "competicion": "Comp Copa Andalucia B",
+    "marcador_local": null,
+    "marcador_visitante": null,
     "fecha": "26/02/2026",
     "hora": "",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
@@ -28,21 +43,6 @@
     "rival": "XEREZ CD BALONCESTO",
     "ubicacion": "Visitante",
     "id": "26022026_xerez-cd-baloncesto_cba-azul_junior-masculino-2-fase-grupo-3"
-  },
-  {
-    "competicion": "Comp Copa Andalucia B",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
-    "pabellon": "PAB. Dr. JUAN CARLOS MATEO",
-    "es_resultado": false,
-    "jornada": "Jornada 8 - 22/02/2026",
-    "categoria": "Junior Masculino - 2ª FASE - GRUPO 3",
-    "equipo": "CBA AZUL",
-    "rival": "GYMNÁSTICA P. AMARILLO",
-    "ubicacion": "Local",
-    "id": "22022026_cba-azul_gymnastica-p-amarillo_junior-masculino-2-fase-grupo-3"
   },
   {
     "competicion": "Comp Copa Andalucia B",

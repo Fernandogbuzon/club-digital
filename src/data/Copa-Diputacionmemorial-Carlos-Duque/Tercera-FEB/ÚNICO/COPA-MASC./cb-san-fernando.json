@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 72,
+    "marcador_visitante": 80,
+    "fecha": "27/09/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. ANGELITA ALTA",
+    "es_resultado": true,
+    "jornada": "3/4 PUESTO Jornada 1 - 28/09/2025",
+    "categoria": "Tercera FEB - COPA MASC. - ÚNICO",
+    "equipo": "CB SAN FERNANDO",
+    "rival": "BAUBLOCK GYMNÁSTICA",
+    "ubicacion": "Visitante",
+    "id": "27092025_baublock-gymnastica_cb-san-fernando_tercera-feb-copa-masc-unico"
+  },
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 111,
+    "marcador_visitante": 76,
+    "fecha": "21/09/2025",
+    "hora": "12:30",
+    "pabellon": "PAB. Dr. JUAN CARLOS MATEO",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Tercera FEB - COPA MASC. - ÚNICO",
+    "equipo": "CB SAN FERNANDO",
+    "rival": "DAMEX CB ALGECIRAS",
+    "ubicacion": "Visitante",
+    "id": "21092025_damex-cb-algeciras_cb-san-fernando_tercera-feb-copa-masc-unico"
+  },
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 111,
+    "marcador_visitante": 76,
+    "fecha": "21/09/2025",
+    "hora": "12:30",
+    "pabellon": "PAB. Dr. JUAN CARLOS MATEO",
+    "es_resultado": true,
+    "jornada": "SEMIFINAL Jornada 1 - 21/09/2025",
+    "categoria": "Tercera FEB - COPA MASC. - ÚNICO",
+    "equipo": "CB SAN FERNANDO",
+    "rival": "DAMEX CB ALGECIRAS",
+    "ubicacion": "Visitante",
+    "id": "21092025_damex-cb-algeciras_cb-san-fernando_tercera-feb-copa-masc-unico"
+  }
+]

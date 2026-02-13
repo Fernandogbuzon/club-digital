@@ -20,6 +20,21 @@
     "marcador_visitante": null,
     "fecha": "22/03/2026",
     "hora": "",
+    "pabellon": "COLEGIO SAN FELIPE NERI",
+    "es_resultado": false,
+    "jornada": "Jornada 10 - 18/01/2026",
+    "categoria": "Infantil Femenino - REGULAR - ÚNICO",
+    "equipo": "CD SAN FELIPE NERI",
+    "rival": "ATRIDEL CB PUERTO REAL",
+    "ubicacion": "Local",
+    "id": "22032026_cd-san-felipe-neri_atridel-cb-puerto-real_infantil-femenino-regular-unico"
+  },
+  {
+    "competicion": "Comp 1 Año",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "22/03/2026",
+    "hora": "",
     "pabellon": "PAB. MPAL. DE DEPORTES",
     "es_resultado": false,
     "jornada": "Jornada 17 - 22/03/2026",
@@ -43,21 +58,6 @@
     "rival": "SD CANDRAY",
     "ubicacion": "Local",
     "id": "08032026_cd-san-felipe-neri_sd-candray_infantil-femenino-regular-unico"
-  },
-  {
-    "competicion": "Comp 1 Año",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
-    "pabellon": "COLEGIO SAN FELIPE NERI",
-    "es_resultado": false,
-    "jornada": "Jornada 10 - 18/01/2026",
-    "categoria": "Infantil Femenino - REGULAR - ÚNICO",
-    "equipo": "CD SAN FELIPE NERI",
-    "rival": "ATRIDEL CB PUERTO REAL",
-    "ubicacion": "Local",
-    "id": "22022026_cd-san-felipe-neri_atridel-cb-puerto-real_infantil-femenino-regular-unico"
   },
   {
     "competicion": "Comp 1 Año",

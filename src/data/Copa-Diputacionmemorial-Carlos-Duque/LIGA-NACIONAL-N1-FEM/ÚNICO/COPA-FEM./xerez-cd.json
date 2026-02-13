@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 96,
+    "marcador_visitante": 41,
+    "fecha": "28/09/2025",
+    "hora": "12:00",
+    "pabellon": "PDVO. RUIZ MATEOS",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 28/09/2025",
+    "categoria": "LIGA NACIONAL N1 FEM - COPA FEM. - ÚNICO",
+    "equipo": "XEREZ CD",
+    "rival": "CÁDIZ CB GADES",
+    "ubicacion": "Local",
+    "id": "28092025_xerez-cd_cadiz-cb-gades_liga-nacional-n1-fem-copa-fem-unico"
+  },
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 55,
+    "marcador_visitante": 112,
+    "fecha": "13/09/2025",
+    "hora": "19:30",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "LIGA NACIONAL N1 FEM - COPA FEM. - ÚNICO",
+    "equipo": "XEREZ CD",
+    "rival": "UBJerez - EL MIRA",
+    "ubicacion": "Visitante",
+    "id": "13092025_ubjerez-el-mira_xerez-cd_liga-nacional-n1-fem-copa-fem-unico"
+  },
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 55,
+    "marcador_visitante": 112,
+    "fecha": "13/09/2025",
+    "hora": "19:30",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 14/09/2025",
+    "categoria": "LIGA NACIONAL N1 FEM - COPA FEM. - ÚNICO",
+    "equipo": "XEREZ CD",
+    "rival": "UBJerez - EL MIRA",
+    "ubicacion": "Visitante",
+    "id": "13092025_ubjerez-el-mira_xerez-cd_liga-nacional-n1-fem-copa-fem-unico"
+  }
+]
