@@ -81,14 +81,15 @@ function abreviarCategoria(cat: string, comp: string): string {
 const DIAS = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
 const MESES_NOMBRES = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
 
-function formatHeaderLine(p: Partido): string {
+function formatHeaderLine(p: Partido): { base: string; lugar: string; pabellon: string; esLocal: boolean } {
   const fecha = parseFecha(p.fecha, p.hora);
   const dia = DIAS[fecha.getDay()];
   const dd = String(fecha.getDate()).padStart(2, '0');
   const mm = String(fecha.getMonth() + 1).padStart(2, '0');
   const hora = p.hora || '';
-  const lugar = p.ubicacion === 'Local' ? 'en CASA' : p.pabellon || 'FUERA';
-  return hora ? `${dia}, ${dd}/${mm}, ${hora} ${lugar}` : `${dia}, ${dd}/${mm} ${lugar}`;
+  const lugarTexto = p.ubicacion === 'Local' ? 'EN CASA' : (p.pabellon ? `EN ${p.pabellon}` : 'FUERA');
+  const base = hora ? `${dia}, ${dd}/${mm}, ${hora}` : `${dia}, ${dd}/${mm}`;
+  return { base, lugar: lugarTexto, pabellon: p.pabellon, esLocal: p.ubicacion === 'Local' };
 }
 
 function fechaCorta(fechaStr: string): string {
@@ -113,13 +114,19 @@ const ahora = new Date();
 const mesActualKey = `${ahora.getFullYear()}-${String(ahora.getMonth()).padStart(2, '0')}`;
 
 // ── Serializar ──
-const partidosJSON = JSON.stringify(partidos.map(p => ({
-  ...p,
-  _ts: parseFecha(p.fecha, p.hora).getTime(),
-  _catCorta: abreviarCategoria(p.categoria, p.competicion),
-  _header: formatHeaderLine(p),
-  _fechaCorta: fechaCorta(p.fecha),
-})));
+const partidosJSON = JSON.stringify(partidos.map(p => {
+  const hdr = formatHeaderLine(p);
+  return {
+    ...p,
+    _ts: parseFecha(p.fecha, p.hora).getTime(),
+    _catCorta: abreviarCategoria(p.categoria, p.competicion),
+    _headerBase: hdr.base,
+    _headerLugar: hdr.lugar,
+    _headerPabellon: hdr.pabellon,
+    _headerEsLocal: hdr.esLocal,
+    _fechaCorta: fechaCorta(p.fecha),
+  };
+}));
 const mesesJSON = JSON.stringify(mesesArr);
 ---
 
@@ -130,7 +137,7 @@ const mesesJSON = JSON.stringify(mesesArr);
   <div class="relative">
     <div 
       id="carousel-track" 
-      class="flex gap-3 px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+      class="flex gap-3 px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory" style="overflow-y: visible; padding-top: 4px; padding-bottom: 4px;"
     >
       <!-- Tarjetas inyectadas por JS -->
     </div>
@@ -180,6 +187,7 @@ const mesesJSON = JSON.stringify(mesesArr);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: default;
+    margin-top: 4px;
   }
   .mc:hover {
     transform: translateY(-3px);
@@ -214,6 +222,14 @@ const mesesJSON = JSON.stringify(mesesArr);
     text-overflow: ellipsis;
     line-height: 1.3;
     margin-top: 1px;
+  }
+  .mc-pab-link {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .mc-pab-link:hover {
+    color: #16a34a;
   }
   .mc-label {
     font-size: 8.5px;
@@ -310,9 +326,23 @@ const mesesJSON = JSON.stringify(mesesArr);
     color: #15803d;
     line-height: 1;
     letter-spacing: -0.01em;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
     text-align: center;
     width: 100%;
+  }
+  .mc-cd-h {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .mc-cd-m {
+    font-size: 22px;
+    font-weight: 400;
+    color: #15803d;
+    line-height: 1;
   }
   .mc-live {
     font-weight: 900;
@@ -422,6 +452,8 @@ const mesesJSON = JSON.stringify(mesesArr);
     .mc-future { font-size: 30px; }
     .mc-time { font-size: 17px; }
     .mc-countdown { font-size: 26px; }
+    .mc-cd-h { font-size: 30px; }
+    .mc-cd-m { font-size: 20px; }
     .mc-rival-name { font-size: 9px; max-width: 70px; }
     .mc-rival-logo { width: 64px; height: 64px; }
     .mn-btn { font-size: 10px; padding: 2px 5px; }
@@ -473,7 +505,16 @@ const mesesJSON = JSON.stringify(mesesArr);
       }
 
       // ── Header line ──
-      let headerInfo = p._header;
+      let headerBase = p._headerBase;
+      let headerLugarHTML = '';
+      if (p._headerEsLocal) {
+        headerLugarHTML = ` ${p._headerLugar}`;
+      } else if (p._headerPabellon) {
+        const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(p._headerPabellon)}`;
+        headerLugarHTML = ` EN <a href="${mapsUrl}" target="_blank" rel="noopener" class="mc-pab-link">${p._headerPabellon}</a>`;
+      } else {
+        headerLugarHTML = ` FUERA`;
+      }
       let headerLabel = '';
 
       if (isLive) {
@@ -528,10 +569,10 @@ const mesesJSON = JSON.stringify(mesesArr);
       const logoMap = [
         // UBJerez
         [r => r.includes('ubjerez') || r.includes('ubj') || (r.includes('jerez') && r.includes('bcto')), 'ubjerez.png'],
+        // Gymnástica Portuense (MUST be before portuense check)
+        [r => r.includes('gymnastica') || r.includes('gymnástica'), 'gymnastica.png'],
         // CB Portuense
         [r => r.includes('portuense') || r.includes('cbp '), 'cbportuense.png'],
-        // Gymnástica Portuense
-        [r => r.includes('gymnastica') || r.includes('gymnástica'), 'gymnastica.png'],
         // CB San Fernando / CBSFDO
         [r => r.includes('cbsfdo') || r.includes('cb san fernando') || r.includes('san fernando'), 'cbsanfernando.png'],
         // Centurias (CD Centurias San Roque)
@@ -554,8 +595,8 @@ const mesesJSON = JSON.stringify(mesesArr);
         [r => r.includes('medina'), 'cbmedinasidonia.png'],
         // SD Candray
         [r => r.includes('candray'), 'candray.png'],
-        // C.A.B.U.
-        [r => r.includes('c.a.b.u') || r.includes('cabu') || r.includes('carbu'), 'cabu.png'],
+        // C.A.B.U. (Ubrique)
+        [r => r.includes('c.a.b.u') || r.includes('cabu') || r.includes('ubrique'), 'cabu.png'],
         // CB Cimbis
         [r => r.includes('cimbis'), 'cbcimbis.png'],
         // Urbaluz / UZ Red Devils
@@ -599,6 +640,10 @@ const mesesJSON = JSON.stringify(mesesArr);
         [r => r.includes('algaida'), 'adcalgaida.png'],
         // GABBA
         [r => r.includes('gabba'), 'cbalgeciras.png'],
+        // CB Trebujena
+        [r => r.includes('trebujena'), 'cbtrebujena.svg'],
+        // CB La Inmaculada Ceuta
+        [r => r.includes('inmaculada') || r.includes('ceuta'), 'cbinmaculadaceuta.svg'],
       ];
 
       let logoFile = null;
@@ -616,7 +661,7 @@ const mesesJSON = JSON.stringify(mesesArr);
       div.innerHTML = `
         <div class="mc-head">
           <div class="mc-cat">${p._catCorta}</div>
-          <div class="mc-info">${headerInfo}</div>
+          <div class="mc-info">${headerBase}${headerLugarHTML}</div>
           ${headerLabel ? `<div class="mc-label">${headerLabel}</div>` : ''}
         </div>
         <div class="mc-body">
@@ -717,7 +762,11 @@ const mesesJSON = JSON.stringify(mesesArr);
         const h = Math.floor(diff / 3600000);
         const m = Math.floor((diff % 3600000) / 60000);
         const s = Math.floor((diff % 60000) / 1000);
-        el.textContent = h > 0 ? `${h}h ${String(m).padStart(2,'0')}m` : `${m}m ${String(s).padStart(2,'0')}s`;
+        if (h > 0) {
+          el.innerHTML = `<span class="mc-cd-h">${h}h</span><span class="mc-cd-m">${String(m).padStart(2,'0')}m</span>`;
+        } else {
+          el.textContent = `${m}m ${String(s).padStart(2,'0')}s`;
+        }
       });
     }
     updateCountdowns();

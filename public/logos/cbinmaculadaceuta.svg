@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#003366" stroke="#cc0000" stroke-width="5"/>
+  <text x="100" y="65" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="white">CB LA</text>
+  <text x="100" y="95" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="16" font-weight="900" fill="#cc0000">INMACULADA</text>
+  <text x="100" y="120" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="white">CEUTA</text>
+  <circle cx="100" cy="152" r="12" fill="#cc0000" stroke="white" stroke-width="1.5"/>
+  <path d="M92 152 L108 152 M100 144 L100 160 M93 146 Q100 152 107 146 M93 158 Q100 152 107 158" stroke="white" stroke-width="1.5" fill="none"/>
+</svg>
