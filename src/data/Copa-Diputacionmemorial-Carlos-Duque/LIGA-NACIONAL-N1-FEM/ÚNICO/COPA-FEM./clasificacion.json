@@ -1,0 +1,40 @@
+{
+  "categoria": "LIGA NACIONAL N1 FEM - COPA FEM. - ÚNICO",
+  "competicion": "Copa Diputacionmemorial Carlos Duque",
+  "ultima_actualizacion": "2026-02-13T15:38:23.631477",
+  "clasificacion": [
+    {
+      "equipo": "XEREZ CD",
+      "partidos_jugados": 3,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 320,
+      "puntos_contra": 151,
+      "diferencia": 169,
+      "puntos": 6,
+      "posicion": 1
+    },
+    {
+      "equipo": "CÁDIZ CB GADES",
+      "partidos_jugados": 2,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 1,
+      "puntos_favor": 113,
+      "puntos_contra": 163,
+      "diferencia": -50,
+      "puntos": 3,
+      "posicion": 2
+    },
+    {
+      "equipo": "UBJerez - EL MIRA",
+      "partidos_jugados": 3,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 3,
+      "puntos_favor": 177,
+      "puntos_contra": 296,
+      "diferencia": -119,
+      "puntos": 3,
+      "posicion": 3
+    }
+  ]
+}

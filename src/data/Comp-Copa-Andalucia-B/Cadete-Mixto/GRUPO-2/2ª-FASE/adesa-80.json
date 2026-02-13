@@ -93,6 +93,21 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
+    "fecha": "18/02/2026",
+    "hora": "18:30",
+    "pabellon": "PAB. ARRABAL",
+    "es_resultado": false,
+    "jornada": "Jornada 5 - 25/01/2026",
+    "categoria": "Cadete Mixto - 2ª FASE - GRUPO 2",
+    "equipo": "ADESA 80",
+    "rival": "COPICENTRO CBA AZUL",
+    "ubicacion": "Visitante",
+    "id": "18022026_copicentro-cba-azul_adesa-80_cadete-mixto-2-fase-grupo-2"
+  },
+  {
+    "competicion": "Comp Copa Andalucia B",
+    "marcador_local": null,
+    "marcador_visitante": null,
     "fecha": "14/02/2026",
     "hora": "19:30",
     "pabellon": "PDVO. MUNICIPAL",
@@ -103,21 +118,6 @@
     "rival": "TAX CENTURIAS",
     "ubicacion": "Local",
     "id": "14022026_adesa-80_tax-centurias_cadete-mixto-2-fase-grupo-2"
-  },
-  {
-    "competicion": "Comp Copa Andalucia B",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "13/02/2026",
-    "hora": "18:00",
-    "pabellon": "PAB. ARRABAL",
-    "es_resultado": false,
-    "jornada": "Jornada 5 - 25/01/2026",
-    "categoria": "Cadete Mixto - 2ª FASE - GRUPO 2",
-    "equipo": "ADESA 80",
-    "rival": "COPICENTRO CBA AZUL",
-    "ubicacion": "Visitante",
-    "id": "13022026_copicentro-cba-azul_adesa-80_cadete-mixto-2-fase-grupo-2"
   },
   {
     "competicion": "Comp Copa Andalucia B",
