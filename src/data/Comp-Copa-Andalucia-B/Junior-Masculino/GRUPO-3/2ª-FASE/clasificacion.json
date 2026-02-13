@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Masculino - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-12T18:28:21.243836",
+  "ultima_actualizacion": "2026-02-13T11:57:47.596746",
   "clasificacion": [
     {
       "equipo": "GABBA",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 5,
+      "puntos_favor": 465,
+      "puntos_contra": 543,
+      "diferencia": -78,
+      "puntos": 11,
+      "posicion": 4
+    },
+    {
       "equipo": "GYMNÁSTICA P. AMARILLO",
       "partidos_jugados": 7,
       "partidos_ganados": 2,
@@ -45,28 +56,17 @@
       "puntos_contra": 406,
       "diferencia": 3,
       "puntos": 9,
-      "posicion": 4
-    },
-    {
-      "equipo": "UBJerez NEGRO",
-      "partidos_jugados": 7,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 5,
-      "puntos_favor": 392,
-      "puntos_contra": 472,
-      "diferencia": -80,
-      "puntos": 9,
       "posicion": 5
     },
     {
       "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 1,
-      "partidos_perdidos": 6,
-      "puntos_favor": 303,
-      "puntos_contra": 445,
-      "diferencia": -142,
-      "puntos": 8,
+      "partidos_perdidos": 7,
+      "puntos_favor": 374,
+      "puntos_contra": 518,
+      "diferencia": -144,
+      "puntos": 9,
       "posicion": 6
     }
   ]

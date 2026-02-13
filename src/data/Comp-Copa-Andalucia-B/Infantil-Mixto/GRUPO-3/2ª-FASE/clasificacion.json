@@ -1,8 +1,19 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-12T18:30:08.291288",
+  "ultima_actualizacion": "2026-02-13T11:59:50.476964",
   "clasificacion": [
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 448,
+      "puntos_contra": 273,
+      "diferencia": 175,
+      "puntos": 14,
+      "posicion": 1
+    },
     {
       "equipo": "EDM ARCOS BLANCO",
       "partidos_jugados": 7,
@@ -12,17 +23,6 @@
       "puntos_contra": 355,
       "diferencia": -19,
       "puntos": 11,
-      "posicion": 1
-    },
-    {
-      "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 5,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 0,
-      "puntos_favor": 316,
-      "puntos_contra": 203,
-      "diferencia": 113,
-      "puntos": 10,
       "posicion": 2
     },
     {
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 4,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
-      "partidos_perdidos": 4,
-      "puntos_favor": 136,
-      "puntos_contra": 249,
-      "diferencia": -113,
-      "puntos": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 206,
+      "puntos_contra": 381,
+      "diferencia": -175,
+      "puntos": 6,
       "posicion": 8
     }
   ]
