@@ -51,37 +51,30 @@ jobs:
             echo "actualizados=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Verificar cambios
-        id: cambios
-        run: |
-          # Checkear cambios en datos Y en intentos
-          git add -A src/data/ intentos_resultados.json 2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo "hay_cambios=false" >> $GITHUB_OUTPUT
-          else
-            echo "hay_cambios=true" >> $GITHUB_OUTPUT
-            git diff --cached --stat
-          fi
-
       - name: Commit y push
-        if: steps.cambios.outputs.hay_cambios == 'true'
         run: |
           git config --local user.name "GitHub Actions Bot"
           git config --local user.email "actions@github.com"
           
-          # Incluir intentos_resultados.json para que el disparador sepa los reintentos
-          git add src/data/ intentos_resultados.json 2>/dev/null || true
+          # Añadir todo (tracked + untracked)
+          git add -A src/data/ 2>/dev/null || true
+          git add intentos_resultados.json 2>/dev/null || true
           
-          TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
-          
-          if [ "${{ steps.scrape.outputs.actualizados }}" = "true" ]; then
-            MSG="Resultados actualizados - ${TIMESTAMP}"
+          # Solo commitear si hay cambios staged
+          if git diff --cached --quiet; then
+            echo "Sin cambios que commitear"
           else
-            MSG="Actualizar intentos - ${TIMESTAMP}"
+            TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
+            
+            if echo "${{ steps.scrape.outputs.actualizados }}" | grep -q "true"; then
+              MSG="Resultados actualizados - ${TIMESTAMP}"
+            else
+              MSG="Actualizar intentos - ${TIMESTAMP}"
+            fi
+            
+            git commit -m "${MSG}"
+            git push
           fi
-          
-          git commit -m "${MSG}" || true
-          git push
 
       - name: Resumen
         if: always()

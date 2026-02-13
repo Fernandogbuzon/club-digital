@@ -43,28 +43,24 @@ jobs:
           xvfb-run --auto-servernum --server-args="-screen 0 1366x768x24" \
             python scraper_competicion.py 2>&1
 
-      - name: Verificar cambios
-        id: cambios
-        run: |
-          if git diff --quiet src/data/ partidos_hoy.json comp_url_map.json 2>/dev/null; then
-            echo "hay_cambios=false" >> $GITHUB_OUTPUT
-          else
-            echo "hay_cambios=true" >> $GITHUB_OUTPUT
-            echo "Cambios detectados:"
-            git diff --stat src/data/
-          fi
-
       - name: Commit y push
-        if: steps.cambios.outputs.hay_cambios == 'true'
         run: |
           git config --local user.name "GitHub Actions Bot"
           git config --local user.email "actions@github.com"
-          git add src/data/ partidos_hoy.json comp_url_map.json intentos_resultados.json 2>/dev/null || true
           
-          TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
-          git commit -m "Calendario actualizado - ${TIMESTAMP}" \
-                     -m "Actualizacion automatica de fechas y horarios"
-          git push
+          # Añadir TODO (tracked + untracked) de las carpetas relevantes
+          git add -A src/data/ 2>/dev/null || true
+          git add partidos_hoy.json comp_url_map.json intentos_resultados.json 2>/dev/null || true
+          
+          # Solo commitear si hay cambios staged
+          if git diff --cached --quiet; then
+            echo "Sin cambios que commitear"
+          else
+            TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
+            git commit -m "Calendario actualizado - ${TIMESTAMP}" \
+                       -m "Actualizacion automatica de fechas y horarios"
+            git push
+          fi
 
       - name: Resumen
         if: always()
