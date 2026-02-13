@@ -1,10 +1,16 @@
 ---
 /**
- * PartidosCarousel – Carrusel estilo NBA Bucks para partidos de ADESA 80
+ * PartidosCarousel – Carrusel estilo NBA Bucks para partidos del equipo
+ * Lee team_config.json para saber qué equipo mostrar (reutilizable)
  */
 
-// ── Importar todos los JSON de ADESA 80 con glob ────────────────────────────
-const allFiles = import.meta.glob('../data/**/adesa-80*.json', { eager: true });
+// ── Config del equipo ────────────────────────────────────────────────────────
+import teamConfig from '../../team_config.json';
+const TEAM_SLUG = teamConfig.team_slug;
+
+// ── Importar todos los JSON del equipo con glob ──────────────────────────────
+// Cargamos todos los JSON de data y filtramos por slug del equipo
+const allJsonFiles = import.meta.glob('../data/**/*.json', { eager: true });
 
 interface Partido {
   competicion: string;
@@ -23,8 +29,11 @@ interface Partido {
 }
 
 let partidos: Partido[] = [];
-for (const path in allFiles) {
-  const data = (allFiles[path] as any).default || allFiles[path];
+for (const path in allJsonFiles) {
+  // Solo ficheros que empiezan por el slug del equipo (ej: "adesa-80")
+  const filename = path.split('/').pop() || '';
+  if (!filename.startsWith(TEAM_SLUG)) continue;
+  const data = (allJsonFiles[path] as any).default || allJsonFiles[path];
   if (Array.isArray(data)) partidos.push(...data);
 }
 
@@ -456,11 +465,11 @@ const mesesJSON = JSON.stringify(mesesArr);
       const isUrgent = !isPlayed && diffH > 0 && diffH <= 24;
 
       // Victory check
-      let adesaWon = false;
+      let teamWon = false;
       if (isPlayed) {
         const as = p.ubicacion === 'Local' ? p.marcador_local : p.marcador_visitante;
         const rs = p.ubicacion === 'Local' ? p.marcador_visitante : p.marcador_local;
-        adesaWon = as > rs;
+        teamWon = as > rs;
       }
 
       // ── Header line ──
@@ -484,11 +493,11 @@ const mesesJSON = JSON.stringify(mesesArr);
           lc = 's-neutral';
           vc = 's-neutral';
         } else if (p.ubicacion === 'Local') {
-          lc = adesaWon ? 's-win' : 's-loss';
+          lc = teamWon ? 's-win' : 's-loss';
           vc = 's-neutral';
         } else {
           lc = 's-neutral';
-          vc = adesaWon ? 's-win' : 's-loss';
+          vc = teamWon ? 's-win' : 's-loss';
         }
         leftHTML = `<div class="mc-scores"><span class="mc-score ${lc}">${ml}</span><span class="mc-sep">-</span><span class="mc-score ${vc}">${mv}</span></div>`;
       } else if (isLive) {

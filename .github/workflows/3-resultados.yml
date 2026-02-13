@@ -1,0 +1,92 @@
+name: "3. Resultados - Scraping rapido"
+
+# Solo se ejecuta cuando el disparador detecta partidos pendientes
+# Abre navegador, scrapea SOLO el grupo exacto, actualiza JSON
+# Max 3 intentos por partido (controlado por intentos_resultados.json)
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: scraper-resultados
+  cancel-in-progress: false
+
+jobs:
+  scrape-resultados:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: |
+          pip install playwright playwright-stealth
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Scraping rapido de resultados
+        id: scrape
+        run: |
+          sudo apt-get install -y xvfb > /dev/null 2>&1
+          
+          OUTPUT=$(xvfb-run --auto-servernum --server-args="-screen 0 1366x768x24" \
+            python scraper_resultados.py 2>&1) || true
+          
+          echo "$OUTPUT"
+          
+          # Detectar si se actualizaron resultados
+          if echo "$OUTPUT" | grep -q "RESULTADO:"; then
+            echo "actualizados=true" >> $GITHUB_OUTPUT
+          else
+            echo "actualizados=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Verificar cambios
+        id: cambios
+        run: |
+          # Checkear cambios en datos Y en intentos
+          git add -A src/data/ intentos_resultados.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "hay_cambios=false" >> $GITHUB_OUTPUT
+          else
+            echo "hay_cambios=true" >> $GITHUB_OUTPUT
+            git diff --cached --stat
+          fi
+
+      - name: Commit y push
+        if: steps.cambios.outputs.hay_cambios == 'true'
+        run: |
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          
+          # Incluir intentos_resultados.json para que el disparador sepa los reintentos
+          git add src/data/ intentos_resultados.json 2>/dev/null || true
+          
+          TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
+          
+          if [ "${{ steps.scrape.outputs.actualizados }}" = "true" ]; then
+            MSG="Resultados actualizados - ${TIMESTAMP}"
+          else
+            MSG="Actualizar intentos - ${TIMESTAMP}"
+          fi
+          
+          git commit -m "${MSG}" || true
+          git push
+
+      - name: Resumen
+        if: always()
+        run: |
+          echo "### Scraper Resultados" >> $GITHUB_STEP_SUMMARY
+          echo "**Hora:** $(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')" >> $GITHUB_STEP_SUMMARY
+          echo "**Resultados nuevos:** ${{ steps.scrape.outputs.actualizados }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** ${{ steps.cambios.outputs.hay_cambios }}" >> $GITHUB_STEP_SUMMARY

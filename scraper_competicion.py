@@ -38,21 +38,23 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
 
-# ─── Configuración ───────────────────────────────────────────────────────────
+# ─── Configuración (desde team_config.json) ─────────────────────────────────
 
-# Todas las competiciones a scrapear
-COMPETICIONES = [
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2445/comp-copa-andalucia-a",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2446/comp-copa-andalucia-b",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2447/comp-1-a%C3%B1o",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2448/liga-pre-minibasket",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2449/programa-babybasket-20182019",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2542/liga-sierra-cadiz",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2503/copa-diputacionmemorial-carlos-duque",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2516/iv-torneo-las-cortes-qv",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2381/liga-verano-el-puerto",
-    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2386/torneo-seleccion-espa%C3%B1ola",
-]
+SCRIPT_DIR = Path(__file__).parent
+CONFIG_FILE = SCRIPT_DIR / "team_config.json"
+
+def cargar_config() -> dict:
+    if not CONFIG_FILE.exists():
+        raise FileNotFoundError(
+            f"No se encontró {CONFIG_FILE}. "
+            "Copia team_config.example.json → team_config.json y ajústalo a tu equipo."
+        )
+    return json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
+
+_CFG = cargar_config()
+TEAM_NAME = _CFG["team_name"]
+TEAM_SLUG = _CFG["team_slug"]
+COMPETICIONES = _CFG["competitions"]
 
 # ASP.NET dropdown names (para __doPostBack)
 DDL_CATEGORIAS = "ctl00$ctl00$contenedor_informacion$contenedor_informacion_con_lateral$DDLCategorias"
@@ -64,7 +66,6 @@ SEL_CAT = f"select[name='{DDL_CATEGORIAS}']"
 SEL_FASE = f"select[name='{DDL_FASES}']"
 SEL_GRUPO = f"select[name='{DDL_GRUPOS}']"
 
-SCRIPT_DIR = Path(__file__).parent
 DATA_BASE_DIR = SCRIPT_DIR / "src" / "data"
 
 USER_AGENTS = [
@@ -397,8 +398,8 @@ def carpeta_competicion(nombre: str) -> str:
 
 async def scrape_una_competicion(
     page, url: str, filtro_cat: Optional[str] = None
-) -> tuple[int, int]:
-    """Scrapea una competición completa. Devuelve (total_partidos, total_archivos)."""
+) -> tuple[int, int, str]:
+    """Scrapea una competición completa. Devuelve (total_partidos, total_archivos, comp_carpeta)."""
 
     logger.info(f"📡 Navegando a {url}")
     await page.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -426,7 +427,7 @@ async def scrape_una_competicion(
 
     if not categorias:
         logger.warning("⚠️ Sin categorías — puede que la página no tenga dropdowns")
-        return 0, 0
+        return 0, 0, comp_carpeta
 
     total_partidos = 0
     total_archivos = 0
@@ -519,7 +520,7 @@ async def scrape_una_competicion(
         await pausa(2.0, 4.0)
 
     logger.info(f"\n  ✅ {comp_nombre}: {total_partidos} partidos, {total_archivos} archivos")
-    return total_partidos, total_archivos
+    return total_partidos, total_archivos, comp_carpeta
 
 
 # ─── Scraper principal (todas las competiciones) ─────────────────────────────
@@ -530,7 +531,7 @@ async def scrape_todas(
     headless: bool = False,
 ):
     logger.info("=" * 60)
-    logger.info("🏀 SCRAPER COMPETICIONES BALONCESTO CÁDIZ")
+    logger.info(f"🏀 SCRAPER COMPETICIONES – {TEAM_NAME}")
     logger.info(f"📋 {len(COMPETICIONES)} competiciones registradas")
     logger.info("=" * 60)
 
@@ -555,13 +556,13 @@ async def scrape_todas(
             logger.info(f"{'═' * 60}")
 
             try:
-                tp, ta = await scrape_una_competicion(page, url, filtro_cat)
+                tp, ta, comp_carpeta = await scrape_una_competicion(page, url, filtro_cat)
                 gran_total_partidos += tp
                 gran_total_archivos += ta
-                resultados.append((url, tp, ta, "✅"))
+                resultados.append((url, tp, ta, "✅", comp_carpeta))
             except Exception as e:
                 logger.error(f"❌ Error en competición: {e}", exc_info=True)
-                resultados.append((url, 0, 0, f"❌ {e}"))
+                resultados.append((url, 0, 0, f"❌ {e}", ""))
                 # Renavegar a una página limpia para recuperar
                 try:
                     await page.goto("about:blank")
@@ -575,7 +576,7 @@ async def scrape_todas(
         logger.info(f"\n{'═' * 60}")
         logger.info("📊 RESUMEN FINAL")
         logger.info(f"{'═' * 60}")
-        for url, tp, ta, status in resultados:
+        for url, tp, ta, status, _ in resultados:
             slug = url.rstrip("/").split("/")[-1]
             logger.info(f"  {status} {slug}: {tp} partidos, {ta} archivos")
         logger.info(f"{'─' * 60}")
@@ -589,6 +590,73 @@ async def scrape_todas(
     finally:
         await browser.close()
         await pw.stop()
+
+    # Generar comp_url_map.json (mapa carpeta → URL para el scraper de resultados)
+    generar_comp_url_map(resultados)
+
+    # Generar partidos_hoy.json para el disparador de resultados
+    generar_partidos_hoy()
+
+
+def generar_comp_url_map(resultados: list[tuple]):
+    """
+    Genera comp_url_map.json: mapea carpeta de competición → URL.
+    Usado por scraper_resultados.py para saber qué URL abrir para cada grupo.
+    """
+    url_map = {}
+    for url, tp, ta, status, comp_carpeta in resultados:
+        if comp_carpeta:
+            url_map[comp_carpeta] = url
+    out = SCRIPT_DIR / "comp_url_map.json"
+    out.write_text(json.dumps(url_map, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"🗺️ comp_url_map.json: {len(url_map)} competiciones mapeadas")
+
+
+def generar_partidos_hoy():
+    """
+    Escanea todos los JSON del equipo (TEAM_SLUG) y genera partidos_hoy.json
+    con los partidos de hoy que aún no tienen resultado.
+    Usado por el workflow disparador para saber cuándo lanzar el scraper de resultados.
+    """
+    hoy = datetime.now().strftime("%d/%m/%Y")
+    partidos_hoy = []
+    glob_pattern = f"{TEAM_SLUG}*.json"
+
+    for json_path in DATA_BASE_DIR.rglob(glob_pattern):
+        try:
+            data = json.loads(json_path.read_text(encoding="utf-8"))
+            if not isinstance(data, list):
+                continue
+        except Exception:
+            continue
+
+        rel = json_path.relative_to(DATA_BASE_DIR)
+        parts = rel.parts
+        if len(parts) < 5:
+            continue
+
+        for p in data:
+            if p.get("es_resultado"):
+                continue
+            if p.get("fecha") == hoy:
+                partidos_hoy.append({
+                    "equipo": p.get("equipo", ""),
+                    "rival": p.get("rival", ""),
+                    "fecha": p.get("fecha", ""),
+                    "hora": p.get("hora", ""),
+                    "categoria": p.get("categoria", ""),
+                    "ubicacion": p.get("ubicacion", ""),
+                    "id": p.get("id", ""),
+                    "comp_carpeta": parts[0],
+                    "cat_carpeta": parts[1],
+                    "grupo_carpeta": parts[2],
+                    "fase_carpeta": parts[3],
+                    "json_path": str(rel),
+                })
+
+    out = SCRIPT_DIR / "partidos_hoy.json"
+    out.write_text(json.dumps(partidos_hoy, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"📅 partidos_hoy.json: {len(partidos_hoy)} partido(s) hoy ({hoy})")
 
 
 # ─── Modo automático ─────────────────────────────────────────────────────────
