@@ -1,0 +1,73 @@
+{
+  "categoria": "PreMini Mixto - REGULAR - GRUPO D",
+  "competicion": "Liga Pre Minibasket",
+  "ultima_actualizacion": "2026-02-12T18:38:35.862885",
+  "clasificacion": [
+    {
+      "equipo": "CBA 2017",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 1
+    },
+    {
+      "equipo": "GONZALEZ&SANCHEZ CENTURIAS NEGRO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 2
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 3
+    },
+    {
+      "equipo": "FORVIDE ALCALA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 4
+    },
+    {
+      "equipo": "REST. TORO EMBOLAO MONTERA BCTO.",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 5
+    },
+    {
+      "equipo": "CBA  2016",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 6
+    }
+  ]
+}

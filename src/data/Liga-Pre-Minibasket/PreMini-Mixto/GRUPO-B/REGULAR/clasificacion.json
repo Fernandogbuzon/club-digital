@@ -1,0 +1,73 @@
+{
+  "categoria": "PreMini Mixto - REGULAR - GRUPO B",
+  "competicion": "Liga Pre Minibasket",
+  "ultima_actualizacion": "2026-02-12T18:38:29.170220",
+  "clasificacion": [
+    {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 1
+    },
+    {
+      "equipo": "CB TREBUJENA",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 2
+    },
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 3
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 4
+    },
+    {
+      "equipo": "SERFLUID CBSFDO",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 5
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 6
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "categoria": "Infantil Mixto - REGULAR - ÚNICO",
+  "competicion": "Liga Sierra Cadiz",
+  "ultima_actualizacion": "2026-02-12T18:40:13.798171",
+  "clasificacion": [
+    {
+      "equipo": "OLVERA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 0,
+      "puntos_favor": 255,
+      "puntos_contra": 52,
+      "diferencia": 203,
+      "puntos": 10,
+      "posicion": 1
+    },
+    {
+      "equipo": "PRADO DEL REY",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 236,
+      "puntos_contra": 120,
+      "diferencia": 116,
+      "puntos": 9,
+      "posicion": 2
+    },
+    {
+      "equipo": "PUERTO SERRANO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 4,
+      "puntos_favor": 87,
+      "puntos_contra": 219,
+      "diferencia": -132,
+      "puntos": 6,
+      "posicion": 3
+    },
+    {
+      "equipo": "VILLAMARTÍN",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 5,
+      "puntos_favor": 46,
+      "puntos_contra": 233,
+      "diferencia": -187,
+      "puntos": 5,
+      "posicion": 4
+    }
+  ]
+}

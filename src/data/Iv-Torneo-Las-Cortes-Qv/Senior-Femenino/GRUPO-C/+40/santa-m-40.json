@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 12,
+    "marcador_visitante": 22,
+    "fecha": "27/09/2025",
+    "hora": "09:50",
+    "pabellon": "PAB. DEL PARQUE Pista 3",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Femenino - +40 - GRUPO C",
+    "equipo": "SANTA Mª +40",
+    "rival": "TORTUGAS +40",
+    "ubicacion": "Local",
+    "id": "27092025_santa-m-40_tortugas-40_senior-femenino-40-grupo-c"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 12,
+    "marcador_visitante": 22,
+    "fecha": "27/09/2025",
+    "hora": "09:50",
+    "pabellon": "PAB. DEL PARQUE Pista 3",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 27/09/2025",
+    "categoria": "Senior Femenino - +40 - GRUPO C",
+    "equipo": "SANTA Mª +40",
+    "rival": "TORTUGAS +40",
+    "ubicacion": "Local",
+    "id": "27092025_santa-m-40_tortugas-40_senior-femenino-40-grupo-c"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 16,
+    "marcador_visitante": 18,
+    "fecha": "27/09/2025",
+    "hora": "14:00",
+    "pabellon": "PAB. DEL PARQUE Pista 2",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 27/09/2025",
+    "categoria": "Senior Femenino - +40 - GRUPO C",
+    "equipo": "SANTA Mª +40",
+    "rival": "SAN ROQUE +40",
+    "ubicacion": "Local",
+    "id": "27092025_santa-m-40_san-roque-40_senior-femenino-40-grupo-c"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 30,
+    "marcador_visitante": 24,
+    "fecha": "27/09/2025",
+    "hora": "12:20",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "Jornada 2 - 27/09/2025",
+    "categoria": "Senior Femenino - +35 - GRUPO A",
+    "equipo": "ES CASTELL +35",
+    "rival": "MQV OMEGA +35",
+    "ubicacion": "Visitante",
+    "id": "27092025_mqv-omega-35_es-castell-35_senior-femenino-35-grupo-a"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 6,
+    "marcador_visitante": 30,
+    "fecha": "27/09/2025",
+    "hora": "14:00",
+    "pabellon": "PAB. DEL PARQUE Pista 3",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 27/09/2025",
+    "categoria": "Senior Femenino - +35 - GRUPO A",
+    "equipo": "ES CASTELL +35",
+    "rival": "BAEZA/VEGAS +35",
+    "ubicacion": "Visitante",
+    "id": "27092025_baezavegas-35_es-castell-35_senior-femenino-35-grupo-a"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "categoria": "Senior Femenino - FASE FINAL +35 - ÚNICO",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:42:23.232815",
+  "clasificacion": [
+    {
+      "equipo": "CBP +35",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 70,
+      "puntos_contra": 26,
+      "diferencia": 44,
+      "puntos": 4,
+      "posicion": 1
+    },
+    {
+      "equipo": "HUELVA +35",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 68,
+      "puntos_contra": 36,
+      "diferencia": 32,
+      "puntos": 4,
+      "posicion": 2
+    },
+    {
+      "equipo": "CBRV +35",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 46,
+      "puntos_contra": 38,
+      "diferencia": 8,
+      "puntos": 4,
+      "posicion": 3
+    },
+    {
+      "equipo": "BAEZA/VEGAS +35",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 38,
+      "puntos_contra": 46,
+      "diferencia": -8,
+      "puntos": 2,
+      "posicion": 4
+    },
+    {
+      "equipo": "ES CASTELL +35",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 36,
+      "puntos_contra": 68,
+      "diferencia": -32,
+      "puntos": 2,
+      "posicion": 5
+    },
+    {
+      "equipo": "MQV OMEGA +35",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 26,
+      "puntos_contra": 70,
+      "diferencia": -44,
+      "puntos": 2,
+      "posicion": 6
+    }
+  ]
+}

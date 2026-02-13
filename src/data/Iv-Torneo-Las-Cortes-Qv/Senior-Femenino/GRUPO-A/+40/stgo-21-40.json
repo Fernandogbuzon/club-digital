@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 10,
+    "marcador_visitante": 46,
+    "fecha": "27/09/2025",
+    "hora": "09:50",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Femenino - +40 - GRUPO A",
+    "equipo": "STGO 2+1 +40",
+    "rival": "OLIVOS +40",
+    "ubicacion": "Visitante",
+    "id": "27092025_olivos-40_stgo-21-40_senior-femenino-40-grupo-a"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 10,
+    "marcador_visitante": 46,
+    "fecha": "27/09/2025",
+    "hora": "09:50",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 27/09/2025",
+    "categoria": "Senior Femenino - +40 - GRUPO A",
+    "equipo": "STGO 2+1 +40",
+    "rival": "OLIVOS +40",
+    "ubicacion": "Visitante",
+    "id": "27092025_olivos-40_stgo-21-40_senior-femenino-40-grupo-a"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 6,
+    "marcador_visitante": 28,
+    "fecha": "27/09/2025",
+    "hora": "11:30",
+    "pabellon": "PAB. DEL PARQUE Pista 1",
+    "es_resultado": true,
+    "jornada": "Jornada 2 - 27/09/2025",
+    "categoria": "Senior Femenino - +40 - GRUPO A",
+    "equipo": "STGO 2+1 +40",
+    "rival": "PUERTOLLANO +40",
+    "ubicacion": "Local",
+    "id": "27092025_stgo-21-40_puertollano-40_senior-femenino-40-grupo-a"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "categoria": "Junior Masculino - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:28:34.457133",
+  "clasificacion": [
+    {
+      "equipo": "AD MARIANISTAS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 452,
+      "puntos_contra": 297,
+      "diferencia": 155,
+      "puntos": 13,
+      "posicion": 1
+    },
+    {
+      "equipo": "MONTERA GAFISUR",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 420,
+      "puntos_contra": 339,
+      "diferencia": 81,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 381,
+      "puntos_contra": 439,
+      "diferencia": -58,
+      "puntos": 11,
+      "posicion": 3
+    },
+    {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 359,
+      "puntos_contra": 537,
+      "diferencia": -178,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

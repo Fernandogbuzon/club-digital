@@ -1,0 +1,40 @@
+{
+  "categoria": "Senior Femenino - +35 - GRUPO A",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:42:11.695657",
+  "clasificacion": [
+    {
+      "equipo": "MQV OMEGA +35",
+      "partidos_jugados": 3,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 128,
+      "puntos_contra": 50,
+      "diferencia": 78,
+      "puntos": 6,
+      "posicion": 1
+    },
+    {
+      "equipo": "ES CASTELL +35",
+      "partidos_jugados": 2,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 1,
+      "puntos_favor": 54,
+      "puntos_contra": 36,
+      "diferencia": 18,
+      "puntos": 3,
+      "posicion": 2
+    },
+    {
+      "equipo": "BAEZA/VEGAS +35",
+      "partidos_jugados": 3,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 3,
+      "puntos_favor": 32,
+      "puntos_contra": 128,
+      "diferencia": -96,
+      "puntos": 3,
+      "posicion": 3
+    }
+  ]
+}

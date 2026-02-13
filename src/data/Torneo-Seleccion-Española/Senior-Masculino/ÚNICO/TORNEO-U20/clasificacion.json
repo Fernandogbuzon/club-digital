@@ -1,0 +1,51 @@
+{
+  "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+  "competicion": "Torneo Seleccion Española",
+  "ultima_actualizacion": "2026-02-12T18:43:08.718699",
+  "clasificacion": [
+    {
+      "equipo": "ESPAÑA",
+      "partidos_jugados": 4,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 0,
+      "puntos_favor": 273,
+      "puntos_contra": 212,
+      "diferencia": 61,
+      "puntos": 8,
+      "posicion": 1
+    },
+    {
+      "equipo": "FRANCIA",
+      "partidos_jugados": 4,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 1,
+      "puntos_favor": 308,
+      "puntos_contra": 224,
+      "diferencia": 84,
+      "puntos": 7,
+      "posicion": 2
+    },
+    {
+      "equipo": "LITUANIA",
+      "partidos_jugados": 4,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 3,
+      "puntos_favor": 243,
+      "puntos_contra": 279,
+      "diferencia": -36,
+      "puntos": 5,
+      "posicion": 3
+    },
+    {
+      "equipo": "BÉLGICA",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 4,
+      "puntos_favor": 212,
+      "puntos_contra": 321,
+      "diferencia": -109,
+      "puntos": 4,
+      "posicion": 4
+    }
+  ]
+}

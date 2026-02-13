@@ -1,0 +1,73 @@
+{
+  "categoria": "Infantil Masculino - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:26:48.004636",
+  "clasificacion": [
+    {
+      "equipo": "CÁDIZ CB GADES LA BARRA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 0,
+      "puntos_favor": 860,
+      "puntos_contra": 459,
+      "diferencia": 401,
+      "puntos": 22,
+      "posicion": 1
+    },
+    {
+      "equipo": "DAIKIN CB PUERTO REAL (M)",
+      "partidos_jugados": 11,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 2,
+      "puntos_favor": 678,
+      "puntos_contra": 552,
+      "diferencia": 126,
+      "puntos": 20,
+      "posicion": 2
+    },
+    {
+      "equipo": "MAXCOLCHON CBSFDO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 735,
+      "puntos_contra": 785,
+      "diferencia": -50,
+      "puntos": 17,
+      "posicion": 3
+    },
+    {
+      "equipo": "CBA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 7,
+      "puntos_favor": 776,
+      "puntos_contra": 749,
+      "diferencia": 27,
+      "puntos": 15,
+      "posicion": 4
+    },
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 576,
+      "puntos_contra": 704,
+      "diferencia": -128,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
+      "equipo": "BAR CABALLITO DE MAR CB PUERTO REAL (V)",
+      "partidos_jugados": 11,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 11,
+      "puntos_favor": 494,
+      "puntos_contra": 870,
+      "diferencia": -376,
+      "puntos": 11,
+      "posicion": 6
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 16,
+    "marcador_visitante": 12,
+    "fecha": "27/09/2025",
+    "hora": "09:00",
+    "pabellon": "PAB. DEL PARQUE Pista 2",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Femenino - +45/+50 - +45",
+    "equipo": "JOAN CAPO +45",
+    "rival": "LLUC MAJOR +45",
+    "ubicacion": "Visitante",
+    "id": "27092025_lluc-major-45_joan-capo-45_senior-femenino-4550-45"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 16,
+    "marcador_visitante": 12,
+    "fecha": "27/09/2025",
+    "hora": "09:00",
+    "pabellon": "PAB. DEL PARQUE Pista 2",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 27/09/2025",
+    "categoria": "Senior Femenino - +45/+50 - +45",
+    "equipo": "JOAN CAPO +45",
+    "rival": "LLUC MAJOR +45",
+    "ubicacion": "Visitante",
+    "id": "27092025_lluc-major-45_joan-capo-45_senior-femenino-4550-45"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 24,
+    "marcador_visitante": 9,
+    "fecha": "27/09/2025",
+    "hora": "14:50",
+    "pabellon": "PAB. DEL PARQUE Pista 3",
+    "es_resultado": true,
+    "jornada": "Jornada 2 - 27/09/2025",
+    "categoria": "Senior Femenino - +45/+50 - +45",
+    "equipo": "JOAN CAPO +45",
+    "rival": "PERALES +45",
+    "ubicacion": "Local",
+    "id": "27092025_joan-capo-45_perales-45_senior-femenino-4550-45"
+  },
+  {
+    "competicion": "Iv Torneo Las Cortes Qv",
+    "marcador_local": 17,
+    "marcador_visitante": 25,
+    "fecha": "27/09/2025",
+    "hora": "13:00",
+    "pabellon": "PAB. DEL PARQUE",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 27/09/2025",
+    "categoria": "Senior Femenino - +45/+50 - +45",
+    "equipo": "JOAN CAPO +45",
+    "rival": "AURUM +45",
+    "ubicacion": "Visitante",
+    "id": "27092025_aurum-45_joan-capo-45_senior-femenino-4550-45"
+  }
+]

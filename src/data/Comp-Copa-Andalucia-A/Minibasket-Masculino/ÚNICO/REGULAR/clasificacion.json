@@ -1,0 +1,106 @@
+{
+  "categoria": "Minibasket Masculino - REGULAR - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:27:28.164697",
+  "clasificacion": [
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 10,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 0,
+      "puntos_favor": 640,
+      "puntos_contra": 307,
+      "diferencia": 333,
+      "puntos": 20,
+      "posicion": 1
+    },
+    {
+      "equipo": "ATRIDEL CB PUERTO REAL",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 586,
+      "puntos_contra": 236,
+      "diferencia": 350,
+      "puntos": 19,
+      "posicion": 2
+    },
+    {
+      "equipo": "ACADEMIA DE OPOSICIONES JUANI CBSFDO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 2,
+      "puntos_favor": 630,
+      "puntos_contra": 448,
+      "diferencia": 182,
+      "puntos": 18,
+      "posicion": 3
+    },
+    {
+      "equipo": "ONGOLF CENTURIAS",
+      "partidos_jugados": 9,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 3,
+      "puntos_favor": 538,
+      "puntos_contra": 413,
+      "diferencia": 125,
+      "puntos": 15,
+      "posicion": 4
+    },
+    {
+      "equipo": "ALVA - MERGABLO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 452,
+      "puntos_contra": 589,
+      "diferencia": -137,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 466,
+      "puntos_contra": 617,
+      "diferencia": -151,
+      "puntos": 14,
+      "posicion": 6
+    },
+    {
+      "equipo": "CBA",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 438,
+      "puntos_contra": 660,
+      "diferencia": -222,
+      "puntos": 12,
+      "posicion": 7
+    },
+    {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 8,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 6,
+      "puntos_favor": 339,
+      "puntos_contra": 496,
+      "diferencia": -157,
+      "puntos": 10,
+      "posicion": 8
+    },
+    {
+      "equipo": "CBP AYUDATPYMES",
+      "partidos_jugados": 10,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 10,
+      "puntos_favor": 281,
+      "puntos_contra": 604,
+      "diferencia": -323,
+      "puntos": 10,
+      "posicion": 9
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Liga Verano El Puerto",
+    "marcador_local": 72,
+    "marcador_visitante": 42,
+    "fecha": "03/09/2025",
+    "hora": "20:00",
+    "pabellon": "ANGELITA ALTA \"A\"",
+    "es_resultado": true,
+    "jornada": "FINAL Jornada 1 - 03/09/2025",
+    "categoria": "Senior Masculino - FASE FINAL - ÚNICO",
+    "equipo": "BALONES A CARBU",
+    "rival": "ADESA 80",
+    "ubicacion": "Visitante",
+    "id": "03092025_adesa-80_balones-a-carbu_senior-masculino-fase-final-unico"
+  },
+  {
+    "competicion": "Liga Verano El Puerto",
+    "marcador_local": 86,
+    "marcador_visitante": 67,
+    "fecha": "27/08/2025",
+    "hora": "20:00",
+    "pabellon": "ANGELITA ALTA \"B\"",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Masculino - FASE FINAL - ÚNICO",
+    "equipo": "BALONES A CARBU",
+    "rival": "CB NUTRIAS",
+    "ubicacion": "Local",
+    "id": "27082025_balones-a-carbu_cb-nutrias_senior-masculino-fase-final-unico"
+  },
+  {
+    "competicion": "Liga Verano El Puerto",
+    "marcador_local": 86,
+    "marcador_visitante": 67,
+    "fecha": "27/08/2025",
+    "hora": "20:00",
+    "pabellon": "ANGELITA ALTA \"B\"",
+    "es_resultado": true,
+    "jornada": "SEMIFINAL Jornada 1 - 27/08/2025",
+    "categoria": "Senior Masculino - FASE FINAL - ÚNICO",
+    "equipo": "BALONES A CARBU",
+    "rival": "CB NUTRIAS",
+    "ubicacion": "Local",
+    "id": "27082025_balones-a-carbu_cb-nutrias_senior-masculino-fase-final-unico"
+  }
+]

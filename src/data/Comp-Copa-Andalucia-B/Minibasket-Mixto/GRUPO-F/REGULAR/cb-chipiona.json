@@ -1,0 +1,62 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia B",
+    "marcador_local": 68,
+    "marcador_visitante": 27,
+    "fecha": "21/12/2025",
+    "hora": "12:15",
+    "pabellon": "PAB. MPAL. MANUEL CASTAÑO OLI",
+    "es_resultado": true,
+    "jornada": "Jornada 6 - 21/12/2025",
+    "categoria": "Minibasket Mixto - REGULAR - GRUPO F",
+    "equipo": "CB CHIPIONA",
+    "rival": "AD MARIANISTAS",
+    "ubicacion": "Local",
+    "id": "21122025_cb-chipiona_ad-marianistas_minibasket-mixto-regular-grupo-f"
+  },
+  {
+    "competicion": "Comp Copa Andalucia B",
+    "marcador_local": 54,
+    "marcador_visitante": 71,
+    "fecha": "19/12/2025",
+    "hora": "17:15",
+    "pabellon": "PAB. DEL PARQUE",
+    "es_resultado": true,
+    "jornada": "Jornada 5 - 14/12/2025",
+    "categoria": "Minibasket Mixto - REGULAR - GRUPO F",
+    "equipo": "CB CHIPIONA",
+    "rival": "CB CIMBIS",
+    "ubicacion": "Visitante",
+    "id": "19122025_cb-cimbis_cb-chipiona_minibasket-mixto-regular-grupo-f"
+  },
+  {
+    "competicion": "Comp Copa Andalucia B",
+    "marcador_local": 58,
+    "marcador_visitante": 70,
+    "fecha": "22/11/2025",
+    "hora": "11:00",
+    "pabellon": "COLEGIO MARIANISTAS. SANTA FE",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 23/11/2025",
+    "categoria": "Minibasket Mixto - REGULAR - GRUPO F",
+    "equipo": "CB CHIPIONA",
+    "rival": "AD MARIANISTAS",
+    "ubicacion": "Visitante",
+    "id": "22112025_ad-marianistas_cb-chipiona_minibasket-mixto-regular-grupo-f"
+  },
+  {
+    "competicion": "Comp Copa Andalucia B",
+    "marcador_local": 60,
+    "marcador_visitante": 20,
+    "fecha": "16/11/2025",
+    "hora": "12:00",
+    "pabellon": "PAB. MPAL. MANUEL CASTAÑO OLI",
+    "es_resultado": true,
+    "jornada": "Jornada 2 - 16/11/2025",
+    "categoria": "Minibasket Mixto - REGULAR - GRUPO F",
+    "equipo": "CB CHIPIONA",
+    "rival": "CB CIMBIS",
+    "ubicacion": "Local",
+    "id": "16112025_cb-chipiona_cb-cimbis_minibasket-mixto-regular-grupo-f"
+  }
+]

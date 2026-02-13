@@ -1,0 +1,62 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "18/02/2026",
+    "hora": "",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": false,
+    "jornada": "SEMIFINAL Jornada 3 - 18/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "CD SAN FELIPE NERI",
+    "rival": "UBJerez GRIS - TOLDOS EL PORTAL",
+    "ubicacion": "Visitante",
+    "id": "18022026_ubjerez-gris-toldos-el-portal_cd-san-felipe-neri_junior-femenino-play-off-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "12/02/2026",
+    "hora": "19:45",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": false,
+    "jornada": "",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "CD SAN FELIPE NERI",
+    "rival": "UBJerez GRIS - TOLDOS EL PORTAL",
+    "ubicacion": "Visitante",
+    "id": "12022026_ubjerez-gris-toldos-el-portal_cd-san-felipe-neri_junior-femenino-play-off-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "12/02/2026",
+    "hora": "19:45",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": false,
+    "jornada": "SEMIFINAL Jornada 1 - 11/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "CD SAN FELIPE NERI",
+    "rival": "UBJerez GRIS - TOLDOS EL PORTAL",
+    "ubicacion": "Visitante",
+    "id": "12022026_ubjerez-gris-toldos-el-portal_cd-san-felipe-neri_junior-femenino-play-off-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": 53,
+    "marcador_visitante": 62,
+    "fecha": "09/02/2026",
+    "hora": "20:15",
+    "pabellon": "COLEGIO SAN FELIPE NERI",
+    "es_resultado": true,
+    "jornada": "SEMIFINAL Jornada 2 - 14/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "CD SAN FELIPE NERI",
+    "rival": "UBJerez GRIS - TOLDOS EL PORTAL",
+    "ubicacion": "Local",
+    "id": "09022026_cd-san-felipe-neri_ubjerez-gris-toldos-el-portal_junior-femenino-play-off-unico"
+  }
+]

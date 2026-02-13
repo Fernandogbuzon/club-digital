@@ -1,0 +1,51 @@
+{
+  "categoria": "Junior Masculino - REGULAR - GRUPO D",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:28:41.740485",
+  "clasificacion": [
+    {
+      "equipo": "YARI DENTAL CENTURIAS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 543,
+      "puntos_contra": 331,
+      "diferencia": 212,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "IPSS CBSFDO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 445,
+      "puntos_contra": 377,
+      "diferencia": 68,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "CBA AZUL",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 449,
+      "puntos_contra": 485,
+      "diferencia": -36,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "AYUDA T PYMES CB MEDINA SIDONIA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 256,
+      "puntos_contra": 500,
+      "diferencia": -244,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

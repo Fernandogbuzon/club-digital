@@ -1,0 +1,40 @@
+{
+  "categoria": "Minibasket Mixto - REGULAR - GRUPO E",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:31:40.697023",
+  "clasificacion": [
+    {
+      "equipo": "Trattoria Da Enzo Vejer",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 254,
+      "puntos_contra": 175,
+      "diferencia": 79,
+      "puntos": 9,
+      "posicion": 1
+    },
+    {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 4,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 1,
+      "puntos_favor": 201,
+      "puntos_contra": 111,
+      "diferencia": 90,
+      "puntos": 7,
+      "posicion": 2
+    },
+    {
+      "equipo": "TRANSPORTES Y LOGISTICA ROIMO CBSFDO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 5,
+      "puntos_favor": 94,
+      "puntos_contra": 263,
+      "diferencia": -169,
+      "puntos": 5,
+      "posicion": 3
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "categoria": "Senior Masculino - REGULAR - ÚNICO",
+  "competicion": "Liga Verano El Puerto",
+  "ultima_actualizacion": "2026-02-12T18:42:48.406674",
+  "clasificacion": [
+    {
+      "equipo": "CB TORREÁ",
+      "partidos_jugados": 8,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 0,
+      "puntos_favor": 676,
+      "puntos_contra": 460,
+      "diferencia": 216,
+      "puntos": 16,
+      "posicion": 1
+    },
+    {
+      "equipo": "BALONES A CARBU",
+      "partidos_jugados": 8,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 1,
+      "puntos_favor": 659,
+      "puntos_contra": 500,
+      "diferencia": 159,
+      "puntos": 15,
+      "posicion": 2
+    },
+    {
+      "equipo": "LOS BERENJENAS",
+      "partidos_jugados": 8,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 3,
+      "puntos_favor": 562,
+      "puntos_contra": 482,
+      "diferencia": 80,
+      "puntos": 13,
+      "posicion": 3
+    },
+    {
+      "equipo": "CB NUTRIAS",
+      "partidos_jugados": 8,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 3,
+      "puntos_favor": 528,
+      "puntos_contra": 474,
+      "diferencia": 54,
+      "puntos": 13,
+      "posicion": 4
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 8,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 4,
+      "puntos_favor": 542,
+      "puntos_contra": 531,
+      "diferencia": 11,
+      "puntos": 12,
+      "posicion": 5
+    },
+    {
+      "equipo": "RFTM TOCAPITOS",
+      "partidos_jugados": 8,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 6,
+      "puntos_favor": 444,
+      "puntos_contra": 551,
+      "diferencia": -107,
+      "puntos": 10,
+      "posicion": 6
+    },
+    {
+      "equipo": "UZ RED DEVILS",
+      "partidos_jugados": 8,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 7,
+      "puntos_favor": 432,
+      "puntos_contra": 549,
+      "diferencia": -117,
+      "puntos": 9,
+      "posicion": 7
+    },
+    {
+      "equipo": "CB LA OÑA",
+      "partidos_jugados": 8,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 8,
+      "puntos_favor": 355,
+      "puntos_contra": 651,
+      "diferencia": -296,
+      "puntos": 8,
+      "posicion": 8
+    }
+  ]
+}

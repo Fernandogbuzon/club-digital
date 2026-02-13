@@ -1,0 +1,124 @@
+name: "2. Disparador - Detectar partidos terminados"
+
+# Comprueba cada 10 min si hay partidos que ya terminaron
+# Es ULTRA ligero: solo lee JSONs locales, no abre navegador
+# Si detecta pendientes, lanza el workflow de resultados
+
+on:
+  schedule:
+    # Viernes 16:00-23:00 UTC (17:00-00:00 España)
+    - cron: '*/10 16-23 * * 5'
+    # Sabado 7:00-22:00 UTC (8:00-23:00 España)
+    - cron: '*/10 7-22 * * 6'
+    # Domingo 7:00-22:00 UTC (8:00-23:00 España)
+    - cron: '*/10 7-22 * * 0'
+    # Lun-Jue 16:00-22:00 UTC (17:00-23:00 España)
+    - cron: '*/10 16-22 * * 1-4'
+  workflow_dispatch:
+
+concurrency:
+  group: scraper-disparador
+  cancel-in-progress: true
+
+jobs:
+  comprobar-y-disparar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Comprobar partidos pendientes
+        id: check
+        run: |
+          # Solo necesitamos comprobar, no hace falta Playwright
+          # Lee team_config.json para saber qué equipo buscar
+          python -c "
+          import json, sys
+          from pathlib import Path
+          from datetime import datetime, timedelta
+
+          # Cargar config del equipo
+          cfg = json.loads(Path('team_config.json').read_text())
+          SLUG = cfg['team_slug']
+          DURATION = cfg.get('match_duration_hours', 2.5)
+          MAX = cfg.get('max_retry_attempts', 3)
+
+          DATA = Path('src/data')
+          INTENTOS_FILE = Path('intentos_resultados.json')
+          ahora = datetime.now()
+
+          # Cargar intentos previos
+          intentos = {}
+          if INTENTOS_FILE.exists():
+              try:
+                  intentos = json.loads(INTENTOS_FILE.read_text())
+                  # Limpiar viejos (>48h)
+                  intentos = {k:v for k,v in intentos.items()
+                              if (ahora - datetime.fromisoformat(v.get('ultimo','2000-01-01'))).total_seconds() < 48*3600}
+              except: pass
+
+          pendientes = 0
+          for f in DATA.rglob(f'{SLUG}*.json'):
+              try:
+                  data = json.loads(f.read_text())
+                  if not isinstance(data, list): continue
+              except: continue
+              for p in data:
+                  if p.get('es_resultado'): continue
+                  fecha = p.get('fecha','')
+                  hora = p.get('hora','')
+                  pid = p.get('id','')
+                  if not fecha or not pid: continue
+                  try:
+                      d,m,y = fecha.split('/')
+                      dt = datetime(int(y),int(m),int(d))
+                      if hora and ':' in hora:
+                          h,mi = hora.split(':')
+                          dt = dt.replace(hour=int(h),minute=int(mi))
+                      else:
+                          dt = dt.replace(hour=12)
+                  except: continue
+                  if dt + timedelta(hours=DURATION) >= ahora: continue
+                  n = intentos.get(pid,{}).get('intentos',0)
+                  if n >= MAX: continue
+                  pendientes += 1
+
+          print(f'Pendientes: {pendientes}')
+          if pendientes > 0:
+              print('HAY_PENDIENTES=true')
+          else:
+              print('HAY_PENDIENTES=false')
+          # Output para GitHub
+          import os
+          with open(os.environ.get('GITHUB_OUTPUT','/dev/null'), 'a') as f:
+              f.write(f'pendientes={\"true\" if pendientes > 0 else \"false\"}\n')
+              f.write(f'num={pendientes}\n')
+          "
+
+      - name: Disparar scraper de resultados
+        if: steps.check.outputs.pendientes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: '3-resultados.yml',
+              ref: 'main',
+            });
+            console.log(`Disparado scraper de resultados (${${{ steps.check.outputs.num }}} pendientes)`);
+
+      - name: Resumen
+        if: always()
+        run: |
+          echo "### Disparador" >> $GITHUB_STEP_SUMMARY
+          echo "**Hora:** $(TZ='Europe/Madrid' date '+%H:%M')" >> $GITHUB_STEP_SUMMARY
+          echo "**Pendientes:** ${{ steps.check.outputs.num || 0 }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Disparado:** ${{ steps.check.outputs.pendientes }}" >> $GITHUB_STEP_SUMMARY

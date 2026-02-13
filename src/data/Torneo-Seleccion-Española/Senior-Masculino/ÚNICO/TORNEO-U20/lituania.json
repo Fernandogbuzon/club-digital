@@ -1,0 +1,62 @@
+[
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 65,
+    "marcador_visitante": 92,
+    "fecha": "06/07/2025",
+    "hora": "17:45",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "Jornada 3 - 06/07/2025",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "LITUANIA",
+    "rival": "BÉLGICA",
+    "ubicacion": "Visitante",
+    "id": "06072025_belgica_lituania_senior-masculino-torneo-u20-unico"
+  },
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 62,
+    "marcador_visitante": 43,
+    "fecha": "05/07/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "Jornada 2 - 05/07/2025",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "LITUANIA",
+    "rival": "ESPAÑA",
+    "ubicacion": "Visitante",
+    "id": "05072025_espana_lituania_senior-masculino-torneo-u20-unico"
+  },
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 54,
+    "marcador_visitante": 76,
+    "fecha": "04/07/2025",
+    "hora": "17:45",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "LITUANIA",
+    "rival": "FRANCIA",
+    "ubicacion": "Local",
+    "id": "04072025_lituania_francia_senior-masculino-torneo-u20-unico"
+  },
+  {
+    "competicion": "Torneo Seleccion Española",
+    "marcador_local": 54,
+    "marcador_visitante": 76,
+    "fecha": "04/07/2025",
+    "hora": "17:45",
+    "pabellon": "PAB. MPAL. LA LINEA",
+    "es_resultado": true,
+    "jornada": "Jornada 1 - 04/07/2025",
+    "categoria": "Senior Masculino - TORNEO U20 - ÚNICO",
+    "equipo": "LITUANIA",
+    "rival": "FRANCIA",
+    "ubicacion": "Local",
+    "id": "04072025_lituania_francia_senior-masculino-torneo-u20-unico"
+  }
+]

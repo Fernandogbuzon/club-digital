@@ -1,0 +1,51 @@
+{
+  "categoria": "Cadete Mixto - REGULAR - GRUPO C",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:29:35.973644",
+  "clasificacion": [
+    {
+      "equipo": "CBP AYUDATPYMES",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 520,
+      "puntos_contra": 267,
+      "diferencia": 253,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "E.D.M. ARCOS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 369,
+      "puntos_contra": 422,
+      "diferencia": -53,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "UBJerez AMARILLO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 5,
+      "puntos_favor": 380,
+      "puntos_contra": 415,
+      "diferencia": -35,
+      "puntos": 9,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD MONTERA BALONCESTO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 299,
+      "puntos_contra": 464,
+      "diferencia": -165,
+      "puntos": 8,
+      "posicion": 4
+    }
+  ]
+}

@@ -1,18 +1,27 @@
 {
-  "name": "nuclear-nova",
+  "name": "adesa-80",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run scrape:partidos && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "scrape": "node scraper.js",
+    "scrape:partidos": "tsx src/scripts/scraper.ts",
+    "scrape:dev": "tsx --watch src/scripts/scraper.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
     "axios": "^1.13.4",
     "cheerio": "^1.2.0",
+    "node-cron": "^4.2.1",
+    "puppeteer": "^23.11.1",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.33",
+    "tsx": "^4.21.0"
   }
 }

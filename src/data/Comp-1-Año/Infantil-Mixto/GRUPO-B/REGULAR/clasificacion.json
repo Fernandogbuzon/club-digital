@@ -1,0 +1,73 @@
+{
+  "categoria": "Infantil Mixto - REGULAR - GRUPO B",
+  "competicion": "Comp 1 Año",
+  "ultima_actualizacion": "2026-02-12T18:32:45.310707",
+  "clasificacion": [
+    {
+      "equipo": "CENTURIAS SAN ROQUE",
+      "partidos_jugados": 10,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 0,
+      "puntos_favor": 667,
+      "puntos_contra": 237,
+      "diferencia": 430,
+      "puntos": 20,
+      "posicion": 1
+    },
+    {
+      "equipo": "AD MARIANISTAS",
+      "partidos_jugados": 8,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 3,
+      "puntos_favor": 419,
+      "puntos_contra": 368,
+      "diferencia": 51,
+      "puntos": 13,
+      "posicion": 2
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 8,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 3,
+      "puntos_favor": 280,
+      "puntos_contra": 321,
+      "diferencia": -41,
+      "puntos": 13,
+      "posicion": 3
+    },
+    {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 10,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 7,
+      "puntos_favor": 337,
+      "puntos_contra": 469,
+      "diferencia": -132,
+      "puntos": 13,
+      "posicion": 4
+    },
+    {
+      "equipo": "MECAMANSOL CB PUERTO REAL",
+      "partidos_jugados": 10,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 7,
+      "puntos_favor": 355,
+      "puntos_contra": 501,
+      "diferencia": -146,
+      "puntos": 13,
+      "posicion": 5
+    },
+    {
+      "equipo": "CBA AMARILLO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 7,
+      "puntos_favor": 262,
+      "puntos_contra": 424,
+      "diferencia": -162,
+      "puntos": 9,
+      "posicion": 6
+    }
+  ]
+}

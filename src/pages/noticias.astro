@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const noticias = [
+  {
+    id: 1,
+    titulo: 'Victoria contundente del equipo senior',
+    fecha: '28/01/2026',
+    categoria: 'Resultados',
+    resumen: 'El equipo senior logra una importante victoria por 78-65 en un partido muy disputado.',
+    imagen: '🏆',
+    destacada: true
+  },
+  {
+    id: 2,
+    titulo: 'Abiertas las inscripciones para el Campus de Verano 2026',
+    fecha: '25/01/2026',
+    categoria: 'Campus',
+    resumen: 'Ya están disponibles las plazas para el campus de verano. ¡No te quedes sin la tuya!',
+    imagen: '🏀',
+    destacada: true
+  },
+  {
+    id: 3,
+    titulo: 'Nuevo acuerdo de patrocinio',
+    fecha: '20/01/2026',
+    categoria: 'Club',
+    resumen: 'El ADESA 80 firma un nuevo acuerdo de patrocinio que reforzará el proyecto deportivo.',
+    imagen: '🤝',
+    destacada: false
+  },
+  {
+    id: 4,
+    titulo: 'El equipo junior se clasifica para la final provincial',
+    fecha: '15/01/2026',
+    categoria: 'Resultados',
+    resumen: 'Gran actuación de nuestro equipo junior que consigue el pase a la final provincial.',
+    imagen: '⭐',
+    destacada: false
+  },
+  {
+    id: 5,
+    titulo: 'Jornada de puertas abiertas',
+    fecha: '10/01/2026',
+    categoria: 'Eventos',
+    resumen: 'Te invitamos a conocer nuestras instalaciones y al equipo técnico el próximo sábado.',
+    imagen: '🚪',
+    destacada: false
+  },
+  {
+    id: 6,
+    titulo: 'Nueva equipación oficial temporada 2025/2026',
+    fecha: '05/01/2026',
+    categoria: 'Tienda',
+    resumen: 'Ya está disponible la nueva equipación oficial. ¡Consigue la tuya en nuestra tienda!',
+    imagen: '👕',
+    destacada: false
+  },
+  {
+    id: 7,
+    titulo: 'Torneo benéfico de Navidad',
+    fecha: '22/12/2025',
+    categoria: 'Eventos',
+    resumen: 'Gran éxito del torneo benéfico con más de 200 participantes y una gran recaudación.',
+    imagen: '🎄',
+    destacada: false
+  },
+  {
+    id: 8,
+    titulo: 'Reconocimiento al mejor jugador del mes',
+    fecha: '15/12/2025',
+    categoria: 'Club',
+    resumen: 'Celebramos el reconocimiento a nuestro jugador más destacado de diciembre.',
+    imagen: '🏅',
+    destacada: false
+  }
+];
+
+const categorias = [...new Set(noticias.map(n => n.categoria))];
+---
+
+<Layout title="Noticias - ADESA 80">
+  <!-- Header Section -->
+  <section class="bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+          Noticias del Club
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Mantente al día con las últimas novedades del ADESA 80
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <section class="bg-gray-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex items-center justify-center gap-3 flex-wrap">
+        <button 
+          class="categoria-filter px-5 py-2.5 rounded-xl font-semibold transition-all bg-adesa-green text-white"
+          data-categoria="all"
+        >
+          Todas
+        </button>
+        {categorias.map((cat: string) => (
+          <button 
+            class="categoria-filter px-5 py-2.5 rounded-xl font-semibold transition-all bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+            data-categoria={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Noticias Destacadas -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl font-black text-gray-900 mb-8">Destacadas</h2>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+      {noticias.filter(n => n.destacada).map((noticia) => (
+        <div 
+          class="noticia-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-2xl transition-all"
+          data-categoria={noticia.categoria}
+        >
+          <div class="bg-linear-to-br from-adesa-green to-adesa-dark p-16 flex items-center justify-center">
+            <span class="text-9xl group-hover:scale-110 transition-transform">{noticia.imagen}</span>
+          </div>
+          
+          <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="px-3 py-1 bg-adesa-green/10 text-adesa-green font-semibold rounded-full text-sm">
+                {noticia.categoria}
+              </span>
+              <span class="text-sm text-gray-500">{noticia.fecha}</span>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-adesa-green transition-colors">
+              {noticia.titulo}
+            </h3>
+            
+            <p class="text-gray-600 mb-6">
+              {noticia.resumen}
+            </p>
+            
+            <button class="inline-flex items-center text-adesa-green font-semibold hover:text-adesa-dark transition-colors">
+              Leer más
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Todas las Noticias -->
+    <h2 class="text-3xl font-black text-gray-900 mb-8">Todas las Noticias</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {noticias.filter(n => !n.destacada).map((noticia) => (
+        <div 
+          class="noticia-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-xl transition-all"
+          data-categoria={noticia.categoria}
+        >
+          <div class="bg-gray-50 p-12 flex items-center justify-center">
+            <span class="text-6xl group-hover:scale-110 transition-transform">{noticia.imagen}</span>
+          </div>
+          
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="px-3 py-1 bg-adesa-green/10 text-adesa-green font-semibold rounded-full text-xs">
+                {noticia.categoria}
+              </span>
+              <span class="text-xs text-gray-500">{noticia.fecha}</span>
+            </div>
+            
+            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-adesa-green transition-colors">
+              {noticia.titulo}
+            </h3>
+            
+            <p class="text-gray-600 text-sm mb-4">
+              {noticia.resumen}
+            </p>
+            
+            <button class="text-adesa-green font-semibold text-sm hover:text-adesa-dark transition-colors">
+              Leer más →
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-linear-to-br from-adesa-dark to-adesa-green rounded-3xl p-12 text-center text-white shadow-2xl">
+        <h2 class="text-3xl font-black mb-4">
+          No te pierdas ninguna noticia
+        </h2>
+        <p class="text-xl text-green-50 mb-8">
+          Suscríbete a nuestro boletín y recibe las últimas novedades
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="tu@email.com" 
+            class="flex-1 px-6 py-4 rounded-2xl text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-white"
+          />
+          <button class="px-8 py-4 bg-white text-adesa-green font-bold rounded-2xl hover:bg-green-50 transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            Suscribirse
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script para filtros -->
+  <script>
+    const filterButtons = document.querySelectorAll('.categoria-filter');
+    const noticiaCards = document.querySelectorAll('.noticia-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const categoria = button.getAttribute('data-categoria');
+        
+        // Update active state
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-adesa-green', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        });
+        button.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        button.classList.add('bg-adesa-green', 'text-white');
+        
+        // Filter news
+        noticiaCards.forEach(card => {
+          if (categoria === 'all' || card.getAttribute('data-categoria') === categoria) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

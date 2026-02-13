@@ -1,0 +1,51 @@
+{
+  "categoria": "Senior Masculino - FASE FINAL - ÚNICO",
+  "competicion": "Liga Verano El Puerto",
+  "ultima_actualizacion": "2026-02-12T18:42:41.086054",
+  "clasificacion": [
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 3,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 220,
+      "puntos_contra": 180,
+      "diferencia": 40,
+      "puntos": 6,
+      "posicion": 1
+    },
+    {
+      "equipo": "BALONES A CARBU",
+      "partidos_jugados": 3,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 1,
+      "puntos_favor": 214,
+      "puntos_contra": 206,
+      "diferencia": 8,
+      "puntos": 5,
+      "posicion": 2
+    },
+    {
+      "equipo": "CB TORREÁ",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 138,
+      "puntos_contra": 148,
+      "diferencia": -10,
+      "puntos": 2,
+      "posicion": 3
+    },
+    {
+      "equipo": "CB NUTRIAS",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 134,
+      "puntos_contra": 172,
+      "diferencia": -38,
+      "puntos": 2,
+      "posicion": 4
+    }
+  ]
+}

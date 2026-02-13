@@ -1,0 +1,106 @@
+{
+  "categoria": "Infantil Femenino - REGULAR - ÚNICO",
+  "competicion": "Comp 1 Año",
+  "ultima_actualizacion": "2026-02-12T18:32:58.086992",
+  "clasificacion": [
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 12,
+      "partidos_ganados": 12,
+      "partidos_perdidos": 0,
+      "puntos_favor": 775,
+      "puntos_contra": 275,
+      "diferencia": 500,
+      "puntos": 24,
+      "posicion": 1
+    },
+    {
+      "equipo": "ATRIDEL CB PUERTO REAL",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 1,
+      "puntos_favor": 641,
+      "puntos_contra": 368,
+      "diferencia": 273,
+      "puntos": 21,
+      "posicion": 2
+    },
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 11,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 3,
+      "puntos_favor": 692,
+      "puntos_contra": 360,
+      "diferencia": 332,
+      "puntos": 19,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 11,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 554,
+      "puntos_contra": 514,
+      "diferencia": 40,
+      "puntos": 17,
+      "posicion": 4
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 12,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 8,
+      "puntos_favor": 460,
+      "puntos_contra": 582,
+      "diferencia": -122,
+      "puntos": 16,
+      "posicion": 5
+    },
+    {
+      "equipo": "C.A.B.U.",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 381,
+      "puntos_contra": 718,
+      "diferencia": -337,
+      "puntos": 15,
+      "posicion": 6
+    },
+    {
+      "equipo": "SD CANDRAY",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 360,
+      "puntos_contra": 596,
+      "diferencia": -236,
+      "puntos": 14,
+      "posicion": 7
+    },
+    {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 9,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 5,
+      "puntos_favor": 383,
+      "puntos_contra": 426,
+      "diferencia": -43,
+      "puntos": 13,
+      "posicion": 8
+    },
+    {
+      "equipo": "FENIE ENERGÍA CBC CÁDIZ",
+      "partidos_jugados": 11,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 11,
+      "puntos_favor": 239,
+      "puntos_contra": 646,
+      "diferencia": -407,
+      "puntos": 11,
+      "posicion": 9
+    }
+  ]
+}

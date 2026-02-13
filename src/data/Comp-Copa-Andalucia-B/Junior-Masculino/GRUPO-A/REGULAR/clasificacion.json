@@ -1,0 +1,51 @@
+{
+  "categoria": "Junior Masculino - REGULAR - GRUPO A",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:28:30.988837",
+  "clasificacion": [
+    {
+      "equipo": "ASFICON CB CHIPIONA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 331,
+      "puntos_contra": 227,
+      "diferencia": 104,
+      "puntos": 12,
+      "posicion": 1
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 415,
+      "puntos_contra": 430,
+      "diferencia": -15,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "GABBA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 300,
+      "puntos_contra": 327,
+      "diferencia": -27,
+      "puntos": 11,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 399,
+      "puntos_contra": 461,
+      "diferencia": -62,
+      "puntos": 8,
+      "posicion": 4
+    }
+  ]
+}

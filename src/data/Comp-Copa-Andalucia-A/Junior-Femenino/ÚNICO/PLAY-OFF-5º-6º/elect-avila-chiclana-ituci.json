@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "21/02/2026",
+    "hora": "",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": false,
+    "jornada": "FINAL Jornada 2 - 22/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF 5º-6º - ÚNICO",
+    "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+    "rival": "XEREZ CD BALONCESTO",
+    "ubicacion": "Visitante",
+    "id": "21022026_xerez-cd-baloncesto_elect-avila-chiclana-ituci_junior-femenino-play-off-5-6-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": 51,
+    "marcador_visitante": 69,
+    "fecha": "11/02/2026",
+    "hora": "19:30",
+    "pabellon": "PAB. CIUDAD DE CHICLANA",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Junior Femenino - PLAY OFF 5º-6º - ÚNICO",
+    "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+    "rival": "XEREZ CD BALONCESTO",
+    "ubicacion": "Local",
+    "id": "11022026_elect-avila-chiclana-ituci_xerez-cd-baloncesto_junior-femenino-play-off-5-6-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": 51,
+    "marcador_visitante": 69,
+    "fecha": "11/02/2026",
+    "hora": "19:30",
+    "pabellon": "PAB. CIUDAD DE CHICLANA",
+    "es_resultado": true,
+    "jornada": "FINAL Jornada 1 - 15/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF 5º-6º - ÚNICO",
+    "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+    "rival": "XEREZ CD BALONCESTO",
+    "ubicacion": "Local",
+    "id": "11022026_elect-avila-chiclana-ituci_xerez-cd-baloncesto_junior-femenino-play-off-5-6-unico"
+  }
+]

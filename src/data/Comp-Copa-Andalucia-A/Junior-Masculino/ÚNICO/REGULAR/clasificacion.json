@@ -1,0 +1,117 @@
+{
+  "categoria": "Junior Masculino - REGULAR - ÚNICO",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:25:58.409817",
+  "clasificacion": [
+    {
+      "equipo": "BERNARDINO ABAD CB PUERTO REAL",
+      "partidos_jugados": 18,
+      "partidos_ganados": 17,
+      "partidos_perdidos": 1,
+      "puntos_favor": 1618,
+      "puntos_contra": 965,
+      "diferencia": 653,
+      "puntos": 35,
+      "posicion": 1
+    },
+    {
+      "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
+      "partidos_jugados": 17,
+      "partidos_ganados": 15,
+      "partidos_perdidos": 2,
+      "puntos_favor": 1468,
+      "puntos_contra": 822,
+      "diferencia": 646,
+      "puntos": 32,
+      "posicion": 2
+    },
+    {
+      "equipo": "STROG SHIPPING ULB",
+      "partidos_jugados": 18,
+      "partidos_ganados": 14,
+      "partidos_perdidos": 4,
+      "puntos_favor": 1300,
+      "puntos_contra": 948,
+      "diferencia": 352,
+      "puntos": 32,
+      "posicion": 3
+    },
+    {
+      "equipo": "PEPE TROYA CBA",
+      "partidos_jugados": 17,
+      "partidos_ganados": 12,
+      "partidos_perdidos": 5,
+      "puntos_favor": 1293,
+      "puntos_contra": 990,
+      "diferencia": 303,
+      "puntos": 29,
+      "posicion": 4
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 17,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 7,
+      "puntos_favor": 1128,
+      "puntos_contra": 1130,
+      "diferencia": -2,
+      "puntos": 27,
+      "posicion": 5
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 18,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 12,
+      "puntos_favor": 1134,
+      "puntos_contra": 1316,
+      "diferencia": -182,
+      "puntos": 24,
+      "posicion": 6
+    },
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 18,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 13,
+      "puntos_favor": 980,
+      "puntos_contra": 1312,
+      "diferencia": -332,
+      "puntos": 23,
+      "posicion": 7
+    },
+    {
+      "equipo": "AIRWIFI - MERGABLO",
+      "partidos_jugados": 17,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 12,
+      "puntos_favor": 959,
+      "puntos_contra": 1309,
+      "diferencia": -350,
+      "puntos": 22,
+      "posicion": 8
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 18,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 14,
+      "puntos_favor": 995,
+      "puntos_contra": 1501,
+      "diferencia": -506,
+      "puntos": 22,
+      "posicion": 9
+    },
+    {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 18,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 18,
+      "puntos_favor": 763,
+      "puntos_contra": 1345,
+      "diferencia": -582,
+      "puntos": 18,
+      "posicion": 10
+    }
+  ]
+}

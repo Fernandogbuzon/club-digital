@@ -1,0 +1,51 @@
+{
+  "categoria": "Cadete Mixto - REGULAR - GRUPO E",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:29:42.696183",
+  "clasificacion": [
+    {
+      "equipo": "BCTO. CAMOENS CEUTA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 336,
+      "puntos_contra": 233,
+      "diferencia": 103,
+      "puntos": 12,
+      "posicion": 1
+    },
+    {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 374,
+      "puntos_contra": 310,
+      "diferencia": 64,
+      "puntos": 12,
+      "posicion": 2
+    },
+    {
+      "equipo": "CADISHIP CBSFDO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 446,
+      "puntos_contra": 339,
+      "diferencia": 107,
+      "puntos": 11,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 164,
+      "puntos_contra": 438,
+      "diferencia": -274,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

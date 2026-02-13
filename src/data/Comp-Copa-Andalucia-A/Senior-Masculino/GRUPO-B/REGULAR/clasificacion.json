@@ -1,0 +1,117 @@
+{
+  "categoria": "Senior Masculino - REGULAR - GRUPO B",
+  "competicion": "Comp Copa Andalucia A",
+  "ultima_actualizacion": "2026-02-12T18:25:16.322992",
+  "clasificacion": [
+    {
+      "equipo": "UBJerez - EL MIRA",
+      "partidos_jugados": 12,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 2,
+      "puntos_favor": 946,
+      "puntos_contra": 708,
+      "diferencia": 238,
+      "puntos": 22,
+      "posicion": 1
+    },
+    {
+      "equipo": "UBAGO CENTURIAS",
+      "partidos_jugados": 12,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 3,
+      "puntos_favor": 894,
+      "puntos_contra": 742,
+      "diferencia": 152,
+      "puntos": 21,
+      "posicion": 2
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 12,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 3,
+      "puntos_favor": 873,
+      "puntos_contra": 767,
+      "diferencia": 106,
+      "puntos": 21,
+      "posicion": 3
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 12,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 6,
+      "puntos_favor": 760,
+      "puntos_contra": 779,
+      "diferencia": -19,
+      "puntos": 18,
+      "posicion": 4
+    },
+    {
+      "equipo": "CB Urbaluz Red Devils",
+      "partidos_jugados": 12,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 6,
+      "puntos_favor": 807,
+      "puntos_contra": 829,
+      "diferencia": -22,
+      "puntos": 18,
+      "posicion": 5
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 11,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 6,
+      "puntos_favor": 665,
+      "puntos_contra": 697,
+      "diferencia": -32,
+      "puntos": 16,
+      "posicion": 6
+    },
+    {
+      "equipo": "CB ARCOS - EL MIRA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 6,
+      "puntos_favor": 706,
+      "puntos_contra": 761,
+      "diferencia": -55,
+      "puntos": 16,
+      "posicion": 7
+    },
+    {
+      "equipo": "BEMOVE CENTER CBA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 719,
+      "puntos_contra": 785,
+      "diferencia": -66,
+      "puntos": 14,
+      "posicion": 8
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 662,
+      "puntos_contra": 800,
+      "diferencia": -138,
+      "puntos": 14,
+      "posicion": 9
+    },
+    {
+      "equipo": "CB CHIPIONA-BAR CHAMAI",
+      "partidos_jugados": 12,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 10,
+      "puntos_favor": 671,
+      "puntos_contra": 835,
+      "diferencia": -164,
+      "puntos": 14,
+      "posicion": 10
+    }
+  ]
+}

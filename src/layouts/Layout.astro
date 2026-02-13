@@ -1,0 +1,177 @@
+---
+import '../styles/tailwind.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Club de Baloncesto ADESA 80 - Calendario, resultados y toda la información del club">
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <img src="/logo-adesa-sin-fondo.png" alt="ADESA 80" class="h-12 w-auto">
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-white hover:text-adesa-green font-medium transition-colors">Inicio</a>
+          <a href="/noticias" class="text-white hover:text-adesa-green font-medium transition-colors">Noticias</a>
+          <a href="/partidos" class="text-white hover:text-adesa-green font-medium transition-colors">Partidos</a>
+          <a href="/eventos" class="text-white hover:text-adesa-green font-medium transition-colors">Eventos</a>
+          <a href="/tienda" class="text-white hover:text-adesa-green font-medium transition-colors">Tienda</a>
+          <a href="/club" class="text-white hover:text-adesa-green font-medium transition-colors">Club</a>
+          <a href="/campus" class="text-white hover:text-adesa-green font-medium transition-colors">Campus</a>
+        </div>
+
+        <button id="menuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+      <div class="px-4 py-3 space-y-2">
+        <a href="/" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Inicio</a>
+        <a href="/noticias" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Noticias</a>
+        <a href="/partidos" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Partidos</a>
+        <a href="/eventos" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Eventos</a>
+        <a href="/tienda" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Tienda</a>
+        <a href="/club" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Club</a>
+        <a href="/campus" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Campus</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-16">
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-20">
+    <!-- Patrocinadores -->
+    <div class="border-b border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h3 class="text-center text-sm font-semibold text-gray-400 uppercase tracking-wider mb-8">
+          Nuestros Patrocinadores
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div class="patrocinador group flex items-center justify-center p-6 bg-gray-800 rounded-2xl transition-all hover:bg-gray-700">
+            <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🏢</span>
+          </div>
+          <div class="patrocinador group flex items-center justify-center p-6 bg-gray-800 rounded-2xl transition-all hover:bg-gray-700">
+            <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🏪</span>
+          </div>
+          <div class="patrocinador group flex items-center justify-center p-6 bg-gray-800 rounded-2xl transition-all hover:bg-gray-700">
+            <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🏭</span>
+          </div>
+          <div class="patrocinador group flex items-center justify-center p-6 bg-gray-800 rounded-2xl transition-all hover:bg-gray-700">
+            <span class="text-4xl grayscale group-hover:grayscale-0 transition-all">🏛️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="/logo-adesa-sin-fondo.png" alt="ADESA 80" class="h-12 w-auto">
+          </div>
+          <p class="text-gray-400">Club de Baloncesto con tradición y pasión por el deporte.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-4">Navegación</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/" class="hover:text-adesa-green transition-colors">Inicio</a></li>
+            <li><a href="/partidos" class="hover:text-adesa-green transition-colors">Partidos</a></li>
+            <li><a href="/noticias" class="hover:text-adesa-green transition-colors">Noticias</a></li>
+            <li><a href="/eventos" class="hover:text-adesa-green transition-colors">Eventos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-4">El Club</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/club" class="hover:text-adesa-green transition-colors">Sobre Nosotros</a></li>
+            <li><a href="/campus" class="hover:text-adesa-green transition-colors">Campus</a></li>
+            <li><a href="/tienda" class="hover:text-adesa-green transition-colors">Tienda</a></li>
+            <li><a href="/club#contacto" class="hover:text-adesa-green transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-4">Contacto</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-center space-x-2">
+              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <a href="mailto:info@adesa80.com" class="hover:text-adesa-green transition-colors">info@adesa80.com</a>
+            </li>
+            <li class="flex items-center space-x-2">
+              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Cádiz, España</span>
+            </li>
+            <li class="flex items-center space-x-3 pt-2">
+              <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-adesa-green transition-colors">
+                <span class="text-sm">📷</span>
+              </a>
+              <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-adesa-green transition-colors">
+                <span class="text-sm">🐦</span>
+              </a>
+              <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-adesa-green transition-colors">
+                <span class="text-sm">📘</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; {new Date().getFullYear()} ADESA 80. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    const mobileLinks = mobileMenu?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu?.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>

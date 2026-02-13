@@ -1,0 +1,139 @@
+{
+  "categoria": "Minibasket Mixto - REGULAR - ÚNICO",
+  "competicion": "Comp 1 Año",
+  "ultima_actualizacion": "2026-02-12T18:33:10.460378",
+  "clasificacion": [
+    {
+      "equipo": "CBA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 0,
+      "puntos_favor": 657,
+      "puntos_contra": 289,
+      "diferencia": 368,
+      "puntos": 22,
+      "posicion": 1
+    },
+    {
+      "equipo": "CENTURIAS SAN ROQUE",
+      "partidos_jugados": 11,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 2,
+      "puntos_favor": 667,
+      "puntos_contra": 370,
+      "diferencia": 297,
+      "puntos": 20,
+      "posicion": 2
+    },
+    {
+      "equipo": "BLUEPARROT OFFSHORE CBSFDO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 578,
+      "puntos_contra": 251,
+      "diferencia": 327,
+      "puntos": 19,
+      "posicion": 3
+    },
+    {
+      "equipo": "C.A.B.U. 5ºM",
+      "partidos_jugados": 10,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 2,
+      "puntos_favor": 510,
+      "puntos_contra": 378,
+      "diferencia": 132,
+      "puntos": 18,
+      "posicion": 4
+    },
+    {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 4,
+      "puntos_favor": 485,
+      "puntos_contra": 465,
+      "diferencia": 20,
+      "puntos": 16,
+      "posicion": 5
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 10,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 521,
+      "puntos_contra": 576,
+      "diferencia": -55,
+      "puntos": 14,
+      "posicion": 6
+    },
+    {
+      "equipo": "CB TREBUJENA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 370,
+      "puntos_contra": 595,
+      "diferencia": -225,
+      "puntos": 14,
+      "posicion": 7
+    },
+    {
+      "equipo": "HOTEL GRAN CIUDAD DEL SUR CB PUERTO REAL",
+      "partidos_jugados": 10,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 7,
+      "puntos_favor": 389,
+      "puntos_contra": 537,
+      "diferencia": -148,
+      "puntos": 13,
+      "posicion": 8
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 10,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 7,
+      "puntos_favor": 352,
+      "puntos_contra": 537,
+      "diferencia": -185,
+      "puntos": 13,
+      "posicion": 9
+    },
+    {
+      "equipo": "C.A.B.U. 4ºM",
+      "partidos_jugados": 9,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 6,
+      "puntos_favor": 390,
+      "puntos_contra": 357,
+      "diferencia": 33,
+      "puntos": 12,
+      "posicion": 10
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 354,
+      "puntos_contra": 511,
+      "diferencia": -157,
+      "puntos": 12,
+      "posicion": 11
+    },
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 10,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 10,
+      "puntos_favor": 57,
+      "puntos_contra": 464,
+      "diferencia": -407,
+      "puntos": 10,
+      "posicion": 12
+    }
+  ]
+}

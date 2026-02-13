@@ -1,0 +1,106 @@
+{
+  "categoria": "Senior Femenino - FASE FINAL +40 - ÚNICO",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:42:03.664670",
+  "clasificacion": [
+    {
+      "equipo": "PUERTOLLANO +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 65,
+      "puntos_contra": 32,
+      "diferencia": 33,
+      "puntos": 6,
+      "posicion": 1
+    },
+    {
+      "equipo": "PASEK +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 1,
+      "puntos_favor": 55,
+      "puntos_contra": 66,
+      "diferencia": -11,
+      "puntos": 5,
+      "posicion": 2
+    },
+    {
+      "equipo": "TORTUGAS +40",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 58,
+      "puntos_contra": 32,
+      "diferencia": 26,
+      "puntos": 4,
+      "posicion": 3
+    },
+    {
+      "equipo": "OLIVOS +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 38,
+      "puntos_contra": 26,
+      "diferencia": 12,
+      "puntos": 4,
+      "posicion": 4
+    },
+    {
+      "equipo": "SAN ROQUE +40",
+      "partidos_jugados": 2,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 1,
+      "puntos_favor": 32,
+      "puntos_contra": 32,
+      "diferencia": 0,
+      "puntos": 3,
+      "posicion": 5
+    },
+    {
+      "equipo": "STGO 2+1 +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 3,
+      "puntos_favor": 57,
+      "puntos_contra": 72,
+      "diferencia": -15,
+      "puntos": 3,
+      "posicion": 6
+    },
+    {
+      "equipo": "PALMA SPORT +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 3,
+      "puntos_favor": 35,
+      "puntos_contra": 68,
+      "diferencia": -33,
+      "puntos": 3,
+      "posicion": 7
+    },
+    {
+      "equipo": "PONTEVEDRA +40",
+      "partidos_jugados": 3,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 26,
+      "puntos_contra": 38,
+      "diferencia": -12,
+      "puntos": 2,
+      "posicion": 8
+    },
+    {
+      "equipo": "SANTA Mª +40",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 9
+    }
+  ]
+}

@@ -1,0 +1,741 @@
+---
+/**
+ * PartidosCarousel – Carrusel estilo NBA Bucks para partidos del equipo
+ * Lee team_config.json para saber qué equipo mostrar (reutilizable)
+ */
+
+// ── Config del equipo ────────────────────────────────────────────────────────
+import teamConfig from '../../team_config.json';
+const TEAM_SLUG = teamConfig.team_slug;
+
+// ── Importar todos los JSON del equipo con glob ──────────────────────────────
+// Cargamos todos los JSON de data y filtramos por slug del equipo
+const allJsonFiles = import.meta.glob('../data/**/*.json', { eager: true });
+
+interface Partido {
+  competicion: string;
+  marcador_local: number | null;
+  marcador_visitante: number | null;
+  fecha: string;
+  hora: string;
+  pabellon: string;
+  es_resultado: boolean;
+  jornada: string;
+  categoria: string;
+  equipo: string;
+  rival: string;
+  ubicacion: string;
+  id: string;
+}
+
+let partidos: Partido[] = [];
+for (const path in allJsonFiles) {
+  // Solo ficheros que empiezan por el slug del equipo (ej: "adesa-80")
+  const filename = path.split('/').pop() || '';
+  if (!filename.startsWith(TEAM_SLUG)) continue;
+  const data = (allJsonFiles[path] as any).default || allJsonFiles[path];
+  if (Array.isArray(data)) partidos.push(...data);
+}
+
+// Deduplicar por id
+const seen = new Set<string>();
+partidos = partidos.filter(p => {
+  if (seen.has(p.id)) return false;
+  seen.add(p.id);
+  return true;
+});
+
+// ── Parseo de fechas ─────────────────────────────────────────────────────────
+function parseFecha(fechaStr: string, horaStr: string): Date {
+  const [d, m, y] = fechaStr.split('/').map(Number);
+  const fecha = new Date(y, m - 1, d);
+  if (horaStr && horaStr.includes(':')) {
+    const [h, min] = horaStr.split(':').map(Number);
+    fecha.setHours(h, min, 0, 0);
+  } else {
+    fecha.setHours(12, 0, 0, 0);
+  }
+  return fecha;
+}
+
+partidos.sort((a, b) => parseFecha(a.fecha, a.hora).getTime() - parseFecha(b.fecha, b.hora).getTime());
+
+// ── Abreviaciones ────────────────────────────────────────────────────────────
+function abreviarCategoria(cat: string, comp: string): string {
+  const parte = cat.split(' - ')[0];
+  let abbr = parte
+    .replace(/Senior/i, 'Sen').replace(/Junior/i, 'Jun')
+    .replace(/Cadete/i, 'Cad').replace(/Infantil/i, 'Inf')
+    .replace(/Minibasket/i, 'Mini').replace(/PreMini/i, 'Pre-Mini')
+    .replace(/Babybasket/i, 'Baby')
+    .replace(/Masculino/i, 'Masc').replace(/Femenino/i, 'Fem')
+    .trim();
+  // Suffix de competición
+  const cl = comp.toLowerCase();
+  if (cl.includes('copa andalucia a') || cl.includes('copa andalucía a')) abbr += ' A';
+  else if (cl.includes('copa andalucia b') || cl.includes('copa andalucía b')) abbr += ' B';
+  else if (cl.includes('1 año') || cl.includes('1 ano')) abbr += ' 1ºAÑO';
+  return abbr;
+}
+
+const DIAS = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
+const MESES_NOMBRES = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+
+function formatHeaderLine(p: Partido): string {
+  const fecha = parseFecha(p.fecha, p.hora);
+  const dia = DIAS[fecha.getDay()];
+  const dd = String(fecha.getDate()).padStart(2, '0');
+  const mm = String(fecha.getMonth() + 1).padStart(2, '0');
+  const hora = p.hora || '';
+  const lugar = p.ubicacion === 'Local' ? 'en CASA' : p.pabellon || 'FUERA';
+  return hora ? `${dia}, ${dd}/${mm}, ${hora} ${lugar}` : `${dia}, ${dd}/${mm} ${lugar}`;
+}
+
+function fechaCorta(fechaStr: string): string {
+  const [d, m] = fechaStr.split('/').map(Number);
+  return `${d} ${MESES_NOMBRES[m - 1]}`;
+}
+
+// ── Meses para navegación ────────────────────────────────────────────────────
+const mesesConPartidos = new Map<string, number>();
+partidos.forEach((p, idx) => {
+  const f = parseFecha(p.fecha, p.hora);
+  const key = `${f.getFullYear()}-${String(f.getMonth()).padStart(2, '0')}`;
+  if (!mesesConPartidos.has(key)) mesesConPartidos.set(key, idx);
+});
+
+const mesesArr = Array.from(mesesConPartidos.entries()).map(([key, idx]) => {
+  const [y, m] = key.split('-').map(Number);
+  return { key, year: y, month: m, label: MESES_NOMBRES[m], firstIdx: idx };
+});
+
+const ahora = new Date();
+const mesActualKey = `${ahora.getFullYear()}-${String(ahora.getMonth()).padStart(2, '0')}`;
+
+// ── Serializar ──
+const partidosJSON = JSON.stringify(partidos.map(p => ({
+  ...p,
+  _ts: parseFecha(p.fecha, p.hora).getTime(),
+  _catCorta: abreviarCategoria(p.categoria, p.competicion),
+  _header: formatHeaderLine(p),
+  _fechaCorta: fechaCorta(p.fecha),
+})));
+const mesesJSON = JSON.stringify(mesesArr);
+---
+
+<!-- ═══ Carrusel de Partidos ═══ -->
+<section class="w-full bg-gray-950 py-4 select-none" id="partidos-carousel-section">
+  
+  <!-- Track del carrusel -->
+  <div class="relative">
+    <div 
+      id="carousel-track" 
+      class="flex gap-3 px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+    >
+      <!-- Tarjetas inyectadas por JS -->
+    </div>
+  </div>
+
+  <!-- Navegación de meses -->
+  <div class="flex items-center justify-center gap-0.5 mt-4 px-4" id="month-nav">
+    <button id="nav-prev" class="p-1.5 text-gray-500 hover:text-white transition-colors" aria-label="Anterior">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+      </svg>
+    </button>
+    
+    <div id="month-buttons" class="flex items-center gap-0.5 flex-wrap justify-center"></div>
+
+    <button id="nav-today" class="p-1 text-gray-500 hover:text-green-500 transition-colors ml-1" aria-label="Hoy" title="Hoy">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+      </svg>
+    </button>
+
+    <button id="nav-next" class="p-1.5 text-gray-500 hover:text-white transition-colors" aria-label="Siguiente">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<style is:global>
+  /* Hide scrollbar */
+  #carousel-track {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  #carousel-track::-webkit-scrollbar { display: none; }
+
+  /* ─── Card ─── */
+  .mc {
+    flex: 0 0 290px;
+    height: 185px;
+    scroll-snap-align: center;
+    border-radius: 12px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+  }
+  .mc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  /* ─── Header ─── */
+  .mc-head {
+    padding: 7px 12px 5px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    background: #fafafa;
+    flex-shrink: 0;
+  }
+  .mc-cat {
+    font-size: 12px;
+    font-weight: 800;
+    color: #222;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mc-info {
+    font-size: 10px;
+    font-weight: 600;
+    color: #777;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    margin-top: 1px;
+  }
+  .mc-label {
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #999;
+    margin-top: 1px;
+  }
+
+  /* ─── Body ─── */
+  .mc-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 0;
+    gap: 0;
+  }
+  .mc-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mc-center-vs {
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mc-right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ─── Scores ─── */
+  .mc-scores {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  .mc-score {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .mc-sep {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: #d1d5db;
+    margin: 0 1px;
+    line-height: 1;
+  }
+  .s-win { color: #15803d; }
+  .s-loss { color: #dc2626; }
+  .s-neutral { color: #111827; }
+
+  /* ─── Future date ─── */
+  .mc-future-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .mc-future {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #111827;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .mc-time {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #6b7280;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  /* ─── Countdown ─── */
+  .mc-countdown {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #15803d;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .mc-live {
+    font-weight: 900;
+    font-size: 13px;
+    color: #dc2626;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    animation: mc-blink 1.2s ease-in-out infinite;
+  }
+  @keyframes mc-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .mc-vs {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #b0b0b0;
+    letter-spacing: 0.02em;
+  }
+  .mc-rival-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #374151;
+    line-height: 1.2;
+    padding: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    max-width: 90px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .mc-rival-logo {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    flex-shrink: 0;
+    padding: 3px;
+  }
+
+  /* ─── Footer button ─── */
+  .mc-foot {
+    padding: 0 10px 7px;
+    flex-shrink: 0;
+  }
+  .mc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
+    cursor: default;
+    line-height: 1;
+  }
+  .mc-btn-dark {
+    background: #111827;
+    color: #fff;
+  }
+  .mc-btn-green {
+    background: #15803d;
+    color: #fff;
+  }
+  .mc-btn-red {
+    background: #dc2626;
+    color: #fff;
+    animation: mc-blink 1.2s ease-in-out infinite;
+  }
+
+  /* ─── Month nav ─── */
+  .mn-btn {
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #555;
+    cursor: pointer;
+    border: none;
+    background: none;
+    white-space: nowrap;
+    transition: color 0.15s;
+  }
+  .mn-btn:hover { color: #ddd; }
+  .mn-btn.active {
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    .mc { flex: 0 0 240px; height: 165px; }
+    .mc-score { font-size: 38px; }
+    .mc-future { font-size: 30px; }
+    .mc-time { font-size: 17px; }
+    .mc-countdown { font-size: 26px; }
+    .mc-rival-name { font-size: 9px; max-width: 70px; }
+    .mc-rival-logo { width: 64px; height: 64px; }
+    .mn-btn { font-size: 10px; padding: 2px 5px; }
+  }
+</style>
+
+<script define:vars={{ partidosJSON, mesesJSON, mesActualKey }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const partidos = JSON.parse(partidosJSON);
+    const meses = JSON.parse(mesesJSON);
+    const track = document.getElementById('carousel-track');
+    const monthButtons = document.getElementById('month-buttons');
+    const now = Date.now();
+
+    // ── Rival initials for circle ──
+    function rivalInitials(name) {
+      const clean = name.replace(/^- /, '').replace(/ - $/, '').trim();
+      // Remove common prefixes
+      const stripped = clean.replace(/^(CB|C\.B\.|C\.D\.|CD|A\.D\.|AD|C\.F\.|CF)\s*/i, '');
+      const words = stripped.split(/\s+/).filter(w => w.length > 0);
+      if (words.length === 0) return clean.substring(0, 3).toUpperCase();
+      if (words.length === 1) return words[0].substring(0, 4).toUpperCase();
+      // Take first letter of each word (max 3)
+      return words.slice(0, 3).map(w => w[0]).join('').toUpperCase();
+    }
+
+    // ── Arrow icon SVG ──
+    const arrowSvg = `<svg style="width:10px;height:10px;display:inline" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`;
+
+    // ── Create card ──
+    function createCard(p) {
+      const div = document.createElement('div');
+      div.className = 'mc';
+      div.dataset.ts = p._ts;
+
+      const ts = p._ts;
+      const isPlayed = p.es_resultado;
+      const diffMs = ts - now;
+      const diffH = diffMs / (1000 * 60 * 60);
+      const isLive = !isPlayed && diffH <= 0 && diffH > -3;
+      const isUrgent = !isPlayed && diffH > 0 && diffH <= 24;
+
+      // Victory check
+      let teamWon = false;
+      if (isPlayed) {
+        const as = p.ubicacion === 'Local' ? p.marcador_local : p.marcador_visitante;
+        const rs = p.ubicacion === 'Local' ? p.marcador_visitante : p.marcador_local;
+        teamWon = as > rs;
+      }
+
+      // ── Header line ──
+      let headerInfo = p._header;
+      let headerLabel = '';
+
+      if (isLive) {
+        headerLabel = '';
+      }
+
+      // ── Left content ──
+      let leftHTML = '';
+
+      if (isPlayed) {
+        const ml = p.marcador_local;
+        const mv = p.marcador_visitante;
+        let lc, vc;
+        const isTie = ml === mv;
+        if (isTie) {
+          // Empate (incluye 0-0): ambos en negro
+          lc = 's-neutral';
+          vc = 's-neutral';
+        } else if (p.ubicacion === 'Local') {
+          lc = teamWon ? 's-win' : 's-loss';
+          vc = 's-neutral';
+        } else {
+          lc = 's-neutral';
+          vc = teamWon ? 's-win' : 's-loss';
+        }
+        leftHTML = `<div class="mc-scores"><span class="mc-score ${lc}">${ml}</span><span class="mc-sep">-</span><span class="mc-score ${vc}">${mv}</span></div>`;
+      } else if (isLive) {
+        leftHTML = `<span class="mc-live">EN JUEGO</span>`;
+      } else if (isUrgent) {
+        leftHTML = `<span class="mc-countdown" data-countdown="${ts}"></span>`;
+      } else {
+        const horaStr = p.hora && p.hora.includes(':') ? p.hora : '';
+        leftHTML = `<div class="mc-future-block"><span class="mc-future">${p._fechaCorta}</span>${horaStr ? `<span class="mc-time">${horaStr}</span>` : ''}</div>`;
+      }
+
+      // ── Footer button ──
+      let btnHTML = '';
+      if (isPlayed) {
+        btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-dark">${arrowSvg} Resultado</div></div>`;
+      } else if (isLive) {
+        btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-red">En Directo</div></div>`;
+      } else {
+        btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-green">Próximo</div></div>`;
+      }
+
+      // ── Rival ──
+      const initials = rivalInitials(p.rival);
+      const rivalClean = p.rival.replace(/^- /, '').replace(/ - $/, '').trim();
+      const rivalLower = rivalClean.toLowerCase();
+
+      // Mapa de logos: nombre parcial → archivo en /logos/
+      const logoMap = [
+        // UBJerez
+        [r => r.includes('ubjerez') || r.includes('ubj') || (r.includes('jerez') && r.includes('bcto')), 'ubjerez.png'],
+        // CB Portuense
+        [r => r.includes('portuense') || r.includes('cbp '), 'cbportuense.png'],
+        // Gymnástica Portuense
+        [r => r.includes('gymnastica') || r.includes('gymnástica'), 'gymnastica.png'],
+        // CB San Fernando / CBSFDO
+        [r => r.includes('cbsfdo') || r.includes('cb san fernando') || r.includes('san fernando'), 'cbsanfernando.png'],
+        // Centurias (CD Centurias San Roque)
+        [r => r.includes('centurias'), 'sanroque.png'],
+        // CBA (CB Algeciras)
+        [r => r.startsWith('cba') || r.includes(' cba'), 'cbalgeciras.png'],
+        // CB Gades
+        [r => r.includes('gades'), 'cbgades.png'],
+        // CBC Cádiz (CB Ciudad de Cádiz)
+        [r => r.includes('cbc cádiz') || r.includes('cbc cadiz'), 'cbciudaddecadiz.png'],
+        // AD Marianistas
+        [r => r.includes('marianistas'), 'admarianistas.png'],
+        // Mergablo
+        [r => r.includes('mergablo'), 'cdmergablo.png'],
+        // CB Chipiona
+        [r => r.includes('chipiona'), 'chipionacb.png'],
+        // CB Puerto Real
+        [r => r.includes('puerto real'), 'puertoreal.png'],
+        // CB Medina Sidonia
+        [r => r.includes('medina'), 'cbmedinasidonia.png'],
+        // SD Candray
+        [r => r.includes('candray'), 'candray.png'],
+        // C.A.B.U.
+        [r => r.includes('c.a.b.u') || r.includes('cabu') || r.includes('carbu'), 'cabu.png'],
+        // CB Cimbis
+        [r => r.includes('cimbis'), 'cbcimbis.png'],
+        // Urbaluz / UZ Red Devils
+        [r => r.includes('urbaluz') || r.includes('uz red'), 'urbaluz.png'],
+        // CD San Felipe Neri
+        [r => r.includes('san felipe') || r.includes('neri'), 'sanfelipeneri.png'],
+        // ADCarteia
+        [r => r.includes('carteia'), 'ADCarteia.png'],
+        // CB Algeciras / CD UDEA Algeciras
+        [r => r.includes('algeciras') && !r.includes('udea'), 'cbalgeciras.png'],
+        [r => r.includes('udea'), 'cdudeaalgeciras.png'],
+        // Arcos
+        [r => r.includes('arcos'), 'arcos.png'],
+        // CB Chiclana / Ituci
+        [r => r.includes('chiclana') || r.includes('ituci'), 'cbchiclana.png'],
+        // Deportes Alcalá / Alcalá de los Gazules
+        [r => r.includes('alcalá') || r.includes('alcala') || r.includes('gazules'), 'alcaladelosgazules.png'],
+        // CB Rota
+        [r => r.includes('rota'), 'cbrota.png'],
+        // Los Barrios
+        [r => r.includes('barrios'), 'losbarrios.png'],
+        // San Roque
+        [r => r.includes('san roque'), 'sanroque.png'],
+        // CP Don Bosco
+        [r => r.includes('don bosco'), 'cpdonbosco.png'],
+        // EBM Vejer
+        [r => r.includes('vejer'), 'ebmvejer.png'],
+        // Xerez CD
+        [r => r.includes('xerez'), 'xerezcd.png'],
+        // ULB / Unión Linense
+        [r => r.includes('ulb') || r.includes('linense'), 'ulblinense.png'],
+        // CD Barbate
+        [r => r.includes('barbate'), 'cdbarbate.png'],
+        // Prado del Rey
+        [r => r.includes('prado'), 'cbpradodelrey.png'],
+        // CB Sancti Petri
+        [r => r.includes('sancti petri'), 'sanctipetri.png'],
+        // Montera
+        [r => r.includes('montera'), 'cdmergablo.png'],
+        // ADC La Algaida
+        [r => r.includes('algaida'), 'adcalgaida.png'],
+        // GABBA
+        [r => r.includes('gabba'), 'cbalgeciras.png'],
+      ];
+
+      let logoFile = null;
+      for (const [matcher, file] of logoMap) {
+        if (matcher(rivalLower)) { logoFile = file; break; }
+      }
+      
+      let rivalBubble;
+      if (logoFile) {
+        rivalBubble = `<img src="/logos/${logoFile}" alt="${rivalClean}" class="mc-rival-logo" title="${rivalClean}">`;
+      } else {
+        rivalBubble = `<div class="mc-rival-name" title="${rivalClean}">${rivalClean}</div>`;
+      }
+
+      div.innerHTML = `
+        <div class="mc-head">
+          <div class="mc-cat">${p._catCorta}</div>
+          <div class="mc-info">${headerInfo}</div>
+          ${headerLabel ? `<div class="mc-label">${headerLabel}</div>` : ''}
+        </div>
+        <div class="mc-body">
+          <div class="mc-left">${leftHTML}</div>
+          <div class="mc-center-vs"><span class="mc-vs">VS.</span></div>
+          <div class="mc-right-side">${rivalBubble}</div>
+        </div>
+        ${btnHTML}
+      `;
+
+      return div;
+    }
+
+    // ── Render ──
+    partidos.forEach(p => track.appendChild(createCard(p)));
+
+    // ── Month nav ──
+    let activeMonthKey = mesActualKey;
+
+    function renderMonths() {
+      monthButtons.innerHTML = '';
+      meses.forEach(m => {
+        const btn = document.createElement('button');
+        btn.className = `mn-btn ${m.key === activeMonthKey ? 'active' : ''}`;
+        btn.textContent = m.label;
+        btn.addEventListener('click', () => scrollToMonth(m.key, m.firstIdx));
+        monthButtons.appendChild(btn);
+      });
+    }
+
+    function scrollToMonth(key, idx) {
+      activeMonthKey = key;
+      renderMonths();
+      const cards = track.querySelectorAll('.mc');
+      if (cards[idx]) cards[idx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+
+    document.getElementById('nav-today').addEventListener('click', () => {
+      let ci = 0, cd = Infinity;
+      partidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
+      activeMonthKey = mesActualKey;
+      renderMonths();
+      track.querySelectorAll('.mc')[ci]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+
+    document.getElementById('nav-prev').addEventListener('click', () => {
+      const cards = track.querySelectorAll('.mc');
+      const tr = track.getBoundingClientRect();
+      const cx = tr.left + tr.width / 2;
+      let ci = 0, cd = Infinity;
+      cards.forEach((c, i) => { const d = Math.abs(c.getBoundingClientRect().left + c.getBoundingClientRect().width / 2 - cx); if (d < cd) { cd = d; ci = i; } });
+      if (ci > 0) cards[ci - 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+    document.getElementById('nav-next').addEventListener('click', () => {
+      const cards = track.querySelectorAll('.mc');
+      const tr = track.getBoundingClientRect();
+      const cx = tr.left + tr.width / 2;
+      let ci = 0, cd = Infinity;
+      cards.forEach((c, i) => { const d = Math.abs(c.getBoundingClientRect().left + c.getBoundingClientRect().width / 2 - cx); if (d < cd) { cd = d; ci = i; } });
+      if (ci < cards.length - 1) cards[ci + 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+
+    // Detect visible month on scroll
+    let st;
+    track.addEventListener('scroll', () => {
+      clearTimeout(st);
+      st = setTimeout(() => {
+        const cards = track.querySelectorAll('.mc');
+        const tr = track.getBoundingClientRect();
+        const cx = tr.left + tr.width / 2;
+        let ci = 0, cd = Infinity;
+        cards.forEach((c, i) => {
+          const r = c.getBoundingClientRect();
+          const d = Math.abs(r.left + r.width / 2 - cx);
+          if (d < cd) { cd = d; ci = i; }
+        });
+        const p = partidos[ci];
+        if (p) {
+          const dt = new Date(p._ts);
+          const k = `${dt.getFullYear()}-${String(dt.getMonth()).padStart(2, '0')}`;
+          if (k !== activeMonthKey) { activeMonthKey = k; renderMonths(); }
+        }
+      }, 120);
+    });
+
+    // ── Countdowns ──
+    function updateCountdowns() {
+      const n = Date.now();
+      document.querySelectorAll('[data-countdown]').forEach(el => {
+        const t = parseInt(el.dataset.countdown);
+        const diff = t - n;
+        if (diff <= 0) {
+          el.className = 'mc-live';
+          el.textContent = 'EN JUEGO';
+          el.removeAttribute('data-countdown');
+          return;
+        }
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        el.textContent = h > 0 ? `${h}h ${String(m).padStart(2,'0')}m` : `${m}m ${String(s).padStart(2,'0')}s`;
+      });
+    }
+    updateCountdowns();
+    setInterval(updateCountdowns, 1000);
+
+    // ── Init scroll to today ──
+    renderMonths();
+    requestAnimationFrame(() => {
+      let ci = 0, cd = Infinity;
+      partidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
+      track.querySelectorAll('.mc')[ci]?.scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
+    });
+
+    // Drag scroll (desktop)
+    let isDown = false, sx, sl;
+    track.addEventListener('mousedown', e => { isDown = true; track.style.cursor = 'grabbing'; sx = e.pageX - track.offsetLeft; sl = track.scrollLeft; });
+    track.addEventListener('mouseleave', () => { isDown = false; track.style.cursor = ''; });
+    track.addEventListener('mouseup', () => { isDown = false; track.style.cursor = ''; });
+    track.addEventListener('mousemove', e => { if (!isDown) return; e.preventDefault(); track.scrollLeft = sl - (e.pageX - track.offsetLeft - sx) * 1.5; });
+  });
+</script>

@@ -1,0 +1,51 @@
+{
+  "categoria": "Cadete Mixto - REGULAR - ÚNICO",
+  "competicion": "Liga Sierra Cadiz",
+  "ultima_actualizacion": "2026-02-12T18:40:02.559382",
+  "clasificacion": [
+    {
+      "equipo": "PUERTO SERRANO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 0,
+      "puntos_favor": 241,
+      "puntos_contra": 139,
+      "diferencia": 102,
+      "puntos": 10,
+      "posicion": 1
+    },
+    {
+      "equipo": "PRADO DEL REY",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 218,
+      "puntos_contra": 79,
+      "diferencia": 139,
+      "puntos": 9,
+      "posicion": 2
+    },
+    {
+      "equipo": "OLVERA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 4,
+      "puntos_favor": 170,
+      "puntos_contra": 206,
+      "diferencia": -36,
+      "puntos": 6,
+      "posicion": 3
+    },
+    {
+      "equipo": "VILLAMARTÍN",
+      "partidos_jugados": 5,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 5,
+      "puntos_favor": 12,
+      "puntos_contra": 217,
+      "diferencia": -205,
+      "puntos": 5,
+      "posicion": 4
+    }
+  ]
+}

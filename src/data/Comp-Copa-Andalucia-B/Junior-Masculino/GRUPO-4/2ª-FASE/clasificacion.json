@@ -1,0 +1,62 @@
+{
+  "categoria": "Junior Masculino - 2ª FASE - GRUPO 4",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:28:23.458485",
+  "clasificacion": [
+    {
+      "equipo": "E.D.M. ARCOS BLANCO",
+      "partidos_jugados": 6,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 2,
+      "puntos_favor": 367,
+      "puntos_contra": 355,
+      "diferencia": 12,
+      "puntos": 10,
+      "posicion": 1
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 4,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 0,
+      "puntos_favor": 327,
+      "puntos_contra": 232,
+      "diferencia": 95,
+      "puntos": 8,
+      "posicion": 2
+    },
+    {
+      "equipo": "AYUDA T PYMES CB MEDINA SIDONIA",
+      "partidos_jugados": 6,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 4,
+      "puntos_favor": 334,
+      "puntos_contra": 347,
+      "diferencia": -13,
+      "puntos": 8,
+      "posicion": 3
+    },
+    {
+      "equipo": "EDM ARCOS ROJO",
+      "partidos_jugados": 5,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 3,
+      "puntos_favor": 312,
+      "puntos_contra": 378,
+      "diferencia": -66,
+      "puntos": 7,
+      "posicion": 4
+    },
+    {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 5,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 4,
+      "puntos_favor": 329,
+      "puntos_contra": 357,
+      "diferencia": -28,
+      "puntos": 6,
+      "posicion": 5
+    }
+  ]
+}

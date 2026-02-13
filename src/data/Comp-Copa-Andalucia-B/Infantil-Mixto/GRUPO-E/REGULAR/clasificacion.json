@@ -1,0 +1,51 @@
+{
+  "categoria": "Infantil Mixto - REGULAR - GRUPO E",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:30:32.240472",
+  "clasificacion": [
+    {
+      "equipo": "GABBA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 422,
+      "puntos_contra": 249,
+      "diferencia": 173,
+      "puntos": 13,
+      "posicion": 1
+    },
+    {
+      "equipo": "CB LA INMACULADA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 324,
+      "puntos_contra": 349,
+      "diferencia": -25,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 292,
+      "puntos_contra": 330,
+      "diferencia": -38,
+      "puntos": 11,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD DON BOSCO`88",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 279,
+      "puntos_contra": 389,
+      "diferencia": -110,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

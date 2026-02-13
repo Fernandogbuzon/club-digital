@@ -1,0 +1,84 @@
+{
+  "categoria": "Cadete Femenino - REGULAR - GRUPO A",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:28:59.993610",
+  "clasificacion": [
+    {
+      "equipo": "GABBA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 1,
+      "puntos_favor": 663,
+      "puntos_contra": 438,
+      "diferencia": 225,
+      "puntos": 21,
+      "posicion": 1
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 648,
+      "puntos_contra": 378,
+      "diferencia": 270,
+      "puntos": 19,
+      "posicion": 2
+    },
+    {
+      "equipo": "KING MAT - MERGABLO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 4,
+      "puntos_favor": 513,
+      "puntos_contra": 419,
+      "diferencia": 94,
+      "puntos": 16,
+      "posicion": 3
+    },
+    {
+      "equipo": "CB SAN FERNANDO",
+      "partidos_jugados": 9,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 3,
+      "puntos_favor": 407,
+      "puntos_contra": 461,
+      "diferencia": -54,
+      "puntos": 15,
+      "posicion": 4
+    },
+    {
+      "equipo": "VENTA FRENAZO MONTERA BCTO.",
+      "partidos_jugados": 11,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 9,
+      "puntos_favor": 458,
+      "puntos_contra": 630,
+      "diferencia": -172,
+      "puntos": 13,
+      "posicion": 5
+    },
+    {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 386,
+      "puntos_contra": 545,
+      "diferencia": -159,
+      "puntos": 12,
+      "posicion": 6
+    },
+    {
+      "equipo": "AUDI CENTER CBA",
+      "partidos_jugados": 9,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 9,
+      "puntos_favor": 298,
+      "puntos_contra": 502,
+      "diferencia": -204,
+      "puntos": 9,
+      "posicion": 7
+    }
+  ]
+}

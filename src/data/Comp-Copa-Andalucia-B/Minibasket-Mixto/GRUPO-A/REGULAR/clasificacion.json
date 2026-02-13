@@ -1,0 +1,51 @@
+{
+  "categoria": "Minibasket Mixto - REGULAR - GRUPO A",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:31:29.124712",
+  "clasificacion": [
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 392,
+      "puntos_contra": 273,
+      "diferencia": 119,
+      "puntos": 13,
+      "posicion": 1
+    },
+    {
+      "equipo": "V. CRUCE DE LOS SANTOS ALCALA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 415,
+      "puntos_contra": 270,
+      "diferencia": 145,
+      "puntos": 12,
+      "posicion": 2
+    },
+    {
+      "equipo": "CD ADC LA ALGAIDA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 368,
+      "puntos_contra": 348,
+      "diferencia": 20,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 108,
+      "puntos_contra": 392,
+      "diferencia": -284,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 4",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:31:23.031774",
+  "clasificacion": [
+    {
+      "equipo": "UBJerez AMARILLO",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 136,
+      "puntos_contra": 72,
+      "diferencia": 64,
+      "puntos": 4,
+      "posicion": 1
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 72,
+      "puntos_contra": 136,
+      "diferencia": -64,
+      "puntos": 2,
+      "posicion": 2
+    }
+  ]
+}

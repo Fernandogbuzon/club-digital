@@ -1,0 +1,51 @@
+{
+  "categoria": "Cadete Mixto - REGULAR - GRUPO A",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:29:31.424170",
+  "clasificacion": [
+    {
+      "equipo": "AD MARIANISTAS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 491,
+      "puntos_contra": 324,
+      "diferencia": 167,
+      "puntos": 14,
+      "posicion": 1
+    },
+    {
+      "equipo": "COPICENTRO CBA AZUL",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 400,
+      "puntos_contra": 376,
+      "diferencia": 24,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
+      "equipo": "GIMNASIO 5TH AVENUE CB PUERTO REAL",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 381,
+      "puntos_contra": 381,
+      "diferencia": 0,
+      "puntos": 10,
+      "posicion": 3
+    },
+    {
+      "equipo": "RECUPERA-T MERGABLO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 7,
+      "puntos_favor": 335,
+      "puntos_contra": 526,
+      "diferencia": -191,
+      "puntos": 7,
+      "posicion": 4
+    }
+  ]
+}

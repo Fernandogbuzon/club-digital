@@ -1,0 +1,73 @@
+{
+  "categoria": "Minibasket Mixto - REGULAR - ÚNICO",
+  "competicion": "Liga Sierra Cadiz",
+  "ultima_actualizacion": "2026-02-12T18:40:25.584696",
+  "clasificacion": [
+    {
+      "equipo": "VILLAMARTÍN",
+      "partidos_jugados": 5,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 0,
+      "puntos_favor": 211,
+      "puntos_contra": 106,
+      "diferencia": 105,
+      "puntos": 10,
+      "posicion": 1
+    },
+    {
+      "equipo": "PRADO DEL REY",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 220,
+      "puntos_contra": 98,
+      "diferencia": 122,
+      "puntos": 9,
+      "posicion": 2
+    },
+    {
+      "equipo": "ALCALÁ DEL VALLE",
+      "partidos_jugados": 3,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 1,
+      "puntos_favor": 142,
+      "puntos_contra": 80,
+      "diferencia": 62,
+      "puntos": 5,
+      "posicion": 3
+    },
+    {
+      "equipo": "PUERTO SERRANO",
+      "partidos_jugados": 3,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 2,
+      "puntos_favor": 71,
+      "puntos_contra": 104,
+      "diferencia": -33,
+      "puntos": 4,
+      "posicion": 4
+    },
+    {
+      "equipo": "OLVERA",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 4,
+      "puntos_favor": 55,
+      "puntos_contra": 182,
+      "diferencia": -127,
+      "puntos": 4,
+      "posicion": 5
+    },
+    {
+      "equipo": "EL BOSQUE",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 4,
+      "puntos_favor": 66,
+      "puntos_contra": 195,
+      "diferencia": -129,
+      "puntos": 4,
+      "posicion": 6
+    }
+  ]
+}

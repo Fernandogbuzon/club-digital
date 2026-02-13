@@ -1,0 +1,95 @@
+{
+  "categoria": "Senior Masculino - REGULAR - ÚNICO",
+  "competicion": "Liga Sierra Cadiz",
+  "ultima_actualizacion": "2026-02-12T18:39:44.312072",
+  "clasificacion": [
+    {
+      "equipo": "ACUDE SENIOR VILLAMARTÍN",
+      "partidos_jugados": 10,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 0,
+      "puntos_favor": 636,
+      "puntos_contra": 389,
+      "diferencia": 247,
+      "puntos": 20,
+      "posicion": 1
+    },
+    {
+      "equipo": "CB OLVERA 2",
+      "partidos_jugados": 10,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 3,
+      "puntos_favor": 504,
+      "puntos_contra": 497,
+      "diferencia": 7,
+      "puntos": 17,
+      "posicion": 2
+    },
+    {
+      "equipo": "CB OLVERA 1",
+      "partidos_jugados": 10,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 4,
+      "puntos_favor": 511,
+      "puntos_contra": 461,
+      "diferencia": 50,
+      "puntos": 16,
+      "posicion": 3
+    },
+    {
+      "equipo": "ALCALÁ DEL VALLE",
+      "partidos_jugados": 9,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 4,
+      "puntos_favor": 475,
+      "puntos_contra": 462,
+      "diferencia": 13,
+      "puntos": 14,
+      "posicion": 4
+    },
+    {
+      "equipo": "PRADOUBRI",
+      "partidos_jugados": 10,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 498,
+      "puntos_contra": 523,
+      "diferencia": -25,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
+      "equipo": "PUERTO SERRANO ATLÉTICO",
+      "partidos_jugados": 9,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 6,
+      "puntos_favor": 449,
+      "puntos_contra": 496,
+      "diferencia": -47,
+      "puntos": 12,
+      "posicion": 6
+    },
+    {
+      "equipo": "LABRADORES DE LA CAMPIÑA ARAHAL",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 492,
+      "puntos_contra": 587,
+      "diferencia": -95,
+      "puntos": 12,
+      "posicion": 7
+    },
+    {
+      "equipo": "ACUDE JUNIOR VILLAMARTÍN",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 450,
+      "puntos_contra": 600,
+      "diferencia": -150,
+      "puntos": 12,
+      "posicion": 8
+    }
+  ]
+}

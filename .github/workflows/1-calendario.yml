@@ -1,0 +1,74 @@
+name: "1. Calendario - Actualizar fechas y horarios"
+
+# Scraper completo: actualiza todas las competiciones, fechas, horarios
+# Se ejecuta 1 vez al dia a las 7:00 (hora España)
+# Tambien genera partidos_hoy.json para el disparador
+
+on:
+  schedule:
+    # 7:00 España = 6:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: scraper-calendario
+  cancel-in-progress: true
+
+jobs:
+  actualizar-calendario:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: |
+          pip install playwright playwright-stealth
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Ejecutar scraper completo
+        run: |
+          sudo apt-get install -y xvfb > /dev/null 2>&1
+          xvfb-run --auto-servernum --server-args="-screen 0 1366x768x24" \
+            python scraper_competicion.py 2>&1
+
+      - name: Verificar cambios
+        id: cambios
+        run: |
+          if git diff --quiet src/data/ partidos_hoy.json comp_url_map.json 2>/dev/null; then
+            echo "hay_cambios=false" >> $GITHUB_OUTPUT
+          else
+            echo "hay_cambios=true" >> $GITHUB_OUTPUT
+            echo "Cambios detectados:"
+            git diff --stat src/data/
+          fi
+
+      - name: Commit y push
+        if: steps.cambios.outputs.hay_cambios == 'true'
+        run: |
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          git add src/data/ partidos_hoy.json comp_url_map.json intentos_resultados.json 2>/dev/null || true
+          
+          TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
+          git commit -m "Calendario actualizado - ${TIMESTAMP}" \
+                     -m "Actualizacion automatica de fechas y horarios"
+          git push
+
+      - name: Resumen
+        if: always()
+        run: |
+          echo "### Scraper Calendario" >> $GITHUB_STEP_SUMMARY
+          echo "**Fecha:** $(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')" >> $GITHUB_STEP_SUMMARY
+          echo "**Cambios:** ${{ steps.cambios.outputs.hay_cambios }}" >> $GITHUB_STEP_SUMMARY

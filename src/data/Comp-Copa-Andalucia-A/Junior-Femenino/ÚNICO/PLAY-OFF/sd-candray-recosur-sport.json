@@ -1,0 +1,62 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "18/02/2026",
+    "hora": "",
+    "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
+    "es_resultado": false,
+    "jornada": "SEMIFINAL Jornada 3 - 18/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "SD CANDRAY RECOSUR SPORT",
+    "rival": "CADIZ CB GADES FONTACLIMA",
+    "ubicacion": "Visitante",
+    "id": "18022026_cadiz-cb-gades-fontaclima_sd-candray-recosur-sport_junior-femenino-play-off-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "14/02/2026",
+    "hora": "14:00",
+    "pabellon": "PAB. MANUEL PRADO (BAHÍA SUR)",
+    "es_resultado": false,
+    "jornada": "SEMIFINAL Jornada 2 - 14/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "SD CANDRAY RECOSUR SPORT",
+    "rival": "CADIZ CB GADES FONTACLIMA",
+    "ubicacion": "Local",
+    "id": "14022026_sd-candray-recosur-sport_cadiz-cb-gades-fontaclima_junior-femenino-play-off-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": 74,
+    "marcador_visitante": 53,
+    "fecha": "09/02/2026",
+    "hora": "20:15",
+    "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "SD CANDRAY RECOSUR SPORT",
+    "rival": "CADIZ CB GADES FONTACLIMA",
+    "ubicacion": "Visitante",
+    "id": "09022026_cadiz-cb-gades-fontaclima_sd-candray-recosur-sport_junior-femenino-play-off-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": 74,
+    "marcador_visitante": 53,
+    "fecha": "09/02/2026",
+    "hora": "20:15",
+    "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
+    "es_resultado": true,
+    "jornada": "SEMIFINAL Jornada 1 - 11/02/2026",
+    "categoria": "Junior Femenino - PLAY OFF - ÚNICO",
+    "equipo": "SD CANDRAY RECOSUR SPORT",
+    "rival": "CADIZ CB GADES FONTACLIMA",
+    "ubicacion": "Visitante",
+    "id": "09022026_cadiz-cb-gades-fontaclima_sd-candray-recosur-sport_junior-femenino-play-off-unico"
+  }
+]

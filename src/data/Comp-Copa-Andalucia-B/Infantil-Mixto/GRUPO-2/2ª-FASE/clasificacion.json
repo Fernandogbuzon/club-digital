@@ -1,0 +1,95 @@
+{
+  "categoria": "Infantil Mixto - 2ª FASE - GRUPO 2",
+  "competicion": "Comp Copa Andalucia B",
+  "ultima_actualizacion": "2026-02-12T18:30:04.444668",
+  "clasificacion": [
+    {
+      "equipo": "CBA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 429,
+      "puntos_contra": 325,
+      "diferencia": 104,
+      "puntos": 13,
+      "posicion": 1
+    },
+    {
+      "equipo": "CB LA INMACULADA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 381,
+      "puntos_contra": 303,
+      "diferencia": 78,
+      "puntos": 13,
+      "posicion": 2
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 6,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 0,
+      "puntos_favor": 381,
+      "puntos_contra": 178,
+      "diferencia": 203,
+      "puntos": 12,
+      "posicion": 3
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 300,
+      "puntos_contra": 321,
+      "diferencia": -21,
+      "puntos": 11,
+      "posicion": 4
+    },
+    {
+      "equipo": "EDM ARCOS ROJO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 361,
+      "puntos_contra": 303,
+      "diferencia": 58,
+      "puntos": 10,
+      "posicion": 5
+    },
+    {
+      "equipo": "CB SANCTI PETRI",
+      "partidos_jugados": 6,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 5,
+      "puntos_favor": 259,
+      "puntos_contra": 332,
+      "diferencia": -73,
+      "puntos": 7,
+      "posicion": 6
+    },
+    {
+      "equipo": "AD MARIANISTAS",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 6,
+      "puntos_favor": 208,
+      "puntos_contra": 379,
+      "diferencia": -171,
+      "puntos": 6,
+      "posicion": 7
+    },
+    {
+      "equipo": "CD MONTERA BALONCESTO",
+      "partidos_jugados": 6,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 6,
+      "puntos_favor": 176,
+      "puntos_contra": 354,
+      "diferencia": -178,
+      "puntos": 6,
+      "posicion": 8
+    }
+  ]
+}

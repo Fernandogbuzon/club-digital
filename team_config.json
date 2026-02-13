@@ -1,0 +1,22 @@
+{
+  "team_name": "ADESA 80",
+  "team_slug": "adesa-80",
+  "province": "cadiz",
+  "province_base_url": "https://www.andaluzabaloncesto.org/cadiz",
+
+  "competitions": [
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2445/comp-copa-andalucia-a",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2446/comp-copa-andalucia-b",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2447/comp-1-a%C3%B1o",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2448/liga-pre-minibasket",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2449/programa-babybasket-20182019",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2542/liga-sierra-cadiz",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2503/copa-diputacionmemorial-carlos-duque",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2516/iv-torneo-las-cortes-qv",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2381/liga-verano-el-puerto",
+    "https://www.andaluzabaloncesto.org/cadiz/delegacion-competicion-2386/torneo-seleccion-espa%C3%B1ola"
+  ],
+
+  "match_duration_hours": 2.5,
+  "max_retry_attempts": 3
+}

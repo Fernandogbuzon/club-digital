@@ -1,0 +1,51 @@
+{
+  "categoria": "Senior Femenino - +45/+50 - +45",
+  "competicion": "Iv Torneo Las Cortes Qv",
+  "ultima_actualizacion": "2026-02-12T18:41:31.430903",
+  "clasificacion": [
+    {
+      "equipo": "AURUM +45",
+      "partidos_jugados": 4,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 1,
+      "puntos_favor": 73,
+      "puntos_contra": 56,
+      "diferencia": 17,
+      "puntos": 7,
+      "posicion": 1
+    },
+    {
+      "equipo": "LLUC MAJOR +45",
+      "partidos_jugados": 4,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 1,
+      "puntos_favor": 68,
+      "puntos_contra": 60,
+      "diferencia": 8,
+      "puntos": 7,
+      "posicion": 2
+    },
+    {
+      "equipo": "JOAN CAPO +45",
+      "partidos_jugados": 4,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 2,
+      "puntos_favor": 73,
+      "puntos_contra": 58,
+      "diferencia": 15,
+      "puntos": 6,
+      "posicion": 3
+    },
+    {
+      "equipo": "PERALES +45",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 4,
+      "puntos_favor": 33,
+      "puntos_contra": 73,
+      "diferencia": -40,
+      "puntos": 4,
+      "posicion": 4
+    }
+  ]
+}

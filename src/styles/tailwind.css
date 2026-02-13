@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-adesa-green: #22c55e;
+  --color-adesa-dark: #16a34a;
+  
+  --font-family-sans: Inter, system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

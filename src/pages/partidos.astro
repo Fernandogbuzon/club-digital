@@ -1,0 +1,734 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PartidosCarousel from '../components/PartidosCarousel.astro';
+
+// Importar todos los archivos JSON de equipos
+import seniorMasculinoA from '../data/equipos/senior-masculino-a.json';
+import juniorMasculinoA from '../data/equipos/junior-masculino-a.json';
+import juniorMasculinoB from '../data/equipos/junior-masculino-b.json';
+import cadeteFemeninoA from '../data/equipos/cadete-femenino-a.json';
+import cadeteFemeninoB from '../data/equipos/cadete-femenino-b.json';
+import cadeteMasculinoA from '../data/equipos/cadete-masculino-a.json';
+import cadeteMixtoB from '../data/equipos/cadete-mixto-b.json';
+import infantilMasculinoA from '../data/equipos/infantil-masculino-a.json';
+import infantilFemeninoA from '../data/equipos/infantil-femenino-a.json';
+import infantilMixtoB from '../data/equipos/infantil-mixto-b.json';
+import infantilMixto from '../data/equipos/infantil-mixto.json';
+import minibasketFemeninoA from '../data/equipos/minibasket-femenino-a.json';
+import minibasketFemenino from '../data/equipos/minibasket-femenino.json';
+import minibasketMasculinoA from '../data/equipos/minibasket-masculino-a.json';
+import minibasketMixtoB from '../data/equipos/minibasket-mixto-b.json';
+import preminiFemenino from '../data/equipos/premini-femenino.json';
+import preminiMixto from '../data/equipos/premini-mixto.json';
+import babybasketMixto from '../data/equipos/babybasket-mixto.json';
+
+// Combinar todos los partidos en un solo array
+const partidos = [
+  ...seniorMasculinoA,
+  ...juniorMasculinoA,
+  ...juniorMasculinoB,
+  ...cadeteFemeninoA,
+  ...cadeteFemeninoB,
+  ...cadeteMasculinoA,
+  ...cadeteMixtoB,
+  ...infantilMasculinoA,
+  ...infantilFemeninoA,
+  ...infantilMixtoB,
+  ...infantilMixto,
+  ...minibasketFemeninoA,
+  ...minibasketFemenino,
+  ...minibasketMasculinoA,
+  ...minibasketMixtoB,
+  ...preminiFemenino,
+  ...preminiMixto,
+  ...babybasketMixto
+];
+
+/**
+ * OPTIMIZACIÓN DE RENDIMIENTO:
+ * - Astro compila esta página en build time (SSG)
+ * - Todo el filtrado y ordenamiento se ejecuta durante la construcción
+ * - El HTML resultante es estático y ultra-rápido
+ * - Los filtros de categoría funcionan con JavaScript vanilla (sin frameworks)
+ * - Total de partidos: ${partidos.length} cargados desde archivos individuales por equipo
+ */
+
+// Función para parsear fecha DD/MM/YYYY y hora HH:MM
+function parseFechaHora(fechaStr: string, horaStr: string): Date {
+  const [dia, mes, anio] = fechaStr.split('/').map(Number);
+  const fecha = new Date(anio, mes - 1, dia);
+  
+  if (horaStr && horaStr.includes(':')) {
+    const [horas, minutos] = horaStr.split(':').map(Number);
+    fecha.setHours(horas, minutos, 0, 0);
+  } else {
+    fecha.setHours(23, 59, 59, 999);
+  }
+  
+  return fecha;
+}
+
+// Jerarquía de categorías para ordenación
+const jerarquiaCategorias: any = {
+  'Senior': 6,
+  'Junior': 5,
+  'Cadete': 4,
+  'Infantil': 3,
+  'Minibasket': 2,
+  'PreMini': 1,
+  'Babybasket': 0,
+  'Baby': 0
+};
+
+function getNivelCategoria(equipo: string): number {
+  for (const nivel in jerarquiaCategorias) {
+    if (equipo.includes(nivel)) {
+      return jerarquiaCategorias[nivel];
+    }
+  }
+  return 0;
+}
+
+function esGeneroMasculino(equipo: string): boolean {
+  return equipo.toLowerCase().includes('masculino');
+}
+
+// Función de ordenación con criterios de prioridad
+function ordenarPartidos(a: any, b: any, ascendente = true): number {
+  const fechaA = parseFechaHora(a.fecha, a.hora || '');
+  const fechaB = parseFechaHora(b.fecha, b.hora || '');
+  
+  const difTiempo = ascendente 
+    ? fechaA.getTime() - fechaB.getTime()
+    : fechaB.getTime() - fechaA.getTime();
+  
+  if (difTiempo !== 0) return difTiempo;
+  
+  if (a.ubicacion === 'Local' && b.ubicacion !== 'Local') return -1;
+  if (a.ubicacion !== 'Local' && b.ubicacion === 'Local') return 1;
+  
+  const nivelA = getNivelCategoria(a.equipo || '');
+  const nivelB = getNivelCategoria(b.equipo || '');
+  if (nivelA !== nivelB) return nivelB - nivelA;
+  
+  const mascA = esGeneroMasculino(a.equipo || '');
+  const mascB = esGeneroMasculino(b.equipo || '');
+  if (mascA && !mascB) return -1;
+  if (!mascA && mascB) return 1;
+  
+  return 0;
+}
+
+// Momento actual
+const ahora = new Date();
+
+// Filtrar por tiempo real
+const proximosPartidos = partidos
+  .filter((p: any) => {
+    const fechaPartido = parseFechaHora(p.fecha, p.hora || '');
+    return fechaPartido >= ahora;
+  })
+  .sort((a: any, b: any) => ordenarPartidos(a, b, true));
+
+const resultadosPasados = partidos
+  .filter((p: any) => {
+    const fechaPartido = parseFechaHora(p.fecha, p.hora || '');
+    return fechaPartido < ahora;
+  })
+  .sort((a: any, b: any) => ordenarPartidos(a, b, false));
+
+// Obtener equipos únicos para filtros y ordenarlos por jerarquía
+const equiposUnicosRaw = [...new Set(partidos.map((p: any) => p.equipo))];
+
+// Función para ordenar equipos por jerarquía (Edad > Género)
+function ordenarEquiposPorJerarquia(equipos: string[]): string[] {
+  const jerarquiaEdad: any = {
+    'Senior': 6,
+    'Junior': 5,
+    'Cadete': 4,
+    'Infantil': 3,
+    'Minibasket': 2,
+    'PreMini': 1,
+    'Babybasket': 0,
+    'Baby': 0
+  };
+  
+  const jerarquiaGenero: any = {
+    'Masculino': 3,
+    'Femenino': 2,
+    'Mixto': 1
+  };
+  
+  return equipos.sort((a, b) => {
+    // 1. Obtener nivel de edad
+    let nivelA = 0;
+    let nivelB = 0;
+    
+    for (const edad in jerarquiaEdad) {
+      if (a.includes(edad)) nivelA = jerarquiaEdad[edad];
+      if (b.includes(edad)) nivelB = jerarquiaEdad[edad];
+    }
+    
+    // Si tienen diferente edad, ordenar por edad (mayor primero)
+    if (nivelA !== nivelB) return nivelB - nivelA;
+    
+    // 2. Si tienen la misma edad, ordenar por género
+    let generoA = 0;
+    let generoB = 0;
+    
+    for (const genero in jerarquiaGenero) {
+      if (a.includes(genero)) generoA = jerarquiaGenero[genero];
+      if (b.includes(genero)) generoB = jerarquiaGenero[genero];
+    }
+    
+    if (generoA !== generoB) return generoB - generoA;
+    
+    // 3. Si tienen mismo género, ordenar alfabéticamente (para A, B, etc.)
+    return a.localeCompare(b);
+  });
+}
+
+const equiposUnicos = ordenarEquiposPorJerarquia(equiposUnicosRaw);
+
+// Serializar datos para JavaScript del cliente
+const partidosJSON = JSON.stringify(partidos);
+---
+
+<Layout title="Partidos y Resultados - ADESA 80">
+  <!-- Header Section -->
+  <section class="bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+          Partidos y Resultados
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Sigue todos los partidos del ADESA 80 en todas las categorías
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrusel estilo NBA -->
+  <PartidosCarousel />
+
+  <!-- PANEL DE CONTROL MAESTRO (Apple Style) -->
+  <section class="bg-gradient-to-b from-gray-50 to-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="bg-white/80 backdrop-blur-md rounded-3xl border border-gray-200/50 p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+        <!-- Filtros en una sola línea centrados -->
+        <div class="flex flex-col lg:flex-row gap-6 items-center justify-center">
+          <!-- Selector de Equipo -->
+          <div class="w-full lg:w-80 flex-shrink-0">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 text-center">Seleccionar Equipo</label>
+            <select 
+              id="filtroEquipoMaestro"
+              class="select-maestro w-full px-5 py-4 border-2 border-gray-200/60 rounded-2xl font-medium text-gray-900 focus:border-adesa-green focus:shadow-md focus:outline-none focus:ring-4 focus:ring-adesa-green/10 transition-all duration-300 bg-white hover:bg-gray-50 appearance-none cursor-pointer shadow-sm hover:shadow-md"
+              style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;"
+            >
+              <option value="all">Todos los equipos</option>
+              {equiposUnicos.map((equipo: string) => (
+                <option value={equipo} class="py-3 px-4 hover:bg-gray-100">{equipo}</option>
+              ))}
+            </select>
+          </div>
+          
+          <!-- Género -->
+          <div class="flex-shrink-0">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 text-center">Género</label>
+            <div class="flex flex-wrap gap-2 justify-center">
+              <button class="filtro-genero-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-adesa-green text-white shadow-md hover:shadow-lg hover:scale-105" data-genero="all">Todos</button>
+              <button class="filtro-genero-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-genero="masculino">Masculino</button>
+              <button class="filtro-genero-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-genero="femenino">Femenino</button>
+              <button class="filtro-genero-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-genero="mixto">Mixto</button>
+            </div>
+          </div>
+          
+          <!-- Ubicación -->
+          <div class="flex-shrink-0">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 text-center">Ubicación</label>
+            <div class="flex flex-wrap gap-2 justify-center">
+              <button class="filtro-ubicacion-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-adesa-green text-white shadow-md hover:shadow-lg hover:scale-105" data-ubicacion="all">Todos</button>
+              <button class="filtro-ubicacion-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-ubicacion="Local">Local</button>
+              <button class="filtro-ubicacion-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-ubicacion="Visitante">Visitante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estilos CSS personalizados para Select Apple-Style -->
+  <style>
+    /* Ocultar scrollbar en el select (cross-browser) */
+    .select-maestro {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE/Edge */
+    }
+    
+    .select-maestro::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    
+    /* Mejorar padding de opciones para táctil */
+    .select-maestro option {
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+    }
+    
+    /* Hover suave en opciones (solo funciona en algunos navegadores) */
+    .select-maestro option:hover {
+      background-color: #f3f4f6;
+    }
+    
+    /* Garantizar min-height en grids para evitar saltos */
+    #proximosGrid,
+    #resultadosGrid {
+      min-height: 300px;
+      transition: all 0.3s ease;
+    }
+  </style>
+
+  <!-- Próximos Partidos -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" style="min-height: 400px;">
+    <div class="mb-8">
+      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-2 text-center">
+        Próximos Partidos
+      </h2>
+      <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark mx-auto rounded-full"></div>
+    </div>
+    
+    <!-- Mensaje de estado vacío (oculto por defecto) -->
+    <div id="mensajeVacioProximos" class="hidden text-center py-20">
+      <div class="inline-block p-10 bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-200/50 shadow-xl">
+        <p class="text-gray-300 text-6xl font-light mb-4">🔍</p>
+        <p class="text-gray-800 text-xl font-semibold mb-2">No hay encuentros disponibles</p>
+        <p class="text-gray-500 text-sm">para este criterio de búsqueda</p>
+      </div>
+    </div>
+
+    {proximosPartidos.length > 0 ? (
+        <div id="proximosGrid" class="grid gap-6" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+          {proximosPartidos.map((partido: any) => (
+            <div 
+              class="partido-card bg-white rounded-3xl p-6 shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-xl transition-all duration-300"
+              data-categoria={partido.equipo}
+              data-ubicacion={partido.ubicacion}
+              data-genero={
+                partido.equipo.toLowerCase().includes('masculino') ? 'masculino' : 
+                partido.equipo.toLowerCase().includes('femenino') ? 'femenino' : 
+                'mixto'
+              }
+              style="min-height: 220px; display: grid; grid-template-rows: auto 1fr auto;"
+            >
+              <!-- Fila Superior: Meta (Categoría + Fecha) -->
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-semibold text-gray-900 text-xs truncate max-w-[55%]">{partido.equipo}</span>
+                <span class="text-xs text-gray-500 whitespace-nowrap">{partido.fecha}</span>
+              </div>
+              
+              <!-- Fila Central: Acción (Mirror Layout con VS central) -->
+              <div class="flex items-center justify-center">
+                <div class="w-full" style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;">
+                  <!-- Bloque Local (Izquierda) -->
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <p class="text-center text-sm font-bold text-gray-900 break-words leading-tight">
+                      {partido.ubicacion === 'Local' ? 'ADESA 80' : partido.rival}
+                    </p>
+                  </div>
+                  
+                  <!-- Eje Central: VS (Inamovible) -->
+                  <div class="flex items-center justify-center shrink-0 px-4">
+                    <p class="text-lg font-black text-gray-400">VS</p>
+                  </div>
+                  
+                  <!-- Bloque Visitante (Derecha) -->
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <p class="text-center text-sm font-bold text-gray-900 break-words leading-tight">
+                      {partido.ubicacion === 'Local' ? partido.rival : 'ADESA 80'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Fila Inferior: Logística (Hora + Pabellón) -->
+              <div class="pt-3 border-t border-gray-100 mt-3">
+                <div class="flex items-center justify-between text-xs text-gray-600">
+                  <span class="whitespace-nowrap">{partido.hora || 'Por definir'}</span>
+                  <a 
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                      partido.pabellon.toLowerCase().includes('municipal') || partido.pabellon.toLowerCase().includes('pdvo')
+                        ? 'Pabellón Sanlúcar, Av. Bajo de Guía, 27, 11540 Sanlúcar de Barrameda, Cádiz'
+                        : partido.pabellon + ' Cadiz Andalucia'
+                    )}`}
+                    target="_blank"
+                    class="hover:text-adesa-green transition-colors text-right truncate max-w-[55%] ml-2"
+                  >
+                    📍 {partido.pabellon}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-gray-500 text-lg">No hay próximos partidos programados</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Resultados -->
+  <section class="bg-gray-50 py-16" style="min-height: 400px;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-2 text-center">
+          Resultados
+        </h2>
+        <div class="w-20 h-1.5 bg-linear-to-r from-adesa-green to-adesa-dark mx-auto rounded-full"></div>
+      </div>
+      
+      <!-- Filtros de Estado (Independientes) -->
+      <div class="flex justify-center items-center gap-3 mb-8">
+        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Filtrar:</span>
+        <button class="filtro-estado-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-adesa-green text-white shadow-md hover:shadow-lg hover:scale-105" data-estado="all">Todos</button>
+        <button class="filtro-estado-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-estado="ganado">Ganados</button>
+        <button class="filtro-estado-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-estado="perdido">Perdidos</button>
+        <button class="filtro-estado-maestro px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gray-50 text-gray-700 hover:shadow-lg hover:scale-105" data-estado="aplazado">Aplazados</button>
+      </div>
+      
+      <!-- Mensaje de estado vacío (oculto por defecto) -->
+      <div id="mensajeVacioResultados" class="hidden text-center py-20">
+        <div class="inline-block p-10 bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-200/50 shadow-xl">
+          <p class="text-gray-300 text-6xl font-light mb-4">🔍</p>
+          <p class="text-gray-800 text-xl font-semibold mb-2">No hay encuentros disponibles</p>
+          <p class="text-gray-500 text-sm">para este criterio de búsqueda</p>
+        </div>
+      </div>
+
+      {resultadosPasados.length > 0 ? (
+        <div id="resultadosGrid" class="grid gap-6" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+          {resultadosPasados.map((partido: any) => {
+            // ========== LÓGICA DIRECTA: IDENTIFICAR VICTORIA DE ADESA 80 ==========
+            const esAdesaLocal = partido.ubicacion === 'Local';
+            const puntosAdesa = esAdesaLocal ? parseInt(partido.marcador_local) : parseInt(partido.marcador_visitante);
+            const puntosRival = esAdesaLocal ? parseInt(partido.marcador_visitante) : parseInt(partido.marcador_local);
+            const esVictoria = partido.marcador_local && partido.marcador_visitante && puntosAdesa > puntosRival;
+            
+            // ========== LÓGICA DE APLAZADOS Y ESTADOS ==========
+            const contraDescansa = partido.rival?.toUpperCase().includes('DESCANSA');
+            const tieneResultado = partido.marcador_local && partido.marcador_visitante;
+            const puntosLocal = parseInt(partido.marcador_local || '0');
+            const puntosVisitante = parseInt(partido.marcador_visitante || '0');
+            const esEmpate00 = tieneResultado && puntosLocal === 0 && puntosVisitante === 0;
+            
+            // Aplazado = sin resultado (no tiene marcadores) y no es DESCANSA
+            const esAplazado = !tieneResultado && !contraDescansa;
+            
+            // Borde gris para: 0-0 o DESCANSA o sin resultado
+            const borderGris = esEmpate00 || contraDescansa || !tieneResultado;
+            
+            // Determinar el estado del partido
+            let estadoPartido = 'perdido';
+            if (contraDescansa) {
+              estadoPartido = 'descansa';
+            } else if (esAplazado) {
+              estadoPartido = 'aplazado';
+            } else if (esEmpate00) {
+              estadoPartido = 'empate00';
+            } else if (esVictoria) {
+              estadoPartido = 'ganado';
+            }
+            // =====================================================================
+            
+            return (
+              <div 
+                class={`resultado-card bg-white rounded-3xl p-6 shadow-lg transition-all duration-300 ${
+                  borderGris ? 'border-2 border-gray-400' : (esVictoria ? 'border-2 border-adesa-green' : 'border-2 border-red-500')
+                }`}
+                data-categoria={partido.equipo}
+                data-ubicacion={partido.ubicacion}
+                data-genero={
+                  partido.equipo.toLowerCase().includes('masculino') ? 'masculino' : 
+                  partido.equipo.toLowerCase().includes('femenino') ? 'femenino' : 
+                  'mixto'
+                }
+                data-resultado={estadoPartido}
+                data-descansa={contraDescansa ? 'true' : 'false'}
+                style="height: 250px; display: grid; grid-template-rows: auto 1fr auto;"
+              >
+                <!-- Fila Superior: Meta (Categoría + Fecha) -->
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-semibold text-gray-900 text-xs truncate max-w-[55%]">{partido.equipo}</span>
+                  <span class="text-xs text-gray-500 whitespace-nowrap">{partido.fecha}</span>
+                </div>
+                
+                <!-- Fila Central: Local (Izquierda) vs Visitante (Derecha) -->
+                <div class="flex flex-col items-center justify-center">
+                  <div class="w-full" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center;">
+                    <!-- IZQUIERDA = LOCAL (Nombre + marcador_local directo) -->
+                    <div class="flex flex-col items-center justify-center gap-2" style="min-height: 80px;">
+                      <p class="text-center text-sm font-bold text-gray-900 break-words leading-tight">
+                        {partido.ubicacion === 'Local' ? 'ADESA 80' : partido.rival}
+                      </p>
+                      {partido.marcador_local && partido.marcador_visitante ? (
+                        <p class={`text-3xl ${
+                          partido.ubicacion === 'Local'
+                            ? (esVictoria ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
+                            : 'font-black text-gray-900'
+                        }`}>
+                          {partido.marcador_local}
+                        </p>
+                      ) : (
+                        <p class="text-3xl invisible">-</p>
+                      )}
+                    </div>
+                    
+                    <!-- CENTRO: VS -->
+                    <div class="flex items-center justify-center shrink-0 px-4">
+                      <p class="text-base font-black text-gray-400">VS</p>
+                    </div>
+                    
+                    <!-- DERECHA = VISITANTE (Nombre + marcador_visitante directo) -->
+                    <div class="flex flex-col items-center justify-center gap-2" style="min-height: 80px;">
+                      <p class="text-center text-sm font-bold text-gray-900 break-words leading-tight">
+                        {partido.ubicacion === 'Local' ? partido.rival : 'ADESA 80'}
+                      </p>
+                      {partido.marcador_local && partido.marcador_visitante ? (
+                        <p class={`text-3xl ${
+                          partido.ubicacion === 'Visitante'
+                            ? (esVictoria ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
+                            : 'font-black text-gray-900'
+                        }`}>
+                          {partido.marcador_visitante}
+                        </p>
+                      ) : (
+                        <p class="text-3xl invisible">-</p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Fila Inferior: Logística (Hora + Pabellón) -->
+                <div class="pt-3 border-t border-gray-100 mt-3">
+                  <div class="flex items-center justify-between text-xs text-gray-600">
+                    <span class="whitespace-nowrap">{partido.hora || 'Por definir'}</span>
+                    <a 
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                        partido.pabellon.toLowerCase().includes('municipal') || partido.pabellon.toLowerCase().includes('pdvo')
+                          ? 'Pabellón Sanlúcar, Av. Bajo de Guía, 27, 11540 Sanlúcar de Barrameda, Cádiz'
+                          : partido.pabellon + ' Cadiz Andalucia'
+                      )}`}
+                      target="_blank"
+                      class="hover:text-adesa-green transition-colors text-right truncate max-w-[55%] ml-2"
+                    >
+                      📍 {partido.pabellon}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-gray-500 text-lg">No hay resultados disponibles</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Script para filtros maestro unificado -->
+  <script>
+    /**
+     * PANEL DE CONTROL MAESTRO - SISTEMA UNIFICADO
+     * - Un solo panel controla ambas secciones (Próximos + Resultados)
+     * - Filtro "Estado" solo afecta a Resultados
+     * - Reubicación dinámica: display: none elimina huecos
+     * - Grid auto-reconfigurable
+     */
+    
+    // Estado de filtros maestro
+    let filtrosMaestro = {
+      equipo: 'all',
+      genero: 'all',
+      ubicacion: 'all',
+      estado: 'all'  // Solo para resultados
+    };
+    
+    // ========== PANEL MAESTRO ==========
+    
+    // Select de equipo maestro
+    const filtroEquipoMaestro = document.getElementById('filtroEquipoMaestro');
+    if (filtroEquipoMaestro) {
+      filtroEquipoMaestro.addEventListener('change', (e) => {
+        filtrosMaestro.equipo = (e.target as HTMLSelectElement).value;
+        aplicarFiltrosMaestro();
+      });
+    }
+    
+    // Botones de género maestro
+    const botonesGeneroMaestro = document.querySelectorAll('.filtro-genero-maestro');
+    botonesGeneroMaestro.forEach(boton => {
+      boton.addEventListener('click', () => {
+        const genero = boton.getAttribute('data-genero') || 'all';
+        filtrosMaestro.genero = genero;
+        
+        // Actualizar estado visual (Apple Style)
+        botonesGeneroMaestro.forEach(btn => {
+          btn.classList.remove('bg-adesa-green', 'text-white', 'shadow-md', 'scale-105');
+          btn.classList.add('bg-gray-50', 'text-gray-700');
+        });
+        boton.classList.remove('bg-gray-50', 'text-gray-700');
+        boton.classList.add('bg-adesa-green', 'text-white', 'shadow-md');
+        
+        aplicarFiltrosMaestro();
+      });
+    });
+    
+    // Botones de ubicación maestro
+    const botonesUbicacionMaestro = document.querySelectorAll('.filtro-ubicacion-maestro');
+    botonesUbicacionMaestro.forEach(boton => {
+      boton.addEventListener('click', () => {
+        const ubicacion = boton.getAttribute('data-ubicacion') || 'all';
+        filtrosMaestro.ubicacion = ubicacion;
+        
+        // Actualizar estado visual (Apple Style)
+        botonesUbicacionMaestro.forEach(btn => {
+          btn.classList.remove('bg-adesa-green', 'text-white', 'shadow-md', 'scale-105');
+          btn.classList.add('bg-gray-50', 'text-gray-700');
+        });
+        boton.classList.remove('bg-gray-50', 'text-gray-700');
+        boton.classList.add('bg-adesa-green', 'text-white', 'shadow-md');
+        
+        aplicarFiltrosMaestro();
+      });
+    });
+    
+    // Botones de estado maestro (solo para resultados)
+    const botonesEstadoMaestro = document.querySelectorAll('.filtro-estado-maestro');
+    botonesEstadoMaestro.forEach(boton => {
+      boton.addEventListener('click', () => {
+        const estado = boton.getAttribute('data-estado') || 'all';
+        filtrosMaestro.estado = estado;
+        
+        // Actualizar estado visual (Apple Style)
+        botonesEstadoMaestro.forEach(btn => {
+          btn.classList.remove('bg-adesa-green', 'text-white', 'shadow-md', 'scale-105');
+          btn.classList.add('bg-gray-50', 'text-gray-700');
+        });
+        boton.classList.remove('bg-gray-50', 'text-gray-700');
+        boton.classList.add('bg-adesa-green', 'text-white', 'shadow-md');
+        
+        aplicarFiltrosMaestro();
+      });
+    });
+    
+    /**
+     * Aplicar filtros a ambas secciones simultáneamente
+     * - Próximos Partidos: Equipo + Género + Ubicación
+     * - Resultados: Equipo + Género + Ubicación + Estado
+     */
+    function aplicarFiltrosMaestro() {
+      filtrarProximos();
+      filtrarResultados();
+    }
+    
+    /**
+     * Filtrar PRÓXIMOS PARTIDOS
+     * No aplica filtro de "Estado" (no tienen marcador)
+     */
+    function filtrarProximos() {
+      const cards = document.querySelectorAll('.partido-card');
+      const grid = document.getElementById('proximosGrid');
+      const mensajeVacio = document.getElementById('mensajeVacioProximos');
+      let visibles = 0;
+      
+      cards.forEach(card => {
+        const equipo = card.getAttribute('data-categoria') || '';
+        const genero = card.getAttribute('data-genero') || '';
+        const ubicacion = card.getAttribute('data-ubicacion') || '';
+        
+        const cumpleEquipo = filtrosMaestro.equipo === 'all' || equipo === filtrosMaestro.equipo;
+        const cumpleGenero = filtrosMaestro.genero === 'all' || genero === filtrosMaestro.genero;
+        const cumpleUbicacion = filtrosMaestro.ubicacion === 'all' || ubicacion === filtrosMaestro.ubicacion;
+        
+        const cumpleTodo = cumpleEquipo && cumpleGenero && cumpleUbicacion;
+        
+        if (cumpleTodo) {
+          // Mostrar con display: block para que Grid lo reubique
+          (card as HTMLElement).style.display = 'grid';
+          visibles++;
+        } else {
+          // Ocultar completamente (Grid lo ignora)
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+      
+      // Mostrar/ocultar mensaje de estado vacío
+      if (visibles === 0) {
+        if (grid) grid.classList.add('hidden');
+        if (mensajeVacio) mensajeVacio.classList.remove('hidden');
+      } else {
+        if (grid) grid.classList.remove('hidden');
+        if (mensajeVacio) mensajeVacio.classList.add('hidden');
+      }
+    }
+    
+    /**
+     * Filtrar RESULTADOS
+     * Aplica todos los filtros incluido "Estado" (Ganados/Perdidos/Aplazados)
+     * REGLAS ESPECIALES: 
+     * - DESCANSA solo aparece en "Todos"
+     * - Partidos 0-0 (aplazados) solo aparecen en "Todos" y "Aplazados"
+     */
+    function filtrarResultados() {
+      const cards = document.querySelectorAll('.resultado-card');
+      const grid = document.getElementById('resultadosGrid');
+      const mensajeVacio = document.getElementById('mensajeVacioResultados');
+      let visibles = 0;
+      
+      cards.forEach(card => {
+        const equipo = card.getAttribute('data-categoria') || '';
+        const genero = card.getAttribute('data-genero') || '';
+        const ubicacion = card.getAttribute('data-ubicacion') || '';
+        const resultado = card.getAttribute('data-resultado') || '';
+        const esDescansa = card.getAttribute('data-descansa') === 'true';
+        
+        const cumpleEquipo = filtrosMaestro.equipo === 'all' || equipo === filtrosMaestro.equipo;
+        const cumpleGenero = filtrosMaestro.genero === 'all' || genero === filtrosMaestro.genero;
+        const cumpleUbicacion = filtrosMaestro.ubicacion === 'all' || ubicacion === filtrosMaestro.ubicacion;
+        const cumpleEstado = filtrosMaestro.estado === 'all' || resultado === filtrosMaestro.estado;
+        
+        // REGLA ESPECIAL 1: DESCANSA solo aparece en "Todos"
+        const ocultarDescansa = esDescansa && filtrosMaestro.estado !== 'all';
+        
+        // REGLA ESPECIAL 2: Empates 0-0 solo aparecen en "Todos"
+        const esEmpate00 = resultado === 'empate00';
+        const ocultarEmpate00 = esEmpate00 && filtrosMaestro.estado !== 'all';
+        
+        const cumpleTodo = cumpleEquipo && cumpleGenero && cumpleUbicacion && cumpleEstado && 
+                          !ocultarDescansa && !ocultarEmpate00;
+        
+        if (cumpleTodo) {
+          // Mostrar con display: grid para que Grid lo reubique
+          (card as HTMLElement).style.display = 'grid';
+          visibles++;
+        } else {
+          // Ocultar completamente (Grid lo ignora)
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+      
+      // Mostrar/ocultar mensaje de estado vacío
+      if (visibles === 0) {
+        if (grid) grid.classList.add('hidden');
+        if (mensajeVacio) mensajeVacio.classList.remove('hidden');
+      } else {
+        if (grid) grid.classList.remove('hidden');
+        if (mensajeVacio) mensajeVacio.classList.add('hidden');
+      }
+    }
+  </script>
+</Layout>

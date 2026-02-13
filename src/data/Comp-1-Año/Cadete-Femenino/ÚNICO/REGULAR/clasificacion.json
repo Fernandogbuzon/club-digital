@@ -1,0 +1,51 @@
+{
+  "categoria": "Cadete Femenino - REGULAR - ÚNICO",
+  "competicion": "Comp 1 Año",
+  "ultima_actualizacion": "2026-02-12T18:32:19.177126",
+  "clasificacion": [
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 510,
+      "puntos_contra": 351,
+      "diferencia": 159,
+      "puntos": 19,
+      "posicion": 1
+    },
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 10,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 3,
+      "puntos_favor": 437,
+      "puntos_contra": 435,
+      "diferencia": 2,
+      "puntos": 17,
+      "posicion": 2
+    },
+    {
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 444,
+      "puntos_contra": 510,
+      "diferencia": -66,
+      "puntos": 12,
+      "posicion": 3
+    },
+    {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 399,
+      "puntos_contra": 494,
+      "diferencia": -95,
+      "puntos": 12,
+      "posicion": 4
+    }
+  ]
+}
