@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-14T06:19:57.714613",
+  "ultima_actualizacion": "2026-02-14T12:33:09.296158",
   "clasificacion": [
     {
       "equipo": "KROSAKI AMR CBA 2011",
@@ -26,6 +26,17 @@
       "posicion": 2
     },
     {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 12,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 4,
+      "puntos_favor": 667,
+      "puntos_contra": 565,
+      "diferencia": 102,
+      "puntos": 20,
+      "posicion": 3
+    },
+    {
       "equipo": "CB CIMBIS",
       "partidos_jugados": 11,
       "partidos_ganados": 8,
@@ -34,7 +45,7 @@
       "puntos_contra": 458,
       "diferencia": 149,
       "puntos": 19,
-      "posicion": 3
+      "posicion": 4
     },
     {
       "equipo": "CBP AYUDATPYMES",
@@ -44,17 +55,6 @@
       "puntos_favor": 593,
       "puntos_contra": 405,
       "diferencia": 188,
-      "puntos": 18,
-      "posicion": 4
-    },
-    {
-      "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 11,
-      "partidos_ganados": 7,
-      "partidos_perdidos": 4,
-      "puntos_favor": 613,
-      "puntos_contra": 519,
-      "diferencia": 94,
       "puntos": 18,
       "posicion": 5
     },
@@ -70,6 +70,17 @@
       "posicion": 6
     },
     {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 497,
+      "puntos_contra": 718,
+      "diferencia": -221,
+      "puntos": 15,
+      "posicion": 7
+    },
+    {
       "equipo": "EL 40&CUATRO CBSFDO",
       "partidos_jugados": 11,
       "partidos_ganados": 3,
@@ -78,7 +89,7 @@
       "puntos_contra": 602,
       "diferencia": -126,
       "puntos": 14,
-      "posicion": 7
+      "posicion": 8
     },
     {
       "equipo": "LIVENDO ALCALÁ DE LOS GAZULES",
@@ -88,17 +99,6 @@
       "puntos_favor": 401,
       "puntos_contra": 599,
       "diferencia": -198,
-      "puntos": 14,
-      "posicion": 8
-    },
-    {
-      "equipo": "UBJerez NEGRO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 451,
-      "puntos_contra": 664,
-      "diferencia": -213,
       "puntos": 14,
       "posicion": 9
     },

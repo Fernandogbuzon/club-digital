@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T06:12:42.592664",
+  "ultima_actualizacion": "2026-02-14T12:25:58.999402",
   "clasificacion": [
     {
       "equipo": "BERNARDINO ABAD CB PUERTO REAL",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "STROG SHIPPING ULB",
+      "partidos_jugados": 19,
+      "partidos_ganados": 15,
+      "partidos_perdidos": 4,
+      "puntos_favor": 1385,
+      "puntos_contra": 1019,
+      "diferencia": 366,
+      "puntos": 34,
+      "posicion": 2
+    },
+    {
       "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
       "partidos_jugados": 18,
       "partidos_ganados": 15,
@@ -23,17 +34,6 @@
       "puntos_contra": 891,
       "diferencia": 623,
       "puntos": 33,
-      "posicion": 2
-    },
-    {
-      "equipo": "STROG SHIPPING ULB",
-      "partidos_jugados": 18,
-      "partidos_ganados": 14,
-      "partidos_perdidos": 4,
-      "puntos_favor": 1300,
-      "puntos_contra": 948,
-      "diferencia": 352,
-      "puntos": 32,
       "posicion": 3
     },
     {
@@ -49,24 +49,24 @@
     },
     {
       "equipo": "ADESA 80",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 10,
-      "partidos_perdidos": 7,
-      "puntos_favor": 1128,
-      "puntos_contra": 1130,
-      "diferencia": -2,
-      "puntos": 27,
+      "partidos_perdidos": 8,
+      "puntos_favor": 1199,
+      "puntos_contra": 1215,
+      "diferencia": -16,
+      "puntos": 28,
       "posicion": 5
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 18,
+      "partidos_jugados": 19,
       "partidos_ganados": 6,
-      "partidos_perdidos": 12,
-      "puntos_favor": 1134,
-      "puntos_contra": 1316,
-      "diferencia": -182,
-      "puntos": 24,
+      "partidos_perdidos": 13,
+      "puntos_favor": 1180,
+      "puntos_contra": 1382,
+      "diferencia": -202,
+      "puntos": 25,
       "posicion": 6
     },
     {
@@ -104,13 +104,13 @@
     },
     {
       "equipo": "UBJerez GRIS",
-      "partidos_jugados": 18,
-      "partidos_ganados": 0,
+      "partidos_jugados": 19,
+      "partidos_ganados": 1,
       "partidos_perdidos": 18,
-      "puntos_favor": 763,
-      "puntos_contra": 1345,
-      "diferencia": -582,
-      "puntos": 18,
+      "puntos_favor": 829,
+      "puntos_contra": 1391,
+      "diferencia": -562,
+      "puntos": 20,
       "posicion": 10
     }
   ]

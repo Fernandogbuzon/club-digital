@@ -1,28 +1,28 @@
 {
   "categoria": "Minibasket Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T06:14:18.618780",
+  "ultima_actualizacion": "2026-02-14T12:27:34.750810",
   "clasificacion": [
     {
-      "equipo": "UBJerez GRIS",
-      "partidos_jugados": 10,
+      "equipo": "ATRIDEL CB PUERTO REAL",
+      "partidos_jugados": 11,
       "partidos_ganados": 10,
-      "partidos_perdidos": 0,
+      "partidos_perdidos": 1,
       "puntos_favor": 640,
-      "puntos_contra": 307,
-      "diferencia": 333,
-      "puntos": 20,
+      "puntos_contra": 250,
+      "diferencia": 390,
+      "puntos": 21,
       "posicion": 1
     },
     {
-      "equipo": "ATRIDEL CB PUERTO REAL",
-      "partidos_jugados": 10,
-      "partidos_ganados": 9,
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
       "partidos_perdidos": 1,
-      "puntos_favor": 586,
-      "puntos_contra": 236,
-      "diferencia": 350,
-      "puntos": 19,
+      "puntos_favor": 654,
+      "puntos_contra": 361,
+      "diferencia": 293,
+      "puntos": 21,
       "posicion": 2
     },
     {

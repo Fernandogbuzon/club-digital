@@ -54,33 +54,5 @@
     "grupo_carpeta": "GRUPO-1",
     "fase_carpeta": "2ª-FASE",
     "json_path": "Comp-Copa-Andalucia-A/Infantil-Masculino/GRUPO-1/2ª-FASE/adesa-80.json"
-  },
-  {
-    "equipo": "ADESA 80",
-    "rival": "ISAVAL CBA",
-    "fecha": "14/02/2026",
-    "hora": "10:30",
-    "categoria": "Cadete Masculino - REGULAR - ÚNICO",
-    "ubicacion": "Local",
-    "id": "14022026_adesa-80_isaval-cba_cadete-masculino-regular-unico",
-    "comp_carpeta": "Comp-Copa-Andalucia-A",
-    "cat_carpeta": "Cadete-Masculino",
-    "grupo_carpeta": "ÚNICO",
-    "fase_carpeta": "REGULAR",
-    "json_path": "Comp-Copa-Andalucia-A/Cadete-Masculino/ÚNICO/REGULAR/adesa-80.json"
-  },
-  {
-    "equipo": "ADESA 80",
-    "rival": "STROG SHIPPING ULB",
-    "fecha": "14/02/2026",
-    "hora": "11:00",
-    "categoria": "Junior Masculino - REGULAR - ÚNICO",
-    "ubicacion": "Visitante",
-    "id": "14022026_strog-shipping-ulb_adesa-80_junior-masculino-regular-unico",
-    "comp_carpeta": "Comp-Copa-Andalucia-A",
-    "cat_carpeta": "Junior-Masculino",
-    "grupo_carpeta": "ÚNICO",
-    "fase_carpeta": "REGULAR",
-    "json_path": "Comp-Copa-Andalucia-A/Junior-Masculino/ÚNICO/REGULAR/adesa-80.json"
   }
 ]

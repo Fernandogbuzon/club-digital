@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-14T06:20:37.428368",
+  "ultima_actualizacion": "2026-02-14T12:33:53.310689",
   "clasificacion": [
     {
       "equipo": "CBA",
@@ -70,6 +70,28 @@
       "posicion": 6
     },
     {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 420,
+      "puntos_contra": 537,
+      "diferencia": -117,
+      "puntos": 14,
+      "posicion": 7
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 378,
+      "puntos_contra": 603,
+      "diferencia": -225,
+      "puntos": 14,
+      "posicion": 8
+    },
+    {
       "equipo": "CB TREBUJENA",
       "partidos_jugados": 11,
       "partidos_ganados": 3,
@@ -78,7 +100,7 @@
       "puntos_contra": 595,
       "diferencia": -225,
       "puntos": 14,
-      "posicion": 7
+      "posicion": 9
     },
     {
       "equipo": "HOTEL GRAN CIUDAD DEL SUR CB PUERTO REAL",
@@ -89,18 +111,7 @@
       "puntos_contra": 537,
       "diferencia": -148,
       "puntos": 13,
-      "posicion": 8
-    },
-    {
-      "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 10,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 7,
-      "puntos_favor": 352,
-      "puntos_contra": 537,
-      "diferencia": -185,
-      "puntos": 13,
-      "posicion": 9
+      "posicion": 10
     },
     {
       "equipo": "C.A.B.U. 4ºM",
@@ -110,17 +121,6 @@
       "puntos_favor": 390,
       "puntos_contra": 357,
       "diferencia": 33,
-      "puntos": 12,
-      "posicion": 10
-    },
-    {
-      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 10,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 8,
-      "puntos_favor": 354,
-      "puntos_contra": 511,
-      "diferencia": -157,
       "puntos": 12,
       "posicion": 11
     },

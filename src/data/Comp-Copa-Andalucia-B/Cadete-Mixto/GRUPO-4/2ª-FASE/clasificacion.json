@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 4",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T06:16:31.060993",
+  "ultima_actualizacion": "2026-02-14T12:29:37.944499",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES",
@@ -49,24 +49,24 @@
     },
     {
       "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 5,
-      "partidos_ganados": 0,
+      "partidos_jugados": 6,
+      "partidos_ganados": 1,
       "partidos_perdidos": 5,
-      "puntos_favor": 191,
-      "puntos_contra": 310,
-      "diferencia": -119,
-      "puntos": 5,
+      "puntos_favor": 267,
+      "puntos_contra": 340,
+      "diferencia": -73,
+      "puntos": 7,
       "posicion": 5
     },
     {
       "equipo": "CD MONTERA BALONCESTO",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
-      "partidos_perdidos": 5,
-      "puntos_favor": 125,
-      "puntos_contra": 356,
-      "diferencia": -231,
-      "puntos": 5,
+      "partidos_perdidos": 6,
+      "puntos_favor": 155,
+      "puntos_contra": 432,
+      "diferencia": -277,
+      "puntos": 6,
       "posicion": 6
     }
   ]

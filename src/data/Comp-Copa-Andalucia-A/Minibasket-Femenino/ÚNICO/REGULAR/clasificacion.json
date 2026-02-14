@@ -1,17 +1,17 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T06:14:33.080534",
+  "ultima_actualizacion": "2026-02-14T12:27:47.289279",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES ARISTON",
-      "partidos_jugados": 11,
-      "partidos_ganados": 11,
+      "partidos_jugados": 12,
+      "partidos_ganados": 12,
       "partidos_perdidos": 0,
-      "puntos_favor": 616,
-      "puntos_contra": 186,
-      "diferencia": 430,
-      "puntos": 22,
+      "puntos_favor": 667,
+      "puntos_contra": 197,
+      "diferencia": 470,
+      "puntos": 24,
       "posicion": 1
     },
     {
@@ -26,6 +26,17 @@
       "posicion": 2
     },
     {
+      "equipo": "SD CANDRAY JOHN ATKINSON SCHOOL OF ENGLISH",
+      "partidos_jugados": 9,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 2,
+      "puntos_favor": 490,
+      "puntos_contra": 330,
+      "diferencia": 160,
+      "puntos": 16,
+      "posicion": 3
+    },
+    {
       "equipo": "CBPORTUENSE EDASE",
       "partidos_jugados": 10,
       "partidos_ganados": 6,
@@ -34,29 +45,29 @@
       "puntos_contra": 638,
       "diferencia": -60,
       "puntos": 16,
-      "posicion": 3
-    },
-    {
-      "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 11,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 7,
-      "puntos_favor": 507,
-      "puntos_contra": 587,
-      "diferencia": -80,
-      "puntos": 15,
       "posicion": 4
     },
     {
-      "equipo": "SD CANDRAY JOHN ATKINSON SCHOOL OF ENGLISH",
-      "partidos_jugados": 8,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 2,
-      "puntos_favor": 430,
-      "puntos_contra": 310,
-      "diferencia": 120,
-      "puntos": 14,
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 12,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 8,
+      "puntos_favor": 518,
+      "puntos_contra": 638,
+      "diferencia": -120,
+      "puntos": 16,
       "posicion": 5
+    },
+    {
+      "equipo": "CASA PURI ULB",
+      "partidos_jugados": 11,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 7,
+      "puntos_favor": 459,
+      "puntos_contra": 557,
+      "diferencia": -98,
+      "puntos": 15,
+      "posicion": 6
     },
     {
       "equipo": "ADESA 80",
@@ -66,17 +77,6 @@
       "puntos_favor": 420,
       "puntos_contra": 473,
       "diferencia": -53,
-      "puntos": 14,
-      "posicion": 6
-    },
-    {
-      "equipo": "CASA PURI ULB",
-      "partidos_jugados": 10,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 6,
-      "puntos_favor": 439,
-      "puntos_contra": 497,
-      "diferencia": -58,
       "puntos": 14,
       "posicion": 7
     },

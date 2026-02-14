@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 4",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T06:17:26.492929",
+  "ultima_actualizacion": "2026-02-14T12:30:33.966985",
   "clasificacion": [
     {
       "equipo": "UBJerez AMARILLO",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "ISOVIAS - MERGABLO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 258,
+      "puntos_contra": 356,
+      "diferencia": -98,
+      "puntos": 11,
+      "posicion": 2
+    },
+    {
       "equipo": "CD DON BOSCO`88",
       "partidos_jugados": 6,
       "partidos_ganados": 4,
@@ -23,28 +34,17 @@
       "puntos_contra": 236,
       "diferencia": 66,
       "puntos": 10,
-      "posicion": 2
-    },
-    {
-      "equipo": "ISOVIAS - MERGABLO",
-      "partidos_jugados": 6,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 3,
-      "puntos_favor": 209,
-      "puntos_contra": 308,
-      "diferencia": -99,
-      "puntos": 9,
       "posicion": 3
     },
     {
       "equipo": "CB TREBUJENA",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 3,
-      "partidos_perdidos": 2,
-      "puntos_favor": 263,
-      "puntos_contra": 236,
-      "diferencia": 27,
-      "puntos": 8,
+      "partidos_perdidos": 3,
+      "puntos_favor": 311,
+      "puntos_contra": 285,
+      "diferencia": 26,
+      "puntos": 9,
       "posicion": 4
     },
     {

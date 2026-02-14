@@ -1,28 +1,28 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T06:17:15.458167",
+  "ultima_actualizacion": "2026-02-14T12:30:21.696202",
   "clasificacion": [
     {
       "equipo": "CD ADC LA ALGAIDA",
-      "partidos_jugados": 7,
-      "partidos_ganados": 6,
+      "partidos_jugados": 8,
+      "partidos_ganados": 7,
       "partidos_perdidos": 1,
-      "puntos_favor": 434,
-      "puntos_contra": 236,
-      "diferencia": 198,
-      "puntos": 13,
+      "puntos_favor": 498,
+      "puntos_contra": 293,
+      "diferencia": 205,
+      "puntos": 15,
       "posicion": 1
     },
     {
       "equipo": "LA MAR DE GAMBAS CB PUERTO REAL (M)",
-      "partidos_jugados": 6,
+      "partidos_jugados": 7,
       "partidos_ganados": 6,
-      "partidos_perdidos": 0,
-      "puntos_favor": 398,
-      "puntos_contra": 276,
-      "diferencia": 122,
-      "puntos": 12,
+      "partidos_perdidos": 1,
+      "puntos_favor": 455,
+      "puntos_contra": 340,
+      "diferencia": 115,
+      "puntos": 13,
       "posicion": 2
     },
     {
