@@ -1,0 +1,51 @@
+{
+  "categoria": "Tercera FEB - COPA MASC. - ÚNICO",
+  "competicion": "Copa Diputacionmemorial Carlos Duque",
+  "ultima_actualizacion": "2026-02-14T06:24:14.197822",
+  "clasificacion": [
+    {
+      "equipo": "DAMEX CB ALGECIRAS",
+      "partidos_jugados": 3,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 297,
+      "puntos_contra": 212,
+      "diferencia": 85,
+      "puntos": 6,
+      "posicion": 1
+    },
+    {
+      "equipo": "OH!TELS ULB",
+      "partidos_jugados": 3,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 1,
+      "puntos_favor": 244,
+      "puntos_contra": 257,
+      "diferencia": -13,
+      "puntos": 5,
+      "posicion": 2
+    },
+    {
+      "equipo": "CB SAN FERNANDO",
+      "partidos_jugados": 3,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 2,
+      "puntos_favor": 232,
+      "puntos_contra": 294,
+      "diferencia": -62,
+      "puntos": 4,
+      "posicion": 3
+    },
+    {
+      "equipo": "BAUBLOCK GYMNÁSTICA",
+      "partidos_jugados": 3,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 3,
+      "puntos_favor": 254,
+      "puntos_contra": 264,
+      "diferencia": -10,
+      "puntos": 3,
+      "posicion": 4
+    }
+  ]
+}

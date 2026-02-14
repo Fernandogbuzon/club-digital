@@ -1,7 +1,7 @@
 {
   "categoria": "Senior Masculino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-13T15:25:45.523879",
+  "ultima_actualizacion": "2026-02-14T06:11:54.976297",
   "clasificacion": [
     {
       "equipo": "UBJerez - EL MIRA",
@@ -81,6 +81,28 @@
       "posicion": 7
     },
     {
+      "equipo": "CB CHIPIONA-BAR CHAMAI",
+      "partidos_jugados": 13,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 10,
+      "puntos_favor": 753,
+      "puntos_contra": 897,
+      "diferencia": -144,
+      "puntos": 16,
+      "posicion": 8
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 724,
+      "puntos_contra": 882,
+      "diferencia": -158,
+      "puntos": 15,
+      "posicion": 9
+    },
+    {
       "equipo": "BEMOVE CENTER CBA",
       "partidos_jugados": 11,
       "partidos_ganados": 3,
@@ -88,28 +110,6 @@
       "puntos_favor": 719,
       "puntos_contra": 785,
       "diferencia": -66,
-      "puntos": 14,
-      "posicion": 8
-    },
-    {
-      "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 662,
-      "puntos_contra": 800,
-      "diferencia": -138,
-      "puntos": 14,
-      "posicion": 9
-    },
-    {
-      "equipo": "CB CHIPIONA-BAR CHAMAI",
-      "partidos_jugados": 12,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 10,
-      "puntos_favor": 671,
-      "puntos_contra": 835,
-      "diferencia": -164,
       "puntos": 14,
       "posicion": 10
     }

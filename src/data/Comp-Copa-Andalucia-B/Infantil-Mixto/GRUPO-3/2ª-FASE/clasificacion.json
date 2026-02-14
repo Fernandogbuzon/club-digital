@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-13T15:31:09.855166",
+  "ultima_actualizacion": "2026-02-14T06:17:22.455867",
   "clasificacion": [
     {
       "equipo": "CD SAN FELIPE NERI",
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 245,
+      "puntos_contra": 418,
+      "diferencia": -173,
+      "puntos": 8,
+      "posicion": 5
+    },
+    {
       "equipo": "CADIZ CB GADES",
       "partidos_jugados": 5,
       "partidos_ganados": 2,
@@ -56,7 +67,18 @@
       "puntos_contra": 240,
       "diferencia": -5,
       "puntos": 7,
-      "posicion": 5
+      "posicion": 6
+    },
+    {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 5,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 3,
+      "puntos_favor": 206,
+      "puntos_contra": 236,
+      "diferencia": -30,
+      "puntos": 7,
+      "posicion": 7
     },
     {
       "equipo": "GYMNASTICA PORTUENSE",
@@ -67,28 +89,6 @@
       "puntos_contra": 382,
       "diferencia": -163,
       "puntos": 7,
-      "posicion": 6
-    },
-    {
-      "equipo": "CBC CÁDIZ",
-      "partidos_jugados": 4,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 2,
-      "puntos_favor": 169,
-      "puntos_contra": 197,
-      "diferencia": -28,
-      "puntos": 6,
-      "posicion": 7
-    },
-    {
-      "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 6,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 6,
-      "puntos_favor": 206,
-      "puntos_contra": 381,
-      "diferencia": -175,
-      "puntos": 6,
       "posicion": 8
     }
   ]

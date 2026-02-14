@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-13T15:32:17.400809",
+  "ultima_actualizacion": "2026-02-14T06:18:32.316000",
   "clasificacion": [
     {
       "equipo": "CD SAN FELIPE NERI",
@@ -16,14 +16,25 @@
     },
     {
       "equipo": "MIFISIO CB PUERTO REAL",
-      "partidos_jugados": 4,
-      "partidos_ganados": 3,
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
       "partidos_perdidos": 1,
-      "puntos_favor": 244,
-      "puntos_contra": 186,
-      "diferencia": 58,
-      "puntos": 7,
+      "puntos_favor": 332,
+      "puntos_contra": 251,
+      "diferencia": 81,
+      "puntos": 9,
       "posicion": 2
+    },
+    {
+      "equipo": "CB CHIPIONA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 4,
+      "puntos_favor": 180,
+      "puntos_contra": 218,
+      "diferencia": -38,
+      "puntos": 6,
+      "posicion": 3
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
@@ -34,17 +45,6 @@
       "puntos_contra": 130,
       "diferencia": -49,
       "puntos": 6,
-      "posicion": 3
-    },
-    {
-      "equipo": "CB CHIPIONA",
-      "partidos_jugados": 4,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 3,
-      "puntos_favor": 115,
-      "puntos_contra": 130,
-      "diferencia": -15,
-      "puntos": 5,
       "posicion": 4
     },
     {

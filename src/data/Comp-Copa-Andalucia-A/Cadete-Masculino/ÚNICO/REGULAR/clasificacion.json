@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-13T15:27:03.059163",
+  "ultima_actualizacion": "2026-02-14T06:13:10.154709",
   "clasificacion": [
     {
       "equipo": "ADESA 80",
@@ -49,13 +49,13 @@
     },
     {
       "equipo": "CB SANCTI PETRI",
-      "partidos_jugados": 14,
-      "partidos_ganados": 8,
+      "partidos_jugados": 15,
+      "partidos_ganados": 9,
       "partidos_perdidos": 6,
-      "puntos_favor": 907,
-      "puntos_contra": 830,
-      "diferencia": 77,
-      "puntos": 22,
+      "puntos_favor": 968,
+      "puntos_contra": 855,
+      "diferencia": 113,
+      "puntos": 24,
       "posicion": 5
     },
     {
@@ -104,13 +104,13 @@
     },
     {
       "equipo": "CB CIMBIS",
-      "partidos_jugados": 16,
+      "partidos_jugados": 17,
       "partidos_ganados": 0,
-      "partidos_perdidos": 16,
-      "puntos_favor": 383,
-      "puntos_contra": 1585,
-      "diferencia": -1202,
-      "puntos": 16,
+      "partidos_perdidos": 17,
+      "puntos_favor": 408,
+      "puntos_contra": 1646,
+      "diferencia": -1238,
+      "puntos": 17,
       "posicion": 10
     }
   ]
