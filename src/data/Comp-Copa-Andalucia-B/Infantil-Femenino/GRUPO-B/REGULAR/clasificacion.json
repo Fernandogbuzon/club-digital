@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T06:23:01.099003",
+  "ultima_actualizacion": "2026-02-15T11:51:35.585570",
   "clasificacion": [
     {
       "equipo": "OXXI-CB PRADO",
@@ -38,13 +38,13 @@
     },
     {
       "equipo": "C. DENTAL CONIL - MERGABLO",
-      "partidos_jugados": 10,
-      "partidos_ganados": 4,
+      "partidos_jugados": 11,
+      "partidos_ganados": 5,
       "partidos_perdidos": 6,
-      "puntos_favor": 413,
-      "puntos_contra": 335,
-      "diferencia": 78,
-      "puntos": 14,
+      "puntos_favor": 477,
+      "puntos_contra": 394,
+      "diferencia": 83,
+      "puntos": 16,
       "posicion": 4
     },
     {
@@ -71,13 +71,13 @@
     },
     {
       "equipo": "CB SAN FERNANDO",
-      "partidos_jugados": 8,
+      "partidos_jugados": 9,
       "partidos_ganados": 4,
-      "partidos_perdidos": 4,
-      "puntos_favor": 372,
-      "puntos_contra": 400,
-      "diferencia": -28,
-      "puntos": 12,
+      "partidos_perdidos": 5,
+      "puntos_favor": 431,
+      "puntos_contra": 464,
+      "diferencia": -33,
+      "puntos": 13,
       "posicion": 7
     },
     {

@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T06:22:03.251898",
+  "ultima_actualizacion": "2026-02-15T11:50:36.505554",
   "clasificacion": [
     {
       "equipo": "CBA",
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "CB SANCTI PETRI",
-      "partidos_jugados": 7,
-      "partidos_ganados": 1,
+      "partidos_jugados": 8,
+      "partidos_ganados": 2,
       "partidos_perdidos": 6,
-      "puntos_favor": 298,
-      "puntos_contra": 397,
-      "diferencia": -99,
-      "puntos": 8,
+      "puntos_favor": 373,
+      "puntos_contra": 435,
+      "diferencia": -62,
+      "puntos": 10,
       "posicion": 6
     },
     {
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "AD MARIANISTAS",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 0,
-      "partidos_perdidos": 7,
-      "puntos_favor": 250,
-      "puntos_contra": 427,
-      "diferencia": -177,
-      "puntos": 7,
+      "partidos_perdidos": 8,
+      "puntos_favor": 288,
+      "puntos_contra": 502,
+      "diferencia": -214,
+      "puntos": 8,
       "posicion": 8
     }
   ]

@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T06:17:54.707952",
+  "ultima_actualizacion": "2026-02-15T11:46:34.382862",
   "clasificacion": [
     {
       "equipo": "ISAVAL CBA",
@@ -38,13 +38,13 @@
     },
     {
       "equipo": "UBJerez GRIS",
-      "partidos_jugados": 14,
-      "partidos_ganados": 11,
+      "partidos_jugados": 15,
+      "partidos_ganados": 12,
       "partidos_perdidos": 3,
-      "puntos_favor": 983,
-      "puntos_contra": 712,
-      "diferencia": 271,
-      "puntos": 25,
+      "puntos_favor": 1068,
+      "puntos_contra": 752,
+      "diferencia": 316,
+      "puntos": 27,
       "posicion": 4
     },
     {
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "TECNOHELP CENTURIAS",
-      "partidos_jugados": 16,
+      "partidos_jugados": 17,
       "partidos_ganados": 6,
-      "partidos_perdidos": 10,
-      "puntos_favor": 936,
-      "puntos_contra": 945,
-      "diferencia": -9,
-      "puntos": 22,
+      "partidos_perdidos": 11,
+      "puntos_favor": 976,
+      "puntos_contra": 1030,
+      "diferencia": -54,
+      "puntos": 23,
       "posicion": 6
     },
     {

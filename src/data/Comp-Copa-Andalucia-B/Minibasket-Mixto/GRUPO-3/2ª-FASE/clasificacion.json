@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T06:23:19.941505",
+  "ultima_actualizacion": "2026-02-15T11:51:56.078645",
   "clasificacion": [
     {
       "equipo": "CD ADC LA ALGAIDA",
@@ -16,14 +16,25 @@
     },
     {
       "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 5,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 2,
+      "puntos_favor": 208,
+      "puntos_contra": 128,
+      "diferencia": 80,
+      "puntos": 8,
+      "posicion": 2
+    },
+    {
+      "equipo": "CB CIMBIS",
       "partidos_jugados": 4,
       "partidos_ganados": 3,
       "partidos_perdidos": 1,
-      "puntos_favor": 168,
-      "puntos_contra": 85,
-      "diferencia": 83,
+      "puntos_favor": 169,
+      "puntos_contra": 189,
+      "diferencia": -20,
       "puntos": 7,
-      "posicion": 2
+      "posicion": 3
     },
     {
       "equipo": "ADESA 80",
@@ -34,17 +45,6 @@
       "puntos_contra": 166,
       "diferencia": 36,
       "puntos": 6,
-      "posicion": 3
-    },
-    {
-      "equipo": "CB CIMBIS",
-      "partidos_jugados": 3,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 1,
-      "puntos_favor": 126,
-      "puntos_contra": 149,
-      "diferencia": -23,
-      "puntos": 5,
       "posicion": 4
     },
     {

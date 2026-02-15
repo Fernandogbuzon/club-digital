@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T06:24:07.659330",
+  "ultima_actualizacion": "2026-02-15T11:52:42.249617",
   "clasificacion": [
     {
       "equipo": "Gazul Forestal Alcalá",
@@ -38,13 +38,13 @@
     },
     {
       "equipo": "SD CANDRAY AMARILLO",
-      "partidos_jugados": 8,
-      "partidos_ganados": 5,
+      "partidos_jugados": 9,
+      "partidos_ganados": 6,
       "partidos_perdidos": 3,
-      "puntos_favor": 280,
-      "puntos_contra": 326,
-      "diferencia": -46,
-      "puntos": 13,
+      "puntos_favor": 325,
+      "puntos_contra": 344,
+      "diferencia": -19,
+      "puntos": 15,
       "posicion": 4
     },
     {
@@ -70,6 +70,17 @@
       "posicion": 6
     },
     {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 10,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 9,
+      "puntos_favor": 236,
+      "puntos_contra": 481,
+      "diferencia": -245,
+      "puntos": 11,
+      "posicion": 7
+    },
+    {
       "equipo": "GYMNASTICA PORTUENSE",
       "partidos_jugados": 9,
       "partidos_ganados": 2,
@@ -78,17 +89,6 @@
       "puntos_contra": 501,
       "diferencia": -246,
       "puntos": 11,
-      "posicion": 7
-    },
-    {
-      "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 9,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 8,
-      "puntos_favor": 218,
-      "puntos_contra": 436,
-      "diferencia": -218,
-      "puntos": 10,
       "posicion": 8
     }
   ]

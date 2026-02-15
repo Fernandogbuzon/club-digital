@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T06:23:16.546783",
+  "ultima_actualizacion": "2026-02-15T11:51:52.600708",
   "clasificacion": [
     {
       "equipo": "V. CRUCE DE LOS SANTOS ALCALA",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "Trattoria Da Enzo Vejer",
+      "partidos_jugados": 5,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 3,
+      "puntos_favor": 190,
+      "puntos_contra": 259,
+      "diferencia": -69,
+      "puntos": 7,
+      "posicion": 4
+    },
+    {
       "equipo": "AYUDA T PYMES CB MEDINA SIDONIA",
       "partidos_jugados": 5,
       "partidos_ganados": 1,
@@ -45,28 +56,17 @@
       "puntos_contra": 266,
       "diferencia": -135,
       "puntos": 6,
-      "posicion": 4
-    },
-    {
-      "equipo": "Trattoria Da Enzo Vejer",
-      "partidos_jugados": 4,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 3,
-      "puntos_favor": 145,
-      "puntos_contra": 221,
-      "diferencia": -76,
-      "puntos": 5,
       "posicion": 5
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_ganados": 0,
-      "partidos_perdidos": 3,
-      "puntos_favor": 102,
-      "puntos_contra": 198,
-      "diferencia": -96,
-      "puntos": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 140,
+      "puntos_contra": 243,
+      "diferencia": -103,
+      "puntos": 4,
       "posicion": 6
     }
   ]

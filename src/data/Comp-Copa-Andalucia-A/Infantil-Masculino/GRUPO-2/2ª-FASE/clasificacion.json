@@ -1,40 +1,51 @@
 {
   "categoria": "Infantil Masculino - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T06:18:11.580157",
+  "ultima_actualizacion": "2026-02-15T11:46:51.120836",
   "clasificacion": [
     {
       "equipo": "UBJerez GRIS",
-      "partidos_jugados": 1,
-      "partidos_ganados": 1,
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
       "partidos_perdidos": 0,
-      "puntos_favor": 72,
-      "puntos_contra": 53,
-      "diferencia": 19,
-      "puntos": 2,
+      "puntos_favor": 159,
+      "puntos_contra": 96,
+      "diferencia": 63,
+      "puntos": 4,
       "posicion": 1
     },
     {
       "equipo": "CBA",
-      "partidos_jugados": 1,
-      "partidos_ganados": 1,
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
       "partidos_perdidos": 0,
-      "puntos_favor": 52,
-      "puntos_contra": 43,
-      "diferencia": 9,
-      "puntos": 2,
+      "puntos_favor": 115,
+      "puntos_contra": 78,
+      "diferencia": 37,
+      "puntos": 4,
       "posicion": 2
     },
     {
       "equipo": "BAR CABALLITO DE MAR CB PUERTO REAL (V)",
-      "partidos_jugados": 1,
+      "partidos_jugados": 2,
       "partidos_ganados": 1,
-      "partidos_perdidos": 0,
-      "puntos_favor": 62,
-      "puntos_contra": 60,
-      "diferencia": 2,
-      "puntos": 2,
+      "partidos_perdidos": 1,
+      "puntos_favor": 105,
+      "puntos_contra": 147,
+      "diferencia": -42,
+      "puntos": 3,
       "posicion": 3
+    },
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 88,
+      "puntos_contra": 135,
+      "diferencia": -47,
+      "puntos": 2,
+      "posicion": 4
     },
     {
       "equipo": "AVATEL CENTURIAS",
@@ -45,7 +56,7 @@
       "puntos_contra": 62,
       "diferencia": -2,
       "puntos": 1,
-      "posicion": 4
+      "posicion": 5
     },
     {
       "equipo": "GYMNÁSTICA PORTUENSE",
@@ -55,17 +66,6 @@
       "puntos_favor": 43,
       "puntos_contra": 52,
       "diferencia": -9,
-      "puntos": 1,
-      "posicion": 5
-    },
-    {
-      "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 1,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 1,
-      "puntos_favor": 53,
-      "puntos_contra": 72,
-      "diferencia": -19,
       "puntos": 1,
       "posicion": 6
     }

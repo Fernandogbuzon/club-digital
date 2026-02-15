@@ -1,28 +1,28 @@
 {
   "categoria": "Cadete Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T06:20:48.274115",
+  "ultima_actualizacion": "2026-02-15T11:49:21.710006",
   "clasificacion": [
     {
       "equipo": "SD CANDRAY SURHOGAR SERVICIOS INMOBILIARIOS",
-      "partidos_jugados": 11,
-      "partidos_ganados": 11,
+      "partidos_jugados": 12,
+      "partidos_ganados": 12,
       "partidos_perdidos": 0,
-      "puntos_favor": 641,
-      "puntos_contra": 399,
-      "diferencia": 242,
-      "puntos": 22,
+      "puntos_favor": 702,
+      "puntos_contra": 431,
+      "diferencia": 271,
+      "puntos": 24,
       "posicion": 1
     },
     {
       "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 11,
-      "partidos_ganados": 10,
+      "partidos_jugados": 12,
+      "partidos_ganados": 11,
       "partidos_perdidos": 1,
-      "puntos_favor": 598,
-      "puntos_contra": 372,
-      "diferencia": 226,
-      "puntos": 21,
+      "puntos_favor": 645,
+      "puntos_contra": 410,
+      "diferencia": 235,
+      "puntos": 23,
       "posicion": 2
     },
     {
@@ -49,13 +49,13 @@
     },
     {
       "equipo": "GOMINOLAS-CB PRADO",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 6,
-      "partidos_perdidos": 6,
-      "puntos_favor": 559,
-      "puntos_contra": 583,
-      "diferencia": -24,
-      "puntos": 18,
+      "partidos_perdidos": 7,
+      "puntos_favor": 597,
+      "puntos_contra": 630,
+      "diferencia": -33,
+      "puntos": 19,
       "posicion": 5
     },
     {
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 1,
-      "partidos_perdidos": 10,
-      "puntos_favor": 396,
-      "puntos_contra": 623,
-      "diferencia": -227,
-      "puntos": 12,
+      "partidos_perdidos": 11,
+      "puntos_favor": 428,
+      "puntos_contra": 684,
+      "diferencia": -256,
+      "puntos": 13,
       "posicion": 8
     }
   ]

@@ -1,7 +1,7 @@
 {
   "categoria": "Senior Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T06:16:20.933313",
+  "ultima_actualizacion": "2026-02-15T11:45:02.793353",
   "clasificacion": [
     {
       "equipo": "GYMNÁSTICA P.",
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 12,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 6,
+      "puntos_favor": 598,
+      "puntos_contra": 625,
+      "diferencia": -27,
+      "puntos": 18,
+      "posicion": 5
+    },
+    {
       "equipo": "PTP GROUP CB PUERTO REAL",
       "partidos_jugados": 11,
       "partidos_ganados": 6,
@@ -56,7 +67,7 @@
       "puntos_contra": 540,
       "diferencia": 125,
       "puntos": 17,
-      "posicion": 5
+      "posicion": 6
     },
     {
       "equipo": "C.A.B.U.",
@@ -67,17 +78,6 @@
       "puntos_contra": 578,
       "diferencia": 28,
       "puntos": 17,
-      "posicion": 6
-    },
-    {
-      "equipo": "CB CIMBIS",
-      "partidos_jugados": 11,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 6,
-      "puntos_favor": 548,
-      "puntos_contra": 601,
-      "diferencia": -53,
-      "puntos": 16,
       "posicion": 7
     },
     {
@@ -115,13 +115,13 @@
     },
     {
       "equipo": "ABADES AREA ALCALÁ",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 0,
-      "partidos_perdidos": 11,
-      "puntos_favor": 356,
-      "puntos_contra": 767,
-      "diferencia": -411,
-      "puntos": 11,
+      "partidos_perdidos": 12,
+      "puntos_favor": 380,
+      "puntos_contra": 817,
+      "diferencia": -437,
+      "puntos": 12,
       "posicion": 11
     }
   ]
