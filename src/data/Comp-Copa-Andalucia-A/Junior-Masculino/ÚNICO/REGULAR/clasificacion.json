@@ -1,8 +1,19 @@
 {
   "categoria": "Junior Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T15:49:40.530419",
+  "ultima_actualizacion": "2026-02-15T23:06:13.188339",
   "clasificacion": [
+    {
+      "equipo": "BERNARDINO ABAD CB PUERTO REAL",
+      "partidos_jugados": 19,
+      "partidos_ganados": 18,
+      "partidos_perdidos": 1,
+      "puntos_favor": 1710,
+      "puntos_contra": 1008,
+      "diferencia": 702,
+      "puntos": 37,
+      "posicion": 1
+    },
     {
       "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
       "partidos_jugados": 19,
@@ -11,17 +22,6 @@
       "puntos_favor": 1571,
       "puntos_contra": 910,
       "diferencia": 661,
-      "puntos": 35,
-      "posicion": 1
-    },
-    {
-      "equipo": "BERNARDINO ABAD CB PUERTO REAL",
-      "partidos_jugados": 18,
-      "partidos_ganados": 17,
-      "partidos_perdidos": 1,
-      "puntos_favor": 1618,
-      "puntos_contra": 965,
-      "diferencia": 653,
       "puntos": 35,
       "posicion": 2
     },
@@ -71,13 +71,13 @@
     },
     {
       "equipo": "CB CIMBIS",
-      "partidos_jugados": 18,
+      "partidos_jugados": 19,
       "partidos_ganados": 5,
-      "partidos_perdidos": 13,
-      "puntos_favor": 980,
-      "puntos_contra": 1312,
-      "diferencia": -332,
-      "puntos": 23,
+      "partidos_perdidos": 14,
+      "puntos_favor": 1023,
+      "puntos_contra": 1404,
+      "diferencia": -381,
+      "puntos": 24,
       "posicion": 7
     },
     {

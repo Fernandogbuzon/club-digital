@@ -1,28 +1,28 @@
 {
   "categoria": "Senior Masculino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T15:48:43.137336",
+  "ultima_actualizacion": "2026-02-15T23:05:21.544309",
   "clasificacion": [
     {
       "equipo": "GAGGERO CADIZ CBSFDO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 10,
+      "partidos_jugados": 12,
+      "partidos_ganados": 11,
       "partidos_perdidos": 1,
-      "puntos_favor": 797,
-      "puntos_contra": 583,
-      "diferencia": 214,
-      "puntos": 21,
+      "puntos_favor": 870,
+      "puntos_contra": 637,
+      "diferencia": 233,
+      "puntos": 23,
       "posicion": 1
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 9,
-      "partidos_perdidos": 2,
-      "puntos_favor": 873,
-      "puntos_contra": 680,
-      "diferencia": 193,
-      "puntos": 20,
+      "partidos_perdidos": 3,
+      "puntos_favor": 927,
+      "puntos_contra": 753,
+      "diferencia": 174,
+      "puntos": 21,
       "posicion": 2
     },
     {

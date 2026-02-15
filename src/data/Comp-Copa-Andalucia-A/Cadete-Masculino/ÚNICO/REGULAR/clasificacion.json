@@ -1,17 +1,17 @@
 {
   "categoria": "Cadete Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T15:50:07.646418",
+  "ultima_actualizacion": "2026-02-15T23:06:42.501700",
   "clasificacion": [
     {
       "equipo": "ISAVAL CBA",
-      "partidos_jugados": 15,
-      "partidos_ganados": 15,
+      "partidos_jugados": 16,
+      "partidos_ganados": 16,
       "partidos_perdidos": 0,
-      "puntos_favor": 1334,
-      "puntos_contra": 713,
-      "diferencia": 621,
-      "puntos": 30,
+      "puntos_favor": 1411,
+      "puntos_contra": 773,
+      "diferencia": 638,
+      "puntos": 32,
       "posicion": 1
     },
     {
@@ -49,13 +49,13 @@
     },
     {
       "equipo": "CB SANCTI PETRI",
-      "partidos_jugados": 15,
+      "partidos_jugados": 16,
       "partidos_ganados": 9,
-      "partidos_perdidos": 6,
-      "puntos_favor": 968,
-      "puntos_contra": 855,
-      "diferencia": 113,
-      "puntos": 24,
+      "partidos_perdidos": 7,
+      "puntos_favor": 1028,
+      "puntos_contra": 932,
+      "diferencia": 96,
+      "puntos": 25,
       "posicion": 5
     },
     {
