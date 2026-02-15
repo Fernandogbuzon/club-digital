@@ -2,25 +2,37 @@ name: "3. Resultados - Scraping rapido"
 
 # Solo se ejecuta cuando el disparador detecta partidos pendientes
 # Abre navegador, scrapea SOLO el grupo exacto, actualiza JSON
-# Max 3 intentos por partido (controlado por intentos_resultados.json)
+# El frontend lee directamente de src/data/<Comp>/<Cat>/... (no usa equipos/)
+#
+# FLUJO:
+#   1. scraper_resultados.py → actualiza src/data/<Comp>/<Cat>/.../adesa-80.json
+#   2. Commit y push
+#
+# IMPORTANTE: TZ=Europe/Madrid para hora espanola
 
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
-  group: scraper-resultados
+  group: scraper-escritura
   cancel-in-progress: false
 
 jobs:
   scrape-resultados:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      TZ: Europe/Madrid
 
     steps:
-      - name: Checkout
+      - name: Checkout (ultima version)
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -38,13 +50,12 @@ jobs:
         id: scrape
         run: |
           sudo apt-get install -y xvfb > /dev/null 2>&1
-          
+
           OUTPUT=$(xvfb-run --auto-servernum --server-args="-screen 0 1366x768x24" \
             python scraper_resultados.py 2>&1) || true
-          
+
           echo "$OUTPUT"
-          
-          # Detectar si se actualizaron resultados
+
           if echo "$OUTPUT" | grep -q "RESULTADO:"; then
             echo "actualizados=true" >> $GITHUB_OUTPUT
           else
@@ -55,31 +66,53 @@ jobs:
         run: |
           git config --local user.name "GitHub Actions Bot"
           git config --local user.email "actions@github.com"
-          
-          # Añadir todo (tracked + untracked)
+
+          # Sincronizar con remoto antes de commitear
+          echo "Sincronizando con remoto..."
+          git pull --rebase origin main || {
+            echo "Rebase fallido, resolviendo..."
+            git rebase --abort 2>/dev/null || true
+            git pull origin main --no-rebase || true
+          }
+
           git add -A src/data/ 2>/dev/null || true
-          git add intentos_resultados.json 2>/dev/null || true
-          
-          # Solo commitear si hay cambios staged
+          git add partidos_hoy.json intentos_resultados.json 2>/dev/null || true
+
           if git diff --cached --quiet; then
             echo "Sin cambios que commitear"
           else
-            TIMESTAMP=$(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')
-            
-            if echo "${{ steps.scrape.outputs.actualizados }}" | grep -q "true"; then
+            TIMESTAMP=$(date '+%d/%m/%Y %H:%M')
+
+            if [ "${{ steps.scrape.outputs.actualizados }}" = "true" ]; then
               MSG="Resultados actualizados - ${TIMESTAMP}"
             else
               MSG="Actualizar intentos - ${TIMESTAMP}"
             fi
-            
+
             git commit -m "${MSG}"
-            git push
+
+            for intento in 1 2 3; do
+              if git push origin main; then
+                echo "Push exitoso (intento $intento)"
+                break
+              fi
+              echo "Push fallido (intento $intento/3), reintentando en 5s..."
+              sleep 5
+              git pull --rebase origin main || {
+                echo "Rebase con conflicto, haciendo abort + merge..."
+                git rebase --abort 2>/dev/null || true
+                git pull origin main --no-rebase || true
+              }
+              if [ "$intento" -eq 3 ]; then
+                echo "::error::No se pudo hacer push tras 3 intentos"
+                exit 1
+              fi
+            done
           fi
 
       - name: Resumen
         if: always()
         run: |
           echo "### Scraper Resultados" >> $GITHUB_STEP_SUMMARY
-          echo "**Hora:** $(TZ='Europe/Madrid' date '+%d/%m/%Y %H:%M')" >> $GITHUB_STEP_SUMMARY
-          echo "**Resultados nuevos:** ${{ steps.scrape.outputs.actualizados }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Commit:** ${{ steps.cambios.outputs.hay_cambios }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Hora Espana:** $(date '+%d/%m/%Y %H:%M')" >> $GITHUB_STEP_SUMMARY
+          echo "**Resultados nuevos:** ${{ steps.scrape.outputs.actualizados || 'false' }}" >> $GITHUB_STEP_SUMMARY

@@ -1,47 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import teamConfig from '../../team_config.json';
+const TEAM_SLUG = teamConfig.team_slug;
 
-// Importar todos los archivos JSON de equipos
-import seniorMasculinoA from '../data/equipos/senior-masculino-a.json';
-import juniorMasculinoA from '../data/equipos/junior-masculino-a.json';
-import juniorMasculinoB from '../data/equipos/junior-masculino-b.json';
-import cadeteFemeninoA from '../data/equipos/cadete-femenino-a.json';
-import cadeteFemeninoB from '../data/equipos/cadete-femenino-b.json';
-import cadeteMasculinoA from '../data/equipos/cadete-masculino-a.json';
-import cadeteMixtoB from '../data/equipos/cadete-mixto-b.json';
-import infantilMasculinoA from '../data/equipos/infantil-masculino-a.json';
-import infantilFemeninoA from '../data/equipos/infantil-femenino-a.json';
-import infantilMixtoB from '../data/equipos/infantil-mixto-b.json';
-import infantilMixto from '../data/equipos/infantil-mixto.json';
-import minibasketFemeninoA from '../data/equipos/minibasket-femenino-a.json';
-import minibasketFemenino from '../data/equipos/minibasket-femenino.json';
-import minibasketMasculinoA from '../data/equipos/minibasket-masculino-a.json';
-import minibasketMixtoB from '../data/equipos/minibasket-mixto-b.json';
-import preminiFemenino from '../data/equipos/premini-femenino.json';
-import preminiMixto from '../data/equipos/premini-mixto.json';
-import babybasketMixto from '../data/equipos/babybasket-mixto.json';
+// Derivar nombre humano del equipo desde categoría + competición
+function derivarNombreEquipo(categoria: string, competicion: string): string {
+  const base = (categoria || '').split(' - ')[0].trim();
+  const cl = (competicion || '').toLowerCase();
+  if (cl.includes('copa andalucia a') || cl.includes('copa andalucía a')) return base + ' A';
+  if (cl.includes('copa andalucia b') || cl.includes('copa andalucía b')) return base + ' B';
+  return base;
+}
 
-// Combinar todos los partidos en un solo array
-const partidos = [
-  ...seniorMasculinoA,
-  ...juniorMasculinoA,
-  ...juniorMasculinoB,
-  ...cadeteFemeninoA,
-  ...cadeteFemeninoB,
-  ...cadeteMasculinoA,
-  ...cadeteMixtoB,
-  ...infantilMasculinoA,
-  ...infantilFemeninoA,
-  ...infantilMixtoB,
-  ...infantilMixto,
-  ...minibasketFemeninoA,
-  ...minibasketFemenino,
-  ...minibasketMasculinoA,
-  ...minibasketMixtoB,
-  ...preminiFemenino,
-  ...preminiMixto,
-  ...babybasketMixto
-];
+// Cargar TODOS los JSON del equipo desde las carpetas de competición
+const allJsonFiles = import.meta.glob('../data/**/*.json', { eager: true });
+let partidos: any[] = [];
+for (const [path, mod] of Object.entries(allJsonFiles)) {
+  if (path.includes('/equipos/')) continue;
+  const filename = path.split('/').pop() || '';
+  if (!filename.startsWith(TEAM_SLUG)) continue;
+  const data = (mod as any).default || mod;
+  if (!Array.isArray(data)) continue;
+  for (const p of data) {
+    partidos.push({ ...p, equipo: derivarNombreEquipo(p.categoria, p.competicion) });
+  }
+}
+
+// Deduplicar por id
+const seenIds = new Set<string>();
+partidos = partidos.filter(p => {
+  if (seenIds.has(p.id)) return false;
+  seenIds.add(p.id);
+  return true;
+});
 
 // Función para parsear fecha DD/MM/YYYY y hora HH:MM
 function parseFechaHora(fechaStr: string, horaStr: string): Date {
@@ -131,37 +122,25 @@ const resultadosPasados = partidos
   })
   .sort((a: any, b: any) => ordenarPartidos(a, b, false));
 
-// Obtener lista única de todos los equipos (manteniendo el orden de prioridad)
-const todosLosEquipos = [
-  ...seniorMasculinoA,
-  ...juniorMasculinoA,
-  ...juniorMasculinoB,
-  ...cadeteFemeninoA,
-  ...cadeteFemeninoB,
-  ...cadeteMasculinoA,
-  ...cadeteMixtoB,
-  ...infantilMasculinoA,
-  ...infantilFemeninoA,
-  ...infantilMixtoB,
-  ...infantilMixto,
-  ...minibasketFemeninoA,
-  ...minibasketFemenino,
-  ...minibasketMasculinoA,
-  ...minibasketMixtoB,
-  ...preminiFemenino,
-  ...preminiMixto,
-  ...babybasketMixto
-];
-
+// Obtener lista única de equipos, ordenados por jerarquía
 const equiposUnicos: string[] = [];
-const equiposSet = new Set();
+const equiposSet = new Set<string>();
 
-for (const partido of todosLosEquipos) {
+for (const partido of partidos) {
   if (!equiposSet.has(partido.equipo)) {
     equiposUnicos.push(partido.equipo);
     equiposSet.add(partido.equipo);
   }
 }
+
+equiposUnicos.sort((a, b) => {
+  const na = getNivelCategoria(a), nb = getNivelCategoria(b);
+  if (na !== nb) return nb - na;
+  const ma = esGeneroMasculino(a), mb = esGeneroMasculino(b);
+  if (ma && !mb) return -1;
+  if (!ma && mb) return 1;
+  return a.localeCompare(b);
+});
 
 // Crear arrays sincronizados: para cada equipo, obtener su próximo partido y último resultado
 const proximosPartidosPorEquipo: any[] = [];

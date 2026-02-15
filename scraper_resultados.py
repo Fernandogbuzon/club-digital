@@ -50,8 +50,9 @@ def cargar_config() -> dict:
 _CFG = cargar_config()
 TEAM_NAME = _CFG["team_name"]
 TEAM_SLUG = _CFG["team_slug"]
-DURACION_PARTIDO_HORAS = _CFG.get("match_duration_hours", 2.5)
-MAX_INTENTOS = _CFG.get("max_retry_attempts", 3)
+DURACION_PARTIDO_HORAS = _CFG.get("match_duration_hours", 1)
+MAX_INTENTOS = _CFG.get("max_retry_attempts", 5)
+RETRY_INTERVAL_MIN = _CFG.get("retry_interval_minutes", 10)
 
 DATA_BASE_DIR = SCRIPT_DIR / "src" / "data"
 LOG_DIR = SCRIPT_DIR / "logs"
@@ -160,6 +161,58 @@ def slugify(text: str) -> str:
 
 async def pausa(lo: float = 0.5, hi: float = 1.5):
     await asyncio.sleep(random.uniform(lo, hi))
+
+
+def normalizar_nombre(nombre: str) -> str:
+    """Normaliza un nombre de equipo para comparación robusta.
+    Quita acentos, pasa a minúsculas, elimina espacios extra."""
+    s = unicodedata.normalize("NFD", nombre)
+    s = s.encode("ascii", "ignore").decode("ascii")
+    s = s.lower().strip()
+    s = re.sub(r"\s+", " ", s)
+    return s
+
+
+def nombres_coinciden(nombre_json: str, nombre_web: str) -> bool:
+    """Compara nombres de equipos de forma flexible.
+    Los patrocinadores rotan (ej: 'ISAVAL CBA' → 'NOATUM LOGISTIC CBA'),
+    así que hacemos matching parcial inteligente."""
+    a = normalizar_nombre(nombre_json)
+    b = normalizar_nombre(nombre_web)
+
+    # Exacto
+    if a == b:
+        return True
+
+    # Uno contenido en el otro (ej: 'CBA' en 'ISAVAL CBA')
+    if a in b or b in a:
+        return True
+
+    # Comparar últimas palabras (el "nombre base" del club suele ir al final)
+    # Ej: "ISAVAL CBA" → "CBA", "NOATUM LOGISTIC CBA" → "CBA"
+    palabras_a = a.split()
+    palabras_b = b.split()
+    if len(palabras_a) >= 1 and len(palabras_b) >= 1:
+        # Última palabra igual (el nombre del club)
+        if palabras_a[-1] == palabras_b[-1] and len(palabras_a[-1]) >= 3:
+            return True
+        # Últimas 2 palabras iguales
+        if len(palabras_a) >= 2 and len(palabras_b) >= 2:
+            if palabras_a[-2:] == palabras_b[-2:]:
+                return True
+
+    # Primeras palabras iguales (ej: "SD CANDRAY ..." → "SD CANDRAY")
+    if len(palabras_a) >= 2 and len(palabras_b) >= 2:
+        if palabras_a[:2] == palabras_b[:2]:
+            return True
+
+    # Ratio de similitud con SequenceMatcher
+    from difflib import SequenceMatcher
+    ratio = SequenceMatcher(None, a, b).ratio()
+    if ratio >= 0.6:
+        return True
+
+    return False
 
 
 # ─── Detectar partidos pendientes ────────────────────────────────────────────
@@ -359,24 +412,47 @@ async def extraer_partidos_pagina(page) -> list[dict]:
 # ─── Match dropdown to folder ───────────────────────────────────────────────
 
 def match_opcion_a_carpeta(opciones: list[dict], carpeta: str) -> Optional[str]:
-    carpeta_norm = carpeta.replace("-", " ").lower().strip()
+    """Busca la opción del dropdown que mejor coincide con el nombre de carpeta.
+    Prioriza exacto > exacto sin acentos > mejor substring."""
+    def strip_accents(s):
+        return unicodedata.normalize("NFD", s).encode("ascii", "ignore").decode("ascii").lower().strip()
 
+    carpeta_norm = carpeta.replace("-", " ").lower().strip()
+    carpeta_ascii = strip_accents(carpeta.replace("-", " "))
+
+    # Paso 1: Match exacto (con y sin acentos)
     for opt in opciones:
         opt_norm = opt["text"].lower().strip()
         if opt_norm == carpeta_norm:
             return opt["value"]
-        if carpeta_norm in opt_norm or opt_norm in carpeta_norm:
-            return opt["value"]
-
-    def strip_accents(s):
-        return unicodedata.normalize("NFD", s).encode("ascii", "ignore").decode("ascii").lower()
-
-    carpeta_ascii = strip_accents(carpeta.replace("-", " "))
     for opt in opciones:
         if strip_accents(opt["text"]) == carpeta_ascii:
             return opt["value"]
-        if carpeta_ascii in strip_accents(opt["text"]):
+
+    # Paso 2: Substring match - buscar el MEJOR match (más largo overlap)
+    best_match = None
+    best_score = 0
+    for opt in opciones:
+        opt_ascii = strip_accents(opt["text"])
+        # Solo match si la carpeta está contenida en la opción
+        # (no al revés, para evitar 'grupo a' matcheando 'grupo ascenso')
+        if carpeta_ascii == opt_ascii:
             return opt["value"]
+        # Substring: carpeta contenida en opción, y la longitud es similar
+        if carpeta_ascii in opt_ascii:
+            score = len(carpeta_ascii) / max(len(opt_ascii), 1)
+            if score > best_score:
+                best_score = score
+                best_match = opt["value"]
+        elif opt_ascii in carpeta_ascii:
+            score = len(opt_ascii) / max(len(carpeta_ascii), 1)
+            if score > best_score:
+                best_score = score
+                best_match = opt["value"]
+
+    if best_match and best_score >= 0.5:
+        return best_match
+
     return None
 
 
@@ -481,16 +557,33 @@ def actualizar_json(json_path: str, partidos_web: list[dict]) -> list[str]:
             p_ubi = partido.get("ubicacion", "")
 
             match = False
-            if p_ubi == "Local" and pw["local"] == p_equipo and pw["visitante"] == p_rival:
-                match = True
-            elif p_ubi == "Visitante" and pw["visitante"] == p_equipo and pw["local"] == p_rival:
-                match = True
+            if p_ubi == "Local":
+                # Nuestro equipo es local → comparar local(web) con equipo, visitante(web) con rival
+                if nombres_coinciden(p_equipo, pw["local"]) and nombres_coinciden(p_rival, pw["visitante"]):
+                    match = True
+                elif nombres_coinciden(p_equipo, pw["local"]):
+                    logger.debug(f"  Equipo OK pero rival NO: JSON='{p_rival}' WEB='{pw['visitante']}'")
+            elif p_ubi == "Visitante":
+                # Nuestro equipo es visitante
+                if nombres_coinciden(p_equipo, pw["visitante"]) and nombres_coinciden(p_rival, pw["local"]):
+                    match = True
+                elif nombres_coinciden(p_equipo, pw["visitante"]):
+                    logger.debug(f"  Equipo OK pero rival NO: JSON='{p_rival}' WEB='{pw['local']}'")
+
+            if not match and nombres_coinciden(p_equipo, pw["local"] if p_ubi == "Local" else pw["visitante"]):
+                # Fallback: si nuestro equipo coincide + misma fecha + misma jornada → match
+                pw_jornada = pw.get("jornada", "")
+                p_jornada = partido.get("jornada", "")
+                if pw_jornada and p_jornada and normalizar_nombre(pw_jornada) == normalizar_nombre(p_jornada):
+                    logger.info(f"  MATCH por jornada: JSON rival='{p_rival}' WEB rival='{pw['local'] if p_ubi == 'Visitante' else pw['visitante']}' (jornada: {p_jornada})")
+                    match = True
 
             if match:
                 logger.info(f"  RESULTADO: {pw['local']} {pw['marcador_local']}-{pw['marcador_visitante']} {pw['visitante']}")
                 partido["marcador_local"] = pw["marcador_local"]
                 partido["marcador_visitante"] = pw["marcador_visitante"]
                 partido["es_resultado"] = True
+                partido["estado"] = "finalizado"
                 if pw.get("hora"):
                     partido["hora"] = pw["hora"]
                 if pw.get("pabellon"):
@@ -503,6 +596,55 @@ def actualizar_json(json_path: str, partidos_web: list[dict]) -> list[str]:
         logger.info(f"  Guardado {path.name}: {len(ids_actualizados)} resultado(s)")
 
     return ids_actualizados
+
+
+def marcar_estado_sin_resultado(json_path: str, pid: str, partidos_web: list[dict]):
+    """
+    Marca un partido sin resultado tras agotar los {MAX_INTENTOS} intentos.
+    
+    Lógica para diferenciar Aplazado vs Esperando resultado:
+    - Si otros partidos de la MISMA fecha en la web SÍ tienen resultado
+      → nuestro partido probablemente fue aplazado/suspendido → "Aplazado"
+    - Si la mayoría de partidos de esa fecha tampoco tienen resultado
+      → probablemente aún no lo han publicado → "Esperando resultado"
+    """
+    path = Path(json_path)
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return
+
+    if not isinstance(data, list):
+        return
+
+    modified = False
+    for partido in data:
+        if partido.get("id") != pid:
+            continue
+        if partido.get("es_resultado"):
+            break
+
+        fecha_partido = partido.get("fecha", "")
+
+        # Buscar cuántos partidos de la misma fecha tienen resultado en la web
+        misma_fecha = [p for p in partidos_web if p.get("fecha") == fecha_partido]
+        con_resultado = [p for p in misma_fecha if p.get("es_resultado")]
+
+        if len(misma_fecha) > 0 and len(con_resultado) >= len(misma_fecha) * 0.5:
+            # La mayoría de partidos de esa fecha tienen resultado → aplazado
+            partido["estado"] = "aplazado"
+            logger.info(f"  APLAZADO: {partido.get('equipo','?')} vs {partido.get('rival','?')} "
+                       f"({len(con_resultado)}/{len(misma_fecha)} partidos de esa fecha con resultado)")
+        else:
+            # Pocos o ningún resultado publicado → esperando
+            partido["estado"] = "esperando_resultado"
+            logger.info(f"  ESPERANDO RESULTADO: {partido.get('equipo','?')} vs {partido.get('rival','?')} "
+                       f"({len(con_resultado)}/{len(misma_fecha)} partidos con resultado)")
+        modified = True
+        break
+
+    if modified:
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 # ─── Pipeline principal ──────────────────────────────────────────────────────
@@ -601,8 +743,10 @@ async def actualizar_resultados(headless: bool = False, check_only: bool = False
                     pt = p["partido"]
                     if n >= MAX_INTENTOS:
                         logger.info(f"  RENDIDO ({n}/{MAX_INTENTOS}): {pt.get('equipo','?')} vs {pt.get('rival','?')}")
+                        # Marcar como Aplazado o Esperando resultado según contexto
+                        marcar_estado_sin_resultado(p["json_path"], pid, partidos_web)
                     else:
-                        logger.info(f"  Sin resultado ({n}/{MAX_INTENTOS}). Se reintentara.")
+                        logger.info(f"  Sin resultado ({n}/{MAX_INTENTOS}). Se reintentara en ~{RETRY_INTERVAL_MIN}min.")
 
             await pausa(1.0, 2.0)
 

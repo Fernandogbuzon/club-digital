@@ -1,28 +1,29 @@
 {
-  "ultima_actualizacion": "2026-02-09T12:50:17.133Z",
+  "ultima_actualizacion": "2026-02-13T17:50:10.257Z",
   "total_partidos": 19,
   "partidos": [
     {
-      "id": "15022026_senior_masculinoregulargrupo_b_cd_san_felipe_neri_adesa_80",
+      "id": "14032026_senior_masculinoregulargrupo_b_cd_san_felipe_neri_adesa_80",
       "categoria": "Senior MasculinoREGULARGRUPO B",
       "competicion": "Comp. Copa Andalucía A",
       "equipoLocal": "CD SAN FELIPE NERI",
       "equipoVisitante": "ADESA 80",
-      "fecha": "15/02/2026",
+      "fecha": "14/03/2026",
       "pabellon": "COLEGIO SAN FELIPE NERI",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.098Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.210Z"
     },
     {
-      "id": "15022026_junior_masculinoregularunico_strog_shipping_ulb_adesa_80",
+      "id": "14022026_junior_masculinoregularunico_strog_shipping_ulb_adesa_80",
       "categoria": "Junior MasculinoREGULARÚNICO",
       "competicion": "Comp. Copa Andalucía A",
       "equipoLocal": "STROG SHIPPING ULB",
       "equipoVisitante": "ADESA 80",
-      "fecha": "15/02/2026",
+      "fecha": "14/02/2026",
+      "hora": "11:00",
       "pabellon": "PAB. MPAL. LA LINEA",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.099Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.212Z"
     },
     {
       "id": "15022026_cadete_femeninoregularunico_noatum_logistic_cba_adesa_80",
@@ -31,9 +32,10 @@
       "equipoLocal": "NOATUM LOGISTIC CBA",
       "equipoVisitante": "ADESA 80",
       "fecha": "15/02/2026",
-      "pabellon": "PAB. Dr. JUAN CARLOS MATEO",
+      "hora": "12:00",
+      "pabellon": "PAB. ANDRÉS MATEO",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.100Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.214Z"
     },
     {
       "id": "14022026_cadete_masculinoregularunico_adesa_80_isaval_cba",
@@ -42,9 +44,10 @@
       "equipoLocal": "ADESA 80",
       "equipoVisitante": "ISAVAL CBA",
       "fecha": "14/02/2026",
+      "hora": "10:30",
       "pabellon": "PDVO. MUNICIPAL",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.100Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.214Z"
     },
     {
       "id": "14022026_infantil_masculino2_fasegrupo_1_adesa_80_maxcolchon_cbsfdo",
@@ -53,42 +56,46 @@
       "equipoLocal": "ADESA 80",
       "equipoVisitante": "MAXCOLCHON CBSFDO",
       "fecha": "14/02/2026",
+      "hora": "12:30",
       "pabellon": "PDVO. MUNICIPAL",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.214Z"
     },
     {
-      "id": "14022026_infantil_femenino2_fasegrupo_1_cadiz_cb_gades_recup_chichos_andalucia_adesa_80",
+      "id": "15022026_infantil_femenino2_fasegrupo_1_cadiz_cb_gades_recup_chichos_andalucia_adesa_80",
       "categoria": "Infantil Femenino2ª FASEGRUPO 1",
       "competicion": "Comp. Copa Andalucía A",
       "equipoLocal": "CADIZ CB GADES RECUP. CHICHOS ANDALUCÍA",
       "equipoVisitante": "ADESA 80",
-      "fecha": "14/02/2026",
-      "pabellon": "PAB. MIRANDILLA",
+      "fecha": "15/02/2026",
+      "hora": "12:00",
+      "pabellon": "PABELLÓN IDB LA PAZ",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.214Z"
     },
     {
-      "id": "14022026_minibasket_femeninoregularunico_adesa_80_ubjerez_gris",
-      "categoria": "Minibasket FemeninoREGULARÚNICO",
-      "competicion": "Comp. Copa Andalucía A",
-      "equipoLocal": "ADESA 80",
-      "equipoVisitante": "UBJerez GRIS",
-      "fecha": "14/02/2026",
-      "pabellon": "PDVO. MUNICIPAL",
-      "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
-    },
-    {
-      "id": "14022026_minibasket_masculinoregularunico_adesa_80_ongolf_centurias",
+      "id": "19022026_minibasket_masculinoregularunico_adesa_80_ongolf_centurias",
       "categoria": "Minibasket MasculinoREGULARÚNICO",
       "competicion": "Comp. Copa Andalucía A",
       "equipoLocal": "ADESA 80",
       "equipoVisitante": "ONGOLF CENTURIAS",
-      "fecha": "14/02/2026",
+      "fecha": "19/02/2026",
+      "hora": "18:00",
       "pabellon": "PDVO. MUNICIPAL",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.214Z"
+    },
+    {
+      "id": "15022026_minibasket_femeninoregularunico_adesa_80_ubjerez_gris",
+      "categoria": "Minibasket FemeninoREGULARÚNICO",
+      "competicion": "Comp. Copa Andalucía A",
+      "equipoLocal": "ADESA 80",
+      "equipoVisitante": "UBJerez GRIS",
+      "fecha": "15/02/2026",
+      "hora": "11:00",
+      "pabellon": "PDVO. MUNICIPAL",
+      "estado": "proximo",
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
       "id": "25022026_junior_masculino2_fasegrupo_2_ubjerez_blanco_adesa_80",
@@ -100,18 +107,19 @@
       "hora": "20:15",
       "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
-      "id": "22022026_cadete_femeninoregulargrupo_a_cb_san_fernando_adesa_80",
+      "id": "14022026_cadete_femeninoregulargrupo_a_cb_san_fernando_adesa_80",
       "categoria": "Cadete FemeninoREGULARGRUPO A",
       "competicion": "Comp. Copa Andalucía B",
       "equipoLocal": "CB SAN FERNANDO",
       "equipoVisitante": "ADESA 80",
-      "fecha": "22/02/2026",
-      "pabellon": "PAB. DEL PARQUE",
+      "fecha": "14/02/2026",
+      "hora": "18:00",
+      "pabellon": "PAB. GOMEZ CASTRO",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
       "id": "14022026_cadete_mixto2_fasegrupo_2_adesa_80_tax_centurias",
@@ -120,20 +128,22 @@
       "equipoLocal": "ADESA 80",
       "equipoVisitante": "TAX CENTURIAS",
       "fecha": "14/02/2026",
+      "hora": "19:30",
       "pabellon": "PDVO. MUNICIPAL",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
-      "id": "14022026_infantil_mixto2_fasegrupo_2_adesa_80_cb_la_inmaculada",
+      "id": "15022026_infantil_mixto2_fasegrupo_2_adesa_80_cb_la_inmaculada",
       "categoria": "Infantil Mixto2ª FASEGRUPO 2",
       "competicion": "Comp. Copa Andalucía B",
       "equipoLocal": "ADESA 80",
       "equipoVisitante": "CB LA INMACULADA",
-      "fecha": "14/02/2026",
+      "fecha": "15/02/2026",
+      "hora": "12:30",
       "pabellon": "PDVO. MUNICIPAL",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
       "id": "14022026_minibasket_mixto2_fasegrupo_3_adesa_80_cd_adc_la_algaida",
@@ -144,18 +154,18 @@
       "fecha": "14/02/2026",
       "pabellon": "PDVO. MUNICIPAL",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
-      "id": "14022026_infantil_mixtoregulargrupo_a_gamo_bahia_cbsfdo_adesa_80",
+      "id": "21022026_infantil_mixtoregulargrupo_a_gamo_bahia_cbsfdo_adesa_80",
       "categoria": "Infantil MixtoREGULARGRUPO A",
       "competicion": "Comp. 1º Año",
       "equipoLocal": "GAMO BAHÍA CBSFDO",
       "equipoVisitante": "ADESA 80",
-      "fecha": "14/02/2026",
-      "pabellon": "PAB. GOMEZ CASTRO",
+      "fecha": "21/02/2026",
+      "pabellon": "PAB. ENRIQUE MÁRQUEZ MUÑOZ",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.101Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
       "id": "18042026_minibasket_femeninoregularunico_cb_trebujena_adesa_80",
@@ -167,7 +177,7 @@
       "hora": "11:00",
       "pabellon": "PAB. DOMINGO PRUAÑO",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.102Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.215Z"
     },
     {
       "id": "22022026_premini_mixtoregularunico_carpe_diem_cbsfdo_adesa_80",
@@ -178,7 +188,7 @@
       "fecha": "22/02/2026",
       "pabellon": "PAB. DEL PARQUE",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.102Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.221Z"
     },
     {
       "id": "22022026_premini_mixtoregulargrupo_b_adesa_80_serfluid_cbsfdo",
@@ -189,7 +199,7 @@
       "fecha": "22/02/2026",
       "pabellon": "PDVO. MUNICIPAL",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.102Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.221Z"
     },
     {
       "id": "22022026_premini_femeninojornadas_510jornadas_510_sd_candray_adesa_80",
@@ -200,7 +210,7 @@
       "fecha": "22/02/2026",
       "pabellon": "CEIP SERVANDO CAMUÑEZ",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.102Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.221Z"
     },
     {
       "id": "15022026_babybasket_mixtoregulargrupo_a_carpe_diem_verde_cbsfdo_m_adesa_80",
@@ -209,9 +219,10 @@
       "equipoLocal": "CARPE DIEM VERDE CBSFDO (M)",
       "equipoVisitante": "ADESA 80",
       "fecha": "15/02/2026",
-      "pabellon": "PAB. DEL PARQUE",
+      "hora": "10:00",
+      "pabellon": "PAB. GOMEZ CASTRO",
       "estado": "proximo",
-      "fechaActualizacion": "2026-02-09T12:50:17.102Z"
+      "fechaActualizacion": "2026-02-13T17:50:10.221Z"
     }
   ]
 }

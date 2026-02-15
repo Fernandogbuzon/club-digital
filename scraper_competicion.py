@@ -280,6 +280,7 @@ def agrupar_por_equipo(partidos: list[dict]) -> dict[str, list[dict]]:
             "fecha": p["fecha"], "hora": p["hora"],
             "pabellon": p["pabellon"],
             "es_resultado": p["es_resultado"],
+            "estado": "finalizado" if p["es_resultado"] else "proximo",
             "jornada": p["jornada"],
         }
         equipos.setdefault(loc, []).append({
