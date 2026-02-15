@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "15022026_carpe-diem-verde-cbsfdo-m_adesa-80-a_babybasket-mixto-regular-grupo-a": {
     "intentos": 5,
     "ultimo": "2026-02-15T12:51:47.550235"
@@ -42,5 +43,26 @@
   "07022026_karting-kr24-mergablo_adesa-80_premini-mixto-regular-unico": {
     "intentos": 5,
     "ultimo": "2026-02-15T12:51:49.456474"
+=======
+  "07022026_karting-kr24-mergablo_adesa-80_premini-mixto-regular-unico": {
+    "intentos": 3,
+    "ultimo": "2026-02-13T16:33:56.615559"
+  },
+  "31012026_sd-candray-john-atkinson-school-of-english_adesa-80_minibasket-femenino-regular-unico": {
+    "intentos": 3,
+    "ultimo": "2026-02-13T16:34:02.369161"
+  },
+  "08022026_adesa-80-a_carpe-diem-verde-cbsfdo-m_babybasket-mixto-regular-grupo-a": {
+    "intentos": 3,
+    "ultimo": "2026-02-13T16:34:03.491130"
+  },
+  "14022026_adesa-80_cd-adc-la-algaida_minibasket-mixto-2-fase-grupo-3": {
+    "intentos": 3,
+    "ultimo": "2026-02-14T15:05:40.660331"
+  },
+  "15022026_carpe-diem-verde-cbsfdo-m_adesa-80-a_babybasket-mixto-regular-grupo-a": {
+    "intentos": 3,
+    "ultimo": "2026-02-15T13:30:37.967988"
+>>>>>>> d2e33c3618dd1fc84dbe2f6cc6e2ec11af28c73b
   }
 }

@@ -1,18 +1,29 @@
 {
   "categoria": "Infantil Femenino - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-13T15:27:44.650845",
+  "ultima_actualizacion": "2026-02-15T11:47:15.989334",
   "clasificacion": [
     {
-      "equipo": "SUMITECNIC-ULB",
+      "equipo": "SD CANDRAY E3 INGENIA",
       "partidos_jugados": 3,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 1,
-      "puntos_favor": 198,
-      "puntos_contra": 157,
-      "diferencia": 41,
-      "puntos": 5,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 0,
+      "puntos_favor": 181,
+      "puntos_contra": 128,
+      "diferencia": 53,
+      "puntos": 6,
       "posicion": 1
+    },
+    {
+      "equipo": "SUMITECNIC-ULB",
+      "partidos_jugados": 4,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 2,
+      "puntos_favor": 260,
+      "puntos_contra": 228,
+      "diferencia": 32,
+      "puntos": 6,
+      "posicion": 2
     },
     {
       "equipo": "ADESA 80",
@@ -23,29 +34,29 @@
       "puntos_contra": 187,
       "diferencia": -14,
       "puntos": 5,
-      "posicion": 2
-    },
-    {
-      "equipo": "SD CANDRAY E3 INGENIA",
-      "partidos_jugados": 2,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 0,
-      "puntos_favor": 110,
-      "puntos_contra": 66,
-      "diferencia": 44,
-      "puntos": 4,
       "posicion": 3
     },
     {
-      "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 3,
+      "equipo": "FASE INMOBILIARIA CBA",
+      "partidos_jugados": 4,
       "partidos_ganados": 1,
-      "partidos_perdidos": 2,
-      "puntos_favor": 119,
-      "puntos_contra": 149,
-      "diferencia": -30,
-      "puntos": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 169,
+      "puntos_contra": 198,
+      "diferencia": -29,
+      "puntos": 5,
       "posicion": 4
+    },
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 4,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 3,
+      "puntos_favor": 146,
+      "puntos_contra": 189,
+      "diferencia": -43,
+      "puntos": 5,
+      "posicion": 5
     },
     {
       "equipo": "CADIZ CB GADES RECUP. CHICHOS ANDALUCÍA",
@@ -55,17 +66,6 @@
       "puntos_favor": 107,
       "puntos_contra": 106,
       "diferencia": 1,
-      "puntos": 3,
-      "posicion": 5
-    },
-    {
-      "equipo": "FASE INMOBILIARIA CBA",
-      "partidos_jugados": 3,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 3,
-      "puntos_favor": 129,
-      "puntos_contra": 171,
-      "diferencia": -42,
       "puntos": 3,
       "posicion": 6
     }

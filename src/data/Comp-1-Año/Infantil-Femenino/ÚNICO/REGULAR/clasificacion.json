@@ -1,17 +1,17 @@
 {
   "categoria": "Infantil Femenino - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-13T15:34:19.922473",
+  "ultima_actualizacion": "2026-02-15T11:53:46.060259",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 12,
-      "partidos_ganados": 12,
+      "partidos_jugados": 13,
+      "partidos_ganados": 13,
       "partidos_perdidos": 0,
-      "puntos_favor": 775,
-      "puntos_contra": 275,
-      "diferencia": 500,
-      "puntos": 24,
+      "puntos_favor": 838,
+      "puntos_contra": 312,
+      "diferencia": 526,
+      "puntos": 26,
       "posicion": 1
     },
     {
@@ -27,24 +27,24 @@
     },
     {
       "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 8,
-      "partidos_perdidos": 3,
-      "puntos_favor": 692,
-      "puntos_contra": 360,
-      "diferencia": 332,
-      "puntos": 19,
+      "partidos_perdidos": 4,
+      "puntos_favor": 729,
+      "puntos_contra": 423,
+      "diferencia": 306,
+      "puntos": 20,
       "posicion": 3
     },
     {
       "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 11,
-      "partidos_ganados": 6,
+      "partidos_jugados": 12,
+      "partidos_ganados": 7,
       "partidos_perdidos": 5,
-      "puntos_favor": 554,
-      "puntos_contra": 514,
-      "diferencia": 40,
-      "puntos": 17,
+      "puntos_favor": 609,
+      "puntos_contra": 557,
+      "diferencia": 52,
+      "puntos": 19,
       "posicion": 4
     },
     {
@@ -70,6 +70,17 @@
       "posicion": 6
     },
     {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 426,
+      "puntos_contra": 481,
+      "diferencia": -55,
+      "puntos": 14,
+      "posicion": 7
+    },
+    {
       "equipo": "SD CANDRAY",
       "partidos_jugados": 11,
       "partidos_ganados": 3,
@@ -78,17 +89,6 @@
       "puntos_contra": 596,
       "diferencia": -236,
       "puntos": 14,
-      "posicion": 7
-    },
-    {
-      "equipo": "UBJerez NEGRO",
-      "partidos_jugados": 9,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 5,
-      "puntos_favor": 383,
-      "puntos_contra": 426,
-      "diferencia": -43,
-      "puntos": 13,
       "posicion": 8
     },
     {

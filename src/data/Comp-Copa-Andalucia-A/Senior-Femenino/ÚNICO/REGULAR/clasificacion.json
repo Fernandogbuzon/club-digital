@@ -1,8 +1,19 @@
 {
   "categoria": "Senior Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-13T15:25:26.552496",
+  "ultima_actualizacion": "2026-02-15T11:45:02.793353",
   "clasificacion": [
+    {
+      "equipo": "GYMNÁSTICA P.",
+      "partidos_jugados": 12,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 2,
+      "puntos_favor": 688,
+      "puntos_contra": 568,
+      "diferencia": 120,
+      "puntos": 22,
+      "posicion": 1
+    },
     {
       "equipo": "SD CANDRAY AISH UNIDAD DE REPRODUCCIÓN",
       "partidos_jugados": 11,
@@ -12,28 +23,17 @@
       "puntos_contra": 478,
       "diferencia": 322,
       "puntos": 21,
-      "posicion": 1
-    },
-    {
-      "equipo": "GYMNÁSTICA P.",
-      "partidos_jugados": 11,
-      "partidos_ganados": 10,
-      "partidos_perdidos": 1,
-      "puntos_favor": 626,
-      "puntos_contra": 499,
-      "diferencia": 127,
-      "puntos": 21,
       "posicion": 2
     },
     {
       "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 8,
+      "partidos_jugados": 12,
+      "partidos_ganados": 9,
       "partidos_perdidos": 3,
-      "puntos_favor": 781,
-      "puntos_contra": 664,
-      "diferencia": 117,
-      "puntos": 19,
+      "puntos_favor": 850,
+      "puntos_contra": 726,
+      "diferencia": 124,
+      "puntos": 21,
       "posicion": 3
     },
     {
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 12,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 6,
+      "puntos_favor": 598,
+      "puntos_contra": 625,
+      "diferencia": -27,
+      "puntos": 18,
+      "posicion": 5
+    },
+    {
       "equipo": "PTP GROUP CB PUERTO REAL",
       "partidos_jugados": 11,
       "partidos_ganados": 6,
@@ -56,7 +67,7 @@
       "puntos_contra": 540,
       "diferencia": 125,
       "puntos": 17,
-      "posicion": 5
+      "posicion": 6
     },
     {
       "equipo": "C.A.B.U.",
@@ -67,17 +78,6 @@
       "puntos_contra": 578,
       "diferencia": 28,
       "puntos": 17,
-      "posicion": 6
-    },
-    {
-      "equipo": "CB CIMBIS",
-      "partidos_jugados": 11,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 6,
-      "puntos_favor": 548,
-      "puntos_contra": 601,
-      "diferencia": -53,
-      "puntos": 16,
       "posicion": 7
     },
     {
@@ -115,13 +115,13 @@
     },
     {
       "equipo": "ABADES AREA ALCALÁ",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 0,
-      "partidos_perdidos": 11,
-      "puntos_favor": 356,
-      "puntos_contra": 767,
-      "diferencia": -411,
-      "puntos": 11,
+      "partidos_perdidos": 12,
+      "puntos_favor": 380,
+      "puntos_contra": 817,
+      "diferencia": -437,
+      "puntos": 12,
       "posicion": 11
     }
   ]

@@ -1,8 +1,19 @@
 {
   "categoria": "Junior Masculino - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-13T15:29:06.810155",
+  "ultima_actualizacion": "2026-02-15T11:48:35.014160",
   "clasificacion": [
+    {
+      "equipo": "CB SANCTI PETRI",
+      "partidos_jugados": 8,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 2,
+      "puntos_favor": 518,
+      "puntos_contra": 447,
+      "diferencia": 71,
+      "puntos": 14,
+      "posicion": 1
+    },
     {
       "equipo": "GABBA",
       "partidos_jugados": 7,
@@ -12,28 +23,17 @@
       "puntos_contra": 332,
       "diferencia": 120,
       "puntos": 13,
-      "posicion": 1
-    },
-    {
-      "equipo": "CB SANCTI PETRI",
-      "partidos_jugados": 7,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 2,
-      "puntos_favor": 446,
-      "puntos_contra": 395,
-      "diferencia": 51,
-      "puntos": 12,
       "posicion": 2
     },
     {
       "equipo": "CBA AZUL",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 5,
-      "partidos_perdidos": 2,
-      "puntos_favor": 434,
-      "puntos_contra": 386,
-      "diferencia": 48,
-      "puntos": 12,
+      "partidos_perdidos": 3,
+      "puntos_favor": 486,
+      "puntos_contra": 458,
+      "diferencia": 28,
+      "puntos": 13,
       "posicion": 3
     },
     {

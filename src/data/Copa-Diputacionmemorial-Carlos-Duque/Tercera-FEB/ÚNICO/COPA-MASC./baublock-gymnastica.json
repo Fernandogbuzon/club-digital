@@ -1,0 +1,47 @@
+[
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 72,
+    "marcador_visitante": 80,
+    "fecha": "27/09/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. ANGELITA ALTA",
+    "es_resultado": true,
+    "jornada": "3/4 PUESTO Jornada 1 - 28/09/2025",
+    "categoria": "Tercera FEB - COPA MASC. - ÚNICO",
+    "equipo": "BAUBLOCK GYMNÁSTICA",
+    "rival": "CB SAN FERNANDO",
+    "ubicacion": "Local",
+    "id": "27092025_baublock-gymnastica_cb-san-fernando_tercera-feb-copa-masc-unico"
+  },
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 91,
+    "marcador_visitante": 92,
+    "fecha": "20/09/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. ANGELITA ALTA",
+    "es_resultado": true,
+    "jornada": "",
+    "categoria": "Tercera FEB - COPA MASC. - ÚNICO",
+    "equipo": "BAUBLOCK GYMNÁSTICA",
+    "rival": "OH!TELS ULB",
+    "ubicacion": "Local",
+    "id": "20092025_baublock-gymnastica_ohtels-ulb_tercera-feb-copa-masc-unico"
+  },
+  {
+    "competicion": "Copa Diputacionmemorial Carlos Duque",
+    "marcador_local": 91,
+    "marcador_visitante": 92,
+    "fecha": "20/09/2025",
+    "hora": "20:00",
+    "pabellon": "PAB. ANGELITA ALTA",
+    "es_resultado": true,
+    "jornada": "SEMIFINAL Jornada 1 - 21/09/2025",
+    "categoria": "Tercera FEB - COPA MASC. - ÚNICO",
+    "equipo": "BAUBLOCK GYMNÁSTICA",
+    "rival": "OH!TELS ULB",
+    "ubicacion": "Local",
+    "id": "20092025_baublock-gymnastica_ohtels-ulb_tercera-feb-copa-masc-unico"
+  }
+]

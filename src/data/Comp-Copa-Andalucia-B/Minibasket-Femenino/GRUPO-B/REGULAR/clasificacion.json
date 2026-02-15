@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-13T15:33:14.354137",
+  "ultima_actualizacion": "2026-02-15T11:52:42.249617",
   "clasificacion": [
+    {
+      "equipo": "Gazul Forestal Alcalá",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 1,
+      "puntos_favor": 551,
+      "puntos_contra": 189,
+      "diferencia": 362,
+      "puntos": 21,
+      "posicion": 1
+    },
     {
       "equipo": "TU COLADA PERFECTA CB PUERTO REAL",
       "partidos_jugados": 10,
@@ -12,39 +23,28 @@
       "puntos_contra": 253,
       "diferencia": 336,
       "puntos": 20,
-      "posicion": 1
-    },
-    {
-      "equipo": "Gazul Forestal Alcalá",
-      "partidos_jugados": 10,
-      "partidos_ganados": 9,
-      "partidos_perdidos": 1,
-      "puntos_favor": 489,
-      "puntos_contra": 167,
-      "diferencia": 322,
-      "puntos": 19,
       "posicion": 2
     },
     {
       "equipo": "CBA",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 7,
-      "partidos_perdidos": 2,
-      "puntos_favor": 402,
-      "puntos_contra": 236,
-      "diferencia": 166,
-      "puntos": 16,
+      "partidos_perdidos": 3,
+      "puntos_favor": 424,
+      "puntos_contra": 298,
+      "diferencia": 126,
+      "puntos": 17,
       "posicion": 3
     },
     {
       "equipo": "SD CANDRAY AMARILLO",
-      "partidos_jugados": 8,
-      "partidos_ganados": 5,
+      "partidos_jugados": 9,
+      "partidos_ganados": 6,
       "partidos_perdidos": 3,
-      "puntos_favor": 280,
-      "puntos_contra": 326,
-      "diferencia": -46,
-      "puntos": 13,
+      "puntos_favor": 325,
+      "puntos_contra": 344,
+      "diferencia": -19,
+      "puntos": 15,
       "posicion": 4
     },
     {
@@ -70,6 +70,17 @@
       "posicion": 6
     },
     {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 10,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 9,
+      "puntos_favor": 236,
+      "puntos_contra": 481,
+      "diferencia": -245,
+      "puntos": 11,
+      "posicion": 7
+    },
+    {
       "equipo": "GYMNASTICA PORTUENSE",
       "partidos_jugados": 9,
       "partidos_ganados": 2,
@@ -78,17 +89,6 @@
       "puntos_contra": 501,
       "diferencia": -246,
       "puntos": 11,
-      "posicion": 7
-    },
-    {
-      "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 9,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 8,
-      "puntos_favor": 218,
-      "puntos_contra": 436,
-      "diferencia": -218,
-      "puntos": 10,
       "posicion": 8
     }
   ]

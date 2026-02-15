@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 4",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-13T15:32:30.408205",
+  "ultima_actualizacion": "2026-02-15T11:51:59.990302",
   "clasificacion": [
     {
       "equipo": "UBJerez AMARILLO",
@@ -16,14 +16,25 @@
     },
     {
       "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 2,
+      "partidos_jugados": 3,
       "partidos_ganados": 0,
-      "partidos_perdidos": 2,
-      "puntos_favor": 72,
-      "puntos_contra": 136,
-      "diferencia": -64,
-      "puntos": 2,
+      "partidos_perdidos": 3,
+      "puntos_favor": 115,
+      "puntos_contra": 214,
+      "diferencia": -99,
+      "puntos": 3,
       "posicion": 2
+    },
+    {
+      "equipo": "DIAMPE - MERGABLO",
+      "partidos_jugados": 1,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 0,
+      "puntos_favor": 78,
+      "puntos_contra": 43,
+      "diferencia": 35,
+      "puntos": 2,
+      "posicion": 3
     }
   ]
 }

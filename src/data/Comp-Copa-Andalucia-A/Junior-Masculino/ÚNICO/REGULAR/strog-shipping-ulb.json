@@ -1,12 +1,12 @@
 [
   {
     "competicion": "Comp Copa Andalucia A",
-    "marcador_local": null,
-    "marcador_visitante": null,
+    "marcador_local": 85,
+    "marcador_visitante": 71,
     "fecha": "14/02/2026",
     "hora": "11:00",
     "pabellon": "PAB. MPAL. LA LINEA",
-    "es_resultado": false,
+    "es_resultado": true,
     "jornada": "Jornada 18 - 15/02/2026",
     "categoria": "Junior Masculino - REGULAR - ÚNICO",
     "equipo": "STROG SHIPPING ULB",

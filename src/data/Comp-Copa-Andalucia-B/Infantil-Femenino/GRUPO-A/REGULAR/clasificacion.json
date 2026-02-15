@@ -1,17 +1,17 @@
 {
   "categoria": "Infantil Femenino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-13T15:31:58.749283",
+  "ultima_actualizacion": "2026-02-15T11:51:32.071317",
   "clasificacion": [
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 10,
-      "partidos_ganados": 10,
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
       "partidos_perdidos": 0,
-      "puntos_favor": 651,
-      "puntos_contra": 259,
-      "diferencia": 392,
-      "puntos": 20,
+      "puntos_favor": 720,
+      "puntos_contra": 314,
+      "diferencia": 406,
+      "puntos": 22,
       "posicion": 1
     },
     {
@@ -27,13 +27,13 @@
     },
     {
       "equipo": "GABBA",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 8,
-      "partidos_perdidos": 2,
-      "puntos_favor": 623,
-      "puntos_contra": 438,
-      "diferencia": 185,
-      "puntos": 18,
+      "partidos_perdidos": 3,
+      "puntos_favor": 678,
+      "puntos_contra": 507,
+      "diferencia": 171,
+      "puntos": 19,
       "posicion": 3
     },
     {

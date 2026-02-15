@@ -1,29 +1,40 @@
 {
   "categoria": "Infantil Mixto - REGULAR - GRUPO A",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-13T15:34:03.103402",
+  "ultima_actualizacion": "2026-02-15T11:53:29.407204",
   "clasificacion": [
     {
       "equipo": "CBA AZUL",
-      "partidos_jugados": 9,
-      "partidos_ganados": 9,
+      "partidos_jugados": 10,
+      "partidos_ganados": 10,
       "partidos_perdidos": 0,
-      "puntos_favor": 600,
-      "puntos_contra": 373,
-      "diferencia": 227,
-      "puntos": 18,
+      "puntos_favor": 667,
+      "puntos_contra": 390,
+      "diferencia": 277,
+      "puntos": 20,
       "posicion": 1
     },
     {
       "equipo": "GAMO BAHÍA CBSFDO",
-      "partidos_jugados": 8,
+      "partidos_jugados": 9,
       "partidos_ganados": 6,
-      "partidos_perdidos": 2,
-      "puntos_favor": 489,
-      "puntos_contra": 289,
-      "diferencia": 200,
-      "puntos": 14,
+      "partidos_perdidos": 3,
+      "puntos_favor": 530,
+      "puntos_contra": 335,
+      "diferencia": 195,
+      "puntos": 15,
       "posicion": 2
+    },
+    {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 9,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 3,
+      "puntos_favor": 508,
+      "puntos_contra": 455,
+      "diferencia": 53,
+      "puntos": 15,
+      "posicion": 3
     },
     {
       "equipo": "ADESA 80",
@@ -34,28 +45,17 @@
       "puntos_contra": 399,
       "diferencia": 110,
       "puntos": 13,
-      "posicion": 3
-    },
-    {
-      "equipo": "UBJerez NEGRO",
-      "partidos_jugados": 8,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 3,
-      "puntos_favor": 462,
-      "puntos_contra": 414,
-      "diferencia": 48,
-      "puntos": 13,
       "posicion": 4
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 2,
-      "partidos_perdidos": 7,
-      "puntos_favor": 271,
-      "puntos_contra": 550,
-      "diferencia": -279,
-      "puntos": 11,
+      "partidos_perdidos": 8,
+      "puntos_favor": 288,
+      "puntos_contra": 617,
+      "diferencia": -329,
+      "puntos": 12,
       "posicion": 5
     },
     {

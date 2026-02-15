@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Masculino - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-13T15:29:03.408026",
+  "ultima_actualizacion": "2026-02-15T11:48:31.836661",
   "clasificacion": [
     {
       "equipo": "ADESA 80",
@@ -38,14 +38,25 @@
     },
     {
       "equipo": "MONTERA GAFISUR",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 3,
-      "partidos_perdidos": 4,
-      "puntos_favor": 396,
-      "puntos_contra": 380,
-      "diferencia": 16,
-      "puntos": 10,
+      "partidos_perdidos": 5,
+      "puntos_favor": 452,
+      "puntos_contra": 439,
+      "diferencia": 13,
+      "puntos": 11,
       "posicion": 4
+    },
+    {
+      "equipo": "CBP AYUDATPYMES",
+      "partidos_jugados": 9,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 8,
+      "puntos_favor": 304,
+      "puntos_contra": 617,
+      "diferencia": -313,
+      "puntos": 10,
+      "posicion": 5
     },
     {
       "equipo": "IPSS CBSFDO",
@@ -56,17 +67,6 @@
       "puntos_contra": 433,
       "diferencia": -2,
       "puntos": 9,
-      "posicion": 5
-    },
-    {
-      "equipo": "CBP AYUDATPYMES",
-      "partidos_jugados": 8,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 8,
-      "puntos_favor": 245,
-      "puntos_contra": 561,
-      "diferencia": -316,
-      "puntos": 8,
       "posicion": 6
     }
   ]
