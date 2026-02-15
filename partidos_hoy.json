@@ -1,16 +1,16 @@
 [
   {
-    "equipo": "ADESA 80 (A)",
-    "rival": "CARPE DIEM VERDE CBSFDO (M)",
-    "fecha": "15/02/2026",
-    "hora": "10:00",
-    "categoria": "Babybasket Mixto - REGULAR - GRUPO A",
+    "equipo": "ADESA 80",
+    "rival": "AIRWIFI - MERGABLO",
+    "fecha": "16/02/2026",
+    "hora": "20:15",
+    "categoria": "Junior Masculino - REGULAR - ÚNICO",
     "ubicacion": "Visitante",
-    "id": "15022026_carpe-diem-verde-cbsfdo-m_adesa-80-a_babybasket-mixto-regular-grupo-a",
-    "comp_carpeta": "Programa-Babybasket-20182019",
-    "cat_carpeta": "Babybasket-Mixto",
-    "grupo_carpeta": "GRUPO-A",
+    "id": "16022026_airwifi-mergablo_adesa-80_junior-masculino-regular-unico",
+    "comp_carpeta": "Comp-Copa-Andalucia-A",
+    "cat_carpeta": "Junior-Masculino",
+    "grupo_carpeta": "ÚNICO",
     "fase_carpeta": "REGULAR",
-    "json_path": "Programa-Babybasket-20182019/Babybasket-Mixto/GRUPO-A/REGULAR/adesa-80-a.json"
+    "json_path": "Comp-Copa-Andalucia-A/Junior-Masculino/ÚNICO/REGULAR/adesa-80.json"
   }
 ]
