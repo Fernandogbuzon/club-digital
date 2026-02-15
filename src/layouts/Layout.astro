@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <!DOCTYPE html>
@@ -25,17 +26,17 @@ const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center">
-          <img src="/logo-adesa-sin-fondo.png" alt="ADESA 80" class="h-12 w-auto">
+          <img src={`${base}/logo-adesa-sin-fondo.png`} alt="ADESA 80" class="h-12 w-auto">
         </div>
         
         <div class="hidden md:flex items-center space-x-8">
-          <a href="/" class="text-white hover:text-adesa-green font-medium transition-colors">Inicio</a>
-          <a href="/noticias" class="text-white hover:text-adesa-green font-medium transition-colors">Noticias</a>
-          <a href="/partidos" class="text-white hover:text-adesa-green font-medium transition-colors">Partidos</a>
-          <a href="/eventos" class="text-white hover:text-adesa-green font-medium transition-colors">Eventos</a>
-          <a href="/tienda" class="text-white hover:text-adesa-green font-medium transition-colors">Tienda</a>
-          <a href="/club" class="text-white hover:text-adesa-green font-medium transition-colors">Club</a>
-          <a href="/campus" class="text-white hover:text-adesa-green font-medium transition-colors">Campus</a>
+          <a href={`${base}/`} class="text-white hover:text-adesa-green font-medium transition-colors">Inicio</a>
+          <a href={`${base}/noticias`} class="text-white hover:text-adesa-green font-medium transition-colors">Noticias</a>
+          <a href={`${base}/partidos`} class="text-white hover:text-adesa-green font-medium transition-colors">Partidos</a>
+          <a href={`${base}/eventos`} class="text-white hover:text-adesa-green font-medium transition-colors">Eventos</a>
+          <a href={`${base}/tienda`} class="text-white hover:text-adesa-green font-medium transition-colors">Tienda</a>
+          <a href={`${base}/club`} class="text-white hover:text-adesa-green font-medium transition-colors">Club</a>
+          <a href={`${base}/campus`} class="text-white hover:text-adesa-green font-medium transition-colors">Campus</a>
         </div>
 
         <button id="menuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors">
@@ -49,13 +50,13 @@ const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
       <div class="px-4 py-3 space-y-2">
-        <a href="/" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Inicio</a>
-        <a href="/noticias" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Noticias</a>
-        <a href="/partidos" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Partidos</a>
-        <a href="/eventos" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Eventos</a>
-        <a href="/tienda" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Tienda</a>
-        <a href="/club" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Club</a>
-        <a href="/campus" class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Campus</a>
+        <a href={`${base}/`} class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Inicio</a>
+        <a href={`${base}/noticias`} class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Noticias</a>
+        <a href={`${base}/partidos`} class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Partidos</a>
+        <a href={`${base}/eventos`} class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Eventos</a>
+        <a href={`${base}/tienda`} class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Tienda</a>
+        <a href={`${base}/club`} class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Club</a>
+        <a href={`${base}/campus`} class="block px-3 py-2 rounded-lg text-white hover:bg-gray-800 hover:text-adesa-green font-medium transition-colors">Campus</a>
       </div>
     </div>
   </nav>
@@ -94,7 +95,7 @@ const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <div class="flex items-center mb-4">
-            <img src="/logo-adesa-sin-fondo.png" alt="ADESA 80" class="h-12 w-auto">
+            <img src={`${base}/logo-adesa-sin-fondo.png`} alt="ADESA 80" class="h-12 w-auto">
           </div>
           <p class="text-gray-400">Club de Baloncesto con tradición y pasión por el deporte.</p>
         </div>
@@ -102,20 +103,20 @@ const { title = 'ADESA 80 - Club de Baloncesto' } = Astro.props;
         <div>
           <h3 class="font-semibold text-lg mb-4">Navegación</h3>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="/" class="hover:text-adesa-green transition-colors">Inicio</a></li>
-            <li><a href="/partidos" class="hover:text-adesa-green transition-colors">Partidos</a></li>
-            <li><a href="/noticias" class="hover:text-adesa-green transition-colors">Noticias</a></li>
-            <li><a href="/eventos" class="hover:text-adesa-green transition-colors">Eventos</a></li>
+            <li><a href={`${base}/`} class="hover:text-adesa-green transition-colors">Inicio</a></li>
+            <li><a href={`${base}/partidos`} class="hover:text-adesa-green transition-colors">Partidos</a></li>
+            <li><a href={`${base}/noticias`} class="hover:text-adesa-green transition-colors">Noticias</a></li>
+            <li><a href={`${base}/eventos`} class="hover:text-adesa-green transition-colors">Eventos</a></li>
           </ul>
         </div>
 
         <div>
           <h3 class="font-semibold text-lg mb-4">El Club</h3>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="/club" class="hover:text-adesa-green transition-colors">Sobre Nosotros</a></li>
-            <li><a href="/campus" class="hover:text-adesa-green transition-colors">Campus</a></li>
-            <li><a href="/tienda" class="hover:text-adesa-green transition-colors">Tienda</a></li>
-            <li><a href="/club#contacto" class="hover:text-adesa-green transition-colors">Contacto</a></li>
+            <li><a href={`${base}/club`} class="hover:text-adesa-green transition-colors">Sobre Nosotros</a></li>
+            <li><a href={`${base}/campus`} class="hover:text-adesa-green transition-colors">Campus</a></li>
+            <li><a href={`${base}/tienda`} class="hover:text-adesa-green transition-colors">Tienda</a></li>
+            <li><a href={`${base}/club#contacto`} class="hover:text-adesa-green transition-colors">Contacto</a></li>
           </ul>
         </div>
 
