@@ -104,7 +104,10 @@ def slugify(text: str) -> str:
 
 def normalizar_carpeta(nombre: str) -> str:
     nombre = re.sub(r"\s+", " ", nombre).strip()
-    return re.sub(r"\s", "-", nombre)
+    nombre = re.sub(r"\s", "-", nombre)
+    # Eliminar puntos finales (invalido en Windows y problematico para git)
+    nombre = nombre.rstrip(".")
+    return nombre
 
 
 def generar_id(fecha: str, local: str, visitante: str, categoria: str) -> str:
@@ -392,7 +395,10 @@ def carpeta_competicion(nombre: str) -> str:
     """Convierte nombre de competición a nombre de carpeta."""
     nombre = re.sub(r"\s+", " ", nombre).strip()
     # Capitalizar palabras, reemplazar espacios por guiones
-    return re.sub(r"\s", "-", nombre)
+    nombre = re.sub(r"\s", "-", nombre)
+    # Eliminar puntos finales (invalido en Windows y problematico para git)
+    nombre = nombre.rstrip(".")
+    return nombre
 
 
 # ─── Scraper de una competición ──────────────────────────────────────────────
