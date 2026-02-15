@@ -1,18 +1,29 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 4",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:30:33.966985",
+  "ultima_actualizacion": "2026-02-15T06:22:10.592180",
   "clasificacion": [
     {
       "equipo": "UBJerez AMARILLO",
-      "partidos_jugados": 6,
-      "partidos_ganados": 6,
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
       "partidos_perdidos": 0,
-      "puntos_favor": 351,
-      "puntos_contra": 116,
-      "diferencia": 235,
-      "puntos": 12,
+      "puntos_favor": 409,
+      "puntos_contra": 147,
+      "diferencia": 262,
+      "puntos": 14,
       "posicion": 1
+    },
+    {
+      "equipo": "CD DON BOSCO`88",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 333,
+      "puntos_contra": 294,
+      "diferencia": 39,
+      "puntos": 11,
+      "posicion": 2
     },
     {
       "equipo": "ISOVIAS - MERGABLO",
@@ -23,18 +34,18 @@
       "puntos_contra": 356,
       "diferencia": -98,
       "puntos": 11,
-      "posicion": 2
+      "posicion": 3
     },
     {
-      "equipo": "CD DON BOSCO`88",
-      "partidos_jugados": 6,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 2,
-      "puntos_favor": 302,
-      "puntos_contra": 236,
-      "diferencia": 66,
+      "equipo": "EUROPEA DE EXPEDICIONES CBSFDO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 296,
+      "puntos_contra": 337,
+      "diferencia": -41,
       "puntos": 10,
-      "posicion": 3
+      "posicion": 4
     },
     {
       "equipo": "CB TREBUJENA",
@@ -45,7 +56,7 @@
       "puntos_contra": 285,
       "diferencia": 26,
       "puntos": 9,
-      "posicion": 4
+      "posicion": 5
     },
     {
       "equipo": "Las Delicias Vejer",
@@ -56,28 +67,17 @@
       "puntos_contra": 268,
       "diferencia": -39,
       "puntos": 8,
-      "posicion": 5
-    },
-    {
-      "equipo": "EUROPEA DE EXPEDICIONES CBSFDO",
-      "partidos_jugados": 5,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 4,
-      "puntos_favor": 162,
-      "puntos_contra": 241,
-      "diferencia": -79,
-      "puntos": 6,
       "posicion": 6
     },
     {
       "equipo": "AVATEL CENTURIAS",
-      "partidos_jugados": 4,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
-      "partidos_perdidos": 4,
-      "puntos_favor": 116,
-      "puntos_contra": 227,
-      "diferencia": -111,
-      "puntos": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 212,
+      "puntos_contra": 361,
+      "diferencia": -149,
+      "puntos": 6,
       "posicion": 7
     }
   ]

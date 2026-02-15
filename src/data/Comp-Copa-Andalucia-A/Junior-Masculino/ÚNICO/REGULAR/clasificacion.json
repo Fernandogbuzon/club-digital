@@ -1,8 +1,19 @@
 {
   "categoria": "Junior Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T12:25:58.999402",
+  "ultima_actualizacion": "2026-02-15T06:17:29.102716",
   "clasificacion": [
+    {
+      "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
+      "partidos_jugados": 19,
+      "partidos_ganados": 16,
+      "partidos_perdidos": 3,
+      "puntos_favor": 1571,
+      "puntos_contra": 910,
+      "diferencia": 661,
+      "puntos": 35,
+      "posicion": 1
+    },
     {
       "equipo": "BERNARDINO ABAD CB PUERTO REAL",
       "partidos_jugados": 18,
@@ -12,7 +23,7 @@
       "puntos_contra": 965,
       "diferencia": 653,
       "puntos": 35,
-      "posicion": 1
+      "posicion": 2
     },
     {
       "equipo": "STROG SHIPPING ULB",
@@ -23,28 +34,17 @@
       "puntos_contra": 1019,
       "diferencia": 366,
       "puntos": 34,
-      "posicion": 2
-    },
-    {
-      "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
-      "partidos_jugados": 18,
-      "partidos_ganados": 15,
-      "partidos_perdidos": 3,
-      "puntos_favor": 1514,
-      "puntos_contra": 891,
-      "diferencia": 623,
-      "puntos": 33,
       "posicion": 3
     },
     {
       "equipo": "PEPE TROYA CBA",
-      "partidos_jugados": 18,
-      "partidos_ganados": 13,
+      "partidos_jugados": 19,
+      "partidos_ganados": 14,
       "partidos_perdidos": 5,
-      "puntos_favor": 1362,
-      "puntos_contra": 1036,
-      "diferencia": 326,
-      "puntos": 31,
+      "puntos_favor": 1434,
+      "puntos_contra": 1079,
+      "diferencia": 355,
+      "puntos": 33,
       "posicion": 4
     },
     {
@@ -82,24 +82,24 @@
     },
     {
       "equipo": "AIRWIFI - MERGABLO",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 5,
-      "partidos_perdidos": 12,
-      "puntos_favor": 959,
-      "puntos_contra": 1309,
-      "diferencia": -350,
-      "puntos": 22,
+      "partidos_perdidos": 13,
+      "puntos_favor": 1002,
+      "puntos_contra": 1381,
+      "diferencia": -379,
+      "puntos": 23,
       "posicion": 8
     },
     {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 18,
+      "partidos_jugados": 19,
       "partidos_ganados": 4,
-      "partidos_perdidos": 14,
-      "puntos_favor": 995,
-      "puntos_contra": 1501,
-      "diferencia": -506,
-      "puntos": 22,
+      "partidos_perdidos": 15,
+      "puntos_favor": 1014,
+      "puntos_contra": 1558,
+      "diferencia": -544,
+      "puntos": 23,
       "posicion": 9
     },
     {

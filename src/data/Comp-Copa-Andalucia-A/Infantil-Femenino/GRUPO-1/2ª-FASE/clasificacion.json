@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Femenino - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T12:27:04.794394",
+  "ultima_actualizacion": "2026-02-15T06:18:35.432563",
   "clasificacion": [
     {
       "equipo": "SD CANDRAY E3 INGENIA",
@@ -37,15 +37,26 @@
       "posicion": 3
     },
     {
-      "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 3,
+      "equipo": "FASE INMOBILIARIA CBA",
+      "partidos_jugados": 4,
       "partidos_ganados": 1,
-      "partidos_perdidos": 2,
-      "puntos_favor": 119,
-      "puntos_contra": 149,
-      "diferencia": -30,
-      "puntos": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 169,
+      "puntos_contra": 198,
+      "diferencia": -29,
+      "puntos": 5,
       "posicion": 4
+    },
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 4,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 3,
+      "puntos_favor": 146,
+      "puntos_contra": 189,
+      "diferencia": -43,
+      "puntos": 5,
+      "posicion": 5
     },
     {
       "equipo": "CADIZ CB GADES RECUP. CHICHOS ANDALUCÍA",
@@ -55,17 +66,6 @@
       "puntos_favor": 107,
       "puntos_contra": 106,
       "diferencia": 1,
-      "puntos": 3,
-      "posicion": 5
-    },
-    {
-      "equipo": "FASE INMOBILIARIA CBA",
-      "partidos_jugados": 3,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 3,
-      "puntos_favor": 129,
-      "puntos_contra": 171,
-      "diferencia": -42,
       "puntos": 3,
       "posicion": 6
     }

@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Femenino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:29:11.833570",
+  "ultima_actualizacion": "2026-02-15T06:20:43.925597",
   "clasificacion": [
     {
       "equipo": "GABBA",
@@ -16,35 +16,35 @@
     },
     {
       "equipo": "ADESA 80",
-      "partidos_jugados": 10,
-      "partidos_ganados": 9,
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
       "partidos_perdidos": 1,
-      "puntos_favor": 648,
-      "puntos_contra": 378,
-      "diferencia": 270,
-      "puntos": 19,
+      "puntos_favor": 735,
+      "puntos_contra": 424,
+      "diferencia": 311,
+      "puntos": 21,
       "posicion": 2
     },
     {
       "equipo": "KING MAT - MERGABLO",
-      "partidos_jugados": 10,
-      "partidos_ganados": 6,
+      "partidos_jugados": 11,
+      "partidos_ganados": 7,
       "partidos_perdidos": 4,
-      "puntos_favor": 513,
-      "puntos_contra": 419,
-      "diferencia": 94,
-      "puntos": 16,
+      "puntos_favor": 574,
+      "puntos_contra": 462,
+      "diferencia": 112,
+      "puntos": 18,
       "posicion": 3
     },
     {
       "equipo": "CB SAN FERNANDO",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 6,
-      "partidos_perdidos": 3,
-      "puntos_favor": 407,
-      "puntos_contra": 461,
-      "diferencia": -54,
-      "puntos": 15,
+      "partidos_perdidos": 4,
+      "puntos_favor": 453,
+      "puntos_contra": 548,
+      "diferencia": -95,
+      "puntos": 16,
       "posicion": 4
     },
     {
@@ -71,13 +71,13 @@
     },
     {
       "equipo": "AUDI CENTER CBA",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 0,
-      "partidos_perdidos": 9,
-      "puntos_favor": 298,
-      "puntos_contra": 502,
-      "diferencia": -204,
-      "puntos": 9,
+      "partidos_perdidos": 10,
+      "puntos_favor": 341,
+      "puntos_contra": 563,
+      "diferencia": -222,
+      "puntos": 10,
       "posicion": 7
     }
   ]

@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:30:29.344426",
+  "ultima_actualizacion": "2026-02-15T06:22:06.598705",
   "clasificacion": [
     {
       "equipo": "CD SAN FELIPE NERI",
@@ -15,6 +15,28 @@
       "posicion": 1
     },
     {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 1,
+      "puntos_favor": 429,
+      "puntos_contra": 306,
+      "diferencia": 123,
+      "puntos": 13,
+      "posicion": 2
+    },
+    {
+      "equipo": "CB CHIPIONA",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 425,
+      "puntos_contra": 333,
+      "diferencia": 92,
+      "puntos": 11,
+      "posicion": 3
+    },
+    {
       "equipo": "EDM ARCOS BLANCO",
       "partidos_jugados": 7,
       "partidos_ganados": 4,
@@ -23,28 +45,6 @@
       "puntos_contra": 355,
       "diferencia": -19,
       "puntos": 11,
-      "posicion": 2
-    },
-    {
-      "equipo": "CB CHIPIONA",
-      "partidos_jugados": 5,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 1,
-      "puntos_favor": 341,
-      "puntos_contra": 231,
-      "diferencia": 110,
-      "puntos": 9,
-      "posicion": 3
-    },
-    {
-      "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 5,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 1,
-      "puntos_favor": 327,
-      "puntos_contra": 222,
-      "diferencia": 105,
-      "puntos": 9,
       "posicion": 4
     },
     {

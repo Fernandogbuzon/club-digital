@@ -1,8 +1,19 @@
 {
   "categoria": "Infantil Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:31:28.189712",
+  "ultima_actualizacion": "2026-02-15T06:23:01.099003",
   "clasificacion": [
+    {
+      "equipo": "OXXI-CB PRADO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 0,
+      "puntos_favor": 597,
+      "puntos_contra": 344,
+      "diferencia": 253,
+      "puntos": 22,
+      "posicion": 1
+    },
     {
       "equipo": "FENIE ENERGÍA CBC CÁDIZ",
       "partidos_jugados": 11,
@@ -12,17 +23,6 @@
       "puntos_contra": 331,
       "diferencia": 261,
       "puntos": 21,
-      "posicion": 1
-    },
-    {
-      "equipo": "OXXI-CB PRADO",
-      "partidos_jugados": 10,
-      "partidos_ganados": 10,
-      "partidos_perdidos": 0,
-      "puntos_favor": 545,
-      "puntos_contra": 306,
-      "diferencia": 239,
-      "puntos": 20,
       "posicion": 2
     },
     {
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 446,
+      "puntos_contra": 491,
+      "diferencia": -45,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
       "equipo": "CADIZ CB GADES ENERGYON MARKETING DIRECTO SL",
       "partidos_jugados": 10,
       "partidos_ganados": 4,
@@ -56,17 +67,6 @@
       "puntos_contra": 465,
       "diferencia": -83,
       "puntos": 14,
-      "posicion": 5
-    },
-    {
-      "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 10,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 7,
-      "puntos_favor": 408,
-      "puntos_contra": 439,
-      "diferencia": -31,
-      "puntos": 13,
       "posicion": 6
     },
     {

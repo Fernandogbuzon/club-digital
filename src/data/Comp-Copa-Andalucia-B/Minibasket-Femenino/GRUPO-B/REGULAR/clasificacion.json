@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:32:36.209451",
+  "ultima_actualizacion": "2026-02-15T06:24:07.659330",
   "clasificacion": [
+    {
+      "equipo": "Gazul Forestal Alcalá",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 1,
+      "puntos_favor": 551,
+      "puntos_contra": 189,
+      "diferencia": 362,
+      "puntos": 21,
+      "posicion": 1
+    },
     {
       "equipo": "TU COLADA PERFECTA CB PUERTO REAL",
       "partidos_jugados": 10,
@@ -12,28 +23,17 @@
       "puntos_contra": 253,
       "diferencia": 336,
       "puntos": 20,
-      "posicion": 1
-    },
-    {
-      "equipo": "Gazul Forestal Alcalá",
-      "partidos_jugados": 10,
-      "partidos_ganados": 9,
-      "partidos_perdidos": 1,
-      "puntos_favor": 489,
-      "puntos_contra": 167,
-      "diferencia": 322,
-      "puntos": 19,
       "posicion": 2
     },
     {
       "equipo": "CBA",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 7,
-      "partidos_perdidos": 2,
-      "puntos_favor": 402,
-      "puntos_contra": 236,
-      "diferencia": 166,
-      "puntos": 16,
+      "partidos_perdidos": 3,
+      "puntos_favor": 424,
+      "puntos_contra": 298,
+      "diferencia": 126,
+      "puntos": 17,
       "posicion": 3
     },
     {

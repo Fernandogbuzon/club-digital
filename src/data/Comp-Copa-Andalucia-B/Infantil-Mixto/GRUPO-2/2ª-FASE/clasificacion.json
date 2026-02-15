@@ -1,17 +1,17 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:30:25.613480",
+  "ultima_actualizacion": "2026-02-15T06:22:03.251898",
   "clasificacion": [
     {
       "equipo": "CBA",
-      "partidos_jugados": 7,
-      "partidos_ganados": 6,
+      "partidos_jugados": 8,
+      "partidos_ganados": 7,
       "partidos_perdidos": 1,
-      "puntos_favor": 429,
-      "puntos_contra": 325,
-      "diferencia": 104,
-      "puntos": 13,
+      "puntos_favor": 479,
+      "puntos_contra": 372,
+      "diferencia": 107,
+      "puntos": 15,
       "posicion": 1
     },
     {
@@ -49,13 +49,13 @@
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 4,
-      "partidos_perdidos": 3,
-      "puntos_favor": 300,
-      "puntos_contra": 321,
-      "diferencia": -21,
-      "puntos": 11,
+      "partidos_perdidos": 4,
+      "puntos_favor": 347,
+      "puntos_contra": 371,
+      "diferencia": -24,
+      "puntos": 12,
       "posicion": 5
     },
     {

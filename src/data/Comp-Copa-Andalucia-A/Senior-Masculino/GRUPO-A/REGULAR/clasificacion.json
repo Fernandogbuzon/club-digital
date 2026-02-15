@@ -1,7 +1,7 @@
 {
   "categoria": "Senior Masculino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T12:25:03.880740",
+  "ultima_actualizacion": "2026-02-15T06:16:32.873940",
   "clasificacion": [
     {
       "equipo": "GAGGERO CADIZ CBSFDO",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 12,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 5,
+      "puntos_favor": 837,
+      "puntos_contra": 767,
+      "diferencia": 70,
+      "puntos": 19,
+      "posicion": 4
+    },
+    {
       "equipo": "GYMNÁSTICA P.",
       "partidos_jugados": 10,
       "partidos_ganados": 8,
@@ -45,18 +56,18 @@
       "puntos_contra": 567,
       "diferencia": 158,
       "puntos": 18,
-      "posicion": 4
+      "posicion": 5
     },
     {
-      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 11,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 5,
-      "puntos_favor": 773,
-      "puntos_contra": 711,
-      "diferencia": 62,
-      "puntos": 17,
-      "posicion": 5
+      "equipo": "CB TREBUJENA",
+      "partidos_jugados": 12,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 10,
+      "puntos_favor": 738,
+      "puntos_contra": 873,
+      "diferencia": -135,
+      "puntos": 14,
+      "posicion": 6
     },
     {
       "equipo": "C.MEDICO \"SAN SEBASTIÁN\"-MERGABLO",
@@ -66,17 +77,6 @@
       "puntos_favor": 650,
       "puntos_contra": 707,
       "diferencia": -57,
-      "puntos": 13,
-      "posicion": 6
-    },
-    {
-      "equipo": "CB TREBUJENA",
-      "partidos_jugados": 11,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 9,
-      "puntos_favor": 682,
-      "puntos_contra": 809,
-      "diferencia": -127,
       "puntos": 13,
       "posicion": 7
     },

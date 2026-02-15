@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T12:26:24.583255",
+  "ultima_actualizacion": "2026-02-15T06:17:54.707952",
   "clasificacion": [
     {
       "equipo": "ISAVAL CBA",
@@ -27,13 +27,13 @@
     },
     {
       "equipo": "ELEKÁ CB PUERTO REAL",
-      "partidos_jugados": 15,
-      "partidos_ganados": 11,
+      "partidos_jugados": 16,
+      "partidos_ganados": 12,
       "partidos_perdidos": 4,
-      "puntos_favor": 1096,
-      "puntos_contra": 833,
-      "diferencia": 263,
-      "puntos": 26,
+      "puntos_favor": 1186,
+      "puntos_contra": 873,
+      "diferencia": 313,
+      "puntos": 28,
       "posicion": 3
     },
     {
@@ -70,36 +70,36 @@
       "posicion": 6
     },
     {
-      "equipo": "MONTIEL DE ARNÁIZ ABOGADOS CBSFDO",
-      "partidos_jugados": 15,
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 17,
       "partidos_ganados": 5,
-      "partidos_perdidos": 10,
-      "puntos_favor": 898,
-      "puntos_contra": 947,
-      "diferencia": -49,
-      "puntos": 20,
+      "partidos_perdidos": 12,
+      "puntos_favor": 1047,
+      "puntos_contra": 1190,
+      "diferencia": -143,
+      "puntos": 22,
       "posicion": 7
     },
     {
-      "equipo": "UNION LINENSE BALONCESTO",
+      "equipo": "MONTIEL DE ARNÁIZ ABOGADOS CBSFDO",
       "partidos_jugados": 16,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 12,
-      "puntos_favor": 973,
-      "puntos_contra": 1132,
-      "diferencia": -159,
-      "puntos": 20,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 11,
+      "puntos_favor": 956,
+      "puntos_contra": 1021,
+      "diferencia": -65,
+      "puntos": 21,
       "posicion": 8
     },
     {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 16,
+      "partidos_jugados": 17,
       "partidos_ganados": 4,
-      "partidos_perdidos": 12,
-      "puntos_favor": 801,
-      "puntos_contra": 986,
-      "diferencia": -185,
-      "puntos": 20,
+      "partidos_perdidos": 13,
+      "puntos_favor": 841,
+      "puntos_contra": 1076,
+      "diferencia": -235,
+      "puntos": 21,
       "posicion": 9
     },
     {

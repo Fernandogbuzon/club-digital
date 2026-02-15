@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Masculino - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T12:26:41.003713",
+  "ultima_actualizacion": "2026-02-15T06:18:11.580157",
   "clasificacion": [
     {
       "equipo": "UBJerez GRIS",
@@ -38,7 +38,7 @@
     },
     {
       "equipo": "AVATEL CENTURIAS",
-      "partidos_jugados": 1,
+      "partidos_jugados": 2,
       "partidos_ganados": 0,
       "partidos_perdidos": 1,
       "puntos_favor": 60,
@@ -49,7 +49,7 @@
     },
     {
       "equipo": "GYMNÁSTICA PORTUENSE",
-      "partidos_jugados": 1,
+      "partidos_jugados": 2,
       "partidos_ganados": 0,
       "partidos_perdidos": 1,
       "puntos_favor": 43,

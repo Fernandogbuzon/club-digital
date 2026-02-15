@@ -1,8 +1,19 @@
 {
   "categoria": "Senior Masculino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T12:25:08.238004",
+  "ultima_actualizacion": "2026-02-15T06:16:37.035904",
   "clasificacion": [
+    {
+      "equipo": "UBAGO CENTURIAS",
+      "partidos_jugados": 13,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 3,
+      "puntos_favor": 974,
+      "puntos_contra": 813,
+      "diferencia": 161,
+      "puntos": 23,
+      "posicion": 1
+    },
     {
       "equipo": "UBJerez - EL MIRA",
       "partidos_jugados": 12,
@@ -12,17 +23,6 @@
       "puntos_contra": 708,
       "diferencia": 238,
       "puntos": 22,
-      "posicion": 1
-    },
-    {
-      "equipo": "UBAGO CENTURIAS",
-      "partidos_jugados": 12,
-      "partidos_ganados": 9,
-      "partidos_perdidos": 3,
-      "puntos_favor": 894,
-      "puntos_contra": 742,
-      "diferencia": 152,
-      "puntos": 21,
       "posicion": 2
     },
     {
@@ -92,6 +92,17 @@
       "posicion": 8
     },
     {
+      "equipo": "BEMOVE CENTER CBA",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 790,
+      "puntos_contra": 865,
+      "diferencia": -75,
+      "puntos": 15,
+      "posicion": 9
+    },
+    {
       "equipo": "XEREZ CD BALONCESTO",
       "partidos_jugados": 12,
       "partidos_ganados": 3,
@@ -100,17 +111,6 @@
       "puntos_contra": 882,
       "diferencia": -158,
       "puntos": 15,
-      "posicion": 9
-    },
-    {
-      "equipo": "BEMOVE CENTER CBA",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 719,
-      "puntos_contra": 785,
-      "diferencia": -66,
-      "puntos": 14,
       "posicion": 10
     }
   ]

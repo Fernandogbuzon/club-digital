@@ -1,29 +1,40 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:29:30.369605",
+  "ultima_actualizacion": "2026-02-15T06:21:04.453396",
   "clasificacion": [
     {
       "equipo": "ADESA 80",
-      "partidos_jugados": 5,
-      "partidos_ganados": 5,
+      "partidos_jugados": 6,
+      "partidos_ganados": 6,
       "partidos_perdidos": 0,
-      "puntos_favor": 352,
-      "puntos_contra": 232,
-      "diferencia": 120,
-      "puntos": 10,
+      "puntos_favor": 430,
+      "puntos_contra": 259,
+      "diferencia": 171,
+      "puntos": 12,
       "posicion": 1
     },
     {
-      "equipo": "COPICENTRO CBA AZUL",
-      "partidos_jugados": 5,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 0,
-      "puntos_favor": 309,
-      "puntos_contra": 196,
-      "diferencia": 113,
-      "puntos": 10,
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 417,
+      "puntos_contra": 285,
+      "diferencia": 132,
+      "puntos": 11,
       "posicion": 2
+    },
+    {
+      "equipo": "COPICENTRO CBA AZUL",
+      "partidos_jugados": 6,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 1,
+      "puntos_favor": 350,
+      "puntos_contra": 245,
+      "diferencia": 105,
+      "puntos": 11,
+      "posicion": 3
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI AMARILLO",
@@ -34,17 +45,6 @@
       "puntos_contra": 388,
       "diferencia": -73,
       "puntos": 10,
-      "posicion": 3
-    },
-    {
-      "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 6,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 3,
-      "puntos_favor": 368,
-      "puntos_contra": 244,
-      "diferencia": 124,
-      "puntos": 9,
       "posicion": 4
     },
     {
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "TAX CENTURIAS",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 1,
-      "partidos_perdidos": 4,
-      "puntos_favor": 183,
-      "puntos_contra": 312,
-      "diferencia": -129,
-      "puntos": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 210,
+      "puntos_contra": 390,
+      "diferencia": -180,
+      "puntos": 7,
       "posicion": 6
     },
     {

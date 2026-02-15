@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-14T12:28:08.155753",
+  "ultima_actualizacion": "2026-02-15T06:19:38.330784",
   "clasificacion": [
     {
       "equipo": "UNION LINENSE BALONCESTO",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "SD CANDRAY CONSAMARE CONSTRUCCIONES",
+      "partidos_jugados": 11,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 4,
+      "puntos_favor": 656,
+      "puntos_contra": 531,
+      "diferencia": 125,
+      "puntos": 18,
+      "posicion": 4
+    },
+    {
       "equipo": "CBC CÁDIZ",
       "partidos_jugados": 12,
       "partidos_ganados": 5,
@@ -45,28 +56,17 @@
       "puntos_contra": 583,
       "diferencia": -59,
       "puntos": 17,
-      "posicion": 4
-    },
-    {
-      "equipo": "SD CANDRAY CONSAMARE CONSTRUCCIONES",
-      "partidos_jugados": 10,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 4,
-      "puntos_favor": 611,
-      "puntos_contra": 493,
-      "diferencia": 118,
-      "puntos": 16,
       "posicion": 5
     },
     {
       "equipo": "UBJerez BLANCO - TOLDOS EL PORTAL",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 4,
-      "partidos_perdidos": 8,
-      "puntos_favor": 520,
-      "puntos_contra": 590,
-      "diferencia": -70,
-      "puntos": 16,
+      "partidos_perdidos": 9,
+      "puntos_favor": 558,
+      "puntos_contra": 635,
+      "diferencia": -77,
+      "puntos": 17,
       "posicion": 6
     },
     {

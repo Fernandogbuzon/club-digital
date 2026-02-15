@@ -1,18 +1,29 @@
 {
   "categoria": "Minibasket Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-14T12:33:53.310689",
+  "ultima_actualizacion": "2026-02-15T06:25:27.962686",
   "clasificacion": [
     {
       "equipo": "CBA",
-      "partidos_jugados": 11,
-      "partidos_ganados": 11,
+      "partidos_jugados": 12,
+      "partidos_ganados": 12,
       "partidos_perdidos": 0,
-      "puntos_favor": 657,
-      "puntos_contra": 289,
-      "diferencia": 368,
-      "puntos": 22,
+      "puntos_favor": 703,
+      "puntos_contra": 294,
+      "diferencia": 409,
+      "puntos": 24,
       "posicion": 1
+    },
+    {
+      "equipo": "BLUEPARROT OFFSHORE CBSFDO",
+      "partidos_jugados": 11,
+      "partidos_ganados": 10,
+      "partidos_perdidos": 1,
+      "puntos_favor": 635,
+      "puntos_contra": 268,
+      "diferencia": 367,
+      "puntos": 21,
+      "posicion": 2
     },
     {
       "equipo": "CENTURIAS SAN ROQUE",
@@ -23,17 +34,6 @@
       "puntos_contra": 370,
       "diferencia": 297,
       "puntos": 20,
-      "posicion": 2
-    },
-    {
-      "equipo": "BLUEPARROT OFFSHORE CBSFDO",
-      "partidos_jugados": 10,
-      "partidos_ganados": 9,
-      "partidos_perdidos": 1,
-      "puntos_favor": 578,
-      "puntos_contra": 251,
-      "diferencia": 327,
-      "puntos": 19,
       "posicion": 3
     },
     {
@@ -60,14 +60,47 @@
     },
     {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 10,
-      "partidos_ganados": 4,
+      "partidos_jugados": 11,
+      "partidos_ganados": 5,
       "partidos_perdidos": 6,
-      "puntos_favor": 521,
-      "puntos_contra": 576,
-      "diferencia": -55,
-      "puntos": 14,
+      "puntos_favor": 578,
+      "puntos_contra": 616,
+      "diferencia": -38,
+      "puntos": 16,
       "posicion": 6
+    },
+    {
+      "equipo": "HOTEL GRAN CIUDAD DEL SUR CB PUERTO REAL",
+      "partidos_jugados": 12,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 8,
+      "puntos_favor": 481,
+      "puntos_contra": 638,
+      "diferencia": -157,
+      "puntos": 16,
+      "posicion": 7
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 422,
+      "puntos_contra": 655,
+      "diferencia": -233,
+      "puntos": 15,
+      "posicion": 8
+    },
+    {
+      "equipo": "CB TREBUJENA",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 387,
+      "puntos_contra": 652,
+      "diferencia": -265,
+      "puntos": 15,
+      "posicion": 9
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
@@ -78,39 +111,6 @@
       "puntos_contra": 537,
       "diferencia": -117,
       "puntos": 14,
-      "posicion": 7
-    },
-    {
-      "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 378,
-      "puntos_contra": 603,
-      "diferencia": -225,
-      "puntos": 14,
-      "posicion": 8
-    },
-    {
-      "equipo": "CB TREBUJENA",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 370,
-      "puntos_contra": 595,
-      "diferencia": -225,
-      "puntos": 14,
-      "posicion": 9
-    },
-    {
-      "equipo": "HOTEL GRAN CIUDAD DEL SUR CB PUERTO REAL",
-      "partidos_jugados": 10,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 7,
-      "puntos_favor": 389,
-      "puntos_contra": 537,
-      "diferencia": -148,
-      "puntos": 13,
       "posicion": 10
     },
     {
@@ -126,13 +126,13 @@
     },
     {
       "equipo": "CB CIMBIS",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 0,
-      "partidos_perdidos": 10,
-      "puntos_favor": 57,
-      "puntos_contra": 464,
-      "diferencia": -407,
-      "puntos": 10,
+      "partidos_perdidos": 11,
+      "puntos_favor": 62,
+      "puntos_contra": 510,
+      "diferencia": -448,
+      "puntos": 11,
       "posicion": 12
     }
   ]

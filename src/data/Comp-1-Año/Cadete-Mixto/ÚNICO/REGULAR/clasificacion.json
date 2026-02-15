@@ -1,28 +1,28 @@
 {
   "categoria": "Cadete Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-14T12:33:09.296158",
+  "ultima_actualizacion": "2026-02-15T06:24:40.855753",
   "clasificacion": [
     {
       "equipo": "KROSAKI AMR CBA 2011",
-      "partidos_jugados": 11,
-      "partidos_ganados": 10,
+      "partidos_jugados": 12,
+      "partidos_ganados": 11,
       "partidos_perdidos": 1,
-      "puntos_favor": 727,
-      "puntos_contra": 335,
-      "diferencia": 392,
-      "puntos": 21,
+      "puntos_favor": 797,
+      "puntos_contra": 377,
+      "diferencia": 420,
+      "puntos": 23,
       "posicion": 1
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 11,
-      "partidos_ganados": 10,
+      "partidos_jugados": 12,
+      "partidos_ganados": 11,
       "partidos_perdidos": 1,
-      "puntos_favor": 801,
-      "puntos_contra": 514,
-      "diferencia": 287,
-      "puntos": 21,
+      "puntos_favor": 845,
+      "puntos_contra": 542,
+      "diferencia": 303,
+      "puntos": 23,
       "posicion": 2
     },
     {
@@ -60,14 +60,25 @@
     },
     {
       "equipo": "ALVA MERGABLO",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 6,
-      "partidos_perdidos": 5,
-      "puntos_favor": 643,
-      "puntos_contra": 584,
-      "diferencia": 59,
-      "puntos": 17,
+      "partidos_perdidos": 6,
+      "puntos_favor": 671,
+      "puntos_contra": 628,
+      "diferencia": 43,
+      "puntos": 18,
       "posicion": 6
+    },
+    {
+      "equipo": "EL 40&CUATRO CBSFDO",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 518,
+      "puntos_contra": 672,
+      "diferencia": -154,
+      "puntos": 15,
+      "posicion": 7
     },
     {
       "equipo": "UBJerez NEGRO",
@@ -78,17 +89,6 @@
       "puntos_contra": 718,
       "diferencia": -221,
       "puntos": 15,
-      "posicion": 7
-    },
-    {
-      "equipo": "EL 40&CUATRO CBSFDO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 476,
-      "puntos_contra": 602,
-      "diferencia": -126,
-      "puntos": 14,
       "posicion": 8
     },
     {

@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - REGULAR - GRUPO B",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-14T12:33:26.166187",
+  "ultima_actualizacion": "2026-02-15T06:24:59.368934",
   "clasificacion": [
     {
       "equipo": "CENTURIAS SAN ROQUE",
@@ -16,24 +16,24 @@
     },
     {
       "equipo": "AD MARIANISTAS",
-      "partidos_jugados": 8,
-      "partidos_ganados": 5,
+      "partidos_jugados": 9,
+      "partidos_ganados": 6,
       "partidos_perdidos": 3,
-      "puntos_favor": 419,
-      "puntos_contra": 368,
-      "diferencia": 51,
-      "puntos": 13,
+      "puntos_favor": 479,
+      "puntos_contra": 408,
+      "diferencia": 71,
+      "puntos": 15,
       "posicion": 2
     },
     {
       "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 8,
+      "partidos_jugados": 9,
       "partidos_ganados": 5,
-      "partidos_perdidos": 3,
-      "puntos_favor": 280,
-      "puntos_contra": 321,
-      "diferencia": -41,
-      "puntos": 13,
+      "partidos_perdidos": 4,
+      "puntos_favor": 320,
+      "puntos_contra": 381,
+      "diferencia": -61,
+      "puntos": 14,
       "posicion": 3
     },
     {

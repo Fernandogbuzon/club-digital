@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-14T12:27:47.289279",
+  "ultima_actualizacion": "2026-02-15T06:19:17.990635",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES ARISTON",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 11,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 4,
+      "puntos_favor": 662,
+      "puntos_contra": 682,
+      "diferencia": -20,
+      "puntos": 18,
+      "posicion": 2
+    },
+    {
       "equipo": "UBJerez GRIS",
       "partidos_jugados": 10,
       "partidos_ganados": 7,
@@ -23,7 +34,7 @@
       "puntos_contra": 357,
       "diferencia": 154,
       "puntos": 17,
-      "posicion": 2
+      "posicion": 3
     },
     {
       "equipo": "SD CANDRAY JOHN ATKINSON SCHOOL OF ENGLISH",
@@ -33,17 +44,6 @@
       "puntos_favor": 490,
       "puntos_contra": 330,
       "diferencia": 160,
-      "puntos": 16,
-      "posicion": 3
-    },
-    {
-      "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 10,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 4,
-      "puntos_favor": 578,
-      "puntos_contra": 638,
-      "diferencia": -60,
       "puntos": 16,
       "posicion": 4
     },
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "SUZUKI CAMPOSUR CBA",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 2,
-      "partidos_perdidos": 8,
-      "puntos_favor": 396,
-      "puntos_contra": 611,
-      "diferencia": -215,
-      "puntos": 12,
+      "partidos_perdidos": 9,
+      "puntos_favor": 440,
+      "puntos_contra": 695,
+      "diferencia": -255,
+      "puntos": 13,
       "posicion": 8
     },
     {
