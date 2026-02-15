@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:49:39.883631",
+  "ultima_actualizacion": "2026-02-15T15:53:18.503289",
   "clasificacion": [
     {
       "equipo": "ADESA 80",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "CBC CÁDIZ ROJO",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 448,
+      "puntos_contra": 381,
+      "diferencia": 67,
+      "puntos": 11,
+      "posicion": 4
+    },
+    {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI AMARILLO",
       "partidos_jugados": 7,
       "partidos_ganados": 3,
@@ -45,17 +56,6 @@
       "puntos_contra": 388,
       "diferencia": -73,
       "puntos": 10,
-      "posicion": 4
-    },
-    {
-      "equipo": "CBC CÁDIZ ROJO",
-      "partidos_jugados": 6,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 3,
-      "puntos_favor": 354,
-      "puntos_contra": 318,
-      "diferencia": 36,
-      "puntos": 9,
       "posicion": 5
     },
     {
@@ -71,13 +71,13 @@
     },
     {
       "equipo": "E.D.M. ARCOS",
-      "partidos_jugados": 6,
+      "partidos_jugados": 7,
       "partidos_ganados": 0,
-      "partidos_perdidos": 6,
-      "puntos_favor": 241,
-      "puntos_contra": 432,
-      "diferencia": -191,
-      "puntos": 6,
+      "partidos_perdidos": 7,
+      "puntos_favor": 304,
+      "puntos_contra": 526,
+      "diferencia": -222,
+      "puntos": 7,
       "posicion": 7
     }
   ]

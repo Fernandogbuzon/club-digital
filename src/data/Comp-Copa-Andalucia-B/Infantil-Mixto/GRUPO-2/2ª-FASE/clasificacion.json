@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:50:36.505554",
+  "ultima_actualizacion": "2026-02-15T15:54:11.970321",
   "clasificacion": [
     {
       "equipo": "CBA",
@@ -15,25 +15,25 @@
       "posicion": 1
     },
     {
-      "equipo": "CB LA INMACULADA",
+      "equipo": "ADESA 80",
       "partidos_jugados": 7,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 1,
-      "puntos_favor": 381,
-      "puntos_contra": 303,
-      "diferencia": 78,
-      "puntos": 13,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 0,
+      "puntos_favor": 459,
+      "puntos_contra": 206,
+      "diferencia": 253,
+      "puntos": 14,
       "posicion": 2
     },
     {
-      "equipo": "ADESA 80",
-      "partidos_jugados": 6,
+      "equipo": "CB LA INMACULADA",
+      "partidos_jugados": 8,
       "partidos_ganados": 6,
-      "partidos_perdidos": 0,
-      "puntos_favor": 381,
-      "puntos_contra": 178,
-      "diferencia": 203,
-      "puntos": 12,
+      "partidos_perdidos": 2,
+      "puntos_favor": 409,
+      "puntos_contra": 381,
+      "diferencia": 28,
+      "puntos": 14,
       "posicion": 3
     },
     {

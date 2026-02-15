@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:51:48.791993",
+  "ultima_actualizacion": "2026-02-15T15:55:24.202319",
   "clasificacion": [
     {
       "equipo": "CD SAN FELIPE NERI",
@@ -26,6 +26,17 @@
       "posicion": 2
     },
     {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 5,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 2,
+      "puntos_favor": 152,
+      "puntos_contra": 160,
+      "diferencia": -8,
+      "puntos": 8,
+      "posicion": 3
+    },
+    {
       "equipo": "CB CHIPIONA",
       "partidos_jugados": 5,
       "partidos_ganados": 1,
@@ -33,17 +44,6 @@
       "puntos_favor": 180,
       "puntos_contra": 218,
       "diferencia": -38,
-      "puntos": 6,
-      "posicion": 3
-    },
-    {
-      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 4,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 2,
-      "puntos_favor": 81,
-      "puntos_contra": 130,
-      "diferencia": -49,
       "puntos": 6,
       "posicion": 4
     },
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_ganados": 0,
-      "partidos_perdidos": 3,
-      "puntos_favor": 38,
-      "puntos_contra": 162,
-      "diferencia": -124,
-      "puntos": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 68,
+      "puntos_contra": 233,
+      "diferencia": -165,
+      "puntos": 4,
       "posicion": 6
     }
   ]

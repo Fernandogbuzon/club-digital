@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T11:47:44.340137",
+  "ultima_actualizacion": "2026-02-15T15:51:17.990944",
   "clasificacion": [
     {
       "equipo": "ATRIDEL CB PUERTO REAL",
@@ -71,24 +71,24 @@
     },
     {
       "equipo": "CBA",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 2,
-      "partidos_perdidos": 8,
-      "puntos_favor": 438,
-      "puntos_contra": 660,
-      "diferencia": -222,
-      "puntos": 12,
+      "partidos_perdidos": 9,
+      "puntos_favor": 506,
+      "puntos_contra": 742,
+      "diferencia": -236,
+      "puntos": 13,
       "posicion": 7
     },
     {
       "equipo": "GYMNASTICA PORTUENSE",
-      "partidos_jugados": 8,
-      "partidos_ganados": 2,
+      "partidos_jugados": 9,
+      "partidos_ganados": 3,
       "partidos_perdidos": 6,
-      "puntos_favor": 339,
-      "puntos_contra": 496,
-      "diferencia": -157,
-      "puntos": 10,
+      "puntos_favor": 421,
+      "puntos_contra": 564,
+      "diferencia": -143,
+      "puntos": 12,
       "posicion": 8
     },
     {

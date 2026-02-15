@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 4",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:50:43.329875",
+  "ultima_actualizacion": "2026-02-15T15:54:20.536678",
   "clasificacion": [
     {
       "equipo": "UBJerez AMARILLO",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "Las Delicias Vejer",
+      "partidos_jugados": 7,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 4,
+      "puntos_favor": 300,
+      "puntos_contra": 328,
+      "diferencia": -28,
+      "puntos": 10,
+      "posicion": 4
+    },
+    {
       "equipo": "EUROPEA DE EXPEDICIONES CBSFDO",
       "partidos_jugados": 7,
       "partidos_ganados": 3,
@@ -45,7 +56,7 @@
       "puntos_contra": 337,
       "diferencia": -41,
       "puntos": 10,
-      "posicion": 4
+      "posicion": 5
     },
     {
       "equipo": "CB TREBUJENA",
@@ -56,28 +67,17 @@
       "puntos_contra": 285,
       "diferencia": 26,
       "puntos": 9,
-      "posicion": 5
-    },
-    {
-      "equipo": "Las Delicias Vejer",
-      "partidos_jugados": 6,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 4,
-      "puntos_favor": 229,
-      "puntos_contra": 268,
-      "diferencia": -39,
-      "puntos": 8,
       "posicion": 6
     },
     {
       "equipo": "AVATEL CENTURIAS",
-      "partidos_jugados": 6,
+      "partidos_jugados": 7,
       "partidos_ganados": 0,
-      "partidos_perdidos": 6,
-      "puntos_favor": 212,
-      "puntos_contra": 361,
-      "diferencia": -149,
-      "puntos": 6,
+      "partidos_perdidos": 7,
+      "puntos_favor": 272,
+      "puntos_contra": 432,
+      "diferencia": -160,
+      "puntos": 7,
       "posicion": 7
     }
   ]

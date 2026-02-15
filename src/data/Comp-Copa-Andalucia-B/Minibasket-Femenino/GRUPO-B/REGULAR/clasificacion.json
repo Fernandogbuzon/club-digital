@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:52:42.249617",
+  "ultima_actualizacion": "2026-02-15T15:56:20.368323",
   "clasificacion": [
+    {
+      "equipo": "TU COLADA PERFECTA CB PUERTO REAL",
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 0,
+      "puntos_favor": 636,
+      "puntos_contra": 260,
+      "diferencia": 376,
+      "puntos": 22,
+      "posicion": 1
+    },
     {
       "equipo": "Gazul Forestal Alcalá",
       "partidos_jugados": 11,
@@ -12,17 +23,6 @@
       "puntos_contra": 189,
       "diferencia": 362,
       "puntos": 21,
-      "posicion": 1
-    },
-    {
-      "equipo": "TU COLADA PERFECTA CB PUERTO REAL",
-      "partidos_jugados": 10,
-      "partidos_ganados": 10,
-      "partidos_perdidos": 0,
-      "puntos_favor": 589,
-      "puntos_contra": 253,
-      "diferencia": 336,
-      "puntos": 20,
       "posicion": 2
     },
     {
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 262,
+      "puntos_contra": 548,
+      "diferencia": -286,
+      "puntos": 12,
+      "posicion": 5
+    },
+    {
       "equipo": "AMOR DE DIOS",
       "partidos_jugados": 9,
       "partidos_ganados": 2,
@@ -56,7 +67,7 @@
       "puntos_contra": 446,
       "diferencia": -114,
       "puntos": 11,
-      "posicion": 5
+      "posicion": 6
     },
     {
       "equipo": "FENIE ENERGÍA CBC CÁDIZ",
@@ -67,7 +78,7 @@
       "puntos_contra": 560,
       "diferencia": -200,
       "puntos": 11,
-      "posicion": 6
+      "posicion": 7
     },
     {
       "equipo": "CBPORTUENSE EDASE",
@@ -77,17 +88,6 @@
       "puntos_favor": 236,
       "puntos_contra": 481,
       "diferencia": -245,
-      "puntos": 11,
-      "posicion": 7
-    },
-    {
-      "equipo": "GYMNASTICA PORTUENSE",
-      "partidos_jugados": 9,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 7,
-      "puntos_favor": 255,
-      "puntos_contra": 501,
-      "diferencia": -246,
       "puntos": 11,
       "posicion": 8
     }

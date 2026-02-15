@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:49:36.537784",
+  "ultima_actualizacion": "2026-02-15T15:53:14.891940",
   "clasificacion": [
     {
       "equipo": "SIERRA NET-CB PRADO",
@@ -48,6 +48,28 @@
       "posicion": 4
     },
     {
+      "equipo": "CD DON BOSCO`88",
+      "partidos_jugados": 6,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 4,
+      "puntos_favor": 311,
+      "puntos_contra": 344,
+      "diferencia": -33,
+      "puntos": 8,
+      "posicion": 5
+    },
+    {
+      "equipo": "CBP AYUDATPYMES",
+      "partidos_jugados": 7,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 6,
+      "puntos_favor": 376,
+      "puntos_contra": 427,
+      "diferencia": -51,
+      "puntos": 8,
+      "posicion": 6
+    },
+    {
       "equipo": "C.A.B.U.",
       "partidos_jugados": 5,
       "partidos_ganados": 2,
@@ -56,28 +78,6 @@
       "puntos_contra": 307,
       "diferencia": 14,
       "puntos": 7,
-      "posicion": 5
-    },
-    {
-      "equipo": "CD DON BOSCO`88",
-      "partidos_jugados": 5,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 3,
-      "puntos_favor": 250,
-      "puntos_contra": 277,
-      "diferencia": -27,
-      "puntos": 7,
-      "posicion": 6
-    },
-    {
-      "equipo": "CBP AYUDATPYMES",
-      "partidos_jugados": 6,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 6,
-      "puntos_favor": 309,
-      "puntos_contra": 366,
-      "diferencia": -57,
-      "puntos": 6,
       "posicion": 7
     }
   ]

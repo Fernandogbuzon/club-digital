@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-15T11:54:13.088621",
+  "ultima_actualizacion": "2026-02-15T15:57:47.066877",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES BLV PROYECT 2025",
@@ -27,24 +27,24 @@
     },
     {
       "equipo": "ENSO - MERGABLO",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 7,
-      "partidos_perdidos": 3,
-      "puntos_favor": 592,
-      "puntos_contra": 428,
-      "diferencia": 164,
-      "puntos": 17,
+      "partidos_perdidos": 4,
+      "puntos_favor": 635,
+      "puntos_contra": 481,
+      "diferencia": 154,
+      "puntos": 18,
       "posicion": 3
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 10,
-      "partidos_ganados": 6,
+      "partidos_jugados": 11,
+      "partidos_ganados": 7,
       "partidos_perdidos": 4,
-      "puntos_favor": 493,
-      "puntos_contra": 527,
-      "diferencia": -34,
-      "puntos": 16,
+      "puntos_favor": 546,
+      "puntos_contra": 570,
+      "diferencia": -24,
+      "puntos": 18,
       "posicion": 4
     },
     {

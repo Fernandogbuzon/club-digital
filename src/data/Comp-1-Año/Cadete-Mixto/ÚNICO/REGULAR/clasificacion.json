@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-15T11:53:14.707358",
+  "ultima_actualizacion": "2026-02-15T15:56:52.314287",
   "clasificacion": [
     {
       "equipo": "KROSAKI AMR CBA 2011",
@@ -70,6 +70,17 @@
       "posicion": 6
     },
     {
+      "equipo": "LIVENDO ALCALÁ DE LOS GAZULES",
+      "partidos_jugados": 12,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 8,
+      "puntos_favor": 460,
+      "puntos_contra": 652,
+      "diferencia": -192,
+      "puntos": 16,
+      "posicion": 7
+    },
+    {
       "equipo": "EL 40&CUATRO CBSFDO",
       "partidos_jugados": 12,
       "partidos_ganados": 3,
@@ -78,7 +89,7 @@
       "puntos_contra": 672,
       "diferencia": -154,
       "puntos": 15,
-      "posicion": 7
+      "posicion": 8
     },
     {
       "equipo": "UBJerez NEGRO",
@@ -89,18 +100,18 @@
       "puntos_contra": 718,
       "diferencia": -221,
       "puntos": 15,
-      "posicion": 8
+      "posicion": 9
     },
     {
-      "equipo": "LIVENDO ALCALÁ DE LOS GAZULES",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 401,
-      "puntos_contra": 599,
-      "diferencia": -198,
-      "puntos": 14,
-      "posicion": 9
+      "equipo": "MIELERIA DE PAYAN-CB PRADO",
+      "partidos_jugados": 12,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 11,
+      "puntos_favor": 419,
+      "puntos_contra": 686,
+      "diferencia": -267,
+      "puntos": 13,
+      "posicion": 10
     },
     {
       "equipo": "CD BCTO. BARBATE 23",
@@ -111,17 +122,6 @@
       "puntos_contra": 735,
       "diferencia": -415,
       "puntos": 13,
-      "posicion": 10
-    },
-    {
-      "equipo": "MIELERIA DE PAYAN-CB PRADO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 10,
-      "puntos_favor": 366,
-      "puntos_contra": 627,
-      "diferencia": -261,
-      "puntos": 12,
       "posicion": 11
     }
   ]

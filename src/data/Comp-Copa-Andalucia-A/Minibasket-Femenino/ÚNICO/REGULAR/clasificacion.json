@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T11:47:57.455831",
+  "ultima_actualizacion": "2026-02-15T15:51:31.474621",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES ARISTON",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 11,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 3,
+      "puntos_favor": 570,
+      "puntos_contra": 394,
+      "diferencia": 176,
+      "puntos": 19,
+      "posicion": 2
+    },
+    {
       "equipo": "CBPORTUENSE EDASE",
       "partidos_jugados": 11,
       "partidos_ganados": 7,
@@ -23,17 +34,6 @@
       "puntos_contra": 682,
       "diferencia": -20,
       "puntos": 18,
-      "posicion": 2
-    },
-    {
-      "equipo": "UBJerez GRIS",
-      "partidos_jugados": 10,
-      "partidos_ganados": 7,
-      "partidos_perdidos": 3,
-      "puntos_favor": 511,
-      "puntos_contra": 357,
-      "diferencia": 154,
-      "puntos": 17,
       "posicion": 3
     },
     {
@@ -59,6 +59,17 @@
       "posicion": 5
     },
     {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 11,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 7,
+      "puntos_favor": 457,
+      "puntos_contra": 532,
+      "diferencia": -75,
+      "puntos": 15,
+      "posicion": 6
+    },
+    {
       "equipo": "CASA PURI ULB",
       "partidos_jugados": 11,
       "partidos_ganados": 4,
@@ -67,17 +78,6 @@
       "puntos_contra": 557,
       "diferencia": -98,
       "puntos": 15,
-      "posicion": 6
-    },
-    {
-      "equipo": "ADESA 80",
-      "partidos_jugados": 10,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 6,
-      "puntos_favor": 420,
-      "puntos_contra": 473,
-      "diferencia": -53,
-      "puntos": 14,
       "posicion": 7
     },
     {

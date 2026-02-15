@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Femenino - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-15T11:53:46.060259",
+  "ultima_actualizacion": "2026-02-15T15:57:19.319032",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES",
@@ -59,6 +59,17 @@
       "posicion": 5
     },
     {
+      "equipo": "SD CANDRAY",
+      "partidos_jugados": 12,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 8,
+      "puntos_favor": 412,
+      "puntos_contra": 612,
+      "diferencia": -200,
+      "puntos": 16,
+      "posicion": 6
+    },
+    {
       "equipo": "C.A.B.U.",
       "partidos_jugados": 12,
       "partidos_ganados": 3,
@@ -67,7 +78,7 @@
       "puntos_contra": 718,
       "diferencia": -337,
       "puntos": 15,
-      "posicion": 6
+      "posicion": 7
     },
     {
       "equipo": "UBJerez NEGRO",
@@ -78,28 +89,17 @@
       "puntos_contra": 481,
       "diferencia": -55,
       "puntos": 14,
-      "posicion": 7
-    },
-    {
-      "equipo": "SD CANDRAY",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 360,
-      "puntos_contra": 596,
-      "diferencia": -236,
-      "puntos": 14,
       "posicion": 8
     },
     {
       "equipo": "FENIE ENERGÍA CBC CÁDIZ",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 0,
-      "partidos_perdidos": 11,
-      "puntos_favor": 239,
-      "puntos_contra": 646,
-      "diferencia": -407,
-      "puntos": 11,
+      "partidos_perdidos": 12,
+      "puntos_favor": 255,
+      "puntos_contra": 698,
+      "diferencia": -443,
+      "puntos": 12,
       "posicion": 9
     }
   ]

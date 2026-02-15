@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:52:38.997334",
+  "ultima_actualizacion": "2026-02-15T15:56:16.834074",
   "clasificacion": [
+    {
+      "equipo": "CB TREBUJENA",
+      "partidos_jugados": 10,
+      "partidos_ganados": 9,
+      "partidos_perdidos": 1,
+      "puntos_favor": 505,
+      "puntos_contra": 227,
+      "diferencia": 278,
+      "puntos": 19,
+      "posicion": 1
+    },
     {
       "equipo": "C.A.B.U.",
       "partidos_jugados": 9,
@@ -12,17 +23,6 @@
       "puntos_contra": 103,
       "diferencia": 346,
       "puntos": 18,
-      "posicion": 1
-    },
-    {
-      "equipo": "CB TREBUJENA",
-      "partidos_jugados": 9,
-      "partidos_ganados": 8,
-      "partidos_perdidos": 1,
-      "puntos_favor": 462,
-      "puntos_contra": 225,
-      "diferencia": 237,
-      "puntos": 17,
       "posicion": 2
     },
     {
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "UBJerez BLANCO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 8,
+      "puntos_favor": 167,
+      "puntos_contra": 412,
+      "diferencia": -245,
+      "puntos": 12,
+      "posicion": 4
+    },
+    {
       "equipo": "CB SAN FERNANDO",
       "partidos_jugados": 9,
       "partidos_ganados": 3,
@@ -44,17 +55,6 @@
       "puntos_favor": 268,
       "puntos_contra": 401,
       "diferencia": -133,
-      "puntos": 11,
-      "posicion": 4
-    },
-    {
-      "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 9,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 7,
-      "puntos_favor": 165,
-      "puntos_contra": 369,
-      "diferencia": -204,
       "puntos": 11,
       "posicion": 5
     },

@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Femenino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:51:32.071317",
+  "ultima_actualizacion": "2026-02-15T15:55:10.254367",
   "clasificacion": [
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "CD ADC LA ALGAIDA",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 386,
+      "puntos_contra": 551,
+      "diferencia": -165,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
       "equipo": "CEMARSER CB PUERTO REAL",
       "partidos_jugados": 8,
       "partidos_ganados": 4,
@@ -56,7 +67,7 @@
       "puntos_contra": 301,
       "diferencia": -8,
       "puntos": 12,
-      "posicion": 5
+      "posicion": 6
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
@@ -66,17 +77,6 @@
       "puntos_favor": 311,
       "puntos_contra": 492,
       "diferencia": -181,
-      "puntos": 12,
-      "posicion": 6
-    },
-    {
-      "equipo": "CD ADC LA ALGAIDA",
-      "partidos_jugados": 10,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 8,
-      "puntos_favor": 319,
-      "puntos_contra": 528,
-      "diferencia": -209,
       "puntos": 12,
       "posicion": 7
     },
@@ -93,13 +93,13 @@
     },
     {
       "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 0,
-      "partidos_perdidos": 10,
-      "puntos_favor": 178,
-      "puntos_contra": 559,
-      "diferencia": -381,
-      "puntos": 10,
+      "partidos_perdidos": 11,
+      "puntos_favor": 201,
+      "puntos_contra": 626,
+      "diferencia": -425,
+      "puntos": 11,
       "posicion": 9
     }
   ]

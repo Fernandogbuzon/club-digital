@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-15T11:51:35.585570",
+  "ultima_actualizacion": "2026-02-15T15:55:13.167277",
   "clasificacion": [
     {
       "equipo": "OXXI-CB PRADO",
@@ -27,13 +27,13 @@
     },
     {
       "equipo": "SD CANDRAY MAIRANDU",
-      "partidos_jugados": 10,
-      "partidos_ganados": 7,
+      "partidos_jugados": 11,
+      "partidos_ganados": 8,
       "partidos_perdidos": 3,
-      "puntos_favor": 502,
-      "puntos_contra": 383,
-      "diferencia": 119,
-      "puntos": 17,
+      "puntos_favor": 573,
+      "puntos_contra": 418,
+      "diferencia": 155,
+      "puntos": 19,
       "posicion": 3
     },
     {
@@ -93,13 +93,13 @@
     },
     {
       "equipo": "CB CIMBIS",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 0,
-      "partidos_perdidos": 9,
-      "puntos_favor": 263,
-      "puntos_contra": 544,
-      "diferencia": -281,
-      "puntos": 9,
+      "partidos_perdidos": 10,
+      "puntos_favor": 298,
+      "puntos_contra": 615,
+      "diferencia": -317,
+      "puntos": 10,
       "posicion": 9
     }
   ]
