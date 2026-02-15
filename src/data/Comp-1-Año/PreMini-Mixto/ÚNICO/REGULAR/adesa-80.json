@@ -87,7 +87,7 @@
     "hora": "",
     "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
     "es_resultado": false,
-    "estado": "proximo",
+    "estado": "esperando_resultado",
     "jornada": "Jornada 5 - 08/02/2026",
     "categoria": "PreMini Mixto - REGULAR - ÚNICO",
     "equipo": "ADESA 80",
