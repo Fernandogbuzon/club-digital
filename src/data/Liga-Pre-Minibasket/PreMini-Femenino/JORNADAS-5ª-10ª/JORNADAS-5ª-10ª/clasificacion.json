@@ -1,6 +1,51 @@
 {
   "categoria": "PreMini Femenino - JORNADAS 5ª-10ª - JORNADAS 5ª-10ª",
   "competicion": "Liga Pre Minibasket",
-  "ultima_actualizacion": "2026-02-16T00:15:31.091099",
-  "clasificacion": []
+  "ultima_actualizacion": "2026-02-16T14:38:11.234426",
+  "clasificacion": [
+    {
+      "equipo": "CD SAN FELIPE NERI 2016",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 1
+    },
+    {
+      "equipo": "CB PORTUENSE EDASE 2016",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 2
+    },
+    {
+      "equipo": "LA MAR DE GAMBAS CB PUERTO REAL",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 3
+    },
+    {
+      "equipo": "CD SAN FELIPE NERI 2017",
+      "partidos_jugados": 1,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 0,
+      "puntos_favor": 0,
+      "puntos_contra": 0,
+      "diferencia": 0,
+      "puntos": 0,
+      "posicion": 4
+    }
+  ]
 }

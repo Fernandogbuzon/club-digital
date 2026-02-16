@@ -1,7 +1,7 @@
 {
   "categoria": "Babybasket Mixto - REGULAR - GRUPO A",
   "competicion": "Programa Babybasket 20182019",
-  "ultima_actualizacion": "2026-02-16T00:15:58.492336",
+  "ultima_actualizacion": "2026-02-16T14:38:38.978628",
   "clasificacion": [
     {
       "equipo": "UBJerez NEGRO",
@@ -16,7 +16,7 @@
     },
     {
       "equipo": "CARPE DIEM VERDE CBSFDO (M)",
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -38,7 +38,7 @@
     },
     {
       "equipo": "ADESA 80 (A)",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,

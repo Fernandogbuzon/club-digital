@@ -1,11 +1,11 @@
 {
   "categoria": "Babybasket Mixto - REGULAR - GRUPO C",
   "competicion": "Programa Babybasket 20182019",
-  "ultima_actualizacion": "2026-02-16T00:16:06.340055",
+  "ultima_actualizacion": "2026-02-16T14:38:46.130246",
   "clasificacion": [
     {
       "equipo": "CB PORTUENSE AYUDATPYMES",
-      "partidos_jugados": 6,
+      "partidos_jugados": 7,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -16,7 +16,7 @@
     },
     {
       "equipo": "AUTOLAVADO WAP-MERGABLO",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -27,7 +27,7 @@
     },
     {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 6,
+      "partidos_jugados": 7,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -38,7 +38,7 @@
     },
     {
       "equipo": "CARPE DIEM BLANCO CBSFDO (F)",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
