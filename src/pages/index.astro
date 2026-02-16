@@ -270,10 +270,13 @@ const ultimoResultado: any = resultadosPasados[0];
             const puntosAdesa = esAdesaLocal ? puntosLocal : puntosVisitante;
             const puntosRival = esAdesaLocal ? puntosVisitante : puntosLocal;
             
+            // Comprobar si hay resultado disponible
+            const sinResultado = !ultimoResultado.marcador_local && !ultimoResultado.marcador_visitante;
+            
             // Determinar si es empate 0-0 o contra DESCANSA
             const esEmpate00 = puntosLocal === 0 && puntosVisitante === 0;
             const contraDescansa = ultimoResultado.rival?.toUpperCase().includes('DESCANSA');
-            const borderGris = esEmpate00 || contraDescansa;
+            const borderGris = esEmpate00 || contraDescansa || sinResultado;
             
             const haGanadoAdesa = ultimoResultado.marcador_local && 
                                   ultimoResultado.marcador_visitante && 
@@ -301,7 +304,7 @@ const ultimoResultado: any = resultadosPasados[0];
                         <p class="text-center text-sm font-extrabold text-gray-900 break-words leading-tight">
                           {nombreLocal}
                         </p>
-                        {ultimoResultado.marcador_local && ultimoResultado.marcador_visitante && (
+                        {ultimoResultado.marcador_local && ultimoResultado.marcador_visitante ? (
                           <p class={`text-4xl ${
                             esAdesaLocal
                               ? (puntosAdesa > puntosRival ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
@@ -309,18 +312,24 @@ const ultimoResultado: any = resultadosPasados[0];
                           }`}>
                             {ultimoResultado.marcador_local}
                           </p>
+                        ) : sinResultado && (
+                          <p class="text-2xl font-bold text-gray-300">-</p>
                         )}
                       </div>
                       
                       <div class="flex items-center justify-center shrink-0 px-4">
-                        <p class="text-lg font-black text-gray-400">VS</p>
+                        {sinResultado ? (
+                          <p class="text-sm font-bold text-gray-400">S/R</p>
+                        ) : (
+                          <p class="text-lg font-black text-gray-400">VS</p>
+                        )}
                       </div>
                       
                       <div class="flex flex-col items-center justify-center gap-3">
                         <p class="text-center text-sm font-extrabold text-gray-900 break-words leading-tight">
                           {nombreVisitante}
                         </p>
-                        {ultimoResultado.marcador_local && ultimoResultado.marcador_visitante && (
+                        {ultimoResultado.marcador_local && ultimoResultado.marcador_visitante ? (
                           <p class={`text-4xl ${
                             !esAdesaLocal
                               ? (puntosAdesa > puntosRival ? 'font-extrabold text-adesa-green' : 'font-black text-gray-400')
@@ -328,6 +337,8 @@ const ultimoResultado: any = resultadosPasados[0];
                           }`}>
                             {ultimoResultado.marcador_visitante}
                           </p>
+                        ) : sinResultado && (
+                          <p class="text-2xl font-bold text-gray-300">-</p>
                         )}
                       </div>
                       

@@ -45,6 +45,16 @@ partidos = partidos.filter(p => {
   return true;
 });
 
+// Filtrar Liga Verano El Puerto
+partidos = partidos.filter(p => !p.competicion.toLowerCase().includes('liga verano'));
+
+// ── Helper de temporada ──────────────────────────────────────────────────────
+function getTemporada(fechaStr: string): string {
+  const [d, m, y] = fechaStr.split('/').map(Number);
+  if (m >= 9) return `${y % 100}/${(y + 1) % 100}`;
+  return `${(y - 1) % 100}/${y % 100}`;
+}
+
 // ── Parseo de fechas ─────────────────────────────────────────────────────────
 function parseFecha(fechaStr: string, horaStr: string): Date {
   const [d, m, y] = fechaStr.split('/').map(Number);
@@ -125,6 +135,8 @@ const partidosJSON = JSON.stringify(partidos.map(p => {
     _headerPabellon: hdr.pabellon,
     _headerEsLocal: hdr.esLocal,
     _fechaCorta: fechaCorta(p.fecha),
+    _temporada: getTemporada(p.fecha),
+    _catBase: p.categoria.split(' - ')[0].trim(),
   };
 }));
 const mesesJSON = JSON.stringify(mesesArr);
@@ -272,7 +284,7 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
   /* ─── Scores ─── */
   .mc-scores {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 0;
   }
   .mc-score {
@@ -426,6 +438,21 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
     color: #fff;
     animation: mc-blink 1.2s ease-in-out infinite;
   }
+  .mc-btn-gray {
+    background: #9ca3af;
+    color: #fff;
+  }
+
+  /* ─── No result ─── */
+  .mc-no-result {
+    font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #9ca3af;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
 
   /* ─── Month nav ─── */
   .mn-btn {
@@ -489,6 +516,11 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
       const div = document.createElement('div');
       div.className = 'mc';
       div.dataset.ts = p._ts;
+      div.dataset.temporada = p._temporada || '';
+      div.dataset.catBase = p._catBase || '';
+      div.dataset.competicion = p.competicion || '';
+      div.dataset.liga = p.categoria || '';
+      div.dataset.rival = p.rival || '';
 
       const ts = p._ts;
       const isPlayed = p.es_resultado;
@@ -496,6 +528,7 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
       const diffH = diffMs / (1000 * 60 * 60);
       const isLive = !isPlayed && diffH <= 0 && diffH > -3;
       const isUrgent = !isPlayed && diffH > 0 && diffH <= 24;
+      const isPastNoResult = !isPlayed && diffH <= -3;
 
       // Victory check
       let teamWon = false;
@@ -528,22 +561,29 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
       if (isPlayed) {
         const ml = p.marcador_local;
         const mv = p.marcador_visitante;
-        let lc, vc;
-        const isTie = ml === mv;
-        if (isTie) {
-          // Empate (incluye 0-0): ambos en negro
-          lc = 's-neutral';
-          vc = 's-neutral';
-        } else if (p.ubicacion === 'Local') {
-          lc = teamWon ? 's-win' : 's-loss';
-          vc = 's-neutral';
+        const tieneResultado = ml !== null && mv !== null && ml !== '' && mv !== '';
+        if (tieneResultado) {
+          let lc, vc;
+          const isTie = ml === mv;
+          if (isTie) {
+            // Empate (incluye 0-0): ambos en negro
+            lc = 's-neutral';
+            vc = 's-neutral';
+          } else if (p.ubicacion === 'Local') {
+            lc = teamWon ? 's-win' : 's-loss';
+            vc = 's-neutral';
+          } else {
+            lc = 's-neutral';
+            vc = teamWon ? 's-win' : 's-loss';
+          }
+          leftHTML = `<div class="mc-scores"><span class="mc-score ${lc}">${ml}</span><span class="mc-sep">-</span><span class="mc-score ${vc}">${mv}</span></div>`;
         } else {
-          lc = 's-neutral';
-          vc = teamWon ? 's-win' : 's-loss';
+          leftHTML = `<div class="mc-no-result" style="color:#dc2626;">APLAZADO</div>`;
         }
-        leftHTML = `<div class="mc-scores"><span class="mc-score ${lc}">${ml}</span><span class="mc-sep">-</span><span class="mc-score ${vc}">${mv}</span></div>`;
       } else if (isLive) {
         leftHTML = `<span class="mc-live">EN JUEGO</span>`;
+      } else if (isPastNoResult) {
+        leftHTML = `<div class="mc-no-result" style="color:#dc2626;">APLAZADO</div>`;
       } else if (isUrgent) {
         leftHTML = `<span class="mc-countdown" data-countdown="${ts}"></span>`;
       } else {
@@ -553,10 +593,13 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
 
       // ── Footer button ──
       let btnHTML = '';
-      if (isPlayed) {
+      const tieneRes = p.marcador_local !== null && p.marcador_visitante !== null && p.marcador_local !== '' && p.marcador_visitante !== '';
+      if (tieneRes) {
         btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-dark">${arrowSvg} Resultado</div></div>`;
       } else if (isLive) {
         btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-red">En Directo</div></div>`;
+      } else if (isPlayed || isPastNoResult) {
+        btnHTML = `<div class="mc-foot"><div class="mc-btn" style="background:#dc2626;color:#fff;">Aplazado</div></div>`;
       } else {
         btnHTML = `<div class="mc-foot"><div class="mc-btn mc-btn-green">Próximo</div></div>`;
       }
@@ -676,33 +719,81 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
       return div;
     }
 
-    // ── Render ──
-    partidos.forEach(p => track.appendChild(createCard(p)));
-
-    // ── Month nav ──
+    // ── Filtering state ──
+    const allPartidos = partidos;
+    let filteredPartidos = allPartidos;
+    let filteredMeses = meses;
     let activeMonthKey = mesActualKey;
+
+    const MESES_N = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+
+    function recalcMeses(list) {
+      const map = new Map();
+      list.forEach((p, idx) => {
+        const f = new Date(p._ts);
+        const key = `${f.getFullYear()}-${String(f.getMonth()).padStart(2, '0')}`;
+        if (!map.has(key)) map.set(key, idx);
+      });
+      return Array.from(map.entries()).map(([key, idx]) => {
+        const [y, m] = key.split('-').map(Number);
+        return { key, year: y, month: m, label: MESES_N[m], firstIdx: idx };
+      });
+    }
 
     function renderMonths() {
       monthButtons.innerHTML = '';
-      meses.forEach(m => {
+      filteredMeses.forEach(m => {
         const btn = document.createElement('button');
         btn.className = `mn-btn ${m.key === activeMonthKey ? 'active' : ''}`;
         btn.textContent = m.label;
-        btn.addEventListener('click', () => scrollToMonth(m.key, m.firstIdx));
+        btn.addEventListener('click', () => {
+          activeMonthKey = m.key;
+          renderMonths();
+          const cards = track.querySelectorAll('.mc');
+          if (cards[m.firstIdx]) cards[m.firstIdx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        });
         monthButtons.appendChild(btn);
       });
     }
 
-    function scrollToMonth(key, idx) {
-      activeMonthKey = key;
+    function renderCarousel(scrollToday) {
+      track.innerHTML = '';
+      filteredPartidos.forEach(p => track.appendChild(createCard(p)));
+      filteredMeses = recalcMeses(filteredPartidos);
+      activeMonthKey = mesActualKey;
       renderMonths();
-      const cards = track.querySelectorAll('.mc');
-      if (cards[idx]) cards[idx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      if (scrollToday !== false) {
+        requestAnimationFrame(() => {
+          let ci = 0, cd = Infinity;
+          filteredPartidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
+          const cards = track.querySelectorAll('.mc');
+          if (cards[ci]) cards[ci].scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
+        });
+      }
     }
 
+    // ── Filter function (called from parent page) ──
+    window.__filterCarousel = function(opts) {
+      filteredPartidos = allPartidos.filter(p => {
+        if (opts.temporada && p._temporada !== opts.temporada) return false;
+        if (opts.catBase && p._catBase !== opts.catBase) return false;
+        return true;
+      });
+      renderCarousel(true);
+    };
+
+    window.__resetCarouselFilter = function() {
+      filteredPartidos = allPartidos;
+      renderCarousel(true);
+    };
+
+    // ── Initial render ──
+    renderCarousel(true);
+
+    // ── Nav buttons ──
     document.getElementById('nav-today').addEventListener('click', () => {
       let ci = 0, cd = Infinity;
-      partidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
+      filteredPartidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
       activeMonthKey = mesActualKey;
       renderMonths();
       track.querySelectorAll('.mc')[ci]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
@@ -739,9 +830,8 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
           const d = Math.abs(r.left + r.width / 2 - cx);
           if (d < cd) { cd = d; ci = i; }
         });
-        const p = partidos[ci];
-        if (p) {
-          const dt = new Date(p._ts);
+        if (filteredPartidos[ci]) {
+          const dt = new Date(filteredPartidos[ci]._ts);
           const k = `${dt.getFullYear()}-${String(dt.getMonth()).padStart(2, '0')}`;
           if (k !== activeMonthKey) { activeMonthKey = k; renderMonths(); }
         }
@@ -772,14 +862,6 @@ const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
     }
     updateCountdowns();
     setInterval(updateCountdowns, 1000);
-
-    // ── Init scroll to today ──
-    renderMonths();
-    requestAnimationFrame(() => {
-      let ci = 0, cd = Infinity;
-      partidos.forEach((p, i) => { const d = Math.abs(p._ts - now); if (d < cd) { cd = d; ci = i; } });
-      track.querySelectorAll('.mc')[ci]?.scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
-    });
 
     // Drag scroll (desktop)
     let isDown = false, sx, sl;

@@ -11,6 +11,13 @@ function derivarNombreEquipo(categoria: string, competicion: string): string {
   return base;
 }
 
+// Helper de temporada
+function getTemporada(fechaStr: string): string {
+  const [d, m, y] = fechaStr.split('/').map(Number);
+  if (m >= 9) return `${y % 100}/${(y + 1) % 100}`;
+  return `${(y - 1) % 100}/${y % 100}`;
+}
+
 // Momento actual
 const ahora = new Date();
 
@@ -21,6 +28,7 @@ const partidosPorCat: Record<string, any[]> = {};
 
 for (const [ruta, mod] of Object.entries(todosArchivos)) {
   if (ruta.includes('/equipos/') || ruta.endsWith('/partidos.json')) continue;
+  if (ruta.toLowerCase().includes('liga-verano')) continue;
   const datos = (mod as any).default || mod;
   if (ruta.endsWith('/clasificacion.json') && datos?.categoria) {
     clasificacionesPorCat[datos.categoria] = datos;
@@ -126,7 +134,8 @@ for (const [teamName, eqData] of Object.entries(equiposMapa)) {
     pg: row?.partidos_ganados || 0,
     pp: row?.partidos_perdidos || 0,
     pts: row?.puntos || 0,
-    prox: prox ? { r: prox.rival, f: prox.fecha, u: prox.ubicacion } : null
+    prox: prox ? { r: prox.rival, f: prox.fecha, u: prox.ubicacion } : null,
+    temporada: activeMatches[0]?.fecha ? getTemporada(activeMatches[0].fecha) : '25/26'
   };
 }
 const equiposOverview = Object.values(teamCards).sort((a: any, b: any) => {
@@ -136,8 +145,47 @@ const equiposOverview = Object.values(teamCards).sort((a: any, b: any) => {
   return na !== nb ? nb - na : a.nombre.localeCompare(b.nombre);
 });
 
+// ========== TEMPORADAS ==========
+const currentMonth = ahora.getMonth() + 1;
+const currentYear = ahora.getFullYear();
+const currentSeason = currentMonth >= 9
+  ? `${currentYear % 100}/${(currentYear + 1) % 100}`
+  : `${(currentYear - 1) % 100}/${currentYear % 100}`;
+
+const allSeasons = new Set<string>();
+for (const [cat, matches] of Object.entries(partidosPorCat)) {
+  if (!catsAdesa.has(cat)) continue;
+  for (const m of matches) {
+    allSeasons.add(getTemporada(m.fecha));
+  }
+}
+const nextSeasonYear = currentMonth >= 9 ? currentYear + 1 : currentYear;
+const nextSeason = `${nextSeasonYear % 100}/${(nextSeasonYear + 1) % 100}`;
+allSeasons.add(nextSeason);
+if (!allSeasons.has(currentSeason)) allSeasons.add(currentSeason);
+const seasonsArr = Array.from(allSeasons).sort();
+
+// ========== FASES/GRUPOS POR EQUIPO ==========
+const teamPhases: Record<string, Array<{cat: string, phase: string, group: string, isActive: boolean}>> = {};
+for (const [teamName, eqData] of Object.entries(equiposMapa)) {
+  const eqCats = [...new Set(eqData.map((p: any) => p.categoria as string))];
+  const options = eqCats.filter(c => catsAdesa.has(c)).map(cat => {
+    const parts = cat.split(' - ');
+    const phase = parts.length >= 2 ? parts[1].trim() : 'REGULAR';
+    const group = parts.length >= 3 ? parts.slice(2).join(' - ').trim() : 'ÚNICO';
+    const ms = partidosPorCat[cat] || [];
+    const hasUnplayed = ms.some((p: any) => p.marcador_local === null || p.marcador_local === undefined || p.marcador_local === '');
+    return { cat, phase, group, isActive: hasUnplayed };
+  });
+  const phaseOrd = (s: string) => s.includes('FASE FINAL') ? 3 : s.includes('2ª FASE') ? 2 : 1;
+  options.sort((a, b) => phaseOrd(a.phase) - phaseOrd(b.phase) || a.group.localeCompare(b.group));
+  teamPhases[teamName] = options;
+}
+
 const ligaDataJSON = JSON.stringify(ligaData);
 const equiposOverviewJSON = JSON.stringify(equiposOverview);
+const teamPhasesJSON = JSON.stringify(teamPhases);
+const seasonsJSON = JSON.stringify(seasonsArr);
 ---
 
 <Layout title="Partidos y Resultados - ADESA 80">
@@ -147,13 +195,25 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
   <!-- ========== CATEGORÍAS ========== -->
   <section id="zonaLiga" class="bg-white pt-6 pb-8">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 id="categoriasTitle" class="text-sm font-bold text-gray-300 uppercase tracking-widest mb-4">Categorías</h2>
+
+      <!-- Header con título y selector de temporada -->
+      <div class="flex items-center justify-between mb-4">
+        <h2 id="categoriasTitle" class="text-sm font-bold text-gray-300 uppercase tracking-widest">Categorías</h2>
+        <div class="flex items-center gap-2" id="seasonDropdownWrap">
+          <label class="text-xs font-bold text-gray-400 uppercase tracking-wider hidden sm:inline">Temporada</label>
+          <select id="seasonSelect" class="text-sm font-bold text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-1.5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-adesa-green/50 transition-colors">
+            {seasonsArr.map(s => (
+              <option value={s} selected={s === currentSeason}>{s}</option>
+            ))}
+          </select>
+        </div>
+      </div>
 
       <!-- Overview por defecto -->
       <div id="overviewPanel">
-        <div class="grid gap-3" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+        <div class="grid gap-3" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));" id="overviewGrid">
           {equiposOverview.map(eq => (
-            <div class="equipo-overview rounded-lg overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg border border-gray-100 flex items-stretch bg-white" style="height: 68px;" data-cat={eq.cat}>
+            <div class="equipo-overview rounded-lg overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg border border-gray-100 flex items-stretch bg-white" style="height: 68px;" data-cat={eq.cat} data-nombre={eq.nombre} data-temporada={eq.temporada}>
               <div class="flex flex-col justify-center px-4 flex-1 min-w-0">
                 <p class="font-extrabold text-[14px] text-gray-900 uppercase tracking-wide leading-tight truncate">{eq.nombre}</p>
                 <p class="text-[12px] font-bold text-gray-400 mt-0.5">{eq.pg}-{eq.pp}</p>
@@ -168,13 +228,22 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
             </div>
           ))}
         </div>
+        <div id="noSeasonData" class="hidden text-center py-10 text-gray-400">
+          <p class="text-lg font-bold">No hay datos para esta temporada</p>
+          <p class="text-sm mt-1">Los datos estarán disponibles cuando comience la temporada</p>
+        </div>
       </div>
 
       <!-- Panel de detalle (oculto por defecto) -->
       <div id="detailPanel" class="hidden">
-        <button id="btnVolverOverview" class="mb-5 flex items-center gap-2 text-adesa-green hover:text-white font-semibold text-sm transition-colors group">
-          <span class="transform group-hover:-translate-x-1 transition-transform">←</span> Volver
-        </button>
+        <div class="flex items-center justify-between mb-5">
+          <button id="btnVolverOverview" class="flex items-center gap-2 text-adesa-green hover:text-gray-900 font-semibold text-sm transition-colors group">
+            <span class="transform group-hover:-translate-x-1 transition-transform">←</span> Volver
+          </button>
+          <div id="phaseSelector" class="flex items-center gap-2">
+            <!-- Selector de fase/grupo inyectado por JS -->
+          </div>
+        </div>
         <div id="detailContent">
           <!-- Relleno dinámico por JavaScript -->
         </div>
@@ -183,9 +252,12 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
   </section>
 
   <!-- Datos de liga serializados para JavaScript -->
-  <script define:vars={{ ligaDataJSON, equiposOverviewJSON }}>
+  <script define:vars={{ ligaDataJSON, equiposOverviewJSON, teamPhasesJSON, seasonsJSON, currentSeason }}>
     window.__ligaData = JSON.parse(ligaDataJSON);
     window.__overviewData = JSON.parse(equiposOverviewJSON);
+    window.__teamPhases = JSON.parse(teamPhasesJSON);
+    window.__seasons = JSON.parse(seasonsJSON);
+    window.__currentSeason = currentSeason;
   </script>
 
   <!-- Script Zona Liga -->
@@ -193,21 +265,69 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
     // ========== ZONA LIGA - PANEL DE DETALLE ==========
     const _ld = (window as any).__ligaData || {};
     const _od = (window as any).__overviewData || [];
+    const _tp = (window as any).__teamPhases || {};
     const detailPanel = document.getElementById('detailPanel');
     const overviewPanel = document.getElementById('overviewPanel');
     const detailContent = document.getElementById('detailContent');
     const zonaLiga = document.getElementById('zonaLiga');
     const categoriasTitle = document.getElementById('categoriasTitle');
     const btnVolver = document.getElementById('btnVolverOverview');
+    const seasonSelect = document.getElementById('seasonSelect') as HTMLSelectElement;
+    const phaseSelector = document.getElementById('phaseSelector');
+    const noSeasonData = document.getElementById('noSeasonData');
+    const overviewGrid = document.getElementById('overviewGrid');
+
+    // State
+    let currentSeason = seasonSelect?.value || '';
+    let currentTeamName: string | null = null;
+    let currentCatBase: string | null = null;
+
+    function updateCarouselFilter() {
+      const opts: any = {};
+      if (currentSeason) opts.temporada = currentSeason;
+      if (currentCatBase) opts.catBase = currentCatBase;
+      if ((window as any).__filterCarousel) {
+        (window as any).__filterCarousel(opts);
+      }
+    }
+
+    // ── Season change ──
+    if (seasonSelect) {
+      seasonSelect.addEventListener('change', () => {
+        currentSeason = seasonSelect.value;
+        let visibleCount = 0;
+        document.querySelectorAll('.equipo-overview').forEach((card: Element) => {
+          const el = card as HTMLElement;
+          if (el.dataset.temporada === currentSeason) {
+            el.style.display = '';
+            visibleCount++;
+          } else {
+            el.style.display = 'none';
+          }
+        });
+        if (overviewGrid) overviewGrid.style.display = visibleCount > 0 ? '' : 'none';
+        if (noSeasonData) noSeasonData.classList.toggle('hidden', visibleCount > 0);
+        updateCarouselFilter();
+      });
+    }
 
     function mostrarOverview() {
       if (detailPanel) detailPanel.classList.add('hidden');
       if (overviewPanel) overviewPanel.classList.remove('hidden');
       if (categoriasTitle) { categoriasTitle.textContent = 'Categorías'; categoriasTitle.classList.remove('hidden'); }
+      const seasonWrap = document.getElementById('seasonDropdownWrap');
+      if (seasonWrap) seasonWrap.style.display = '';
+      currentTeamName = null;
+      currentCatBase = null;
+      updateCarouselFilter();
     }
 
-    function mostrarDetalle(categoria: string, rivalDestacado?: string) {
-      // Buscar en ligaData: primero directo, luego sin sufijo " B" (equipos B del carrusel)
+    function mostrarDetalle(categoria: string, rivalDestacado?: string, teamName?: string) {
+      if (!teamName) {
+        const match = _od.find((eq: any) => eq.cat === categoria);
+        teamName = match?.nombre || '';
+      }
+
       let liga = _ld[categoria];
       if (!liga) {
         const stripped = categoria.replace(/ B$/, '');
@@ -215,13 +335,52 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
       }
       if (!liga || !detailContent || !detailPanel || !overviewPanel) return;
 
+      currentTeamName = teamName || null;
+      const catBase = categoria.split(' - ')[0].trim();
+      currentCatBase = catBase;
+      updateCarouselFilter();
+
       overviewPanel.classList.add('hidden');
       detailPanel.classList.remove('hidden');
       if (categoriasTitle) categoriasTitle.classList.add('hidden');
+      const seasonWrap = document.getElementById('seasonDropdownWrap');
+      if (seasonWrap) seasonWrap.style.display = 'none';
 
+      // ── Phase/Group selector ──
+      const phases = teamName ? (_tp[teamName] || []) : [];
+      if (phaseSelector) {
+        if (phases.length > 1) {
+          let selHTML = '<label class="text-xs font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">Fase / Grupo</label>';
+          selHTML += '<select id="phaseSelect" class="text-sm font-bold text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-1.5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-adesa-green/50 transition-colors">';
+          for (const opt of phases) {
+            const label = opt.group === 'ÚNICO' ? opt.phase : opt.phase + ' — ' + opt.group;
+            const sel = opt.cat === categoria ? 'selected' : '';
+            selHTML += '<option value="' + opt.cat + '" ' + sel + '>' + label + '</option>';
+          }
+          selHTML += '</select>';
+          phaseSelector.innerHTML = selHTML;
+          const phaseSelect = document.getElementById('phaseSelect') as HTMLSelectElement;
+          if (phaseSelect) {
+            phaseSelect.addEventListener('change', () => {
+              mostrarDetalle(phaseSelect.value, undefined, teamName);
+            });
+          }
+        } else {
+          phaseSelector.innerHTML = '';
+        }
+      }
+
+      renderLigaDetail(liga, rivalDestacado);
+
+      setTimeout(() => {
+        if (zonaLiga) zonaLiga.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+
+    function renderLigaDetail(liga: any, rivalDestacado?: string) {
+      if (!detailContent) return;
       let html = '';
 
-      // === GRID: Clasificación + Jornadas ===
       html += '<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">';
 
       // --- CLASIFICACIÓN ---
@@ -280,18 +439,22 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
           const border = esAdesa ? 'border-l-4 border-l-adesa-green bg-adesa-green/5' : 'border-l-4 border-l-transparent';
           html += '<div class="px-5 py-2.5 flex items-center text-xs ' + border + ' hover:bg-gray-50/50 transition-colors">';
 
-          // Local
           const lAdesa = p.l === 'ADESA 80' || (p.l && p.l.includes('ADESA'));
           html += '<div class="flex-1 text-right truncate pr-2 ' + (lAdesa ? 'font-bold text-adesa-green' : 'text-gray-700') + '">' + p.l + '</div>';
 
-          // Score / date
           if (tieneRes) {
             html += '<div class="px-3 py-1 rounded-lg bg-gray-900 text-white font-bold text-xs whitespace-nowrap min-w-[60px] text-center">' + p.ml + ' - ' + p.mv + '</div>';
           } else {
-            html += '<div class="px-3 py-1 rounded-lg bg-gray-100 text-gray-400 text-[10px] whitespace-nowrap min-w-[60px] text-center">' + p.f + (p.h ? ' · ' + p.h : '') + '</div>';
+            const partes = p.f ? p.f.split('/') : [];
+            const fechaP = partes.length === 3 ? new Date(parseInt(partes[2]), parseInt(partes[1]) - 1, parseInt(partes[0])) : null;
+            const esPasado = fechaP && fechaP < new Date();
+            if (esPasado) {
+              html += '<div class="px-3 py-1 rounded-lg bg-red-100 text-red-600 font-bold text-[10px] whitespace-nowrap min-w-[60px] text-center">APLAZADO</div>';
+            } else {
+              html += '<div class="px-3 py-1 rounded-lg bg-gray-100 text-gray-400 text-[10px] whitespace-nowrap min-w-[60px] text-center">' + p.f + (p.h ? ' · ' + p.h : '') + '</div>';
+            }
           }
 
-          // Visitante
           const vAdesa = p.v === 'ADESA 80' || (p.v && p.v.includes('ADESA'));
           html += '<div class="flex-1 truncate pl-2 ' + (vAdesa ? 'font-bold text-adesa-green' : 'text-gray-700') + '">' + p.v + '</div>';
 
@@ -301,7 +464,7 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
       }
 
       html += '</div></div></div>';
-      html += '</div>'; // End grid
+      html += '</div>';
 
       // === H2H ===
       if (rivalDestacado) {
@@ -338,34 +501,39 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
       }
 
       detailContent.innerHTML = html;
-
-      // Scroll suave a la zona liga
-      setTimeout(() => {
-        if (zonaLiga) zonaLiga.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
     }
 
     // Click en tarjetas del overview
     document.querySelectorAll('.equipo-overview').forEach(card => {
       card.addEventListener('click', () => {
         const cat = card.getAttribute('data-cat');
-        if (cat) mostrarDetalle(cat);
+        const nombre = card.getAttribute('data-nombre');
+        if (cat) mostrarDetalle(cat, undefined, nombre || undefined);
       });
     });
 
-    // Click en tarjetas del carrusel
-    document.querySelectorAll('.mc').forEach(card => {
-      card.addEventListener('click', (e) => {
-        if ((e.target as HTMLElement).closest('a')) return;
-        const cat = card.getAttribute('data-liga') || (card as HTMLElement).dataset.liga;
-        const rival = card.getAttribute('data-rival') || (card as HTMLElement).dataset.rival;
+    // Click en tarjetas del carrusel (delegación por si se reconstruyen)
+    const carouselTrack = document.getElementById('carousel-track');
+    if (carouselTrack) {
+      carouselTrack.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.closest('a')) return;
+        const card = target.closest('.mc') as HTMLElement;
+        if (!card) return;
+        const cat = card.dataset.liga;
+        const rival = card.dataset.rival;
         if (cat) mostrarDetalle(cat, rival || undefined);
       });
-    });
+    }
 
     // Botón volver
     if (btnVolver) {
       btnVolver.addEventListener('click', mostrarOverview);
+    }
+
+    // Aplicar filtro de temporada inicial al carrusel
+    if (currentSeason) {
+      updateCarouselFilter();
     }
   </script>
 
