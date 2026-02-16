@@ -1,7 +1,7 @@
 {
   "categoria": "Babybasket Mixto - REGULAR - GRUPO D",
   "competicion": "Programa Babybasket 20182019",
-  "ultima_actualizacion": "2026-02-15T15:59:30.363275",
+  "ultima_actualizacion": "2026-02-16T14:38:49.845245",
   "clasificacion": [
     {
       "equipo": "UNION LINENSE BALONCESTO",
@@ -27,7 +27,7 @@
     },
     {
       "equipo": "CENTURIAS SAN ROQUE NEGRO",
-      "partidos_jugados": 4,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -38,7 +38,7 @@
     },
     {
       "equipo": "LEGUMBRES PEDRO ALCALÁ",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -49,7 +49,7 @@
     },
     {
       "equipo": "THE ENGLISH ACADEMY MONTERA",
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,

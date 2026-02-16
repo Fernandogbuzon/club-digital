@@ -1,7 +1,7 @@
 {
   "categoria": "Senior Masculino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T15:48:46.640678",
+  "ultima_actualizacion": "2026-02-16T14:28:38.301292",
   "clasificacion": [
     {
       "equipo": "UBAGO CENTURIAS",
@@ -37,25 +37,25 @@
       "posicion": 3
     },
     {
-      "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 12,
-      "partidos_ganados": 6,
+      "equipo": "CB Urbaluz Red Devils",
+      "partidos_jugados": 13,
+      "partidos_ganados": 7,
       "partidos_perdidos": 6,
-      "puntos_favor": 760,
-      "puntos_contra": 779,
-      "diferencia": -19,
-      "puntos": 18,
+      "puntos_favor": 886,
+      "puntos_contra": 886,
+      "diferencia": 0,
+      "puntos": 20,
       "posicion": 4
     },
     {
-      "equipo": "CB Urbaluz Red Devils",
-      "partidos_jugados": 12,
+      "equipo": "CADIZ CB GADES",
+      "partidos_jugados": 13,
       "partidos_ganados": 6,
-      "partidos_perdidos": 6,
-      "puntos_favor": 807,
-      "puntos_contra": 829,
-      "diferencia": -22,
-      "puntos": 18,
+      "partidos_perdidos": 7,
+      "puntos_favor": 817,
+      "puntos_contra": 858,
+      "diferencia": -41,
+      "puntos": 19,
       "posicion": 5
     },
     {

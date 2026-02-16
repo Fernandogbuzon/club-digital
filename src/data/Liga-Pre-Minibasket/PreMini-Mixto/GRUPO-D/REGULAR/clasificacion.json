@@ -1,11 +1,11 @@
 {
   "categoria": "PreMini Mixto - REGULAR - GRUPO D",
   "competicion": "Liga Pre Minibasket",
-  "ultima_actualizacion": "2026-02-15T15:58:33.508563",
+  "ultima_actualizacion": "2026-02-16T14:37:57.922268",
   "clasificacion": [
     {
       "equipo": "CBA 2017",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -16,7 +16,7 @@
     },
     {
       "equipo": "GONZALEZ&SANCHEZ CENTURIAS NEGRO",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -38,7 +38,7 @@
     },
     {
       "equipo": "FORVIDE ALCALA",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -60,7 +60,7 @@
     },
     {
       "equipo": "CBA  2016",
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,

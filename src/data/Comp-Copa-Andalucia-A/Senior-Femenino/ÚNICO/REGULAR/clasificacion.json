@@ -1,7 +1,7 @@
 {
   "categoria": "Senior Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-15T15:48:29.878704",
+  "ultima_actualizacion": "2026-02-16T14:28:21.710525",
   "clasificacion": [
     {
       "equipo": "GYMNÁSTICA P.",
@@ -38,13 +38,13 @@
     },
     {
       "equipo": "CADIZ CB GADES OLIMPIA",
-      "partidos_jugados": 11,
-      "partidos_ganados": 7,
+      "partidos_jugados": 12,
+      "partidos_ganados": 8,
       "partidos_perdidos": 4,
-      "puntos_favor": 673,
-      "puntos_contra": 634,
-      "diferencia": 39,
-      "puntos": 18,
+      "puntos_favor": 719,
+      "puntos_contra": 676,
+      "diferencia": 43,
+      "puntos": 20,
       "posicion": 4
     },
     {
@@ -93,13 +93,13 @@
     },
     {
       "equipo": "TRANSPORTES VALIENTE CBSFDO",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 2,
-      "partidos_perdidos": 9,
-      "puntos_favor": 635,
-      "puntos_contra": 740,
-      "diferencia": -105,
-      "puntos": 13,
+      "partidos_perdidos": 10,
+      "puntos_favor": 677,
+      "puntos_contra": 786,
+      "diferencia": -109,
+      "puntos": 14,
       "posicion": 9
     },
     {
