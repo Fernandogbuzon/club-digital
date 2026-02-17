@@ -1,0 +1,50 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "08/03/2026",
+    "hora": "",
+    "pabellon": "PDVO. MUNICIPAL",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "FINAL Jornada 2 - 08/03/2026",
+    "categoria": "Junior Masculino - PLAY OFF 5º-6º - ÚNICO",
+    "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+    "rival": "ADESA 80",
+    "ubicacion": "Visitante",
+    "id": "08032026_adesa-80_elect-avila-chiclana-ituci_junior-masculino-play-off-5-6-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "22/02/2026",
+    "hora": "",
+    "pabellon": "PAB. CIUDAD DE CHICLANA",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "",
+    "categoria": "Junior Masculino - PLAY OFF 5º-6º - ÚNICO",
+    "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+    "rival": "ADESA 80",
+    "ubicacion": "Local",
+    "id": "22022026_elect-avila-chiclana-ituci_adesa-80_junior-masculino-play-off-5-6-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "22/02/2026",
+    "hora": "",
+    "pabellon": "PAB. CIUDAD DE CHICLANA",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "FINAL Jornada 1 - 22/02/2026",
+    "categoria": "Junior Masculino - PLAY OFF 5º-6º - ÚNICO",
+    "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+    "rival": "ADESA 80",
+    "ubicacion": "Local",
+    "id": "22022026_elect-avila-chiclana-ituci_adesa-80_junior-masculino-play-off-5-6-unico"
+  }
+]

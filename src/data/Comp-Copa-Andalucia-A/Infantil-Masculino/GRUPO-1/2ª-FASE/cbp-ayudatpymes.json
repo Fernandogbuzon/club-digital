@@ -35,8 +35,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "18/02/2026",
+    "hora": "18:00",
     "pabellon": "PAB. ANGELITA ALTA",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,7 +45,7 @@
     "equipo": "CBP AYUDATPYMES",
     "rival": "DAIKIN CB PUERTO REAL (M)",
     "ubicacion": "Local",
-    "id": "22022026_cbp-ayudatpymes_daikin-cb-puerto-real-m_infantil-masculino-2-fase-grupo-1"
+    "id": "18022026_cbp-ayudatpymes_daikin-cb-puerto-real-m_infantil-masculino-2-fase-grupo-1"
   },
   {
     "competicion": "Comp Copa Andalucia A",

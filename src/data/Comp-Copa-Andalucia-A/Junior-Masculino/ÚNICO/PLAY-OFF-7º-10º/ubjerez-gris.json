@@ -1,0 +1,50 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "08/03/2026",
+    "hora": "",
+    "pabellon": "PAB. DEL PARQUE",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "FINAL Jornada 2 - 08/03/2026",
+    "categoria": "Junior Masculino - PLAY OFF 7º-10º - ÚNICO",
+    "equipo": "UBJerez GRIS",
+    "rival": "CB CIMBIS",
+    "ubicacion": "Visitante",
+    "id": "08032026_cb-cimbis_ubjerez-gris_junior-masculino-play-off-7-10-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "22/02/2026",
+    "hora": "",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "",
+    "categoria": "Junior Masculino - PLAY OFF 7º-10º - ÚNICO",
+    "equipo": "UBJerez GRIS",
+    "rival": "CB CIMBIS",
+    "ubicacion": "Local",
+    "id": "22022026_ubjerez-gris_cb-cimbis_junior-masculino-play-off-7-10-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "22/02/2026",
+    "hora": "",
+    "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "FINAL Jornada 1 - 22/02/2026",
+    "categoria": "Junior Masculino - PLAY OFF 7º-10º - ÚNICO",
+    "equipo": "UBJerez GRIS",
+    "rival": "CB CIMBIS",
+    "ubicacion": "Local",
+    "id": "22022026_ubjerez-gris_cb-cimbis_junior-masculino-play-off-7-10-unico"
+  }
+]

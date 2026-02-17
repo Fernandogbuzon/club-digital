@@ -1,0 +1,50 @@
+[
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "08/03/2026",
+    "hora": "",
+    "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "FINAL Jornada 2 - 08/03/2026",
+    "categoria": "Junior Masculino - PLAY OFF 8º-9º - ÚNICO",
+    "equipo": "CADIZ CB GADES",
+    "rival": "AIRWIFI - MERGABLO",
+    "ubicacion": "Local",
+    "id": "08032026_cadiz-cb-gades_airwifi-mergablo_junior-masculino-play-off-8-9-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "22/02/2026",
+    "hora": "",
+    "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "",
+    "categoria": "Junior Masculino - PLAY OFF 8º-9º - ÚNICO",
+    "equipo": "CADIZ CB GADES",
+    "rival": "AIRWIFI - MERGABLO",
+    "ubicacion": "Visitante",
+    "id": "22022026_airwifi-mergablo_cadiz-cb-gades_junior-masculino-play-off-8-9-unico"
+  },
+  {
+    "competicion": "Comp Copa Andalucia A",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "22/02/2026",
+    "hora": "",
+    "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "FINAL Jornada 1 - 22/02/2026",
+    "categoria": "Junior Masculino - PLAY OFF 8º-9º - ÚNICO",
+    "equipo": "CADIZ CB GADES",
+    "rival": "AIRWIFI - MERGABLO",
+    "ubicacion": "Visitante",
+    "id": "22022026_airwifi-mergablo_cadiz-cb-gades_junior-masculino-play-off-8-9-unico"
+  }
+]

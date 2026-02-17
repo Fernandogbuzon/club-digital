@@ -35,8 +35,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "14/02/2026",
-    "hora": "",
+    "fecha": "20/02/2026",
+    "hora": "19:00",
     "pabellon": "PAB. MPAL. DE DEPORTES",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,7 +45,7 @@
     "equipo": "UNION LINENSE BALONCESTO",
     "rival": "C.A.B.U.",
     "ubicacion": "Visitante",
-    "id": "14022026_cabu_union-linense-baloncesto_cadete-femenino-regular-unico"
+    "id": "20022026_cabu_union-linense-baloncesto_cadete-femenino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",
