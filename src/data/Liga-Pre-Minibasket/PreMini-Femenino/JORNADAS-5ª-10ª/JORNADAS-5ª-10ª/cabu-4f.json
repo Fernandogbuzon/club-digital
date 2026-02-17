@@ -83,8 +83,8 @@
     "competicion": "Liga Pre Minibasket",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:00",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,6 +93,6 @@
     "equipo": "C.A.B.U. 4ºF",
     "rival": "UBJerez",
     "ubicacion": "Visitante",
-    "id": "22022026_ubjerez_cabu-4f_premini-femenino-jornadas-5-10-jornadas-5-10"
+    "id": "21022026_ubjerez_cabu-4f_premini-femenino-jornadas-5-10-jornadas-5-10"
   }
 ]

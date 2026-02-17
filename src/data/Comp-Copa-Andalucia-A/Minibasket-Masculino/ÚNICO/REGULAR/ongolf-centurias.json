@@ -83,8 +83,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "21/02/2026",
-    "hora": "",
+    "fecha": "22/02/2026",
+    "hora": "13:00",
     "pabellon": "COMPLEJO DEPORTIVO DE LA BAHÍA",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,7 @@
     "equipo": "ONGOLF CENTURIAS",
     "rival": "GYMNASTICA PORTUENSE",
     "ubicacion": "Local",
-    "id": "21022026_ongolf-centurias_gymnastica-portuense_minibasket-masculino-regular-unico"
+    "id": "22022026_ongolf-centurias_gymnastica-portuense_minibasket-masculino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",

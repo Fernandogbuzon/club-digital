@@ -67,8 +67,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "18:00",
     "pabellon": "PAB. DEL PARQUE",
     "es_resultado": false,
     "estado": "proximo",
@@ -77,7 +77,7 @@
     "equipo": "CBA",
     "rival": "SD CANDRAY AMARILLO",
     "ubicacion": "Visitante",
-    "id": "22022026_sd-candray-amarillo_cba_minibasket-femenino-regular-grupo-b"
+    "id": "21022026_sd-candray-amarillo_cba_minibasket-femenino-regular-grupo-b"
   },
   {
     "competicion": "Comp Copa Andalucia B",

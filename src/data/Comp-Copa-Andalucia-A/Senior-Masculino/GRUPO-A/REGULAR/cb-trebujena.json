@@ -67,8 +67,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "16:00",
     "pabellon": "PAB. DOMINGO PRUAÑO",
     "es_resultado": false,
     "estado": "proximo",
@@ -77,7 +77,7 @@
     "equipo": "CB TREBUJENA",
     "rival": "CB CIMBIS",
     "ubicacion": "Local",
-    "id": "22022026_cb-trebujena_cb-cimbis_senior-masculino-regular-grupo-a"
+    "id": "21022026_cb-trebujena_cb-cimbis_senior-masculino-regular-grupo-a"
   },
   {
     "competicion": "Comp Copa Andalucia A",

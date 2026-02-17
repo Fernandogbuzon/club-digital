@@ -83,8 +83,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:00",
     "pabellon": "SALA BARRIO 512",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,7 @@
     "equipo": "GYMNASTICA PORTUENSE",
     "rival": "GIMNASIO 5TH AVENUE CB PUERTO REAL",
     "ubicacion": "Visitante",
-    "id": "22022026_gimnasio-5th-avenue-cb-puerto-real_gymnastica-portuense_cadete-mixto-2-fase-grupo-3"
+    "id": "21022026_gimnasio-5th-avenue-cb-puerto-real_gymnastica-portuense_cadete-mixto-2-fase-grupo-3"
   },
   {
     "competicion": "Comp Copa Andalucia B",

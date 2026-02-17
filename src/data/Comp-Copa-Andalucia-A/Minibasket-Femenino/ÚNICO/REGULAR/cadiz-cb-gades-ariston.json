@@ -67,8 +67,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:20",
     "pabellon": "PAB. ANDRÉS MATEO",
     "es_resultado": false,
     "estado": "proximo",
@@ -77,7 +77,7 @@
     "equipo": "CADIZ CB GADES ARISTON",
     "rival": "SUZUKI CAMPOSUR CBA",
     "ubicacion": "Visitante",
-    "id": "22022026_suzuki-camposur-cba_cadiz-cb-gades-ariston_minibasket-femenino-regular-unico"
+    "id": "21022026_suzuki-camposur-cba_cadiz-cb-gades-ariston_minibasket-femenino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",

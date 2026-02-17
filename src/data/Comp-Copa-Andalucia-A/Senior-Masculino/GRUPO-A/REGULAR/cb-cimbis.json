@@ -19,7 +19,7 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/03/2026",
+    "fecha": "21/03/2026",
     "hora": "",
     "pabellon": "PAB. DEL PARQUE",
     "es_resultado": false,
@@ -29,7 +29,7 @@
     "equipo": "CB CIMBIS",
     "rival": "C.A.B.U.",
     "ubicacion": "Local",
-    "id": "22032026_cb-cimbis_cabu_senior-masculino-regular-grupo-a"
+    "id": "21032026_cb-cimbis_cabu_senior-masculino-regular-grupo-a"
   },
   {
     "competicion": "Comp Copa Andalucia A",
@@ -99,8 +99,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "16:00",
     "pabellon": "PAB. DOMINGO PRUAÑO",
     "es_resultado": false,
     "estado": "proximo",
@@ -109,7 +109,7 @@
     "equipo": "CB CIMBIS",
     "rival": "CB TREBUJENA",
     "ubicacion": "Visitante",
-    "id": "22022026_cb-trebujena_cb-cimbis_senior-masculino-regular-grupo-a"
+    "id": "21022026_cb-trebujena_cb-cimbis_senior-masculino-regular-grupo-a"
   },
   {
     "competicion": "Comp Copa Andalucia A",

@@ -131,8 +131,8 @@
     "competicion": "Comp 1 Año",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "17:00",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -141,7 +141,7 @@
     "equipo": "UBJerez NEGRO",
     "rival": "MIELERIA DE PAYAN-CB PRADO",
     "ubicacion": "Local",
-    "id": "22022026_ubjerez-negro_mieleria-de-payan-cb-prado_cadete-mixto-regular-unico"
+    "id": "21022026_ubjerez-negro_mieleria-de-payan-cb-prado_cadete-mixto-regular-unico"
   },
   {
     "competicion": "Comp 1 Año",

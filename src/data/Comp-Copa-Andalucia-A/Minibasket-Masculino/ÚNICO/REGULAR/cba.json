@@ -83,8 +83,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "17:00",
     "pabellon": "PAB. ANDRÉS MATEO",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,7 @@
     "equipo": "CBA",
     "rival": "CBP AYUDATPYMES",
     "ubicacion": "Local",
-    "id": "22022026_cba_cbp-ayudatpymes_minibasket-masculino-regular-unico"
+    "id": "21022026_cba_cbp-ayudatpymes_minibasket-masculino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",

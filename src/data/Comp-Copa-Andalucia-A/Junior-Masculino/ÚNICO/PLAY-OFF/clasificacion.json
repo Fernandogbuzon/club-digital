@@ -1,6 +1,29 @@
 {
   "categoria": "Junior Masculino - PLAY OFF - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-17T15:41:52.166471",
-  "clasificacion": []
+  "ultima_actualizacion": "2026-02-17T23:10:35.225872",
+  "clasificacion": [
+    {
+      "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 148,
+      "puntos_contra": 130,
+      "diferencia": 18,
+      "puntos": 4,
+      "posicion": 1
+    },
+    {
+      "equipo": "STROG SHIPPING ULB",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 130,
+      "puntos_contra": 148,
+      "diferencia": -18,
+      "puntos": 2,
+      "posicion": 2
+    }
+  ]
 }

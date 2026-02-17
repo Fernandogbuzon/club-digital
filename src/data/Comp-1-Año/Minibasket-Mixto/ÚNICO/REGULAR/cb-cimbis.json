@@ -163,8 +163,8 @@
     "competicion": "Comp 1 Año",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "16:00",
     "pabellon": "PAB. CIUDAD DE CHICLANA",
     "es_resultado": false,
     "estado": "proximo",
@@ -173,7 +173,7 @@
     "equipo": "CB CIMBIS",
     "rival": "ELECT. ÁVILA CHICLANA-ITUCI",
     "ubicacion": "Visitante",
-    "id": "22022026_elect-avila-chiclana-ituci_cb-cimbis_minibasket-mixto-regular-unico"
+    "id": "21022026_elect-avila-chiclana-ituci_cb-cimbis_minibasket-mixto-regular-unico"
   },
   {
     "competicion": "Comp 1 Año",

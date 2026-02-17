@@ -1,7 +1,7 @@
 {
   "categoria": "PreMini Mixto - REGULAR - GRUPO A",
   "competicion": "Liga Pre Minibasket",
-  "ultima_actualizacion": "2026-02-17T15:53:57.824994",
+  "ultima_actualizacion": "2026-02-17T23:23:22.482575",
   "clasificacion": [
     {
       "equipo": "CD ADC LA ALGAIDA",
@@ -27,7 +27,7 @@
     },
     {
       "equipo": "CB PUERTO REAL 2017",
-      "partidos_jugados": 6,
+      "partidos_jugados": 5,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,
@@ -49,7 +49,7 @@
     },
     {
       "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 5,
+      "partidos_jugados": 4,
       "partidos_ganados": 0,
       "partidos_perdidos": 0,
       "puntos_favor": 0,

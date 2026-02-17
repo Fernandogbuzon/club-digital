@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - REGULAR - GRUPO A",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-17T15:52:14.849869",
+  "ultima_actualizacion": "2026-02-17T23:21:13.224632",
   "clasificacion": [
     {
       "equipo": "CBA AZUL",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "UBJerez NEGRO",
+      "partidos_jugados": 10,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 3,
+      "puntos_favor": 558,
+      "puntos_contra": 492,
+      "diferencia": 66,
+      "puntos": 17,
+      "posicion": 2
+    },
+    {
       "equipo": "GAMO BAHÍA CBSFDO",
       "partidos_jugados": 9,
       "partidos_ganados": 6,
@@ -22,17 +33,6 @@
       "puntos_favor": 530,
       "puntos_contra": 335,
       "diferencia": 195,
-      "puntos": 15,
-      "posicion": 2
-    },
-    {
-      "equipo": "UBJerez NEGRO",
-      "partidos_jugados": 9,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 3,
-      "puntos_favor": 508,
-      "puntos_contra": 455,
-      "diferencia": 53,
       "puntos": 15,
       "posicion": 3
     },
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "CBP AYUDATPYMES",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 0,
-      "partidos_perdidos": 9,
-      "puntos_favor": 217,
-      "puntos_contra": 523,
-      "diferencia": -306,
-      "puntos": 9,
+      "partidos_perdidos": 10,
+      "puntos_favor": 254,
+      "puntos_contra": 573,
+      "diferencia": -319,
+      "puntos": 10,
       "posicion": 6
     }
   ]

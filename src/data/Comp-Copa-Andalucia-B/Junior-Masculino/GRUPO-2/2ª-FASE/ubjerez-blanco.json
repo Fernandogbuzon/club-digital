@@ -51,8 +51,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "20:00",
     "pabellon": "PAB. DEL PARQUE",
     "es_resultado": false,
     "estado": "proximo",
@@ -61,7 +61,7 @@
     "equipo": "UBJerez BLANCO",
     "rival": "IPSS CBSFDO",
     "ubicacion": "Visitante",
-    "id": "22022026_ipss-cbsfdo_ubjerez-blanco_junior-masculino-2-fase-grupo-2"
+    "id": "21022026_ipss-cbsfdo_ubjerez-blanco_junior-masculino-2-fase-grupo-2"
   },
   {
     "competicion": "Comp Copa Andalucia B",

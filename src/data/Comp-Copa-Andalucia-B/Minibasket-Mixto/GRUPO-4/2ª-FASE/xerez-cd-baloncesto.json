@@ -51,8 +51,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "16:00",
     "pabellon": "PAB. MIRANDILLA",
     "es_resultado": false,
     "estado": "proximo",
@@ -61,7 +61,7 @@
     "equipo": "XEREZ CD BALONCESTO",
     "rival": "CBC CÁDIZ",
     "ubicacion": "Visitante",
-    "id": "22022026_cbc-cadiz_xerez-cd-baloncesto_minibasket-mixto-2-fase-grupo-4"
+    "id": "21022026_cbc-cadiz_xerez-cd-baloncesto_minibasket-mixto-2-fase-grupo-4"
   },
   {
     "competicion": "Comp Copa Andalucia B",

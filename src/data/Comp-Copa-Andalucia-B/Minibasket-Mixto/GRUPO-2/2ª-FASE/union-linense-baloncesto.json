@@ -99,8 +99,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "11:45",
     "pabellon": "PAB. PICO DEL CAMPO",
     "es_resultado": false,
     "estado": "proximo",
@@ -109,7 +109,7 @@
     "equipo": "UNION LINENSE BALONCESTO",
     "rival": "V. CRUCE DE LOS SANTOS ALCALA",
     "ubicacion": "Visitante",
-    "id": "22022026_v-cruce-de-los-santos-alcala_union-linense-baloncesto_minibasket-mixto-2-fase-grupo-2"
+    "id": "21022026_v-cruce-de-los-santos-alcala_union-linense-baloncesto_minibasket-mixto-2-fase-grupo-2"
   },
   {
     "competicion": "Comp Copa Andalucia B",

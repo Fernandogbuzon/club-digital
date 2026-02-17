@@ -115,8 +115,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "20/02/2026",
+    "hora": "18:30",
     "pabellon": "PAB. MPAL. CUBIERTO",
     "es_resultado": false,
     "estado": "proximo",
@@ -125,7 +125,7 @@
     "equipo": "CD MONTERA BALONCESTO",
     "rival": "EDM ARCOS ROJO",
     "ubicacion": "Visitante",
-    "id": "22022026_edm-arcos-rojo_cd-montera-baloncesto_infantil-mixto-2-fase-grupo-2"
+    "id": "20022026_edm-arcos-rojo_cd-montera-baloncesto_infantil-mixto-2-fase-grupo-2"
   },
   {
     "competicion": "Comp Copa Andalucia B",

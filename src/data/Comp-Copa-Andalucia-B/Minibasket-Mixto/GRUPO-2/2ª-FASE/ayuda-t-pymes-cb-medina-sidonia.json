@@ -83,8 +83,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:30",
     "pabellon": "PAB. MPAL. CUBIERTO",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,7 @@
     "equipo": "AYUDA T PYMES CB MEDINA SIDONIA",
     "rival": "EDM ARCOS",
     "ubicacion": "Visitante",
-    "id": "22022026_edm-arcos_ayuda-t-pymes-cb-medina-sidonia_minibasket-mixto-2-fase-grupo-2"
+    "id": "21022026_edm-arcos_ayuda-t-pymes-cb-medina-sidonia_minibasket-mixto-2-fase-grupo-2"
   },
   {
     "competicion": "Comp Copa Andalucia B",

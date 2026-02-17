@@ -131,8 +131,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "21/02/2026",
-    "hora": "",
+    "fecha": "22/02/2026",
+    "hora": "12:00",
     "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
     "es_resultado": false,
     "estado": "proximo",
@@ -141,7 +141,7 @@
     "equipo": "C.A.B.U.",
     "rival": "CADIZ CB GADES OLIMPIA",
     "ubicacion": "Visitante",
-    "id": "21022026_cadiz-cb-gades-olimpia_cabu_senior-femenino-regular-unico"
+    "id": "22022026_cadiz-cb-gades-olimpia_cabu_senior-femenino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",

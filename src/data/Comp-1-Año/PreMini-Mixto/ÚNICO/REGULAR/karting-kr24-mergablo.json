@@ -83,8 +83,8 @@
     "competicion": "Comp 1 Año",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "10:30",
     "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,7 @@
     "equipo": "KARTING KR24-MERGABLO",
     "rival": "ADESA 80",
     "ubicacion": "Local",
-    "id": "22022026_karting-kr24-mergablo_adesa-80_premini-mixto-regular-unico"
+    "id": "21022026_karting-kr24-mergablo_adesa-80_premini-mixto-regular-unico"
   },
   {
     "competicion": "Comp 1 Año",

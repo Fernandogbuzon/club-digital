@@ -19,8 +19,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "16:30",
     "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
     "es_resultado": false,
     "estado": "proximo",
@@ -29,14 +29,14 @@
     "equipo": "CADIZ CB GADES",
     "rival": "AIRWIFI - MERGABLO",
     "ubicacion": "Visitante",
-    "id": "22022026_airwifi-mergablo_cadiz-cb-gades_junior-masculino-play-off-8-9-unico"
+    "id": "21022026_airwifi-mergablo_cadiz-cb-gades_junior-masculino-play-off-8-9-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "16:30",
     "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,6 +45,6 @@
     "equipo": "CADIZ CB GADES",
     "rival": "AIRWIFI - MERGABLO",
     "ubicacion": "Visitante",
-    "id": "22022026_airwifi-mergablo_cadiz-cb-gades_junior-masculino-play-off-8-9-unico"
+    "id": "21022026_airwifi-mergablo_cadiz-cb-gades_junior-masculino-play-off-8-9-unico"
   }
 ]

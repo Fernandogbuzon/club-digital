@@ -99,8 +99,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "17:00",
     "pabellon": "PAB. ANDRÉS MATEO",
     "es_resultado": false,
     "estado": "proximo",
@@ -109,7 +109,7 @@
     "equipo": "CBA",
     "rival": "AD MARIANISTAS",
     "ubicacion": "Local",
-    "id": "22022026_cba_ad-marianistas_infantil-mixto-2-fase-grupo-2"
+    "id": "21022026_cba_ad-marianistas_infantil-mixto-2-fase-grupo-2"
   },
   {
     "competicion": "Comp Copa Andalucia B",

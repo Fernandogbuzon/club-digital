@@ -19,8 +19,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "18:00",
     "pabellon": "PAB. CIUDAD DE CHICLANA",
     "es_resultado": false,
     "estado": "proximo",
@@ -29,14 +29,14 @@
     "equipo": "ADESA 80",
     "rival": "ELECT. ÁVILA CHICLANA-ITUCI",
     "ubicacion": "Visitante",
-    "id": "22022026_elect-avila-chiclana-ituci_adesa-80_junior-masculino-play-off-5-6-unico"
+    "id": "21022026_elect-avila-chiclana-ituci_adesa-80_junior-masculino-play-off-5-6-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "18:00",
     "pabellon": "PAB. CIUDAD DE CHICLANA",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,6 +45,6 @@
     "equipo": "ADESA 80",
     "rival": "ELECT. ÁVILA CHICLANA-ITUCI",
     "ubicacion": "Visitante",
-    "id": "22022026_elect-avila-chiclana-ituci_adesa-80_junior-masculino-play-off-5-6-unico"
+    "id": "21022026_elect-avila-chiclana-ituci_adesa-80_junior-masculino-play-off-5-6-unico"
   }
 ]

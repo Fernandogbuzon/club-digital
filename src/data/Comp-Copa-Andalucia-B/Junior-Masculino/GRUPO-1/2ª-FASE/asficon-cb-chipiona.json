@@ -51,8 +51,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "21/02/2026",
-    "hora": "",
+    "fecha": "22/02/2026",
+    "hora": "12:00",
     "pabellon": "COLEGIO MARIANISTAS. SANTA FE",
     "es_resultado": false,
     "estado": "proximo",
@@ -61,7 +61,7 @@
     "equipo": "ASFICON CB CHIPIONA",
     "rival": "AD MARIANISTAS",
     "ubicacion": "Visitante",
-    "id": "21022026_ad-marianistas_asficon-cb-chipiona_junior-masculino-2-fase-grupo-1"
+    "id": "22022026_ad-marianistas_asficon-cb-chipiona_junior-masculino-2-fase-grupo-1"
   },
   {
     "competicion": "Comp Copa Andalucia B",

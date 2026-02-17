@@ -19,7 +19,7 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/03/2026",
+    "fecha": "21/03/2026",
     "hora": "",
     "pabellon": "PAB. DEL PARQUE",
     "es_resultado": false,
@@ -29,7 +29,7 @@
     "equipo": "C.A.B.U.",
     "rival": "CB CIMBIS",
     "ubicacion": "Visitante",
-    "id": "22032026_cb-cimbis_cabu_senior-masculino-regular-grupo-a"
+    "id": "21032026_cb-cimbis_cabu_senior-masculino-regular-grupo-a"
   },
   {
     "competicion": "Comp Copa Andalucia A",
@@ -67,8 +67,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "21/02/2026",
-    "hora": "",
+    "fecha": "22/02/2026",
+    "hora": "12:30",
     "pabellon": "PAB. MPAL. DE DEPORTES",
     "es_resultado": false,
     "estado": "proximo",
@@ -77,7 +77,7 @@
     "equipo": "C.A.B.U.",
     "rival": "GAGGERO CADIZ CBSFDO",
     "ubicacion": "Local",
-    "id": "21022026_cabu_gaggero-cadiz-cbsfdo_senior-masculino-regular-grupo-a"
+    "id": "22022026_cabu_gaggero-cadiz-cbsfdo_senior-masculino-regular-grupo-a"
   },
   {
     "competicion": "Comp Copa Andalucia A",

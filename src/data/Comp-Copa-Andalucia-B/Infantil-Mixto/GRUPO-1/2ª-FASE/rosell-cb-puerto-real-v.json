@@ -99,8 +99,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:00",
     "pabellon": "SALA BARRIO 512",
     "es_resultado": false,
     "estado": "proximo",
@@ -109,7 +109,7 @@
     "equipo": "ROSELL CB PUERTO REAL (V)",
     "rival": "LA MAR DE GAMBAS CB PUERTO REAL (M)",
     "ubicacion": "Local",
-    "id": "22022026_rosell-cb-puerto-real-v_la-mar-de-gambas-cb-puerto-real-m_infantil-mixto-2-fase-grupo-1"
+    "id": "21022026_rosell-cb-puerto-real-v_la-mar-de-gambas-cb-puerto-real-m_infantil-mixto-2-fase-grupo-1"
   },
   {
     "competicion": "Comp Copa Andalucia B",

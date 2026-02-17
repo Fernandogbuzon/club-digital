@@ -67,8 +67,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "16:00",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -77,7 +77,7 @@
     "equipo": "ADESA 80",
     "rival": "UBJerez GRIS",
     "ubicacion": "Visitante",
-    "id": "22022026_ubjerez-gris_adesa-80_minibasket-masculino-regular-unico"
+    "id": "21022026_ubjerez-gris_adesa-80_minibasket-masculino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",

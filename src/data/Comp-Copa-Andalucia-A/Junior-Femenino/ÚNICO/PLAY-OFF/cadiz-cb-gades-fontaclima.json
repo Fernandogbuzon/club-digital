@@ -3,7 +3,7 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "28/02/2026",
+    "fecha": "01/03/2026",
     "hora": "",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
@@ -13,13 +13,13 @@
     "equipo": "CADIZ CB GADES FONTACLIMA",
     "rival": "UBJerez GRIS - TOLDOS EL PORTAL",
     "ubicacion": "Visitante",
-    "id": "28022026_ubjerez-gris-toldos-el-portal_cadiz-cb-gades-fontaclima_junior-femenino-play-off-unico"
+    "id": "01032026_ubjerez-gris-toldos-el-portal_cadiz-cb-gades-fontaclima_junior-femenino-play-off-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "25/02/2026",
+    "fecha": "27/02/2026",
     "hora": "",
     "pabellon": "COMPLEJO CIUDAD DE CÁDIZ",
     "es_resultado": false,
@@ -29,14 +29,14 @@
     "equipo": "CADIZ CB GADES FONTACLIMA",
     "rival": "UBJerez GRIS - TOLDOS EL PORTAL",
     "ubicacion": "Local",
-    "id": "25022026_cadiz-cb-gades-fontaclima_ubjerez-gris-toldos-el-portal_junior-femenino-play-off-unico"
+    "id": "27022026_cadiz-cb-gades-fontaclima_ubjerez-gris-toldos-el-portal_junior-femenino-play-off-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "21/02/2026",
-    "hora": "",
+    "fecha": "24/02/2026",
+    "hora": "19:45",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,7 +45,7 @@
     "equipo": "CADIZ CB GADES FONTACLIMA",
     "rival": "UBJerez GRIS - TOLDOS EL PORTAL",
     "ubicacion": "Visitante",
-    "id": "21022026_ubjerez-gris-toldos-el-portal_cadiz-cb-gades-fontaclima_junior-femenino-play-off-unico"
+    "id": "24022026_ubjerez-gris-toldos-el-portal_cadiz-cb-gades-fontaclima_junior-femenino-play-off-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",

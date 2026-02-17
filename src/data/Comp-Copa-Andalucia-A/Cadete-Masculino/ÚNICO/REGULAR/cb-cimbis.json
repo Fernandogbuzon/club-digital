@@ -19,8 +19,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "10:00",
     "pabellon": "PAB. DEL PARQUE",
     "es_resultado": false,
     "estado": "proximo",
@@ -29,7 +29,7 @@
     "equipo": "CB CIMBIS",
     "rival": "UBJerez GRIS",
     "ubicacion": "Local",
-    "id": "22022026_cb-cimbis_ubjerez-gris_cadete-masculino-regular-unico"
+    "id": "21022026_cb-cimbis_ubjerez-gris_cadete-masculino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",

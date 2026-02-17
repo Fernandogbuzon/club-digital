@@ -83,8 +83,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "10:00",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,23 @@
     "equipo": "UBJerez BLANCO",
     "rival": "CB CHIPIONA",
     "ubicacion": "Local",
-    "id": "22022026_ubjerez-blanco_cb-chipiona_minibasket-mixto-2-fase-grupo-1"
+    "id": "21022026_ubjerez-blanco_cb-chipiona_minibasket-mixto-2-fase-grupo-1"
+  },
+  {
+    "competicion": "Comp Copa Andalucia B",
+    "marcador_local": null,
+    "marcador_visitante": null,
+    "fecha": "20/02/2026",
+    "hora": "19:00",
+    "pabellon": "PAB. MPAL. DE DEPORTES",
+    "es_resultado": false,
+    "estado": "proximo",
+    "jornada": "Jornada 4 - 15/02/2026",
+    "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 1",
+    "equipo": "UBJerez BLANCO",
+    "rival": "VITALDENT-CABU",
+    "ubicacion": "Visitante",
+    "id": "20022026_vitaldent-cabu_ubjerez-blanco_minibasket-mixto-2-fase-grupo-1"
   },
   {
     "competicion": "Comp Copa Andalucia B",
@@ -110,22 +126,6 @@
     "rival": "ELECT. ÁVILA CHICLANA-ITUCI",
     "ubicacion": "Local",
     "id": "15022026_ubjerez-blanco_elect-avila-chiclana-ituci_minibasket-mixto-2-fase-grupo-1"
-  },
-  {
-    "competicion": "Comp Copa Andalucia B",
-    "marcador_local": null,
-    "marcador_visitante": null,
-    "fecha": "14/02/2026",
-    "hora": "",
-    "pabellon": "PAB. MPAL. DE DEPORTES",
-    "es_resultado": false,
-    "estado": "proximo",
-    "jornada": "Jornada 4 - 15/02/2026",
-    "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 1",
-    "equipo": "UBJerez BLANCO",
-    "rival": "VITALDENT-CABU",
-    "ubicacion": "Visitante",
-    "id": "14022026_vitaldent-cabu_ubjerez-blanco_minibasket-mixto-2-fase-grupo-1"
   },
   {
     "competicion": "Comp Copa Andalucia B",

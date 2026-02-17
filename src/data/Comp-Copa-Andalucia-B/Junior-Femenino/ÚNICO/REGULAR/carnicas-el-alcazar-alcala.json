@@ -35,8 +35,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:00",
     "pabellon": "PAB. ANGELITA ALTA",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,7 +45,7 @@
     "equipo": "CARNICAS EL ALCAZAR ALCALA",
     "rival": "CBP EDASE  EL CARRIL DE GADES",
     "ubicacion": "Visitante",
-    "id": "22022026_cbp-edase-el-carril-de-gades_carnicas-el-alcazar-alcala_junior-femenino-regular-unico"
+    "id": "21022026_cbp-edase-el-carril-de-gades_carnicas-el-alcazar-alcala_junior-femenino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia B",

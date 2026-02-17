@@ -35,8 +35,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:00",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,7 +45,7 @@
     "equipo": "UBJerez NEGRO",
     "rival": "GABBA",
     "ubicacion": "Local",
-    "id": "22022026_ubjerez-negro_gabba_junior-masculino-2-fase-grupo-3"
+    "id": "21022026_ubjerez-negro_gabba_junior-masculino-2-fase-grupo-3"
   },
   {
     "competicion": "Comp Copa Andalucia B",

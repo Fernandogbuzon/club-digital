@@ -35,8 +35,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "10:30",
     "pabellon": "PAB. Dr. JUAN CARLOS MATEO",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,7 +45,7 @@
     "equipo": "CBC CÁDIZ",
     "rival": "AUDI CENTER CBA",
     "ubicacion": "Visitante",
-    "id": "22022026_audi-center-cba_cbc-cadiz_cadete-femenino-regular-grupo-a"
+    "id": "21022026_audi-center-cba_cbc-cadiz_cadete-femenino-regular-grupo-a"
   },
   {
     "competicion": "Comp Copa Andalucia B",

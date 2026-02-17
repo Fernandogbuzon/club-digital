@@ -51,8 +51,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "14:00",
     "pabellon": "PAB. ARRABAL",
     "es_resultado": false,
     "estado": "proximo",
@@ -61,7 +61,7 @@
     "equipo": "IBERSUR CBA",
     "rival": "SD CANDRAY CONSAMARE CONSTRUCCIONES",
     "ubicacion": "Local",
-    "id": "22022026_ibersur-cba_sd-candray-consamare-construcciones_junior-femenino-regular-unico"
+    "id": "21022026_ibersur-cba_sd-candray-consamare-construcciones_junior-femenino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia B",

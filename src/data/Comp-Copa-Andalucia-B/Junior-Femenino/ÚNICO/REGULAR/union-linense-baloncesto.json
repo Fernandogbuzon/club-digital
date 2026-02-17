@@ -35,8 +35,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "13:00",
     "pabellon": "PAB. MPAL. LA LINEA",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,7 +45,7 @@
     "equipo": "UNION LINENSE BALONCESTO",
     "rival": "UBJerez BLANCO - TOLDOS EL PORTAL",
     "ubicacion": "Local",
-    "id": "22022026_union-linense-baloncesto_ubjerez-blanco-toldos-el-portal_junior-femenino-regular-unico"
+    "id": "21022026_union-linense-baloncesto_ubjerez-blanco-toldos-el-portal_junior-femenino-regular-unico"
   },
   {
     "competicion": "Comp Copa Andalucia B",

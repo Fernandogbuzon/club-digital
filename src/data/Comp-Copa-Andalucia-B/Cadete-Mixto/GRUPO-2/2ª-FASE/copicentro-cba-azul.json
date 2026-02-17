@@ -83,8 +83,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:00",
     "pabellon": "PAB. ARRABAL",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,7 @@
     "equipo": "COPICENTRO CBA AZUL",
     "rival": "CBC CÁDIZ ROJO",
     "ubicacion": "Local",
-    "id": "22022026_copicentro-cba-azul_cbc-cadiz-rojo_cadete-mixto-2-fase-grupo-2"
+    "id": "21022026_copicentro-cba-azul_cbc-cadiz-rojo_cadete-mixto-2-fase-grupo-2"
   },
   {
     "competicion": "Comp Copa Andalucia B",

@@ -99,9 +99,9 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
-    "pabellon": "PABELLÓN IDB LA PAZ",
+    "fecha": "21/02/2026",
+    "hora": "12:00",
+    "pabellon": "PAB. MIRANDILLA",
     "es_resultado": false,
     "estado": "proximo",
     "jornada": "Jornada 8 - 22/02/2026",
@@ -109,7 +109,7 @@
     "equipo": "CADIZ CB GADES",
     "rival": "CBC CÁDIZ",
     "ubicacion": "Visitante",
-    "id": "22022026_cbc-cadiz_cadiz-cb-gades_infantil-mixto-2-fase-grupo-3"
+    "id": "21022026_cbc-cadiz_cadiz-cb-gades_infantil-mixto-2-fase-grupo-3"
   },
   {
     "competicion": "Comp Copa Andalucia B",

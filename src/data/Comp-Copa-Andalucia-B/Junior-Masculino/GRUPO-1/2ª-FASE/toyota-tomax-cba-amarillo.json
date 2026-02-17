@@ -36,7 +36,7 @@
     "marcador_local": null,
     "marcador_visitante": null,
     "fecha": "23/02/2026",
-    "hora": "",
+    "hora": "19:00",
     "pabellon": "PAB. ARRABAL",
     "es_resultado": false,
     "estado": "proximo",
@@ -51,8 +51,8 @@
     "competicion": "Comp Copa Andalucia B",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "10:00",
     "pabellon": "PAB. ARRABAL",
     "es_resultado": false,
     "estado": "proximo",
@@ -61,7 +61,7 @@
     "equipo": "TOYOTA TOMAX CBA AMARILLO",
     "rival": "YARI DENTAL CENTURIAS",
     "ubicacion": "Local",
-    "id": "22022026_toyota-tomax-cba-amarillo_yari-dental-centurias_junior-masculino-2-fase-grupo-1"
+    "id": "21022026_toyota-tomax-cba-amarillo_yari-dental-centurias_junior-masculino-2-fase-grupo-1"
   },
   {
     "competicion": "Comp Copa Andalucia B",

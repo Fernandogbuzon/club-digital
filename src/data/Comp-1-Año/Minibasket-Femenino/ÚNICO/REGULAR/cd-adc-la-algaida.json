@@ -115,8 +115,8 @@
     "competicion": "Comp 1 Año",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "23/02/2026",
+    "hora": "18:30",
     "pabellon": "PAB. LA ALGAIDA - C.P. MAESTRA CARIDAD RUIZ",
     "es_resultado": false,
     "estado": "proximo",
@@ -125,7 +125,7 @@
     "equipo": "CD ADC LA ALGAIDA",
     "rival": "CB TREBUJENA",
     "ubicacion": "Local",
-    "id": "22022026_cd-adc-la-algaida_cb-trebujena_minibasket-femenino-regular-unico"
+    "id": "23022026_cd-adc-la-algaida_cb-trebujena_minibasket-femenino-regular-unico"
   },
   {
     "competicion": "Comp 1 Año",

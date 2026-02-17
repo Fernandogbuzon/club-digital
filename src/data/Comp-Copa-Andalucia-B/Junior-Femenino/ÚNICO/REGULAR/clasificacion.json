@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-17T15:45:00.833377",
+  "ultima_actualizacion": "2026-02-17T23:13:52.839390",
   "clasificacion": [
     {
       "equipo": "UNION LINENSE BALONCESTO",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "CBP EDASE  EL CARRIL DE GADES",
+      "partidos_jugados": 13,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 5,
+      "puntos_favor": 645,
+      "puntos_contra": 627,
+      "diferencia": 18,
+      "puntos": 21,
+      "posicion": 2
+    },
+    {
       "equipo": "IBERSUR CBA",
       "partidos_jugados": 11,
       "partidos_ganados": 9,
@@ -23,17 +34,6 @@
       "puntos_contra": 537,
       "diferencia": 151,
       "puntos": 20,
-      "posicion": 2
-    },
-    {
-      "equipo": "CBP EDASE  EL CARRIL DE GADES",
-      "partidos_jugados": 12,
-      "partidos_ganados": 7,
-      "partidos_perdidos": 5,
-      "puntos_favor": 611,
-      "puntos_contra": 598,
-      "diferencia": 13,
-      "puntos": 19,
       "posicion": 3
     },
     {
@@ -49,13 +49,13 @@
     },
     {
       "equipo": "CBC CÁDIZ",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 5,
-      "partidos_perdidos": 7,
-      "puntos_favor": 524,
-      "puntos_contra": 583,
-      "diferencia": -59,
-      "puntos": 17,
+      "partidos_perdidos": 8,
+      "puntos_favor": 553,
+      "puntos_contra": 617,
+      "diferencia": -64,
+      "puntos": 18,
       "posicion": 5
     },
     {

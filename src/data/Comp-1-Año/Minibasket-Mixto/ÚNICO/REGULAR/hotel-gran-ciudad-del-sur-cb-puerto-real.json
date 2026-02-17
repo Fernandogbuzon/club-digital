@@ -163,8 +163,8 @@
     "competicion": "Comp 1 Año",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "10:00",
     "pabellon": "SALA BARRIO 512",
     "es_resultado": false,
     "estado": "proximo",
@@ -173,7 +173,7 @@
     "equipo": "HOTEL GRAN CIUDAD DEL SUR CB PUERTO REAL",
     "rival": "BLUEPARROT OFFSHORE CBSFDO",
     "ubicacion": "Local",
-    "id": "22022026_hotel-gran-ciudad-del-sur-cb-puerto-real_blueparrot-offshore-cbsfdo_minibasket-mixto-regular-unico"
+    "id": "21022026_hotel-gran-ciudad-del-sur-cb-puerto-real_blueparrot-offshore-cbsfdo_minibasket-mixto-regular-unico"
   },
   {
     "competicion": "Comp 1 Año",
