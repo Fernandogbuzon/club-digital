@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PartidosCarousel from '../components/PartidosCarousel.astro';
 
 // Derivar nombre humano del equipo desde categoría + competición
 function derivarNombreEquipo(categoria: string, competicion: string): string {
@@ -145,6 +144,25 @@ const equiposOverview = Object.values(teamCards).sort((a: any, b: any) => {
   return na !== nb ? nb - na : a.nombre.localeCompare(b.nombre);
 });
 
+// ========== WEEKLY VIEW DATA ==========
+const weeklyTeamData = equiposOverview.map((eq: any) => {
+  const catBase = eq.cat.split(' - ')[0].trim();
+  const parts = catBase.split(' ');
+  const nivel = parts[0];
+  const genero = parts.length > 1 ? parts.slice(1).join(' ') : 'Mixto';
+  const allMatches = (partidosPorCat[eq.cat] || [])
+    .filter((m: any) => m.equipo === 'ADESA 80' || m.equipo?.includes('ADESA 80'))
+    .map((m: any) => ({
+      f: m.fecha, h: m.hora || '', r: m.rival, u: m.ubicacion,
+      ml: m.marcador_local, mv: m.marcador_visitante,
+    }));
+  return {
+    nombre: eq.nombre, cat: eq.cat, nivel, genero,
+    pos: eq.pos, total: eq.total, pg: eq.pg, pp: eq.pp,
+    temporada: eq.temporada, partidos: allMatches
+  };
+});
+
 // ========== TEMPORADAS ==========
 const currentMonth = ahora.getMonth() + 1;
 const currentYear = ahora.getFullYear();
@@ -187,6 +205,7 @@ const equiposOverviewJSON = JSON.stringify(equiposOverview);
 const teamPhasesJSON = JSON.stringify(teamPhases);
 const seasonsJSON = JSON.stringify(seasonsArr);
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+const weeklyTeamDataJSON = JSON.stringify(weeklyTeamData);
 
 // Logo map serializable for JS
 const logoMapData = [
@@ -237,16 +256,13 @@ const logoMapJSON = JSON.stringify(logoMapData);
 ---
 
 <Layout title="Partidos y Resultados - ADESA 80">
-  <!-- Carrusel estilo NBA -->
-  <PartidosCarousel />
-
   <!-- ========== CATEGORÍAS ========== -->
   <section id="zonaLiga" class="bg-white pt-6 pb-8">
     <div class="max-w-7xl mx-auto px-6">
 
       <!-- Header con título y selector de temporada -->
       <div class="flex items-center justify-between mb-4">
-        <h2 id="categoriasTitle" class="text-sm font-bold text-gray-300 uppercase tracking-widest">Categorías</h2>
+        <h2 id="categoriasTitle" class="text-sm font-bold text-gray-300 uppercase tracking-widest">Resultados</h2>
         <div class="flex items-center gap-2" id="seasonDropdownWrap">
           <label class="text-xs font-bold text-gray-400 uppercase tracking-wider hidden sm:inline">Temporada</label>
           <select id="seasonSelect" class="text-sm font-bold text-gray-700 bg-gray-100 border border-gray-200 rounded-lg px-3 py-1.5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-adesa-green/50 transition-colors">
@@ -257,28 +273,37 @@ const logoMapJSON = JSON.stringify(logoMapData);
         </div>
       </div>
 
-      <!-- Overview por defecto -->
+      <!-- Overview: Vista Semanal de Resultados -->
       <div id="overviewPanel">
-        <div class="grid gap-3" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));" id="overviewGrid">
-          {equiposOverview.map(eq => (
-            <div class="equipo-overview rounded-lg overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg border border-gray-100 flex items-stretch bg-white" style="height: 68px;" data-cat={eq.cat} data-nombre={eq.nombre} data-temporada={eq.temporada}>
-              <div class="flex flex-col justify-center px-4 flex-1 min-w-0">
-                <p class="font-extrabold text-[14px] text-gray-900 uppercase tracking-wide leading-tight truncate">{eq.nombre}</p>
-                <p class="text-[12px] font-bold text-gray-400 mt-0.5">{eq.pg}-{eq.pp}</p>
-              </div>
-              <div class="flex items-center justify-center px-4 flex-shrink-0">
-                {eq.pos ? (
-                  <span class="font-black text-adesa-green leading-none" style="font-size: 36px;">{eq.pos}</span>
-                ) : (
-                  <span class="font-black text-gray-200 leading-none" style="font-size: 36px;">-</span>
-                )}
-              </div>
-            </div>
-          ))}
+        <!-- Quick Category Selector -->
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Ver clasificación:</label>
+          <select id="quickCatSelect" class="text-sm font-semibold text-gray-700 bg-white border border-gray-200 rounded-lg px-3 py-2 cursor-pointer hover:border-adesa-green focus:outline-none focus:ring-2 focus:ring-adesa-green/30 transition-colors">
+            <option value="">Seleccionar categoría...</option>
+          </select>
         </div>
-        <div id="noSeasonData" class="hidden text-center py-10 text-gray-400">
-          <p class="text-lg font-bold">No hay datos para esta temporada</p>
-          <p class="text-sm mt-1">Los datos estarán disponibles cuando comience la temporada</p>
+
+        <!-- Week Navigator -->
+        <div class="flex items-center justify-center gap-3 mb-6" id="weekNavigator">
+          <button id="weekPrev" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-adesa-green hover:text-white flex items-center justify-center text-gray-400 transition-all duration-200" title="Semana anterior">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="flex flex-col items-center gap-1">
+            <span id="weekLabel" class="text-base font-black text-gray-800 tracking-tight min-w-[220px] text-center select-none"></span>
+            <button id="weekToday" class="hidden text-[10px] font-bold text-adesa-green hover:text-white hover:bg-adesa-green border border-adesa-green/30 px-3 py-0.5 rounded-full transition-all">Volver a esta semana</button>
+          </div>
+          <button id="weekNext" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-adesa-green hover:text-white flex items-center justify-center text-gray-400 transition-all duration-200" title="Semana siguiente">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- Weekly Results List -->
+        <div class="max-w-5xl mx-auto">
+          <div id="weeklyResults"></div>
+          <div id="noWeekData" class="hidden text-center py-10 text-gray-400">
+            <p class="text-lg font-bold">No hay datos para esta temporada</p>
+            <p class="text-sm mt-1">Los datos estarán disponibles cuando comience la temporada</p>
+          </div>
         </div>
       </div>
 
@@ -300,7 +325,7 @@ const logoMapJSON = JSON.stringify(logoMapData);
   </section>
 
   <!-- Datos de liga serializados para JavaScript -->
-  <script define:vars={{ ligaDataJSON, equiposOverviewJSON, teamPhasesJSON, seasonsJSON, currentSeason, logoMapJSON, baseUrl }}>
+  <script define:vars={{ ligaDataJSON, equiposOverviewJSON, teamPhasesJSON, seasonsJSON, currentSeason, logoMapJSON, baseUrl, weeklyTeamDataJSON }}>
     window.__ligaData = JSON.parse(ligaDataJSON);
     window.__overviewData = JSON.parse(equiposOverviewJSON);
     window.__teamPhases = JSON.parse(teamPhasesJSON);
@@ -308,16 +333,18 @@ const logoMapJSON = JSON.stringify(logoMapData);
     window.__currentSeason = currentSeason;
     window.__logoMap = JSON.parse(logoMapJSON);
     window.__baseUrl = baseUrl;
+    window.__weeklyTeamData = JSON.parse(weeklyTeamDataJSON);
   </script>
 
   <!-- Script Zona Liga -->
   <script>
-    // ========== ZONA LIGA - PANEL DE DETALLE ==========
+    // ========== ZONA LIGA - WEEKLY VIEW + DETAIL PANEL ==========
     const _ld = (window as any).__ligaData || {};
     const _od = (window as any).__overviewData || [];
     const _tp = (window as any).__teamPhases || {};
     const _logoMap = (window as any).__logoMap || [];
     const _baseUrl = (window as any).__baseUrl || '';
+    const _weeklyData = (window as any).__weeklyTeamData || [];
     const detailPanel = document.getElementById('detailPanel');
     const overviewPanel = document.getElementById('overviewPanel');
     const detailContent = document.getElementById('detailContent');
@@ -326,8 +353,13 @@ const logoMapJSON = JSON.stringify(logoMapData);
     const btnVolver = document.getElementById('btnVolverOverview');
     const seasonSelect = document.getElementById('seasonSelect') as HTMLSelectElement;
     const phaseSelector = document.getElementById('phaseSelector');
-    const noSeasonData = document.getElementById('noSeasonData');
-    const overviewGrid = document.getElementById('overviewGrid');
+    const weeklyResultsEl = document.getElementById('weeklyResults');
+    const noWeekData = document.getElementById('noWeekData');
+    const weekLabelEl = document.getElementById('weekLabel');
+    const weekPrevBtn = document.getElementById('weekPrev');
+    const weekNextBtn = document.getElementById('weekNext');
+    const weekTodayBtn = document.getElementById('weekToday');
+    const weekNavigator = document.getElementById('weekNavigator');
 
     // ── Logo helper ──
     function getTeamLogo(teamName: string, size: number = 20): string {
@@ -343,10 +375,93 @@ const logoMapJSON = JSON.stringify(logoMapData);
       return '';
     }
 
-    // State
+    // ── Week helpers ──
+    const _meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+    const _diasSemana = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+
+    function getMonday(d: Date): Date {
+      const date = new Date(d);
+      const day = date.getDay();
+      const diff = date.getDate() - day + (day === 0 ? -6 : 1);
+      date.setDate(diff);
+      date.setHours(0, 0, 0, 0);
+      return date;
+    }
+
+    function getSunday(mon: Date): Date {
+      const sun = new Date(mon);
+      sun.setDate(sun.getDate() + 6);
+      sun.setHours(23, 59, 59, 999);
+      return sun;
+    }
+
+    function parseMatchDate(s: string): Date {
+      const [d, m, y] = s.split('/').map(Number);
+      return new Date(y, m - 1, d);
+    }
+
+    function sameWeek(a: Date, b: Date): boolean {
+      return getMonday(a).getTime() === getMonday(b).getTime();
+    }
+
+    function formatWeekLabel(mon: Date): string {
+      const sun = new Date(mon);
+      sun.setDate(sun.getDate() + 6);
+      return mon.getDate() + ' ' + _meses[mon.getMonth()] + ' \u2013 ' + sun.getDate() + ' ' + _meses[sun.getMonth()] + ' ' + sun.getFullYear();
+    }
+
+    function formatMatchDay(fechaStr: string, hora: string): string {
+      const d = parseMatchDate(fechaStr);
+      const dia = _diasSemana[d.getDay()];
+      const txt = dia + ' ' + d.getDate() + ' ' + _meses[d.getMonth()];
+      return hora ? txt + ' \u00b7 ' + hora : txt;
+    }
+
+    // ── State ──
     let currentSeason = seasonSelect?.value || '';
     let currentTeamName: string | null = null;
     let currentCatBase: string | null = null;
+    let currentWeekMonday = getMonday(new Date());
+    const todayWeekMonday = getMonday(new Date());
+    const quickCatSelect = document.getElementById('quickCatSelect') as HTMLSelectElement;
+
+    function populateQuickCatSelect() {
+      if (!quickCatSelect) return;
+      const teams = _weeklyData.filter((t: any) => t.temporada === currentSeason);
+      teams.sort((a: any, b: any) => {
+        const na = _nivelOrder[a.nivel] || 0;
+        const nb = _nivelOrder[b.nivel] || 0;
+        return na !== nb ? nb - na : a.nombre.localeCompare(b.nombre);
+      });
+      let html = '<option value="">Seleccionar categoría...</option>';
+      const grupos: Record<string, any[]> = { 'Masculino': [], 'Femenino': [], 'Mixto': [] };
+      for (const t of teams) {
+        if (t.genero === 'Masculino') grupos['Masculino'].push(t);
+        else if (t.genero === 'Femenino') grupos['Femenino'].push(t);
+        else grupos['Mixto'].push(t);
+      }
+      for (const [label, list] of Object.entries(grupos)) {
+        if (list.length > 0) {
+          html += '<optgroup label="' + label + '">';
+          for (const t of list) {
+            html += '<option value="' + t.cat + '" data-nombre="' + t.nombre + '">' + t.nombre + '</option>';
+          }
+          html += '</optgroup>';
+        }
+      }
+      quickCatSelect.innerHTML = html;
+    }
+
+    if (quickCatSelect) {
+      quickCatSelect.addEventListener('change', () => {
+        const cat = quickCatSelect.value;
+        if (!cat) return;
+        const opt = quickCatSelect.options[quickCatSelect.selectedIndex];
+        const nombre = opt.getAttribute('data-nombre') || '';
+        mostrarDetalle(cat, undefined, nombre);
+        quickCatSelect.value = '';
+      });
+    }
 
     function updateCarouselFilter() {
       const opts: any = {};
@@ -357,22 +472,208 @@ const logoMapJSON = JSON.stringify(logoMapData);
       }
     }
 
+    // ── Category level order ──
+    const _nivelOrder: Record<string, number> = { 'Senior': 8, 'Sub-22': 7, 'Junior': 6, 'Cadete': 5, 'Infantil': 4, 'Minibasket': 3, 'Mini': 3, 'PreMini': 2, 'Babybasket': 1 };
+    function nivelSort(a: any, b: any) {
+      const na = _nivelOrder[a.nivel] || 0;
+      const nb = _nivelOrder[b.nivel] || 0;
+      return na !== nb ? nb - na : a.nombre.localeCompare(b.nombre);
+    }
+
+    // ── Weekly View Rendering ──
+    function renderWeeklyView() {
+      if (!weeklyResultsEl || !weekLabelEl) return;
+      const teams = _weeklyData.filter((t: any) => t.temporada === currentSeason);
+      const monday = currentWeekMonday;
+      const sunday = getSunday(monday);
+      weekLabelEl.textContent = formatWeekLabel(monday);
+      if (weekTodayBtn) weekTodayBtn.classList.toggle('hidden', sameWeek(monday, todayWeekMonday));
+
+      if (teams.length === 0) {
+        weeklyResultsEl.innerHTML = '';
+        if (noWeekData) noWeekData.classList.remove('hidden');
+        return;
+      }
+      if (noWeekData) noWeekData.classList.add('hidden');
+
+      // Enrich each team with its week matches
+      const enriched = teams.map((team: any) => {
+        const wm = (team.partidos || []).filter((m: any) => {
+          const d = parseMatchDate(m.f);
+          return d >= monday && d <= sunday;
+        });
+        return { ...team, weekMatches: wm };
+      });
+
+      // Split by gender
+      const masc = enriched.filter((t: any) => t.genero === 'Masculino');
+      const fem = enriched.filter((t: any) => t.genero === 'Femenino');
+      const mixto = enriched.filter((t: any) => t.genero !== 'Masculino' && t.genero !== 'Femenino');
+      masc.sort(nivelSort); fem.sort(nivelSort); mixto.sort(nivelSort);
+
+      let html = '';
+      html += renderGenderSection('MASCULINO', masc, 'masc');
+      html += renderGenderSection('FEMENINO', fem, 'fem');
+      if (mixto.length) html += renderGenderSection('MIXTO', mixto, 'mixto');
+
+      weeklyResultsEl.innerHTML = html;
+
+      // Bind click events
+      weeklyResultsEl.querySelectorAll('.result-row').forEach((row: Element) => {
+        row.addEventListener('click', () => {
+          const cat = row.getAttribute('data-cat');
+          const nombre = row.getAttribute('data-nombre');
+          if (cat) mostrarDetalle(cat, undefined, nombre || undefined);
+        });
+      });
+      weeklyResultsEl.querySelectorAll('.rest-team-btn').forEach((btn: Element) => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const cat = btn.getAttribute('data-cat');
+          const nombre = btn.getAttribute('data-nombre');
+          if (cat) mostrarDetalle(cat, undefined, nombre || undefined);
+        });
+      });
+      // Populate quick category selector
+      populateQuickCatSelect();
+    }
+
+    function renderGenderSection(label: string, teams: any[], id: string): string {
+      const withMatch = teams.filter((t: any) => t.weekMatches.length > 0);
+      const withoutMatch = teams.filter((t: any) => t.weekMatches.length === 0);
+      if (teams.length === 0) return '';
+
+      const colors: Record<string, string> = {
+        'masc': 'from-blue-600 to-blue-700',
+        'fem': 'from-pink-500 to-pink-600',
+        'mixto': 'from-purple-500 to-purple-600'
+      };
+      const accentBg = colors[id] || 'from-gray-600 to-gray-700';
+
+      let h = '<div class="mb-6">';
+      // Section header
+      h += '<div class="flex items-center gap-3 mb-3">';
+      h += '<span class="inline-block px-4 py-1.5 rounded-lg bg-gradient-to-r ' + accentBg + ' text-white text-[11px] font-black uppercase tracking-[0.15em] shadow-sm">' + label + '</span>';
+      h += '<div class="flex-1 h-px bg-gray-200"></div>';
+      h += '</div>';
+
+      // Match rows
+      if (withMatch.length > 0) {
+        h += '<div class="rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm divide-y divide-gray-100">';
+        for (const t of withMatch) {
+          for (const m of t.weekMatches) {
+            h += renderMatchRow(t, m);
+          }
+        }
+        h += '</div>';
+      }
+
+      // "Descansa" row for teams without match (clickeable)
+      if (withoutMatch.length > 0) {
+        h += '<div class="mt-2 px-4 py-2.5 rounded-lg bg-gray-50 border border-gray-100">';
+        h += '<div class="flex items-center gap-2 flex-wrap">';
+        h += '<span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Descansan:</span>';
+        for (const t of withoutMatch) {
+          h += '<button class="rest-team-btn text-xs font-semibold text-gray-500 hover:text-adesa-green hover:underline transition-colors" data-cat="' + t.cat + '" data-nombre="' + t.nombre + '">' + t.nombre + '</button>';
+          if (withoutMatch.indexOf(t) < withoutMatch.length - 1) h += '<span class="text-gray-300">·</span>';
+        }
+        h += '</div></div>';
+      }
+
+      h += '</div>';
+      return h;
+    }
+
+    function renderMatchRow(team: any, m: any): string {
+      const hasScore = m.ml !== null && m.mv !== null && m.ml !== '' && m.mv !== undefined;
+      const isLocal = m.u === 'Local';
+      const adesaName = team.nombre;
+      const rivalName = m.r;
+      const leftName = isLocal ? adesaName : rivalName;
+      const rightName = isLocal ? rivalName : adesaName;
+      const leftIsAdesa = isLocal;
+      const rightIsAdesa = !isLocal;
+      const leftLogo = getTeamLogo(leftIsAdesa ? 'ADESA 80' : rivalName, 36);
+      const rightLogo = getTeamLogo(rightIsAdesa ? 'ADESA 80' : rivalName, 36);
+      const emptyLogo = '<span style="width:36px;height:36px;flex-shrink:0;"></span>';
+
+      let won = false, lost = false;
+      if (hasScore) {
+        const ml = parseInt(m.ml), mv = parseInt(m.mv);
+        const aScore = isLocal ? ml : mv;
+        const rScore = isLocal ? mv : ml;
+        won = aScore > rScore;
+        lost = aScore < rScore;
+      }
+
+      const isPast = !hasScore && parseMatchDate(m.f) < new Date();
+      const posLabel = team.pos ? team.pos + '\u00ba' : '';
+      const record = team.pg + '-' + team.pp;
+
+      // Result badge (W/L/upcoming/postponed)
+      let badge = '';
+      if (hasScore) {
+        badge = won
+          ? '<span class="wl-badge wl-win">V</span>'
+          : '<span class="wl-badge wl-loss">D</span>';
+      } else if (isPast) {
+        badge = '<span class="wl-badge wl-postponed">A</span>';
+      }
+
+      // Row accent
+      const accentClass = hasScore ? (won ? 'row-win' : 'row-loss') : (isPast ? 'row-postponed' : 'row-upcoming');
+
+      let h = '<div class="result-row ' + accentClass + ' flex items-center px-4 sm:px-6 py-4 cursor-pointer hover:bg-gray-50/80 transition-all group" data-cat="' + team.cat + '" data-nombre="' + team.nombre + '">';
+
+      // Badge column
+      h += '<div class="w-8 flex-shrink-0 flex items-center justify-center">' + badge + '</div>';
+
+      // Left team (right-aligned)
+      h += '<div class="flex-1 flex items-center justify-end gap-3 sm:gap-4 min-w-0">';
+      h += '<div class="text-right min-w-0">';
+      h += '<span class="block text-sm sm:text-base font-bold truncate ' + (leftIsAdesa ? 'text-gray-900' : 'text-gray-600') + '">' + leftName + '</span>';
+      if (leftIsAdesa && posLabel) h += '<span class="block text-[11px] font-bold text-adesa-green leading-none mt-1">' + posLabel + ' · ' + record + '</span>';
+      h += '</div>';
+      h += (leftLogo || emptyLogo);
+      h += '</div>';
+
+      // Score center
+      h += '<div class="w-[100px] sm:w-[130px] flex-shrink-0 mx-3 sm:mx-5 flex flex-col items-center">';
+      if (hasScore) {
+        const scoreBg = won ? 'bg-adesa-green' : 'bg-gray-800';
+        h += '<div class="' + scoreBg + ' text-white font-black text-lg sm:text-xl px-4 py-2 rounded-xl tracking-wider text-center leading-none w-full shadow-md">' + m.ml + ' - ' + m.mv + '</div>';
+      } else if (isPast) {
+        h += '<div class="bg-amber-100 text-amber-700 font-bold text-xs px-3 py-2 rounded-xl text-center w-full">APLAZADO</div>';
+      } else {
+        h += '<div class="bg-gray-100 text-gray-600 font-semibold text-xs px-3 py-2 rounded-xl text-center w-full leading-tight">';
+        const partes = m.f ? m.f.split('/') : [];
+        const fechaCorta = partes.length === 3 ? partes[0] + '/' + partes[1] : m.f;
+        h += fechaCorta + (m.h ? '<br><span class="text-gray-500">' + m.h + '</span>' : '');
+        h += '</div>';
+      }
+      h += '</div>';
+
+      // Right team (left-aligned)
+      h += '<div class="flex-1 flex items-center gap-3 sm:gap-4 min-w-0">';
+      h += (rightLogo || emptyLogo);
+      h += '<div class="min-w-0">';
+      h += '<span class="block text-sm sm:text-base font-bold truncate ' + (rightIsAdesa ? 'text-gray-900' : 'text-gray-600') + '">' + rightName + '</span>';
+      if (rightIsAdesa && posLabel) h += '<span class="block text-[11px] font-bold text-adesa-green leading-none mt-1">' + posLabel + ' · ' + record + '</span>';
+      h += '</div>';
+      h += '</div>';
+
+      // Arrow hint
+      h += '<div class="w-5 flex-shrink-0 flex items-center justify-center text-gray-300 group-hover:text-adesa-green transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></div>';
+
+      h += '</div>';
+      return h;
+    }
+
     // ── Season change ──
     if (seasonSelect) {
       seasonSelect.addEventListener('change', () => {
         currentSeason = seasonSelect.value;
-        let visibleCount = 0;
-        document.querySelectorAll('.equipo-overview').forEach((card: Element) => {
-          const el = card as HTMLElement;
-          if (el.dataset.temporada === currentSeason) {
-            el.style.display = '';
-            visibleCount++;
-          } else {
-            el.style.display = 'none';
-          }
-        });
-        if (overviewGrid) overviewGrid.style.display = visibleCount > 0 ? '' : 'none';
-        if (noSeasonData) noSeasonData.classList.toggle('hidden', visibleCount > 0);
+        renderWeeklyView();
         updateCarouselFilter();
       });
     }
@@ -380,12 +681,14 @@ const logoMapJSON = JSON.stringify(logoMapData);
     function mostrarOverview() {
       if (detailPanel) detailPanel.classList.add('hidden');
       if (overviewPanel) overviewPanel.classList.remove('hidden');
-      if (categoriasTitle) { categoriasTitle.textContent = 'Categorías'; categoriasTitle.classList.remove('hidden'); }
+      if (categoriasTitle) { categoriasTitle.textContent = 'Resultados'; categoriasTitle.classList.remove('hidden'); }
       const seasonWrap = document.getElementById('seasonDropdownWrap');
       if (seasonWrap) seasonWrap.style.display = '';
+      if (weekNavigator) weekNavigator.style.display = '';
       currentTeamName = null;
       currentCatBase = null;
       updateCarouselFilter();
+      renderWeeklyView();
     }
 
     function mostrarDetalle(categoria: string, rivalDestacado?: string, teamName?: string) {
@@ -578,14 +881,27 @@ const logoMapJSON = JSON.stringify(logoMapData);
       detailContent.innerHTML = html;
     }
 
-    // Click en tarjetas del overview
-    document.querySelectorAll('.equipo-overview').forEach(card => {
-      card.addEventListener('click', () => {
-        const cat = card.getAttribute('data-cat');
-        const nombre = card.getAttribute('data-nombre');
-        if (cat) mostrarDetalle(cat, undefined, nombre || undefined);
+    // ── Week navigation ──
+    if (weekPrevBtn) {
+      weekPrevBtn.addEventListener('click', () => {
+        currentWeekMonday = new Date(currentWeekMonday);
+        currentWeekMonday.setDate(currentWeekMonday.getDate() - 7);
+        renderWeeklyView();
       });
-    });
+    }
+    if (weekNextBtn) {
+      weekNextBtn.addEventListener('click', () => {
+        currentWeekMonday = new Date(currentWeekMonday);
+        currentWeekMonday.setDate(currentWeekMonday.getDate() + 7);
+        renderWeeklyView();
+      });
+    }
+    if (weekTodayBtn) {
+      weekTodayBtn.addEventListener('click', () => {
+        currentWeekMonday = getMonday(new Date());
+        renderWeeklyView();
+      });
+    }
 
     // Click en tarjetas del carrusel (delegación por si se reconstruyen)
     const carouselTrack = document.getElementById('carousel-track');
@@ -606,7 +922,9 @@ const logoMapJSON = JSON.stringify(logoMapData);
       btnVolver.addEventListener('click', mostrarOverview);
     }
 
-    // Aplicar filtro de temporada inicial al carrusel
+    // Render inicial
+    renderWeeklyView();
+    populateQuickCatSelect();
     if (currentSeason) {
       updateCarouselFilter();
     }
@@ -617,18 +935,29 @@ const logoMapJSON = JSON.stringify(logoMapData);
       scrollbar-width: thin;
       scrollbar-color: #d1d5db transparent;
     }
-    .zona-liga-scroll::-webkit-scrollbar {
-      width: 6px;
+    .zona-liga-scroll::-webkit-scrollbar { width: 6px; }
+    .zona-liga-scroll::-webkit-scrollbar-track { background: transparent; }
+    .zona-liga-scroll::-webkit-scrollbar-thumb { background-color: #d1d5db; border-radius: 3px; }
+    .zona-liga-scroll::-webkit-scrollbar-thumb:hover { background-color: #9ca3af; }
+
+    /* Result rows */
+    .result-row { position: relative; }
+    .result-row.row-win { border-left: 3px solid #22c55e; }
+    .result-row.row-loss { border-left: 3px solid #ef4444; }
+    .result-row.row-postponed { border-left: 3px solid #f59e0b; }
+    .result-row.row-upcoming { border-left: 3px solid transparent; }
+
+    /* W/L badges */
+    .wl-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px; border-radius: 50%;
+      font-size: 11px; font-weight: 800; line-height: 1;
     }
-    .zona-liga-scroll::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .zona-liga-scroll::-webkit-scrollbar-thumb {
-      background-color: #d1d5db;
-      border-radius: 3px;
-    }
-    .zona-liga-scroll::-webkit-scrollbar-thumb:hover {
-      background-color: #9ca3af;
-    }
+    .wl-win { background: #dcfce7; color: #16a34a; }
+    .wl-loss { background: #fef2f2; color: #dc2626; }
+    .wl-postponed { background: #fef3c7; color: #d97706; }
+
+    /* Hover effect on rest team buttons */
+    .rest-team-btn { cursor: pointer; }
   </style>
 </Layout>

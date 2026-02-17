@@ -74,8 +74,8 @@ partidos.sort((a, b) => parseFecha(a.fecha, a.hora).getTime() - parseFecha(b.fec
 function abreviarCategoria(cat: string, comp: string): string {
   const parte = cat.split(' - ')[0];
   let abbr = parte
-    .replace(/Senior/i, 'Sen').replace(/Junior/i, 'Jun')
-    .replace(/Cadete/i, 'Cad').replace(/Infantil/i, 'Inf')
+    .replace(/Senior/i, 'Senior').replace(/Junior/i, 'Junior')
+    .replace(/Cadete/i, 'Cadete').replace(/Infantil/i, 'Infantil')
     .replace(/Minibasket/i, 'Mini').replace(/PreMini/i, 'Pre-Mini')
     .replace(/Babybasket/i, 'Baby')
     .replace(/Masculino/i, 'Masc').replace(/Femenino/i, 'Fem')
