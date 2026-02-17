@@ -81,13 +81,17 @@ const categorias = [...new Set(noticias.map(n => n.categoria))];
 
 <Layout title="Noticias - ADESA 80">
   <!-- Header Section -->
-  <section class="bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <section class="relative overflow-hidden py-16 sm:py-20">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[400px] h-[250px] bg-adesa-green/6 rounded-full blur-[100px]"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+        <p class="text-caption text-adesa-green mb-3">ACTUALIDAD</p>
+        <h1 class="text-display-lg text-white mb-4">
           Noticias del Club
         </h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        <p class="text-body-lg max-w-2xl mx-auto">
           Mantente al día con las últimas novedades del ADESA 80
         </p>
       </div>
@@ -95,18 +99,18 @@ const categorias = [...new Set(noticias.map(n => n.categoria))];
   </section>
 
   <!-- Filtros -->
-  <section class="bg-gray-50 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <div class="flex items-center justify-center gap-3 flex-wrap">
-        <button 
-          class="categoria-filter px-5 py-2.5 rounded-xl font-semibold transition-all bg-adesa-green text-white"
+  <section class="border-b border-white/5 sticky top-16 z-40 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-center gap-2 flex-wrap">
+        <button
+          class="categoria-filter px-4 py-2 rounded-lg font-semibold text-sm transition-all bg-adesa-green text-white"
           data-categoria="all"
         >
           Todas
         </button>
         {categorias.map((cat: string) => (
-          <button 
-            class="categoria-filter px-5 py-2.5 rounded-xl font-semibold transition-all bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+          <button
+            class="categoria-filter px-4 py-2 rounded-lg font-semibold text-sm transition-all bg-surface-700 text-gray-400 hover:text-white border border-white/5"
             data-categoria={cat}
           >
             {cat}
@@ -118,37 +122,35 @@ const categorias = [...new Set(noticias.map(n => n.categoria))];
 
   <!-- Noticias Destacadas -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h2 class="text-3xl font-black text-gray-900 mb-8">Destacadas</h2>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <h2 class="text-display-md text-white mb-8">Destacadas</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
       {noticias.filter(n => n.destacada).map((noticia) => (
-        <div 
-          class="noticia-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-2xl transition-all"
+        <div
+          class="noticia-card card group overflow-hidden"
           data-categoria={noticia.categoria}
         >
-          <div class="bg-linear-to-br from-adesa-green to-adesa-dark p-16 flex items-center justify-center">
-            <span class="text-9xl group-hover:scale-110 transition-transform">{noticia.imagen}</span>
+          <div class="bg-gradient-to-br from-adesa-green/20 to-adesa-dark/20 p-16 flex items-center justify-center border-b border-white/5">
+            <span class="text-8xl group-hover:scale-110 transition-transform duration-300">{noticia.imagen}</span>
           </div>
-          
+
           <div class="p-8">
             <div class="flex items-center gap-3 mb-4">
-              <span class="px-3 py-1 bg-adesa-green/10 text-adesa-green font-semibold rounded-full text-sm">
-                {noticia.categoria}
-              </span>
+              <span class="badge badge-green">{noticia.categoria}</span>
               <span class="text-sm text-gray-500">{noticia.fecha}</span>
             </div>
-            
-            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-adesa-green transition-colors">
+
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-adesa-green transition-colors">
               {noticia.titulo}
             </h3>
-            
-            <p class="text-gray-600 mb-6">
+
+            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
               {noticia.resumen}
             </p>
-            
-            <button class="inline-flex items-center text-adesa-green font-semibold hover:text-adesa-dark transition-colors">
+
+            <button class="btn-ghost text-sm">
               Leer más
-              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
@@ -158,36 +160,35 @@ const categorias = [...new Set(noticias.map(n => n.categoria))];
     </div>
 
     <!-- Todas las Noticias -->
-    <h2 class="text-3xl font-black text-gray-900 mb-8">Todas las Noticias</h2>
-    
+    <h2 class="text-display-md text-white mb-8">Todas las Noticias</h2>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {noticias.filter(n => !n.destacada).map((noticia) => (
-        <div 
-          class="noticia-card group bg-white rounded-3xl overflow-hidden shadow-lg border-2 border-gray-100 hover:border-adesa-green hover:shadow-xl transition-all"
+        <div
+          class="noticia-card card group overflow-hidden"
           data-categoria={noticia.categoria}
         >
-          <div class="bg-gray-50 p-12 flex items-center justify-center">
-            <span class="text-6xl group-hover:scale-110 transition-transform">{noticia.imagen}</span>
+          <div class="bg-surface-700 p-10 flex items-center justify-center border-b border-white/5">
+            <span class="text-5xl group-hover:scale-110 transition-transform duration-300">{noticia.imagen}</span>
           </div>
-          
+
           <div class="p-6">
             <div class="flex items-center gap-3 mb-3">
-              <span class="px-3 py-1 bg-adesa-green/10 text-adesa-green font-semibold rounded-full text-xs">
-                {noticia.categoria}
-              </span>
+              <span class="badge badge-green text-[10px]">{noticia.categoria}</span>
               <span class="text-xs text-gray-500">{noticia.fecha}</span>
             </div>
-            
-            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-adesa-green transition-colors">
+
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-adesa-green transition-colors">
               {noticia.titulo}
             </h3>
-            
-            <p class="text-gray-600 text-sm mb-4">
+
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
               {noticia.resumen}
             </p>
-            
-            <button class="text-adesa-green font-semibold text-sm hover:text-adesa-dark transition-colors">
-              Leer más →
+
+            <button class="btn-ghost text-xs">
+              Leer más
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </button>
           </div>
         </div>
@@ -196,24 +197,29 @@ const categorias = [...new Set(noticias.map(n => n.categoria))];
   </section>
 
   <!-- Newsletter -->
-  <section class="bg-gray-50 py-16">
+  <section class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-linear-to-br from-adesa-dark to-adesa-green rounded-3xl p-12 text-center text-white shadow-2xl">
-        <h2 class="text-3xl font-black mb-4">
-          No te pierdas ninguna noticia
-        </h2>
-        <p class="text-xl text-green-50 mb-8">
-          Suscríbete a nuestro boletín y recibe las últimas novedades
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-          <input 
-            type="email" 
-            placeholder="tu@email.com" 
-            class="flex-1 px-6 py-4 rounded-2xl text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-white"
-          />
-          <button class="px-8 py-4 bg-white text-adesa-green font-bold rounded-2xl hover:bg-green-50 transition-all shadow-lg hover:shadow-xl hover:scale-105">
-            Suscribirse
-          </button>
+      <div class="card glow-green p-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-adesa-green/10 via-transparent to-adesa-green/5"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-px bg-gradient-to-r from-transparent via-adesa-green to-transparent"></div>
+        <div class="relative z-10">
+          <p class="text-caption text-adesa-green mb-3">NEWSLETTER</p>
+          <h2 class="text-display-md text-white mb-4">
+            No te pierdas ninguna noticia
+          </h2>
+          <p class="text-body-lg mb-8">
+            Suscríbete a nuestro boletín y recibe las últimas novedades
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="tu@email.com"
+              class="input-dark flex-1"
+            />
+            <button class="btn-primary whitespace-nowrap">
+              Suscribirse
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -223,19 +229,19 @@ const categorias = [...new Set(noticias.map(n => n.categoria))];
   <script>
     const filterButtons = document.querySelectorAll('.categoria-filter');
     const noticiaCards = document.querySelectorAll('.noticia-card');
-    
+
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         const categoria = button.getAttribute('data-categoria');
-        
+
         // Update active state
         filterButtons.forEach(btn => {
           btn.classList.remove('bg-adesa-green', 'text-white');
-          btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+          btn.classList.add('bg-surface-700', 'text-gray-400', 'border', 'border-white/5');
         });
-        button.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        button.classList.remove('bg-surface-700', 'text-gray-400', 'border', 'border-white/5');
         button.classList.add('bg-adesa-green', 'text-white');
-        
+
         // Filter news
         noticiaCards.forEach(card => {
           if (categoria === 'all' || card.getAttribute('data-categoria') === categoria) {

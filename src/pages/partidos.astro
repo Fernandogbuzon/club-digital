@@ -186,6 +186,54 @@ const ligaDataJSON = JSON.stringify(ligaData);
 const equiposOverviewJSON = JSON.stringify(equiposOverview);
 const teamPhasesJSON = JSON.stringify(teamPhases);
 const seasonsJSON = JSON.stringify(seasonsArr);
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Logo map serializable for JS
+const logoMapData = [
+  [['ubjerez','ubj'], 'ubjerez.png'],
+  [['gymnastica','gymnástica'], 'gymnastica.png'],
+  [['portuense','cbp '], 'cbportuense.png'],
+  [['cbsfdo','cb san fernando','san fernando'], 'cbsanfernando.png'],
+  [['centurias'], 'sanroque.png'],
+  [['adesa'], 'adesa80.png'],
+  [['gades'], 'cbgades.png'],
+  [['cbc cádiz','cbc cadiz'], 'cbciudaddecadiz.png'],
+  [['marianistas'], 'admarianistas.png'],
+  [['mergablo'], 'cdmergablo.png'],
+  [['chipiona'], 'chipionacb.png'],
+  [['puerto real'], 'puertoreal.png'],
+  [['medina'], 'cbmedinasidonia.png'],
+  [['candray'], 'candray.png'],
+  [['c.a.b.u','cabu','ubrique'], 'cabu.png'],
+  [['cimbis'], 'cbcimbis.png'],
+  [['urbaluz','uz red'], 'urbaluz.png'],
+  [['san felipe','neri'], 'sanfelipeneri.png'],
+  [['carteia'], 'ADCarteia.png'],
+  [['udea'], 'cdudeaalgeciras.png'],
+  [['algeciras'], 'cbalgeciras.png'],
+  [['arcos'], 'arcos.png'],
+  [['chiclana','ituci'], 'cbchiclana.png'],
+  [['alcalá','alcala','gazules'], 'alcaladelosgazules.png'],
+  [['rota'], 'cbrota.png'],
+  [['barrios'], 'losbarrios.png'],
+  [['san roque'], 'sanroque.png'],
+  [['don bosco'], 'cpdonbosco.png'],
+  [['vejer'], 'ebmvejer.png'],
+  [['xerez'], 'xerezcd.png'],
+  [['ulb','linense'], 'ulblinense.png'],
+  [['barbate'], 'cdbarbate.png'],
+  [['prado'], 'cbpradodelrey.png'],
+  [['sancti petri'], 'sanctipetri.png'],
+  [['montera'], 'cdmergablo.png'],
+  [['algaida'], 'adcalgaida.png'],
+  [['gabba'], 'cbalgeciras.png'],
+  [['trebujena'], 'cbtrebujena.svg'],
+  [['inmaculada','ceuta'], 'cbinmaculadaceuta.svg'],
+  [['cba'], 'cbalgeciras.png'],
+  [['maxcolchon'], 'cbsanfernando.png'],
+  [['ongolf'], 'sanroque.png'],
+];
+const logoMapJSON = JSON.stringify(logoMapData);
 ---
 
 <Layout title="Partidos y Resultados - ADESA 80">
@@ -252,12 +300,14 @@ const seasonsJSON = JSON.stringify(seasonsArr);
   </section>
 
   <!-- Datos de liga serializados para JavaScript -->
-  <script define:vars={{ ligaDataJSON, equiposOverviewJSON, teamPhasesJSON, seasonsJSON, currentSeason }}>
+  <script define:vars={{ ligaDataJSON, equiposOverviewJSON, teamPhasesJSON, seasonsJSON, currentSeason, logoMapJSON, baseUrl }}>
     window.__ligaData = JSON.parse(ligaDataJSON);
     window.__overviewData = JSON.parse(equiposOverviewJSON);
     window.__teamPhases = JSON.parse(teamPhasesJSON);
     window.__seasons = JSON.parse(seasonsJSON);
     window.__currentSeason = currentSeason;
+    window.__logoMap = JSON.parse(logoMapJSON);
+    window.__baseUrl = baseUrl;
   </script>
 
   <!-- Script Zona Liga -->
@@ -266,6 +316,8 @@ const seasonsJSON = JSON.stringify(seasonsArr);
     const _ld = (window as any).__ligaData || {};
     const _od = (window as any).__overviewData || [];
     const _tp = (window as any).__teamPhases || {};
+    const _logoMap = (window as any).__logoMap || [];
+    const _baseUrl = (window as any).__baseUrl || '';
     const detailPanel = document.getElementById('detailPanel');
     const overviewPanel = document.getElementById('overviewPanel');
     const detailContent = document.getElementById('detailContent');
@@ -276,6 +328,20 @@ const seasonsJSON = JSON.stringify(seasonsArr);
     const phaseSelector = document.getElementById('phaseSelector');
     const noSeasonData = document.getElementById('noSeasonData');
     const overviewGrid = document.getElementById('overviewGrid');
+
+    // ── Logo helper ──
+    function getTeamLogo(teamName: string, size: number = 20): string {
+      const lower = teamName.toLowerCase();
+      for (const [patterns, file] of _logoMap) {
+        for (const pat of patterns) {
+          if (lower.includes(pat)) {
+            const src = (file as string).startsWith('../') ? `${_baseUrl}/${(file as string).slice(3)}` : `${_baseUrl}/logos/${file}`;
+            return `<img src="${src}" alt="" style="width:${size}px;height:${size}px;object-fit:contain;border-radius:50%;flex-shrink:0;" loading="lazy">`;
+          }
+        }
+      }
+      return '';
+    }
 
     // State
     let currentSeason = seasonSelect?.value || '';
@@ -383,20 +449,18 @@ const seasonsJSON = JSON.stringify(seasonsArr);
 
       html += '<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">';
 
-      // --- CLASIFICACIÓN ---
+      // --- CLASIFICACIÓN (sin scroll horizontal) ---
       html += '<div class="lg:col-span-1">';
       html += '<div class="bg-white rounded-2xl border-2 border-gray-100 overflow-hidden shadow-lg sticky top-4">';
-      html += '<div class="bg-adesa-dark text-white px-5 py-3"><h3 class="font-bold text-sm tracking-wide">📊 Clasificación</h3></div>';
-      html += '<div class="overflow-x-auto">';
-      html += '<table class="w-full text-xs">';
-      html += '<thead><tr class="bg-gray-50 text-gray-500 uppercase tracking-wider text-[10px]">';
-      html += '<th class="px-2 py-2 text-center">#</th><th class="px-2 py-2 text-left">Equipo</th>';
-      html += '<th class="px-2 py-2 text-center">PJ</th><th class="px-2 py-2 text-center">PG</th>';
-      html += '<th class="px-2 py-2 text-center">PP</th>';
-      html += '<th class="px-2 py-2 text-center hidden sm:table-cell">PF</th>';
-      html += '<th class="px-2 py-2 text-center hidden sm:table-cell">PC</th>';
-      html += '<th class="px-2 py-2 text-center hidden sm:table-cell">DIF</th>';
-      html += '<th class="px-2 py-2 text-center">PTS</th>';
+      html += '<div class="bg-adesa-dark text-white px-4 py-3"><h3 class="font-bold text-sm tracking-wide">📊 Clasificación</h3></div>';
+      html += '<table class="w-full text-[11px]" style="table-layout:fixed;">';
+      html += '<thead><tr class="bg-gray-50 text-gray-500 uppercase tracking-wider" style="font-size:9px;">';
+      html += '<th style="width:24px;" class="py-1.5 text-center">#</th>';
+      html += '<th class="py-1.5 text-left pl-1">Equipo</th>';
+      html += '<th style="width:22px;" class="py-1.5 text-center">PJ</th>';
+      html += '<th style="width:22px;" class="py-1.5 text-center">G</th>';
+      html += '<th style="width:22px;" class="py-1.5 text-center">P</th>';
+      html += '<th style="width:28px;" class="py-1.5 text-center">PTS</th>';
       html += '</tr></thead><tbody>';
 
       for (const eq of liga.c) {
@@ -404,21 +468,21 @@ const seasonsJSON = JSON.stringify(seasonsArr);
         const esRival = rivalDestacado && eq.equipo && eq.equipo.toUpperCase() === rivalDestacado.toUpperCase();
         const bg = esAdesa ? 'bg-adesa-green/10' : esRival ? 'bg-amber-50' : '';
         const fw = esAdesa ? 'font-bold' : '';
+        const logo = getTeamLogo(eq.equipo, 18);
         html += '<tr class="' + bg + ' ' + fw + ' border-b border-gray-50 hover:bg-gray-50 transition-colors">';
-        html += '<td class="px-2 py-2.5 text-center font-bold ' + (esAdesa ? 'text-adesa-green' : 'text-gray-400') + '">' + eq.posicion + '</td>';
-        html += '<td class="px-2 py-2.5 ' + (esAdesa ? 'text-adesa-green font-bold' : 'text-gray-700') + ' whitespace-nowrap">' + (esAdesa ? '🟢 ' : '') + eq.equipo + '</td>';
-        html += '<td class="px-2 py-2.5 text-center text-gray-600">' + eq.partidos_jugados + '</td>';
-        html += '<td class="px-2 py-2.5 text-center text-green-600 font-medium">' + eq.partidos_ganados + '</td>';
-        html += '<td class="px-2 py-2.5 text-center text-red-500 font-medium">' + eq.partidos_perdidos + '</td>';
-        html += '<td class="px-2 py-2.5 text-center text-gray-500 hidden sm:table-cell">' + (eq.puntos_favor || '-') + '</td>';
-        html += '<td class="px-2 py-2.5 text-center text-gray-500 hidden sm:table-cell">' + (eq.puntos_contra || '-') + '</td>';
-        const dif = eq.diferencia || 0;
-        const difColor = dif > 0 ? 'text-green-600' : dif < 0 ? 'text-red-500' : 'text-gray-500';
-        html += '<td class="px-2 py-2.5 text-center font-medium hidden sm:table-cell ' + difColor + '">' + (dif > 0 ? '+' : '') + dif + '</td>';
-        html += '<td class="px-2 py-2.5 text-center font-bold ' + (esAdesa ? 'text-adesa-green' : 'text-gray-900') + '">' + eq.puntos + '</td>';
+        html += '<td class="py-2 text-center font-bold ' + (esAdesa ? 'text-adesa-green' : 'text-gray-400') + '">' + eq.posicion + '</td>';
+        html += '<td class="py-2 pl-1 ' + (esAdesa ? 'text-adesa-green font-bold' : 'text-gray-700') + '">';
+        html += '<div style="display:flex;align-items:center;gap:4px;overflow:hidden;">';
+        html += logo || '<span style="width:18px;height:18px;flex-shrink:0;"></span>';
+        html += '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + eq.equipo + '</span>';
+        html += '</div></td>';
+        html += '<td class="py-2 text-center text-gray-600">' + eq.partidos_jugados + '</td>';
+        html += '<td class="py-2 text-center text-green-600 font-medium">' + eq.partidos_ganados + '</td>';
+        html += '<td class="py-2 text-center text-red-500 font-medium">' + eq.partidos_perdidos + '</td>';
+        html += '<td class="py-2 text-center font-bold ' + (esAdesa ? 'text-adesa-green' : 'text-gray-900') + '">' + eq.puntos + '</td>';
         html += '</tr>';
       }
-      html += '</tbody></table></div></div></div>';
+      html += '</tbody></table></div></div>';
 
       // --- JORNADAS ---
       html += '<div class="lg:col-span-2">';
@@ -437,26 +501,37 @@ const seasonsJSON = JSON.stringify(seasonsArr);
           const esAdesa = p.a;
           const tieneRes = p.ml !== null && p.mv !== null && p.ml !== '' && p.mv !== '';
           const border = esAdesa ? 'border-l-4 border-l-adesa-green bg-adesa-green/5' : 'border-l-4 border-l-transparent';
-          html += '<div class="px-5 py-2.5 flex items-center text-xs ' + border + ' hover:bg-gray-50/50 transition-colors">';
+          html += '<div class="px-3 py-2 flex items-center text-xs ' + border + ' hover:bg-gray-50/50 transition-colors" style="gap:4px;">';
 
+          // Local: nombre + logo
           const lAdesa = p.l === 'ADESA 80' || (p.l && p.l.includes('ADESA'));
-          html += '<div class="flex-1 text-right truncate pr-2 ' + (lAdesa ? 'font-bold text-adesa-green' : 'text-gray-700') + '">' + p.l + '</div>';
+          const lLogo = getTeamLogo(p.l, 18);
+          html += '<div style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:5px;overflow:hidden;min-width:0;">';
+          html += '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" class="' + (lAdesa ? 'font-bold text-adesa-green' : 'text-gray-700') + '">' + p.l + '</span>';
+          html += lLogo;
+          html += '</div>';
 
+          // Score / date
           if (tieneRes) {
-            html += '<div class="px-3 py-1 rounded-lg bg-gray-900 text-white font-bold text-xs whitespace-nowrap min-w-[60px] text-center">' + p.ml + ' - ' + p.mv + '</div>';
+            html += '<div class="px-2 py-1 rounded-lg bg-gray-900 text-white font-bold text-xs whitespace-nowrap text-center" style="min-width:54px;">' + p.ml + ' - ' + p.mv + '</div>';
           } else {
             const partes = p.f ? p.f.split('/') : [];
             const fechaP = partes.length === 3 ? new Date(parseInt(partes[2]), parseInt(partes[1]) - 1, parseInt(partes[0])) : null;
             const esPasado = fechaP && fechaP < new Date();
             if (esPasado) {
-              html += '<div class="px-3 py-1 rounded-lg bg-red-100 text-red-600 font-bold text-[10px] whitespace-nowrap min-w-[60px] text-center">APLAZADO</div>';
+              html += '<div class="px-2 py-1 rounded-lg bg-red-100 text-red-600 font-bold whitespace-nowrap text-center" style="min-width:54px;font-size:10px;">APLAZADO</div>';
             } else {
-              html += '<div class="px-3 py-1 rounded-lg bg-gray-100 text-gray-400 text-[10px] whitespace-nowrap min-w-[60px] text-center">' + p.f + (p.h ? ' · ' + p.h : '') + '</div>';
+              html += '<div class="px-2 py-1 rounded-lg bg-gray-100 text-gray-400 whitespace-nowrap text-center" style="min-width:54px;font-size:10px;">' + p.f + (p.h ? ' · ' + p.h : '') + '</div>';
             }
           }
 
+          // Visitante: logo + nombre
           const vAdesa = p.v === 'ADESA 80' || (p.v && p.v.includes('ADESA'));
-          html += '<div class="flex-1 truncate pl-2 ' + (vAdesa ? 'font-bold text-adesa-green' : 'text-gray-700') + '">' + p.v + '</div>';
+          const vLogo = getTeamLogo(p.v, 18);
+          html += '<div style="flex:1;display:flex;align-items:center;gap:5px;overflow:hidden;min-width:0;">';
+          html += vLogo;
+          html += '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" class="' + (vAdesa ? 'font-bold text-adesa-green' : 'text-gray-700') + '">' + p.v + '</span>';
+          html += '</div>';
 
           html += '</div>';
         }
