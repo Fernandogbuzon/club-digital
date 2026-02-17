@@ -157,21 +157,26 @@ async def crear_browser(headless: bool = False):
     return pw, browser, context, page
 
 
-async def esperar_pagina(page, timeout: int = 45000) -> bool:
+async def esperar_pagina(page, timeout: int = 60000) -> bool:
     """Espera a que la página real cargue (selector de categoría visible)."""
     try:
-        await page.wait_for_selector(SEL_CAT, timeout=timeout)
+        await page.wait_for_selector(SEL_CAT, timeout=timeout, state="visible")
+        await asyncio.sleep(0.5)  # Pequeña pausa adicional para asegurar estabilidad
         return True
     except Exception:
-        title = await page.title()
-        if "moment" in title.lower() or "momento" in title.lower():
-            logger.info("  ⏳ Challenge CF detectado, esperando resolución...")
-            try:
-                await page.wait_for_selector(SEL_CAT, timeout=90000)
-                return True
-            except Exception:
-                logger.error("  ❌ CF challenge no se resolvió")
-                return False
+        try:
+            title = await page.title()
+            if "moment" in title.lower() or "momento" in title.lower():
+                logger.info("  ⏳ Challenge CF detectado, esperando resolución...")
+                try:
+                    await page.wait_for_selector(SEL_CAT, timeout=120000, state="visible")
+                    await asyncio.sleep(1.0)  # Pausa adicional tras resolver CF
+                    return True
+                except Exception:
+                    logger.error("  ❌ CF challenge no se resolvió")
+                    return False
+        except Exception:
+            pass
         return False
 
 
@@ -183,19 +188,47 @@ async def obtener_opciones(page, selector: str) -> list[dict]:
     )
 
 
-async def seleccionar_dropdown(page, selector: str, ddl_name: str, value: str):
+async def seleccionar_dropdown(page, selector: str, ddl_name: str, value: str, max_retries: int = 3):
     """Selecciona valor en dropdown y espera la navegación del postback ASP.NET."""
-    await page.evaluate("() => { window.__cFRLUnblockHandlers = true; }")
-    try:
-        async with page.expect_navigation(wait_until="domcontentloaded", timeout=60000):
-            await page.select_option(selector, value)
-    except Exception as e:
-        logger.warning(f"  ⚠️ Navigation timeout/error: {e}")
-    ok = await esperar_pagina(page, timeout=60000)
-    if not ok:
-        logger.error(f"  Error tras postback de {ddl_name}")
-    await pausa(1.0, 2.5)
-    return ok
+    for intento in range(max_retries):
+        try:
+            await page.evaluate("() => { window.__cFRLUnblockHandlers = true; }")
+            
+            # Esperar a que el selector esté disponible
+            await page.wait_for_selector(selector, timeout=10000, state="visible")
+            
+            # Intentar selección con navegación
+            try:
+                async with page.expect_navigation(wait_until="load", timeout=90000):
+                    await page.select_option(selector, value)
+                await asyncio.sleep(1.0)
+            except Exception as nav_error:
+                # La navegación puede fallar si es muy rápida o no hay cambio real
+                logger.debug(f"  Navigation event timeout (puede ser normal): {nav_error}")
+                await asyncio.sleep(2.0)
+            
+            # Verificar que la página esté lista
+            ok = await esperar_pagina(page, timeout=90000)
+            if ok:
+                await pausa(1.5, 3.0)  # Pausa más larga para estabilidad
+                return True
+            
+            if intento < max_retries - 1:
+                logger.warning(f"  ⚠️ Intento {intento + 1}/{max_retries} falló para {ddl_name}, reintentando...")
+                await asyncio.sleep(3.0)
+            else:
+                logger.error(f"  ❌ Error tras {max_retries} intentos de postback de {ddl_name}")
+                return False
+                
+        except Exception as e:
+            if intento < max_retries - 1:
+                logger.warning(f"  ⚠️ Error en intento {intento + 1}/{max_retries}: {e}")
+                await asyncio.sleep(3.0)
+            else:
+                logger.error(f"  ❌ Error crítico tras {max_retries} intentos: {e}")
+                return False
+    
+    return False
 
 
 # ─── Extracción de partidos ──────────────────────────────────────────────────
@@ -449,9 +482,11 @@ async def scrape_una_competicion(
         logger.info(f"\n{'─' * 55}")
         logger.info(f"📂 CATEGORÍA: {cat_nombre}")
 
-        ok = await seleccionar_dropdown(page, SEL_CAT, DDL_CATEGORIAS, cat_value)
+        ok = await seleccionar_dropdown(page, SEL_CAT, DDL_CATEGORIAS, cat_value, max_retries=3)
         if not ok:
-            logger.error(f"  ❌ No se pudo cambiar a {cat_nombre}")
+            logger.error(f"  ❌ No se pudo cambiar a {cat_nombre} tras múltiples intentos")
+            # Esperar antes de continuar con la siguiente categoría
+            await asyncio.sleep(5.0)
             continue
 
         # Leer fases
@@ -468,8 +503,10 @@ async def scrape_una_competicion(
             fase_value = fase["value"]
             logger.info(f"  📄 Fase: {fase_nombre}")
 
-            ok = await seleccionar_dropdown(page, SEL_FASE, DDL_FASES, fase_value)
+            ok = await seleccionar_dropdown(page, SEL_FASE, DDL_FASES, fase_value, max_retries=2)
             if not ok:
+                logger.warning(f"    ⚠️ No se pudo cambiar a fase {fase_nombre}")
+                await asyncio.sleep(3.0)
                 continue
 
             # Leer grupos
@@ -486,8 +523,10 @@ async def scrape_una_competicion(
                 grupo_value = grupo["value"]
                 logger.info(f"    🏷️  Grupo: {grupo_nombre}")
 
-                ok = await seleccionar_dropdown(page, SEL_GRUPO, DDL_GRUPOS, grupo_value)
+                ok = await seleccionar_dropdown(page, SEL_GRUPO, DDL_GRUPOS, grupo_value, max_retries=2)
                 if not ok:
+                    logger.warning(f"      ⚠️ No se pudo cambiar a grupo {grupo_nombre}")
+                    await asyncio.sleep(3.0)
                     continue
 
                 # Asegurar tab CALENDARIO activo

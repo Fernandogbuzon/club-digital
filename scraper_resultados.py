@@ -320,19 +320,24 @@ async def crear_browser(headless: bool = False):
     return pw, browser, context, page
 
 
-async def esperar_pagina(page, timeout: int = 45000) -> bool:
+async def esperar_pagina(page, timeout: int = 60000) -> bool:
     try:
-        await page.wait_for_selector(SEL_CAT, timeout=timeout)
+        await page.wait_for_selector(SEL_CAT, timeout=timeout, state="visible")
+        await asyncio.sleep(0.5)  # Pequeña pausa adicional para asegurar estabilidad
         return True
     except Exception:
-        title = await page.title()
-        if "moment" in title.lower() or "momento" in title.lower():
-            logger.info("  CF challenge, esperando...")
-            try:
-                await page.wait_for_selector(SEL_CAT, timeout=90000)
-                return True
-            except Exception:
-                return False
+        try:
+            title = await page.title()
+            if "moment" in title.lower() or "momento" in title.lower():
+                logger.info("  CF challenge, esperando...")
+                try:
+                    await page.wait_for_selector(SEL_CAT, timeout=120000, state="visible")
+                    await asyncio.sleep(1.0)  # Pausa adicional tras resolver CF
+                    return True
+                except Exception:
+                    return False
+        except Exception:
+            pass
         return False
 
 
@@ -343,16 +348,42 @@ async def obtener_opciones(page, selector: str) -> list[dict]:
     )
 
 
-async def seleccionar_dropdown(page, selector: str, ddl_name: str, value: str):
-    await page.evaluate("() => { window.__cFRLUnblockHandlers = true; }")
-    try:
-        async with page.expect_navigation(wait_until="domcontentloaded", timeout=60000):
-            await page.select_option(selector, value)
-    except Exception as e:
-        logger.warning(f"  Navigation: {e}")
-    ok = await esperar_pagina(page, timeout=60000)
-    await pausa(0.5, 1.2)
-    return ok
+async def seleccionar_dropdown(page, selector: str, ddl_name: str, value: str, max_retries: int = 3):
+    for intento in range(max_retries):
+        try:
+            await page.evaluate("() => { window.__cFRLUnblockHandlers = true; }")
+            
+            # Esperar a que el selector esté disponible
+            await page.wait_for_selector(selector, timeout=10000, state="visible")
+            
+            # Intentar selección con navegación
+            try:
+                async with page.expect_navigation(wait_until="load", timeout=90000):
+                    await page.select_option(selector, value)
+                await asyncio.sleep(1.0)
+            except Exception as nav_error:
+                # La navegación puede fallar si es muy rápida o no hay cambio real
+                logger.debug(f"  Navigation event timeout (puede ser normal): {nav_error}")
+                await asyncio.sleep(2.0)
+            
+            # Verificar que la página esté lista
+            ok = await esperar_pagina(page, timeout=90000)
+            if ok:
+                await pausa(1.0, 2.0)
+                return True
+            
+            if intento < max_retries - 1:
+                logger.warning(f"  Intento {intento + 1}/{max_retries} falló para {ddl_name}, reintentando...")
+                await asyncio.sleep(3.0)
+            
+        except Exception as e:
+            if intento < max_retries - 1:
+                logger.warning(f"  Error en intento {intento + 1}/{max_retries}: {e}")
+                await asyncio.sleep(3.0)
+            else:
+                logger.error(f"  Error crítico tras {max_retries} intentos: {e}")
+    
+    return False
 
 
 async def extraer_partidos_pagina(page) -> list[dict]:
@@ -479,7 +510,8 @@ async def scrape_grupo(page, comp_url, cat_carpeta, fase_carpeta, grupo_carpeta)
         return []
 
     logger.info(f"  Categoria: {cat_carpeta}")
-    if not await seleccionar_dropdown(page, SEL_CAT, DDL_CATEGORIAS, cat_value):
+    if not await seleccionar_dropdown(page, SEL_CAT, DDL_CATEGORIAS, cat_value, max_retries=3):
+        logger.error(f"  No se pudo cambiar a categoría {cat_carpeta} tras múltiples intentos")
         return []
 
     # Fase
@@ -493,7 +525,8 @@ async def scrape_grupo(page, comp_url, cat_carpeta, fase_carpeta, grupo_carpeta)
         return []
 
     logger.info(f"  Fase: {fase_carpeta}")
-    if not await seleccionar_dropdown(page, SEL_FASE, DDL_FASES, fase_value):
+    if not await seleccionar_dropdown(page, SEL_FASE, DDL_FASES, fase_value, max_retries=2):
+        logger.warning(f"  No se pudo cambiar a fase {fase_carpeta}")
         return []
 
     # Grupo
@@ -507,7 +540,8 @@ async def scrape_grupo(page, comp_url, cat_carpeta, fase_carpeta, grupo_carpeta)
         return []
 
     logger.info(f"  Grupo: {grupo_carpeta}")
-    if not await seleccionar_dropdown(page, SEL_GRUPO, DDL_GRUPOS, grupo_value):
+    if not await seleccionar_dropdown(page, SEL_GRUPO, DDL_GRUPOS, grupo_value, max_retries=2):
+        logger.warning(f"  No se pudo cambiar a grupo {grupo_carpeta}")
         return []
 
     # Tab calendario
