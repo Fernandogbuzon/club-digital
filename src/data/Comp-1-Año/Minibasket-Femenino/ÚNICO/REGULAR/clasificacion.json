@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-16T14:37:15.769445",
+  "ultima_actualizacion": "2026-02-17T00:15:31.508031",
   "clasificacion": [
+    {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 0,
+      "puntos_favor": 599,
+      "puntos_contra": 246,
+      "diferencia": 353,
+      "puntos": 22,
+      "posicion": 1
+    },
     {
       "equipo": "CADIZ CB GADES BLV PROYECT 2025",
       "partidos_jugados": 11,
@@ -12,17 +23,6 @@
       "puntos_contra": 367,
       "diferencia": 250,
       "puntos": 21,
-      "posicion": 1
-    },
-    {
-      "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 10,
-      "partidos_ganados": 10,
-      "partidos_perdidos": 0,
-      "puntos_favor": 553,
-      "puntos_contra": 240,
-      "diferencia": 313,
-      "puntos": 20,
       "posicion": 2
     },
     {
@@ -71,13 +71,13 @@
     },
     {
       "equipo": "CD ADC LA ALGAIDA",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 3,
-      "partidos_perdidos": 7,
-      "puntos_favor": 325,
-      "puntos_contra": 431,
-      "diferencia": -106,
-      "puntos": 13,
+      "partidos_perdidos": 8,
+      "puntos_favor": 331,
+      "puntos_contra": 477,
+      "diferencia": -146,
+      "puntos": 14,
       "posicion": 7
     },
     {

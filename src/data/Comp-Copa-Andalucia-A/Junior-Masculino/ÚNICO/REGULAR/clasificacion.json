@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-16T14:29:33.361038",
+  "ultima_actualizacion": "2026-02-17T00:07:49.924458",
   "clasificacion": [
     {
       "equipo": "BERNARDINO ABAD CB PUERTO REAL",
@@ -49,13 +49,13 @@
     },
     {
       "equipo": "ADESA 80",
-      "partidos_jugados": 18,
-      "partidos_ganados": 10,
+      "partidos_jugados": 19,
+      "partidos_ganados": 11,
       "partidos_perdidos": 8,
-      "puntos_favor": 1199,
-      "puntos_contra": 1215,
-      "diferencia": -16,
-      "puntos": 28,
+      "puntos_favor": 1263,
+      "puntos_contra": 1264,
+      "diferencia": -1,
+      "puntos": 30,
       "posicion": 5
     },
     {
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "AIRWIFI - MERGABLO",
-      "partidos_jugados": 18,
+      "partidos_jugados": 19,
       "partidos_ganados": 5,
-      "partidos_perdidos": 13,
-      "puntos_favor": 1002,
-      "puntos_contra": 1381,
-      "diferencia": -379,
-      "puntos": 23,
+      "partidos_perdidos": 14,
+      "puntos_favor": 1051,
+      "puntos_contra": 1445,
+      "diferencia": -394,
+      "puntos": 24,
       "posicion": 8
     },
     {

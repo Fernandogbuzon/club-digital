@@ -35,8 +35,8 @@
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "18/02/2026",
-    "hora": "",
+    "fecha": "17/02/2026",
+    "hora": "19:45",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -45,14 +45,14 @@
     "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
     "rival": "STROG SHIPPING ULB",
     "ubicacion": "Local",
-    "id": "18022026_union-bcto-jerez-el-mira_strog-shipping-ulb_junior-masculino-play-off-unico"
+    "id": "17022026_union-bcto-jerez-el-mira_strog-shipping-ulb_junior-masculino-play-off-unico"
   },
   {
     "competicion": "Comp Copa Andalucia A",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "18/02/2026",
-    "hora": "",
+    "fecha": "17/02/2026",
+    "hora": "19:45",
     "pabellon": "PALACIO DE DEPORTES  CHAPÍN",
     "es_resultado": false,
     "estado": "proximo",
@@ -61,6 +61,6 @@
     "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
     "rival": "STROG SHIPPING ULB",
     "ubicacion": "Local",
-    "id": "18022026_union-bcto-jerez-el-mira_strog-shipping-ulb_junior-masculino-play-off-unico"
+    "id": "17022026_union-bcto-jerez-el-mira_strog-shipping-ulb_junior-masculino-play-off-unico"
   }
 ]

@@ -1,13 +1,13 @@
 [
   {
     "competicion": "Comp Copa Andalucia A",
-    "marcador_local": null,
-    "marcador_visitante": null,
+    "marcador_local": 49,
+    "marcador_visitante": 64,
     "fecha": "16/02/2026",
     "hora": "20:15",
     "pabellon": "PAB. MPAL. \"CIUDAD DE CONIL\"",
-    "es_resultado": false,
-    "estado": "proximo",
+    "es_resultado": true,
+    "estado": "finalizado",
     "jornada": "Jornada 13 - 21/12/2025",
     "categoria": "Junior Masculino - REGULAR - ÚNICO",
     "equipo": "ADESA 80",
