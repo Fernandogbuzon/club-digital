@@ -1,16 +1,1 @@
-[
-  {
-    "equipo": "ADESA 80",
-    "rival": "COPICENTRO CBA AZUL",
-    "fecha": "18/02/2026",
-    "hora": "18:30",
-    "categoria": "Cadete Mixto - 2ª FASE - GRUPO 2",
-    "ubicacion": "Visitante",
-    "id": "18022026_copicentro-cba-azul_adesa-80_cadete-mixto-2-fase-grupo-2",
-    "comp_carpeta": "Comp-Copa-Andalucia-B",
-    "cat_carpeta": "Cadete-Mixto",
-    "grupo_carpeta": "GRUPO-2",
-    "fase_carpeta": "2ª-FASE",
-    "json_path": "Comp-Copa-Andalucia-B/Cadete-Mixto/GRUPO-2/2ª-FASE/adesa-80.json"
-  }
-]
+[]

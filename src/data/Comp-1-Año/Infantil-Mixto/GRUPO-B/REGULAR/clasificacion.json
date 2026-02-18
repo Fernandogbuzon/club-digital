@@ -1,17 +1,17 @@
 {
   "categoria": "Infantil Mixto - REGULAR - GRUPO B",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-18T15:30:15.834683",
+  "ultima_actualizacion": "2026-02-18T23:22:20.456581",
   "clasificacion": [
     {
       "equipo": "CENTURIAS SAN ROQUE",
-      "partidos_jugados": 10,
-      "partidos_ganados": 10,
+      "partidos_jugados": 11,
+      "partidos_ganados": 11,
       "partidos_perdidos": 0,
-      "puntos_favor": 667,
-      "puntos_contra": 237,
-      "diferencia": 430,
-      "puntos": 20,
+      "puntos_favor": 726,
+      "puntos_contra": 245,
+      "diferencia": 481,
+      "puntos": 22,
       "posicion": 1
     },
     {
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "CBA AMARILLO",
-      "partidos_jugados": 8,
+      "partidos_jugados": 9,
       "partidos_ganados": 1,
-      "partidos_perdidos": 7,
-      "puntos_favor": 262,
-      "puntos_contra": 424,
-      "diferencia": -162,
-      "puntos": 9,
+      "partidos_perdidos": 8,
+      "puntos_favor": 270,
+      "puntos_contra": 483,
+      "diferencia": -213,
+      "puntos": 10,
       "posicion": 6
     }
   ]

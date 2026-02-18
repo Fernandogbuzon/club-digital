@@ -1,18 +1,29 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-18T15:24:50.873305",
+  "ultima_actualizacion": "2026-02-18T23:16:54.380697",
   "clasificacion": [
     {
       "equipo": "ADESA 80",
-      "partidos_jugados": 6,
-      "partidos_ganados": 6,
+      "partidos_jugados": 7,
+      "partidos_ganados": 7,
       "partidos_perdidos": 0,
-      "puntos_favor": 430,
-      "puntos_contra": 259,
-      "diferencia": 171,
-      "puntos": 12,
+      "puntos_favor": 506,
+      "puntos_contra": 307,
+      "diferencia": 199,
+      "puntos": 14,
       "posicion": 1
+    },
+    {
+      "equipo": "COPICENTRO CBA AZUL",
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 2,
+      "puntos_favor": 398,
+      "puntos_contra": 321,
+      "diferencia": 77,
+      "puntos": 12,
+      "posicion": 2
     },
     {
       "equipo": "UBJerez BLANCO",
@@ -22,17 +33,6 @@
       "puntos_favor": 417,
       "puntos_contra": 285,
       "diferencia": 132,
-      "puntos": 11,
-      "posicion": 2
-    },
-    {
-      "equipo": "COPICENTRO CBA AZUL",
-      "partidos_jugados": 6,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 1,
-      "puntos_favor": 350,
-      "puntos_contra": 245,
-      "diferencia": 105,
       "puntos": 11,
       "posicion": 3
     },

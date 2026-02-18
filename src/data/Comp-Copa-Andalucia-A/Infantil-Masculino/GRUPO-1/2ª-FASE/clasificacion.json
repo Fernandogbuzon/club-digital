@@ -1,8 +1,19 @@
 {
   "categoria": "Infantil Masculino - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-18T15:20:44.558066",
+  "ultima_actualizacion": "2026-02-18T23:12:52.346328",
   "clasificacion": [
+    {
+      "equipo": "DAIKIN CB PUERTO REAL (M)",
+      "partidos_jugados": 4,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 1,
+      "puntos_favor": 191,
+      "puntos_contra": 160,
+      "diferencia": 31,
+      "puntos": 7,
+      "posicion": 1
+    },
     {
       "equipo": "CÁDIZ CB GADES LA BARRA",
       "partidos_jugados": 3,
@@ -12,17 +23,6 @@
       "puntos_contra": 170,
       "diferencia": 70,
       "puntos": 6,
-      "posicion": 1
-    },
-    {
-      "equipo": "DAIKIN CB PUERTO REAL (M)",
-      "partidos_jugados": 3,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 1,
-      "puntos_favor": 128,
-      "puntos_contra": 114,
-      "diferencia": 14,
-      "puntos": 5,
       "posicion": 2
     },
     {
@@ -38,13 +38,13 @@
     },
     {
       "equipo": "CBP AYUDATPYMES",
-      "partidos_jugados": 3,
+      "partidos_jugados": 4,
       "partidos_ganados": 1,
-      "partidos_perdidos": 2,
-      "puntos_favor": 169,
-      "puntos_contra": 181,
-      "diferencia": -12,
-      "puntos": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 215,
+      "puntos_contra": 244,
+      "diferencia": -29,
+      "puntos": 5,
       "posicion": 4
     },
     {
