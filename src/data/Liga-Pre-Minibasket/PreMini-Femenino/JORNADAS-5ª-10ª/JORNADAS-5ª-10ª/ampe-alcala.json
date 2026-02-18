@@ -5,15 +5,15 @@
     "marcador_visitante": null,
     "fecha": "26/04/2026",
     "hora": "",
-    "pabellon": "PAB. PICO DEL CAMPO",
+    "pabellon": "PAB. ANDRÉS MATEO",
     "es_resultado": false,
     "estado": "proximo",
     "jornada": "Jornada 10 - 26/04/2026",
     "categoria": "PreMini Femenino - JORNADAS 5ª-10ª - JORNADAS 5ª-10ª",
     "equipo": "AMPE ALCALA",
     "rival": "CBA",
-    "ubicacion": "Local",
-    "id": "26042026_ampe-alcala_cba_premini-femenino-jornadas-5-10-jornadas-5-10"
+    "ubicacion": "Visitante",
+    "id": "26042026_cba_ampe-alcala_premini-femenino-jornadas-5-10-jornadas-5-10"
   },
   {
     "competicion": "Liga Pre Minibasket",
@@ -83,16 +83,16 @@
     "competicion": "Liga Pre Minibasket",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
-    "pabellon": "PAB. ANDRÉS MATEO",
+    "fecha": "20/02/2026",
+    "hora": "17:00",
+    "pabellon": "PAB. PICO DEL CAMPO",
     "es_resultado": false,
     "estado": "proximo",
     "jornada": "Jornada 5 - 22/02/2026",
     "categoria": "PreMini Femenino - JORNADAS 5ª-10ª - JORNADAS 5ª-10ª",
     "equipo": "AMPE ALCALA",
     "rival": "CBA",
-    "ubicacion": "Visitante",
-    "id": "22022026_cba_ampe-alcala_premini-femenino-jornadas-5-10-jornadas-5-10"
+    "ubicacion": "Local",
+    "id": "20022026_ampe-alcala_cba_premini-femenino-jornadas-5-10-jornadas-5-10"
   }
 ]

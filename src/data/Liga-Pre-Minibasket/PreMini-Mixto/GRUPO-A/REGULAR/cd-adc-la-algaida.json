@@ -83,8 +83,8 @@
     "competicion": "Liga Pre Minibasket",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "22/02/2026",
-    "hora": "",
+    "fecha": "21/02/2026",
+    "hora": "12:30",
     "pabellon": "PAB. MPAL. CUBIERTO",
     "es_resultado": false,
     "estado": "proximo",
@@ -93,7 +93,7 @@
     "equipo": "CD ADC LA ALGAIDA",
     "rival": "AYTO. ARCOS DE LA FRONTERA",
     "ubicacion": "Visitante",
-    "id": "22022026_ayto-arcos-de-la-frontera_cd-adc-la-algaida_premini-mixto-regular-grupo-a"
+    "id": "21022026_ayto-arcos-de-la-frontera_cd-adc-la-algaida_premini-mixto-regular-grupo-a"
   },
   {
     "competicion": "Liga Pre Minibasket",
