@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-19T00:12:55.157523",
+  "ultima_actualizacion": "2026-02-19T14:35:57.790414",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES ARISTON",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "CBPORTUENSE EDASE",
+      "partidos_jugados": 12,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 4,
+      "puntos_favor": 664,
+      "puntos_contra": 682,
+      "diferencia": -18,
+      "puntos": 20,
+      "posicion": 2
+    },
+    {
       "equipo": "UBJerez GRIS",
       "partidos_jugados": 11,
       "partidos_ganados": 8,
@@ -23,17 +34,6 @@
       "puntos_contra": 394,
       "diferencia": 176,
       "puntos": 19,
-      "posicion": 2
-    },
-    {
-      "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 11,
-      "partidos_ganados": 7,
-      "partidos_perdidos": 4,
-      "puntos_favor": 662,
-      "puntos_contra": 682,
-      "diferencia": -20,
-      "puntos": 18,
       "posicion": 3
     },
     {
@@ -93,13 +93,13 @@
     },
     {
       "equipo": "ONDOMUS CENTURIAS",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 1,
-      "partidos_perdidos": 9,
+      "partidos_perdidos": 10,
       "puntos_favor": 399,
-      "puntos_contra": 637,
-      "diferencia": -238,
-      "puntos": 11,
+      "puntos_contra": 639,
+      "diferencia": -240,
+      "puntos": 12,
       "posicion": 9
     }
   ]

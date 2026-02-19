@@ -19,8 +19,8 @@
     "competicion": "Comp 1 Año",
     "marcador_local": null,
     "marcador_visitante": null,
-    "fecha": "21/02/2026",
-    "hora": "12:00",
+    "fecha": "03/03/2026",
+    "hora": "",
     "pabellon": "PAB. ANGELITA ALTA",
     "es_resultado": false,
     "estado": "proximo",
@@ -29,7 +29,7 @@
     "equipo": "CBC CÁDIZ",
     "rival": "CBPORTUENSE EDASE",
     "ubicacion": "Visitante",
-    "id": "21022026_cbportuense-edase_cbc-cadiz_cadete-femenino-regular-unico"
+    "id": "03032026_cbportuense-edase_cbc-cadiz_cadete-femenino-regular-unico"
   },
   {
     "competicion": "Comp 1 Año",
