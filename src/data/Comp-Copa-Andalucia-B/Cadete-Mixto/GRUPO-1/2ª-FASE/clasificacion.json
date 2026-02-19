@@ -1,8 +1,19 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-19T15:26:08.333178",
+  "ultima_actualizacion": "2026-02-19T23:16:14.264852",
   "clasificacion": [
+    {
+      "equipo": "AD MARIANISTAS",
+      "partidos_jugados": 7,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 3,
+      "puntos_favor": 434,
+      "puntos_contra": 397,
+      "diferencia": 37,
+      "puntos": 11,
+      "posicion": 1
+    },
     {
       "equipo": "SIERRA NET-CB PRADO",
       "partidos_jugados": 6,
@@ -12,7 +23,7 @@
       "puntos_contra": 353,
       "diferencia": 9,
       "puntos": 11,
-      "posicion": 1
+      "posicion": 2
     },
     {
       "equipo": "KROSAKI AMR CBA 2011",
@@ -23,28 +34,17 @@
       "puntos_contra": 305,
       "diferencia": 25,
       "puntos": 9,
-      "posicion": 2
-    },
-    {
-      "equipo": "AD MARIANISTAS",
-      "partidos_jugados": 6,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 3,
-      "puntos_favor": 371,
-      "puntos_contra": 352,
-      "diferencia": 19,
-      "puntos": 9,
       "posicion": 3
     },
     {
       "equipo": "CADISHIP CBSFDO",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 3,
-      "partidos_perdidos": 2,
-      "puntos_favor": 312,
-      "puntos_contra": 295,
-      "diferencia": 17,
-      "puntos": 8,
+      "partidos_perdidos": 3,
+      "puntos_favor": 357,
+      "puntos_contra": 358,
+      "diferencia": -1,
+      "puntos": 9,
       "posicion": 4
     },
     {

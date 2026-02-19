@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Masculino - PLAY OFF - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-19T15:21:02.807043",
+  "ultima_actualizacion": "2026-02-19T23:10:58.769250",
   "clasificacion": [
     {
       "equipo": "UNIÓN BCTO. JEREZ-EL MIRA",
@@ -15,6 +15,28 @@
       "posicion": 1
     },
     {
+      "equipo": "BERNARDINO ABAD CB PUERTO REAL",
+      "partidos_jugados": 2,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 0,
+      "puntos_favor": 128,
+      "puntos_contra": 116,
+      "diferencia": 12,
+      "puntos": 4,
+      "posicion": 2
+    },
+    {
+      "equipo": "PEPE TROYA CBA",
+      "partidos_jugados": 2,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 2,
+      "puntos_favor": 116,
+      "puntos_contra": 128,
+      "diferencia": -12,
+      "puntos": 2,
+      "posicion": 3
+    },
+    {
       "equipo": "STROG SHIPPING ULB",
       "partidos_jugados": 2,
       "partidos_ganados": 0,
@@ -23,7 +45,7 @@
       "puntos_contra": 148,
       "diferencia": -18,
       "puntos": 2,
-      "posicion": 2
+      "posicion": 4
     }
   ]
 }

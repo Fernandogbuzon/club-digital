@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-19T15:21:32.706376",
+  "ultima_actualizacion": "2026-02-19T23:11:32.207993",
   "clasificacion": [
     {
       "equipo": "SD CANDRAY MOTORECAMBIOS DEL SUR",
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "NOATUM LOGISTIC CBA",
+      "partidos_jugados": 18,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 11,
+      "puntos_favor": 801,
+      "puntos_contra": 1113,
+      "diferencia": -312,
+      "puntos": 25,
+      "posicion": 5
+    },
+    {
       "equipo": "ONDOMUS CENTURIAS",
       "partidos_jugados": 17,
       "partidos_ganados": 6,
@@ -55,17 +66,6 @@
       "puntos_favor": 763,
       "puntos_contra": 1063,
       "diferencia": -300,
-      "puntos": 23,
-      "posicion": 5
-    },
-    {
-      "equipo": "NOATUM LOGISTIC CBA",
-      "partidos_jugados": 17,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 11,
-      "puntos_favor": 754,
-      "puntos_contra": 1068,
-      "diferencia": -314,
       "puntos": 23,
       "posicion": 6
     },
@@ -93,13 +93,13 @@
     },
     {
       "equipo": "UBJerez GRIS",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 3,
-      "partidos_perdidos": 14,
-      "puntos_favor": 694,
-      "puntos_contra": 1067,
-      "diferencia": -373,
-      "puntos": 20,
+      "partidos_perdidos": 15,
+      "puntos_favor": 739,
+      "puntos_contra": 1114,
+      "diferencia": -375,
+      "puntos": 21,
       "posicion": 9
     },
     {

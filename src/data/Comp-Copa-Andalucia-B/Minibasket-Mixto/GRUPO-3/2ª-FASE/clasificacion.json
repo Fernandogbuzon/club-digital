@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-19T15:29:21.997798",
+  "ultima_actualizacion": "2026-02-19T23:19:31.208728",
   "clasificacion": [
+    {
+      "equipo": "CB CIMBIS",
+      "partidos_jugados": 5,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 1,
+      "puntos_favor": 218,
+      "puntos_contra": 216,
+      "diferencia": 2,
+      "puntos": 9,
+      "posicion": 1
+    },
     {
       "equipo": "CD ADC LA ALGAIDA",
       "partidos_jugados": 4,
@@ -12,7 +23,7 @@
       "puntos_contra": 8,
       "diferencia": 164,
       "puntos": 8,
-      "posicion": 1
+      "posicion": 2
     },
     {
       "equipo": "CADIZ CB GADES",
@@ -23,18 +34,18 @@
       "puntos_contra": 126,
       "diferencia": 36,
       "puntos": 7,
-      "posicion": 2
+      "posicion": 3
     },
     {
-      "equipo": "CB CIMBIS",
-      "partidos_jugados": 4,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 1,
-      "puntos_favor": 169,
-      "puntos_contra": 189,
-      "diferencia": -20,
+      "equipo": "TRANSPORTES Y LOGISTICA ROIMO CBSFDO",
+      "partidos_jugados": 6,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 5,
+      "puntos_favor": 116,
+      "puntos_contra": 235,
+      "diferencia": -119,
       "puntos": 7,
-      "posicion": 3
+      "posicion": 4
     },
     {
       "equipo": "ADESA 80",
@@ -44,17 +55,6 @@
       "puntos_favor": 202,
       "puntos_contra": 166,
       "diferencia": 36,
-      "puntos": 6,
-      "posicion": 4
-    },
-    {
-      "equipo": "TRANSPORTES Y LOGISTICA ROIMO CBSFDO",
-      "partidos_jugados": 5,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 4,
-      "puntos_favor": 89,
-      "puntos_contra": 186,
-      "diferencia": -97,
       "puntos": 6,
       "posicion": 5
     },

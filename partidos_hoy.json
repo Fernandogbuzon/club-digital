@@ -1,16 +1,1 @@
-[
-  {
-    "equipo": "ADESA 80",
-    "rival": "ONGOLF CENTURIAS",
-    "fecha": "19/02/2026",
-    "hora": "18:00",
-    "categoria": "Minibasket Masculino - REGULAR - ÚNICO",
-    "ubicacion": "Local",
-    "id": "19022026_adesa-80_ongolf-centurias_minibasket-masculino-regular-unico",
-    "comp_carpeta": "Comp-Copa-Andalucia-A",
-    "cat_carpeta": "Minibasket-Masculino",
-    "grupo_carpeta": "ÚNICO",
-    "fase_carpeta": "REGULAR",
-    "json_path": "Comp-Copa-Andalucia-A/Minibasket-Masculino/ÚNICO/REGULAR/adesa-80.json"
-  }
-]
+[]

@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-19T15:23:27.181998",
+  "ultima_actualizacion": "2026-02-19T23:13:35.543724",
   "clasificacion": [
     {
       "equipo": "ATRIDEL CB PUERTO REAL",
@@ -38,14 +38,25 @@
     },
     {
       "equipo": "ONGOLF CENTURIAS",
-      "partidos_jugados": 9,
-      "partidos_ganados": 6,
+      "partidos_jugados": 10,
+      "partidos_ganados": 7,
       "partidos_perdidos": 3,
-      "puntos_favor": 538,
-      "puntos_contra": 413,
-      "diferencia": 125,
-      "puntos": 15,
+      "puntos_favor": 585,
+      "puntos_contra": 459,
+      "diferencia": 126,
+      "puntos": 17,
       "posicion": 4
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 12,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 9,
+      "puntos_favor": 512,
+      "puntos_contra": 664,
+      "diferencia": -152,
+      "puntos": 15,
+      "posicion": 5
     },
     {
       "equipo": "ALVA - MERGABLO",
@@ -55,17 +66,6 @@
       "puntos_favor": 452,
       "puntos_contra": 589,
       "diferencia": -137,
-      "puntos": 14,
-      "posicion": 5
-    },
-    {
-      "equipo": "ADESA 80",
-      "partidos_jugados": 11,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 8,
-      "puntos_favor": 466,
-      "puntos_contra": 617,
-      "diferencia": -151,
       "puntos": 14,
       "posicion": 6
     },
