@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "equipo": "ADESA 80",
+    "rival": "ONDOMUS CENTURIAS",
+    "fecha": "20/02/2026",
+    "hora": "18:30",
+    "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
+    "ubicacion": "Visitante",
+    "id": "20022026_ondomus-centurias_adesa-80_minibasket-femenino-regular-unico",
+    "comp_carpeta": "Comp-Copa-Andalucia-A",
+    "cat_carpeta": "Minibasket-Femenino",
+    "grupo_carpeta": "ÚNICO",
+    "fase_carpeta": "REGULAR",
+    "json_path": "Comp-Copa-Andalucia-A/Minibasket-Femenino/ÚNICO/REGULAR/adesa-80.json"
+  }
+]
