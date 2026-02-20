@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-20T15:27:24.587398",
+  "ultima_actualizacion": "2026-02-20T23:18:55.838158",
   "clasificacion": [
     {
       "equipo": "CBA",
@@ -103,6 +103,17 @@
       "posicion": 9
     },
     {
+      "equipo": "C.A.B.U. 4ºM",
+      "partidos_jugados": 10,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 6,
+      "puntos_favor": 435,
+      "puntos_contra": 362,
+      "diferencia": 73,
+      "puntos": 14,
+      "posicion": 10
+    },
+    {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
       "partidos_jugados": 11,
       "partidos_ganados": 3,
@@ -111,28 +122,17 @@
       "puntos_contra": 537,
       "diferencia": -117,
       "puntos": 14,
-      "posicion": 10
-    },
-    {
-      "equipo": "C.A.B.U. 4ºM",
-      "partidos_jugados": 9,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 6,
-      "puntos_favor": 390,
-      "puntos_contra": 357,
-      "diferencia": 33,
-      "puntos": 12,
       "posicion": 11
     },
     {
       "equipo": "CB CIMBIS",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 0,
-      "partidos_perdidos": 11,
-      "puntos_favor": 62,
-      "puntos_contra": 510,
-      "diferencia": -448,
-      "puntos": 11,
+      "partidos_perdidos": 12,
+      "puntos_favor": 67,
+      "puntos_contra": 555,
+      "diferencia": -488,
+      "puntos": 12,
       "posicion": 12
     }
   ]

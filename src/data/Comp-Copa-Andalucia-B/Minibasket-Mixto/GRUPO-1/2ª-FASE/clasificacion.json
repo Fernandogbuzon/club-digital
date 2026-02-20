@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-20T15:24:16.936198",
+  "ultima_actualizacion": "2026-02-20T23:15:52.017126",
   "clasificacion": [
     {
       "equipo": "CD SAN FELIPE NERI",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "VITALDENT-CABU",
+      "partidos_jugados": 5,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 3,
+      "puntos_favor": 275,
+      "puntos_contra": 253,
+      "diferencia": 22,
+      "puntos": 7,
+      "posicion": 4
+    },
+    {
       "equipo": "CB CHIPIONA",
       "partidos_jugados": 5,
       "partidos_ganados": 1,
@@ -45,28 +56,17 @@
       "puntos_contra": 218,
       "diferencia": -38,
       "puntos": 6,
-      "posicion": 4
-    },
-    {
-      "equipo": "VITALDENT-CABU",
-      "partidos_jugados": 4,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 3,
-      "puntos_favor": 218,
-      "puntos_contra": 236,
-      "diferencia": -18,
-      "puntos": 5,
       "posicion": 5
     },
     {
       "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_ganados": 0,
-      "partidos_perdidos": 4,
-      "puntos_favor": 68,
-      "puntos_contra": 233,
-      "diferencia": -165,
-      "puntos": 4,
+      "partidos_perdidos": 5,
+      "puntos_favor": 85,
+      "puntos_contra": 290,
+      "diferencia": -205,
+      "puntos": 5,
       "posicion": 6
     }
   ]

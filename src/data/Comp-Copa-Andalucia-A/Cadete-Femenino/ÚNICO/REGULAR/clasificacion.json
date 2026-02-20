@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-20T15:16:35.202295",
+  "ultima_actualizacion": "2026-02-20T23:08:06.112557",
   "clasificacion": [
     {
       "equipo": "SD CANDRAY MOTORECAMBIOS DEL SUR",
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 16,
+      "partidos_jugados": 17,
       "partidos_ganados": 5,
-      "partidos_perdidos": 11,
-      "puntos_favor": 785,
-      "puntos_contra": 1025,
-      "diferencia": -240,
-      "puntos": 21,
+      "partidos_perdidos": 12,
+      "puntos_favor": 843,
+      "puntos_contra": 1090,
+      "diferencia": -247,
+      "puntos": 22,
       "posicion": 8
     },
     {
@@ -104,13 +104,13 @@
     },
     {
       "equipo": "C.A.B.U.",
-      "partidos_jugados": 16,
-      "partidos_ganados": 3,
+      "partidos_jugados": 17,
+      "partidos_ganados": 4,
       "partidos_perdidos": 13,
-      "puntos_favor": 754,
-      "puntos_contra": 1198,
-      "diferencia": -444,
-      "puntos": 19,
+      "puntos_favor": 819,
+      "puntos_contra": 1256,
+      "diferencia": -437,
+      "puntos": 21,
       "posicion": 10
     }
   ]

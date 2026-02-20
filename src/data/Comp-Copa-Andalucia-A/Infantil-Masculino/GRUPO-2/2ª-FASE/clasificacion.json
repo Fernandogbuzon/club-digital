@@ -1,18 +1,29 @@
 {
   "categoria": "Infantil Masculino - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-20T15:17:15.523041",
+  "ultima_actualizacion": "2026-02-20T23:08:49.384767",
   "clasificacion": [
     {
       "equipo": "UBJerez GRIS",
-      "partidos_jugados": 2,
-      "partidos_ganados": 2,
+      "partidos_jugados": 4,
+      "partidos_ganados": 4,
       "partidos_perdidos": 0,
-      "puntos_favor": 159,
-      "puntos_contra": 96,
-      "diferencia": 63,
-      "puntos": 4,
+      "puntos_favor": 263,
+      "puntos_contra": 196,
+      "diferencia": 67,
+      "puntos": 8,
       "posicion": 1
+    },
+    {
+      "equipo": "BAR CABALLITO DE MAR CB PUERTO REAL (V)",
+      "partidos_jugados": 4,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 1,
+      "puntos_favor": 227,
+      "puntos_contra": 233,
+      "diferencia": -6,
+      "puntos": 7,
+      "posicion": 2
     },
     {
       "equipo": "CBA",
@@ -23,29 +34,29 @@
       "puntos_contra": 78,
       "diferencia": 37,
       "puntos": 4,
-      "posicion": 2
-    },
-    {
-      "equipo": "BAR CABALLITO DE MAR CB PUERTO REAL (V)",
-      "partidos_jugados": 2,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 1,
-      "puntos_favor": 105,
-      "puntos_contra": 147,
-      "diferencia": -42,
-      "puntos": 3,
       "posicion": 3
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 2,
+      "partidos_jugados": 4,
       "partidos_ganados": 0,
-      "partidos_perdidos": 2,
-      "puntos_favor": 88,
-      "puntos_contra": 135,
-      "diferencia": -47,
-      "puntos": 2,
+      "partidos_perdidos": 4,
+      "puntos_favor": 174,
+      "puntos_contra": 257,
+      "diferencia": -83,
+      "puntos": 4,
       "posicion": 4
+    },
+    {
+      "equipo": "GYMNÁSTICA PORTUENSE",
+      "partidos_jugados": 4,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 3,
+      "puntos_favor": 143,
+      "puntos_contra": 156,
+      "diferencia": -13,
+      "puntos": 3,
+      "posicion": 5
     },
     {
       "equipo": "AVATEL CENTURIAS",
@@ -55,17 +66,6 @@
       "puntos_favor": 60,
       "puntos_contra": 62,
       "diferencia": -2,
-      "puntos": 1,
-      "posicion": 5
-    },
-    {
-      "equipo": "GYMNÁSTICA PORTUENSE",
-      "partidos_jugados": 2,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 1,
-      "puntos_favor": 43,
-      "puntos_contra": 52,
-      "diferencia": -9,
       "puntos": 1,
       "posicion": 6
     }

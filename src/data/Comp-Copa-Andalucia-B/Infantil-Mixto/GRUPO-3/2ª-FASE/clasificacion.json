@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-20T15:22:40.432586",
+  "ultima_actualizacion": "2026-02-20T23:14:14.513340",
   "clasificacion": [
     {
       "equipo": "CD SAN FELIPE NERI",
@@ -26,69 +26,69 @@
       "posicion": 2
     },
     {
-      "equipo": "CB CHIPIONA",
-      "partidos_jugados": 7,
-      "partidos_ganados": 4,
+      "equipo": "EDM ARCOS BLANCO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 5,
       "partidos_perdidos": 3,
-      "puntos_favor": 425,
-      "puntos_contra": 333,
-      "diferencia": 92,
-      "puntos": 11,
+      "puntos_favor": 390,
+      "puntos_contra": 403,
+      "diferencia": -13,
+      "puntos": 13,
       "posicion": 3
     },
     {
-      "equipo": "EDM ARCOS BLANCO",
-      "partidos_jugados": 7,
+      "equipo": "CB CHIPIONA",
+      "partidos_jugados": 8,
       "partidos_ganados": 4,
-      "partidos_perdidos": 3,
-      "puntos_favor": 336,
-      "puntos_contra": 355,
-      "diferencia": -19,
-      "puntos": 11,
+      "partidos_perdidos": 4,
+      "puntos_favor": 473,
+      "puntos_contra": 387,
+      "diferencia": 86,
+      "puntos": 12,
       "posicion": 4
     },
     {
+      "equipo": "GYMNASTICA PORTUENSE",
+      "partidos_jugados": 8,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 7,
+      "puntos_favor": 267,
+      "puntos_contra": 426,
+      "diferencia": -159,
+      "puntos": 9,
+      "posicion": 5
+    },
+    {
+      "equipo": "XEREZ CD BALONCESTO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 1,
+      "partidos_perdidos": 7,
+      "puntos_favor": 289,
+      "puntos_contra": 466,
+      "diferencia": -177,
+      "puntos": 9,
+      "posicion": 6
+    },
+    {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 6,
+      "partidos_jugados": 8,
       "partidos_ganados": 2,
       "partidos_perdidos": 4,
       "puntos_favor": 258,
       "puntos_contra": 291,
       "diferencia": -33,
       "puntos": 8,
-      "posicion": 5
+      "posicion": 7
     },
     {
       "equipo": "CBC CÁDIZ",
-      "partidos_jugados": 6,
+      "partidos_jugados": 8,
       "partidos_ganados": 2,
       "partidos_perdidos": 4,
       "puntos_favor": 227,
       "puntos_contra": 292,
       "diferencia": -65,
       "puntos": 8,
-      "posicion": 6
-    },
-    {
-      "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 7,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 6,
-      "puntos_favor": 245,
-      "puntos_contra": 418,
-      "diferencia": -173,
-      "puntos": 8,
-      "posicion": 7
-    },
-    {
-      "equipo": "GYMNASTICA PORTUENSE",
-      "partidos_jugados": 7,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 7,
-      "puntos_favor": 219,
-      "puntos_contra": 382,
-      "diferencia": -163,
-      "puntos": 7,
       "posicion": 8
     }
   ]

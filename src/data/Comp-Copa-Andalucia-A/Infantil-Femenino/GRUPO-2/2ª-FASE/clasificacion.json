@@ -1,28 +1,28 @@
 {
   "categoria": "Infantil Femenino - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-20T15:17:57.006848",
+  "ultima_actualizacion": "2026-02-20T23:09:27.908220",
   "clasificacion": [
     {
       "equipo": "MÁRMOLES GADES CB PUERTO REAL",
-      "partidos_jugados": 5,
-      "partidos_ganados": 5,
+      "partidos_jugados": 6,
+      "partidos_ganados": 6,
       "partidos_perdidos": 0,
-      "puntos_favor": 232,
-      "puntos_contra": 146,
-      "diferencia": 86,
-      "puntos": 10,
+      "puntos_favor": 272,
+      "puntos_contra": 183,
+      "diferencia": 89,
+      "puntos": 12,
       "posicion": 1
     },
     {
       "equipo": "CB SAN FERNANDO",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 4,
-      "partidos_perdidos": 1,
-      "puntos_favor": 233,
-      "puntos_contra": 201,
-      "diferencia": 32,
-      "puntos": 9,
+      "partidos_perdidos": 2,
+      "puntos_favor": 270,
+      "puntos_contra": 241,
+      "diferencia": 29,
+      "puntos": 10,
       "posicion": 2
     },
     {

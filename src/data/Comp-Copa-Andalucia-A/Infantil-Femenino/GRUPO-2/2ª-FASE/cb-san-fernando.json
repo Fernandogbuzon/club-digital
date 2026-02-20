@@ -1,13 +1,13 @@
 [
   {
     "competicion": "Comp Copa Andalucia A",
-    "marcador_local": null,
-    "marcador_visitante": null,
+    "marcador_local": 40,
+    "marcador_visitante": 37,
     "fecha": "20/02/2026",
     "hora": "17:15",
     "pabellon": "SALA BARRIO 512",
-    "es_resultado": false,
-    "estado": "proximo",
+    "es_resultado": true,
+    "estado": "finalizado",
     "jornada": "Jornada 5 - 22/02/2026",
     "categoria": "Infantil Femenino - 2ª FASE - GRUPO 2",
     "equipo": "CB SAN FERNANDO",

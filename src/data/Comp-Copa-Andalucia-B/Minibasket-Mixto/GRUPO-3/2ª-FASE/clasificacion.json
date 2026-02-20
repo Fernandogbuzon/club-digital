@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-20T15:24:27.531010",
+  "ultima_actualizacion": "2026-02-20T23:16:03.158556",
   "clasificacion": [
+    {
+      "equipo": "CD ADC LA ALGAIDA",
+      "partidos_jugados": 5,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 0,
+      "puntos_favor": 219,
+      "puntos_contra": 15,
+      "diferencia": 204,
+      "puntos": 10,
+      "posicion": 1
+    },
     {
       "equipo": "CB CIMBIS",
       "partidos_jugados": 5,
@@ -12,17 +23,6 @@
       "puntos_contra": 216,
       "diferencia": 2,
       "puntos": 9,
-      "posicion": 1
-    },
-    {
-      "equipo": "CD ADC LA ALGAIDA",
-      "partidos_jugados": 4,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 0,
-      "puntos_favor": 172,
-      "puntos_contra": 8,
-      "diferencia": 164,
-      "puntos": 8,
       "posicion": 2
     },
     {
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "GYMNASTICA PORTUENSE",
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_ganados": 1,
-      "partidos_perdidos": 3,
-      "puntos_favor": 87,
-      "puntos_contra": 206,
-      "diferencia": -119,
-      "puntos": 5,
+      "partidos_perdidos": 4,
+      "puntos_favor": 94,
+      "puntos_contra": 253,
+      "diferencia": -159,
+      "puntos": 6,
       "posicion": 6
     }
   ]

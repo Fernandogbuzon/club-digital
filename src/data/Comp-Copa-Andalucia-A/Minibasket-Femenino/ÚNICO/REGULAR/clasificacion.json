@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-20T15:18:50.666996",
+  "ultima_actualizacion": "2026-02-20T23:10:22.981228",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES ARISTON",
@@ -37,6 +37,17 @@
       "posicion": 3
     },
     {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 12,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 7,
+      "puntos_favor": 554,
+      "puntos_contra": 613,
+      "diferencia": -59,
+      "puntos": 17,
+      "posicion": 4
+    },
+    {
       "equipo": "SD CANDRAY JOHN ATKINSON SCHOOL OF ENGLISH",
       "partidos_jugados": 9,
       "partidos_ganados": 7,
@@ -45,7 +56,7 @@
       "puntos_contra": 330,
       "diferencia": 160,
       "puntos": 16,
-      "posicion": 4
+      "posicion": 5
     },
     {
       "equipo": "CD SAN FELIPE NERI",
@@ -56,17 +67,6 @@
       "puntos_contra": 638,
       "diferencia": -120,
       "puntos": 16,
-      "posicion": 5
-    },
-    {
-      "equipo": "ADESA 80",
-      "partidos_jugados": 11,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 7,
-      "puntos_favor": 457,
-      "puntos_contra": 532,
-      "diferencia": -75,
-      "puntos": 15,
       "posicion": 6
     },
     {
@@ -93,13 +93,13 @@
     },
     {
       "equipo": "ONDOMUS CENTURIAS",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 1,
-      "partidos_perdidos": 10,
-      "puntos_favor": 399,
-      "puntos_contra": 639,
-      "diferencia": -240,
-      "puntos": 12,
+      "partidos_perdidos": 11,
+      "puntos_favor": 480,
+      "puntos_contra": 736,
+      "diferencia": -256,
+      "puntos": 13,
       "posicion": 9
     }
   ]

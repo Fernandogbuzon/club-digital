@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-20T15:22:34.646568",
+  "ultima_actualizacion": "2026-02-20T23:14:09.765485",
   "clasificacion": [
     {
       "equipo": "CBA",
@@ -26,6 +26,17 @@
       "posicion": 2
     },
     {
+      "equipo": "EDM ARCOS ROJO",
+      "partidos_jugados": 9,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 4,
+      "puntos_favor": 483,
+      "puntos_contra": 391,
+      "diferencia": 92,
+      "puntos": 14,
+      "posicion": 3
+    },
+    {
       "equipo": "CB LA INMACULADA",
       "partidos_jugados": 8,
       "partidos_ganados": 6,
@@ -34,17 +45,6 @@
       "puntos_contra": 381,
       "diferencia": 28,
       "puntos": 14,
-      "posicion": 3
-    },
-    {
-      "equipo": "EDM ARCOS ROJO",
-      "partidos_jugados": 8,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 4,
-      "puntos_favor": 426,
-      "puntos_contra": 342,
-      "diferencia": 84,
-      "puntos": 12,
       "posicion": 4
     },
     {
@@ -71,13 +71,13 @@
     },
     {
       "equipo": "CD MONTERA BALONCESTO",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 1,
-      "partidos_perdidos": 6,
-      "puntos_favor": 224,
-      "puntos_contra": 396,
-      "diferencia": -172,
-      "puntos": 8,
+      "partidos_perdidos": 7,
+      "puntos_favor": 273,
+      "puntos_contra": 453,
+      "diferencia": -180,
+      "puntos": 9,
       "posicion": 7
     },
     {

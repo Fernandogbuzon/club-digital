@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-20T15:16:52.901487",
+  "ultima_actualizacion": "2026-02-20T23:08:24.024096",
   "clasificacion": [
     {
       "equipo": "ISAVAL CBA",
@@ -27,13 +27,13 @@
     },
     {
       "equipo": "ELEKÁ CB PUERTO REAL",
-      "partidos_jugados": 16,
-      "partidos_ganados": 12,
+      "partidos_jugados": 17,
+      "partidos_ganados": 13,
       "partidos_perdidos": 4,
-      "puntos_favor": 1186,
-      "puntos_contra": 873,
-      "diferencia": 313,
-      "puntos": 28,
+      "puntos_favor": 1271,
+      "puntos_contra": 931,
+      "diferencia": 340,
+      "puntos": 30,
       "posicion": 3
     },
     {
@@ -71,13 +71,13 @@
     },
     {
       "equipo": "MONTIEL DE ARNÁIZ ABOGADOS CBSFDO",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 5,
-      "partidos_perdidos": 12,
-      "puntos_favor": 1004,
-      "puntos_contra": 1096,
-      "diferencia": -92,
-      "puntos": 22,
+      "partidos_perdidos": 13,
+      "puntos_favor": 1062,
+      "puntos_contra": 1181,
+      "diferencia": -119,
+      "puntos": 23,
       "posicion": 7
     },
     {
