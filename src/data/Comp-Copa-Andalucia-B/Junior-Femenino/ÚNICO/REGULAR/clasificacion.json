@@ -1,8 +1,19 @@
 {
   "categoria": "Junior Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T14:23:16.165754",
+  "ultima_actualizacion": "2026-02-21T15:10:36.737033",
   "clasificacion": [
+    {
+      "equipo": "UNION LINENSE BALONCESTO",
+      "partidos_jugados": 12,
+      "partidos_ganados": 11,
+      "partidos_perdidos": 1,
+      "puntos_favor": 796,
+      "puntos_contra": 505,
+      "diferencia": 291,
+      "puntos": 23,
+      "posicion": 1
+    },
     {
       "equipo": "CBP EDASE  EL CARRIL DE GADES",
       "partidos_jugados": 14,
@@ -12,17 +23,6 @@
       "puntos_contra": 660,
       "diferencia": 39,
       "puntos": 23,
-      "posicion": 1
-    },
-    {
-      "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 10,
-      "partidos_perdidos": 1,
-      "puntos_favor": 737,
-      "puntos_contra": 468,
-      "diferencia": 269,
-      "puntos": 21,
       "posicion": 2
     },
     {
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "UBJerez BLANCO - TOLDOS EL PORTAL",
-      "partidos_jugados": 13,
+      "partidos_jugados": 14,
       "partidos_ganados": 4,
-      "partidos_perdidos": 9,
-      "puntos_favor": 558,
-      "puntos_contra": 635,
-      "diferencia": -77,
-      "puntos": 17,
+      "partidos_perdidos": 10,
+      "puntos_favor": 595,
+      "puntos_contra": 694,
+      "diferencia": -99,
+      "puntos": 18,
       "posicion": 6
     },
     {

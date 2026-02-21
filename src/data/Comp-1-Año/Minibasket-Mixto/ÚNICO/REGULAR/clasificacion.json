@@ -1,17 +1,17 @@
 {
   "categoria": "Minibasket Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-21T14:31:15.294929",
+  "ultima_actualizacion": "2026-02-21T15:18:36.322509",
   "clasificacion": [
     {
       "equipo": "CBA",
-      "partidos_jugados": 12,
-      "partidos_ganados": 12,
+      "partidos_jugados": 13,
+      "partidos_ganados": 13,
       "partidos_perdidos": 0,
-      "puntos_favor": 703,
-      "puntos_contra": 294,
-      "diferencia": 409,
-      "puntos": 24,
+      "puntos_favor": 775,
+      "puntos_contra": 337,
+      "diferencia": 438,
+      "puntos": 26,
       "posicion": 1
     },
     {
@@ -49,13 +49,13 @@
     },
     {
       "equipo": "UBJerez NEGRO",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 7,
-      "partidos_perdidos": 4,
-      "puntos_favor": 538,
-      "puntos_contra": 511,
-      "diferencia": 27,
-      "puntos": 18,
+      "partidos_perdidos": 5,
+      "puntos_favor": 581,
+      "puntos_contra": 583,
+      "diferencia": -2,
+      "puntos": 19,
       "posicion": 5
     },
     {

@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-21T14:20:37.834206",
+  "ultima_actualizacion": "2026-02-21T15:07:56.737087",
   "clasificacion": [
     {
       "equipo": "SD CANDRAY MOTORECAMBIOS DEL SUR",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 18,
+      "partidos_ganados": 16,
+      "partidos_perdidos": 2,
+      "puntos_favor": 1380,
+      "puntos_contra": 805,
+      "diferencia": 575,
+      "puntos": 34,
+      "posicion": 2
+    },
+    {
       "equipo": "CADIZ CB GADES GRUPO ARSENIO",
       "partidos_jugados": 18,
       "partidos_ganados": 15,
@@ -23,28 +34,17 @@
       "puntos_contra": 676,
       "diferencia": 916,
       "puntos": 33,
-      "posicion": 2
-    },
-    {
-      "equipo": "ADESA 80",
-      "partidos_jugados": 17,
-      "partidos_ganados": 15,
-      "partidos_perdidos": 2,
-      "puntos_favor": 1286,
-      "puntos_contra": 756,
-      "diferencia": 530,
-      "puntos": 32,
       "posicion": 3
     },
     {
       "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 11,
-      "partidos_perdidos": 6,
-      "puntos_favor": 991,
-      "puntos_contra": 1077,
-      "diferencia": -86,
-      "puntos": 28,
+      "partidos_perdidos": 7,
+      "puntos_favor": 1040,
+      "puntos_contra": 1171,
+      "diferencia": -131,
+      "puntos": 29,
       "posicion": 4
     },
     {

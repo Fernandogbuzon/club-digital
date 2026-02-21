@@ -71,20 +71,6 @@
   },
   {
     "equipo": "ADESA 80",
-    "rival": "CD SAN FELIPE NERI",
-    "fecha": "21/02/2026",
-    "hora": "12:30",
-    "categoria": "Cadete Femenino - REGULAR - ÚNICO",
-    "ubicacion": "Local",
-    "id": "21022026_adesa-80_cd-san-felipe-neri_cadete-femenino-regular-unico",
-    "comp_carpeta": "Comp-Copa-Andalucia-A",
-    "cat_carpeta": "Cadete-Femenino",
-    "grupo_carpeta": "ÚNICO",
-    "fase_carpeta": "REGULAR",
-    "json_path": "Comp-Copa-Andalucia-A/Cadete-Femenino/ÚNICO/REGULAR/adesa-80.json"
-  },
-  {
-    "equipo": "ADESA 80",
     "rival": "CÁDIZ CB GADES LA BARRA",
     "fecha": "21/02/2026",
     "hora": "18:00",
