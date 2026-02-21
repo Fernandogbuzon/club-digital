@@ -1,20 +1,4 @@
 {
-  "14022026_adesa-80_cd-adc-la-algaida_minibasket-mixto-2-fase-grupo-3": {
-    "intentos": 5,
-    "ultimo": "2026-02-19T21:02:46.938561"
-  },
-  "08022026_adesa-80-a_carpe-diem-verde-cbsfdo-m_babybasket-mixto-regular-grupo-a": {
-    "intentos": 5,
-    "ultimo": "2026-02-19T21:02:55.401968"
-  },
-  "19022026_adesa-80_ongolf-centurias_minibasket-masculino-regular-unico": {
-    "intentos": 5,
-    "ultimo": "2026-02-19T21:02:55.398614"
-  },
-  "31012026_sd-candray-john-atkinson-school-of-english_adesa-80_minibasket-femenino-regular-unico": {
-    "intentos": 5,
-    "ultimo": "2026-02-19T21:02:55.394218"
-  },
   "21022026_karting-kr24-mergablo_adesa-80_premini-mixto-regular-unico": {
     "intentos": 5,
     "ultimo": "2026-02-21T12:19:14.025055"
@@ -24,7 +8,19 @@
     "ultimo": "2026-02-21T19:55:01.954179"
   },
   "21022026_adesa-80_ubjerez-blanco_cadete-mixto-2-fase-grupo-2": {
-    "intentos": 3,
-    "ultimo": "2026-02-21T20:55:15.269639"
+    "intentos": 4,
+    "ultimo": "2026-02-21T21:03:45.697575"
+  },
+  "14022026_adesa-80_cd-adc-la-algaida_minibasket-mixto-2-fase-grupo-3": {
+    "intentos": 1,
+    "ultimo": "2026-02-21T21:03:57.422735"
+  },
+  "08022026_adesa-80-a_carpe-diem-verde-cbsfdo-m_babybasket-mixto-regular-grupo-a": {
+    "intentos": 1,
+    "ultimo": "2026-02-21T21:03:58.936313"
+  },
+  "31012026_sd-candray-john-atkinson-school-of-english_adesa-80_minibasket-femenino-regular-unico": {
+    "intentos": 1,
+    "ultimo": "2026-02-21T21:04:05.216074"
   }
 }
