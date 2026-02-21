@@ -1,8 +1,19 @@
 {
   "categoria": "Cadete Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-21T00:19:39.673784",
+  "ultima_actualizacion": "2026-02-21T14:30:20.474773",
   "clasificacion": [
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 13,
+      "partidos_ganados": 12,
+      "partidos_perdidos": 1,
+      "puntos_favor": 927,
+      "puntos_contra": 575,
+      "diferencia": 352,
+      "puntos": 25,
+      "posicion": 1
+    },
     {
       "equipo": "KROSAKI AMR CBA 2011",
       "partidos_jugados": 12,
@@ -11,17 +22,6 @@
       "puntos_favor": 797,
       "puntos_contra": 377,
       "diferencia": 420,
-      "puntos": 23,
-      "posicion": 1
-    },
-    {
-      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 12,
-      "partidos_ganados": 11,
-      "partidos_perdidos": 1,
-      "puntos_favor": 845,
-      "puntos_contra": 542,
-      "diferencia": 303,
       "puntos": 23,
       "posicion": 2
     },
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "EL 40&CUATRO CBSFDO",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 3,
-      "partidos_perdidos": 9,
-      "puntos_favor": 518,
-      "puntos_contra": 672,
-      "diferencia": -154,
-      "puntos": 15,
+      "partidos_perdidos": 10,
+      "puntos_favor": 551,
+      "puntos_contra": 754,
+      "diferencia": -203,
+      "puntos": 16,
       "posicion": 8
     },
     {

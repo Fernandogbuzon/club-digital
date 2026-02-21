@@ -1,8 +1,19 @@
 {
   "categoria": "Infantil Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:15:44.184403",
+  "ultima_actualizacion": "2026-02-21T14:26:29.223482",
   "clasificacion": [
+    {
+      "equipo": "LA MAR DE GAMBAS CB PUERTO REAL (M)",
+      "partidos_jugados": 9,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 1,
+      "puntos_favor": 567,
+      "puntos_contra": 432,
+      "diferencia": 135,
+      "puntos": 17,
+      "posicion": 1
+    },
     {
       "equipo": "CD ADC LA ALGAIDA",
       "partidos_jugados": 8,
@@ -11,17 +22,6 @@
       "puntos_favor": 498,
       "puntos_contra": 293,
       "diferencia": 205,
-      "puntos": 15,
-      "posicion": 1
-    },
-    {
-      "equipo": "LA MAR DE GAMBAS CB PUERTO REAL (M)",
-      "partidos_jugados": 8,
-      "partidos_ganados": 7,
-      "partidos_perdidos": 1,
-      "puntos_favor": 513,
-      "puntos_contra": 381,
-      "diferencia": 132,
       "puntos": 15,
       "posicion": 2
     },
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "ROSELL CB PUERTO REAL (V)",
+      "partidos_jugados": 9,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 7,
+      "puntos_favor": 424,
+      "puntos_contra": 430,
+      "diferencia": -6,
+      "puntos": 11,
+      "posicion": 5
+    },
+    {
       "equipo": "CB CIMBIS",
       "partidos_jugados": 8,
       "partidos_ganados": 3,
@@ -56,17 +67,6 @@
       "puntos_contra": 439,
       "diferencia": -121,
       "puntos": 11,
-      "posicion": 5
-    },
-    {
-      "equipo": "ROSELL CB PUERTO REAL (V)",
-      "partidos_jugados": 8,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 6,
-      "puntos_favor": 373,
-      "puntos_contra": 376,
-      "diferencia": -3,
-      "puntos": 10,
       "posicion": 6
     },
     {

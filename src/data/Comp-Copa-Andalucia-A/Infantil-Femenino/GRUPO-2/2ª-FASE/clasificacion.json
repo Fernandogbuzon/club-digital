@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Femenino - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-21T00:11:04.214277",
+  "ultima_actualizacion": "2026-02-21T14:21:57.184738",
   "clasificacion": [
     {
       "equipo": "MÁRMOLES GADES CB PUERTO REAL",
@@ -27,24 +27,24 @@
     },
     {
       "equipo": "UBJerez GRIS",
-      "partidos_jugados": 5,
-      "partidos_ganados": 3,
+      "partidos_jugados": 6,
+      "partidos_ganados": 4,
       "partidos_perdidos": 2,
-      "puntos_favor": 186,
-      "puntos_contra": 196,
-      "diferencia": -10,
-      "puntos": 8,
+      "puntos_favor": 236,
+      "puntos_contra": 230,
+      "diferencia": 6,
+      "puntos": 10,
       "posicion": 3
     },
     {
       "equipo": "GYMNÁSTICA PORTUENSE",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 1,
-      "partidos_perdidos": 4,
-      "puntos_favor": 229,
-      "puntos_contra": 252,
-      "diferencia": -23,
-      "puntos": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 263,
+      "puntos_contra": 302,
+      "diferencia": -39,
+      "puntos": 7,
       "posicion": 4
     },
     {

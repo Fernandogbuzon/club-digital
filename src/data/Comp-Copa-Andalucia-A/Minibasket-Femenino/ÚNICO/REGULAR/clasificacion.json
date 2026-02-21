@@ -1,17 +1,17 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-21T00:11:54.589512",
+  "ultima_actualizacion": "2026-02-21T14:22:50.391402",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES ARISTON",
-      "partidos_jugados": 12,
-      "partidos_ganados": 12,
+      "partidos_jugados": 13,
+      "partidos_ganados": 13,
       "partidos_perdidos": 0,
-      "puntos_favor": 667,
-      "puntos_contra": 197,
-      "diferencia": 470,
-      "puntos": 24,
+      "puntos_favor": 728,
+      "puntos_contra": 217,
+      "diferencia": 511,
+      "puntos": 26,
       "posicion": 1
     },
     {
@@ -82,13 +82,13 @@
     },
     {
       "equipo": "SUZUKI CAMPOSUR CBA",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 2,
-      "partidos_perdidos": 9,
-      "puntos_favor": 440,
-      "puntos_contra": 695,
-      "diferencia": -255,
-      "puntos": 13,
+      "partidos_perdidos": 10,
+      "puntos_favor": 460,
+      "puntos_contra": 756,
+      "diferencia": -296,
+      "puntos": 14,
       "posicion": 8
     },
     {

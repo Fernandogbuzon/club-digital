@@ -1,18 +1,29 @@
 {
   "categoria": "Cadete Femenino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-21T00:09:38.538552",
+  "ultima_actualizacion": "2026-02-21T14:20:37.834206",
   "clasificacion": [
     {
       "equipo": "SD CANDRAY MOTORECAMBIOS DEL SUR",
-      "partidos_jugados": 17,
-      "partidos_ganados": 16,
+      "partidos_jugados": 18,
+      "partidos_ganados": 17,
       "partidos_perdidos": 1,
-      "puntos_favor": 1319,
-      "puntos_contra": 746,
-      "diferencia": 573,
-      "puntos": 33,
+      "puntos_favor": 1404,
+      "puntos_contra": 768,
+      "diferencia": 636,
+      "puntos": 35,
       "posicion": 1
+    },
+    {
+      "equipo": "CADIZ CB GADES GRUPO ARSENIO",
+      "partidos_jugados": 18,
+      "partidos_ganados": 15,
+      "partidos_perdidos": 3,
+      "puntos_favor": 1592,
+      "puntos_contra": 676,
+      "diferencia": 916,
+      "puntos": 33,
+      "posicion": 2
     },
     {
       "equipo": "ADESA 80",
@@ -23,17 +34,6 @@
       "puntos_contra": 756,
       "diferencia": 530,
       "puntos": 32,
-      "posicion": 2
-    },
-    {
-      "equipo": "CADIZ CB GADES GRUPO ARSENIO",
-      "partidos_jugados": 17,
-      "partidos_ganados": 14,
-      "partidos_perdidos": 3,
-      "puntos_favor": 1487,
-      "puntos_contra": 652,
-      "diferencia": 835,
-      "puntos": 31,
       "posicion": 3
     },
     {
@@ -59,6 +59,17 @@
       "posicion": 5
     },
     {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
+      "partidos_jugados": 18,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 13,
+      "puntos_favor": 799,
+      "puntos_contra": 1043,
+      "diferencia": -244,
+      "puntos": 23,
+      "posicion": 6
+    },
+    {
       "equipo": "ONDOMUS CENTURIAS",
       "partidos_jugados": 17,
       "partidos_ganados": 6,
@@ -67,28 +78,17 @@
       "puntos_contra": 1063,
       "diferencia": -300,
       "puntos": 23,
-      "posicion": 6
-    },
-    {
-      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 17,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 12,
-      "puntos_favor": 777,
-      "puntos_contra": 958,
-      "diferencia": -181,
-      "puntos": 22,
       "posicion": 7
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 5,
-      "partidos_perdidos": 12,
-      "puntos_favor": 843,
-      "puntos_contra": 1090,
-      "diferencia": -247,
-      "puntos": 22,
+      "partidos_perdidos": 13,
+      "puntos_favor": 867,
+      "puntos_contra": 1195,
+      "diferencia": -328,
+      "puntos": 23,
       "posicion": 8
     },
     {

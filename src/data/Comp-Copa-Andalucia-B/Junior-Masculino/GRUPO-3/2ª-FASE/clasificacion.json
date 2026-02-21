@@ -1,17 +1,17 @@
 {
   "categoria": "Junior Masculino - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:12:53.704431",
+  "ultima_actualizacion": "2026-02-21T14:23:45.021038",
   "clasificacion": [
     {
       "equipo": "GABBA",
-      "partidos_jugados": 8,
-      "partidos_ganados": 7,
+      "partidos_jugados": 9,
+      "partidos_ganados": 8,
       "partidos_perdidos": 1,
-      "puntos_favor": 513,
-      "puntos_contra": 386,
-      "diferencia": 127,
-      "puntos": 15,
+      "puntos_favor": 590,
+      "puntos_contra": 446,
+      "diferencia": 144,
+      "puntos": 17,
       "posicion": 1
     },
     {
@@ -38,13 +38,13 @@
     },
     {
       "equipo": "UBJerez NEGRO",
-      "partidos_jugados": 8,
+      "partidos_jugados": 9,
       "partidos_ganados": 3,
-      "partidos_perdidos": 5,
-      "puntos_favor": 465,
-      "puntos_contra": 543,
-      "diferencia": -78,
-      "puntos": 11,
+      "partidos_perdidos": 6,
+      "puntos_favor": 525,
+      "puntos_contra": 620,
+      "diferencia": -95,
+      "puntos": 12,
       "posicion": 4
     },
     {

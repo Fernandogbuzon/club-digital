@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Mixto - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-21T00:20:40.548127",
+  "ultima_actualizacion": "2026-02-21T14:31:15.294929",
   "clasificacion": [
     {
       "equipo": "CBA",
@@ -16,24 +16,24 @@
     },
     {
       "equipo": "BLUEPARROT OFFSHORE CBSFDO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 10,
+      "partidos_jugados": 12,
+      "partidos_ganados": 11,
       "partidos_perdidos": 1,
-      "puntos_favor": 635,
-      "puntos_contra": 268,
-      "diferencia": 367,
-      "puntos": 21,
+      "puntos_favor": 688,
+      "puntos_contra": 280,
+      "diferencia": 408,
+      "puntos": 23,
       "posicion": 2
     },
     {
       "equipo": "CENTURIAS SAN ROQUE",
-      "partidos_jugados": 11,
-      "partidos_ganados": 9,
+      "partidos_jugados": 12,
+      "partidos_ganados": 10,
       "partidos_perdidos": 2,
-      "puntos_favor": 667,
-      "puntos_contra": 370,
-      "diferencia": 297,
-      "puntos": 20,
+      "puntos_favor": 736,
+      "puntos_contra": 433,
+      "diferencia": 303,
+      "puntos": 22,
       "posicion": 3
     },
     {
@@ -60,24 +60,24 @@
     },
     {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 5,
-      "partidos_perdidos": 6,
-      "puntos_favor": 578,
-      "puntos_contra": 616,
-      "diferencia": -38,
-      "puntos": 16,
+      "partidos_perdidos": 7,
+      "puntos_favor": 641,
+      "puntos_contra": 685,
+      "diferencia": -44,
+      "puntos": 17,
       "posicion": 6
     },
     {
       "equipo": "HOTEL GRAN CIUDAD DEL SUR CB PUERTO REAL",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 4,
-      "partidos_perdidos": 8,
-      "puntos_favor": 481,
-      "puntos_contra": 638,
-      "diferencia": -157,
-      "puntos": 16,
+      "partidos_perdidos": 9,
+      "puntos_favor": 493,
+      "puntos_contra": 691,
+      "diferencia": -198,
+      "puntos": 17,
       "posicion": 7
     },
     {

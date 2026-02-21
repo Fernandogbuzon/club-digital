@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Femenino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:13:56.982704",
+  "ultima_actualizacion": "2026-02-21T14:24:45.451911",
   "clasificacion": [
     {
       "equipo": "GABBA",
@@ -48,6 +48,17 @@
       "posicion": 4
     },
     {
+      "equipo": "CBC CÁDIZ",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 435,
+      "puntos_contra": 578,
+      "diferencia": -143,
+      "puntos": 14,
+      "posicion": 5
+    },
+    {
       "equipo": "VENTA FRENAZO MONTERA BCTO.",
       "partidos_jugados": 12,
       "partidos_ganados": 2,
@@ -56,28 +67,17 @@
       "puntos_contra": 701,
       "diferencia": -222,
       "puntos": 14,
-      "posicion": 5
-    },
-    {
-      "equipo": "CBC CÁDIZ",
-      "partidos_jugados": 10,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 8,
-      "puntos_favor": 386,
-      "puntos_contra": 545,
-      "diferencia": -159,
-      "puntos": 12,
       "posicion": 6
     },
     {
       "equipo": "AUDI CENTER CBA",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 0,
-      "partidos_perdidos": 10,
-      "puntos_favor": 341,
-      "puntos_contra": 563,
-      "diferencia": -222,
-      "puntos": 10,
+      "partidos_perdidos": 11,
+      "puntos_favor": 374,
+      "puntos_contra": 612,
+      "diferencia": -238,
+      "puntos": 11,
       "posicion": 7
     }
   ]

@@ -1,8 +1,19 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 3",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:14:33.062002",
+  "ultima_actualizacion": "2026-02-21T14:25:21.833819",
   "clasificacion": [
+    {
+      "equipo": "GIMNASIO 5TH AVENUE CB PUERTO REAL",
+      "partidos_jugados": 8,
+      "partidos_ganados": 7,
+      "partidos_perdidos": 1,
+      "puntos_favor": 469,
+      "puntos_contra": 325,
+      "diferencia": 144,
+      "puntos": 15,
+      "posicion": 1
+    },
     {
       "equipo": "BCTO. CAMOENS CEUTA",
       "partidos_jugados": 7,
@@ -12,17 +23,6 @@
       "puntos_contra": 183,
       "diferencia": 312,
       "puntos": 14,
-      "posicion": 1
-    },
-    {
-      "equipo": "GIMNASIO 5TH AVENUE CB PUERTO REAL",
-      "partidos_jugados": 7,
-      "partidos_ganados": 6,
-      "partidos_perdidos": 1,
-      "puntos_favor": 402,
-      "puntos_contra": 308,
-      "diferencia": 94,
-      "puntos": 13,
       "posicion": 2
     },
     {
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "GYMNASTICA PORTUENSE",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 1,
-      "partidos_perdidos": 6,
-      "puntos_favor": 226,
-      "puntos_contra": 404,
-      "diferencia": -178,
-      "puntos": 8,
+      "partidos_perdidos": 7,
+      "puntos_favor": 243,
+      "puntos_contra": 471,
+      "diferencia": -228,
+      "puntos": 9,
       "posicion": 6
     },
     {

@@ -1,8 +1,19 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:17:29.803331",
+  "ultima_actualizacion": "2026-02-21T14:28:15.600499",
   "clasificacion": [
+    {
+      "equipo": "MIFISIO CB PUERTO REAL",
+      "partidos_jugados": 6,
+      "partidos_ganados": 5,
+      "partidos_perdidos": 1,
+      "puntos_favor": 408,
+      "puntos_contra": 287,
+      "diferencia": 121,
+      "puntos": 11,
+      "posicion": 1
+    },
     {
       "equipo": "CD SAN FELIPE NERI",
       "partidos_jugados": 5,
@@ -12,29 +23,29 @@
       "puntos_contra": 160,
       "diferencia": 148,
       "puntos": 10,
-      "posicion": 1
-    },
-    {
-      "equipo": "MIFISIO CB PUERTO REAL",
-      "partidos_jugados": 5,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 1,
-      "puntos_favor": 332,
-      "puntos_contra": 251,
-      "diferencia": 81,
-      "puntos": 9,
       "posicion": 2
     },
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 3,
-      "partidos_perdidos": 2,
-      "puntos_favor": 152,
-      "puntos_contra": 160,
-      "diferencia": -8,
-      "puntos": 8,
+      "partidos_perdidos": 3,
+      "puntos_favor": 188,
+      "puntos_contra": 236,
+      "diferencia": -48,
+      "puntos": 9,
       "posicion": 3
+    },
+    {
+      "equipo": "CB CHIPIONA",
+      "partidos_jugados": 6,
+      "partidos_ganados": 2,
+      "partidos_perdidos": 4,
+      "puntos_favor": 270,
+      "puntos_contra": 289,
+      "diferencia": -19,
+      "puntos": 8,
+      "posicion": 4
     },
     {
       "equipo": "VITALDENT-CABU",
@@ -45,28 +56,17 @@
       "puntos_contra": 253,
       "diferencia": 22,
       "puntos": 7,
-      "posicion": 4
-    },
-    {
-      "equipo": "CB CHIPIONA",
-      "partidos_jugados": 5,
-      "partidos_ganados": 1,
-      "partidos_perdidos": 4,
-      "puntos_favor": 180,
-      "puntos_contra": 218,
-      "diferencia": -38,
-      "puntos": 6,
       "posicion": 5
     },
     {
       "equipo": "UBJerez BLANCO",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 0,
-      "partidos_perdidos": 5,
-      "puntos_favor": 85,
-      "puntos_contra": 290,
-      "diferencia": -205,
-      "puntos": 5,
+      "partidos_perdidos": 6,
+      "puntos_favor": 156,
+      "puntos_contra": 380,
+      "diferencia": -224,
+      "puntos": 6,
       "posicion": 6
     }
   ]

@@ -1,18 +1,29 @@
 {
   "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:17:35.078926",
+  "ultima_actualizacion": "2026-02-21T14:28:21.055826",
   "clasificacion": [
     {
       "equipo": "V. CRUCE DE LOS SANTOS ALCALA",
-      "partidos_jugados": 5,
-      "partidos_ganados": 5,
+      "partidos_jugados": 6,
+      "partidos_ganados": 6,
       "partidos_perdidos": 0,
-      "puntos_favor": 294,
-      "puntos_contra": 93,
-      "diferencia": 201,
-      "puntos": 10,
+      "puntos_favor": 345,
+      "puntos_contra": 104,
+      "diferencia": 241,
+      "puntos": 12,
       "posicion": 1
+    },
+    {
+      "equipo": "EDM ARCOS",
+      "partidos_jugados": 6,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 2,
+      "puntos_favor": 398,
+      "puntos_contra": 339,
+      "diferencia": 59,
+      "puntos": 10,
+      "posicion": 2
     },
     {
       "equipo": "Trattoria Da Enzo Vejer",
@@ -23,7 +34,7 @@
       "puntos_contra": 315,
       "diferencia": -64,
       "puntos": 9,
-      "posicion": 2
+      "posicion": 3
     },
     {
       "equipo": "AD MARIANISTAS",
@@ -34,39 +45,28 @@
       "puntos_contra": 216,
       "diferencia": 52,
       "puntos": 8,
-      "posicion": 3
-    },
-    {
-      "equipo": "EDM ARCOS",
-      "partidos_jugados": 5,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 2,
-      "puntos_favor": 328,
-      "puntos_contra": 279,
-      "diferencia": 49,
-      "puntos": 8,
       "posicion": 4
     },
     {
       "equipo": "AYUDA T PYMES CB MEDINA SIDONIA",
-      "partidos_jugados": 5,
+      "partidos_jugados": 6,
       "partidos_ganados": 1,
-      "partidos_perdidos": 4,
-      "puntos_favor": 131,
-      "puntos_contra": 266,
-      "diferencia": -135,
-      "puntos": 6,
+      "partidos_perdidos": 5,
+      "puntos_favor": 191,
+      "puntos_contra": 336,
+      "diferencia": -145,
+      "puntos": 7,
       "posicion": 5
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 4,
+      "partidos_jugados": 5,
       "partidos_ganados": 0,
-      "partidos_perdidos": 4,
-      "puntos_favor": 140,
-      "puntos_contra": 243,
-      "diferencia": -103,
-      "puntos": 4,
+      "partidos_perdidos": 5,
+      "puntos_favor": 151,
+      "puntos_contra": 294,
+      "diferencia": -143,
+      "puntos": 5,
       "posicion": 6
     }
   ]

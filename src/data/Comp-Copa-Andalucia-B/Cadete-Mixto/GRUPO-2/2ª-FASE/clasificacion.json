@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Mixto - 2ª FASE - GRUPO 2",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:14:27.393241",
+  "ultima_actualizacion": "2026-02-21T14:25:15.698021",
   "clasificacion": [
     {
       "equipo": "ADESA 80",
@@ -16,14 +16,36 @@
     },
     {
       "equipo": "COPICENTRO CBA AZUL",
-      "partidos_jugados": 7,
-      "partidos_ganados": 5,
+      "partidos_jugados": 8,
+      "partidos_ganados": 6,
       "partidos_perdidos": 2,
-      "puntos_favor": 398,
-      "puntos_contra": 321,
-      "diferencia": 77,
-      "puntos": 12,
+      "puntos_favor": 461,
+      "puntos_contra": 380,
+      "diferencia": 81,
+      "puntos": 14,
       "posicion": 2
+    },
+    {
+      "equipo": "CBC CÁDIZ ROJO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 4,
+      "puntos_favor": 507,
+      "puntos_contra": 444,
+      "diferencia": 63,
+      "puntos": 12,
+      "posicion": 3
+    },
+    {
+      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI AMARILLO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 4,
+      "partidos_perdidos": 4,
+      "puntos_favor": 394,
+      "puntos_contra": 438,
+      "diferencia": -44,
+      "puntos": 12,
+      "posicion": 4
     },
     {
       "equipo": "UBJerez BLANCO",
@@ -34,29 +56,18 @@
       "puntos_contra": 285,
       "diferencia": 132,
       "puntos": 11,
-      "posicion": 3
-    },
-    {
-      "equipo": "CBC CÁDIZ ROJO",
-      "partidos_jugados": 7,
-      "partidos_ganados": 4,
-      "partidos_perdidos": 3,
-      "puntos_favor": 448,
-      "puntos_contra": 381,
-      "diferencia": 67,
-      "puntos": 11,
-      "posicion": 4
-    },
-    {
-      "equipo": "ELECT. ÁVILA CHICLANA-ITUCI AMARILLO",
-      "partidos_jugados": 7,
-      "partidos_ganados": 3,
-      "partidos_perdidos": 4,
-      "puntos_favor": 315,
-      "puntos_contra": 388,
-      "diferencia": -73,
-      "puntos": 10,
       "posicion": 5
+    },
+    {
+      "equipo": "E.D.M. ARCOS",
+      "partidos_jugados": 8,
+      "partidos_ganados": 0,
+      "partidos_perdidos": 8,
+      "puntos_favor": 354,
+      "puntos_contra": 605,
+      "diferencia": -251,
+      "puntos": 8,
+      "posicion": 6
     },
     {
       "equipo": "TAX CENTURIAS",
@@ -66,17 +77,6 @@
       "puntos_favor": 210,
       "puntos_contra": 390,
       "diferencia": -180,
-      "puntos": 7,
-      "posicion": 6
-    },
-    {
-      "equipo": "E.D.M. ARCOS",
-      "partidos_jugados": 7,
-      "partidos_ganados": 0,
-      "partidos_perdidos": 7,
-      "puntos_favor": 304,
-      "puntos_contra": 526,
-      "diferencia": -222,
       "puntos": 7,
       "posicion": 7
     }

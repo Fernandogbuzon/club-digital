@@ -1,7 +1,7 @@
 {
   "categoria": "Infantil Femenino - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-21T00:20:23.961879",
+  "ultima_actualizacion": "2026-02-21T14:30:57.981473",
   "clasificacion": [
     {
       "equipo": "CADIZ CB GADES",
@@ -26,6 +26,17 @@
       "posicion": 2
     },
     {
+      "equipo": "CD SAN FELIPE NERI",
+      "partidos_jugados": 13,
+      "partidos_ganados": 8,
+      "partidos_perdidos": 5,
+      "puntos_favor": 661,
+      "puntos_contra": 585,
+      "diferencia": 76,
+      "puntos": 21,
+      "posicion": 3
+    },
+    {
       "equipo": "CBPORTUENSE EDASE",
       "partidos_jugados": 12,
       "partidos_ganados": 8,
@@ -34,17 +45,6 @@
       "puntos_contra": 423,
       "diferencia": 306,
       "puntos": 20,
-      "posicion": 3
-    },
-    {
-      "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 12,
-      "partidos_ganados": 7,
-      "partidos_perdidos": 5,
-      "puntos_favor": 609,
-      "puntos_contra": 557,
-      "diferencia": 52,
-      "puntos": 19,
       "posicion": 4
     },
     {
@@ -93,13 +93,13 @@
     },
     {
       "equipo": "FENIE ENERGÍA CBC CÁDIZ",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 0,
-      "partidos_perdidos": 12,
-      "puntos_favor": 255,
-      "puntos_contra": 698,
-      "diferencia": -443,
-      "puntos": 12,
+      "partidos_perdidos": 13,
+      "puntos_favor": 283,
+      "puntos_contra": 750,
+      "diferencia": -467,
+      "puntos": 13,
       "posicion": 9
     }
   ]

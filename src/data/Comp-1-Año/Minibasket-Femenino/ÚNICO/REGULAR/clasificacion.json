@@ -1,7 +1,7 @@
 {
   "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
   "competicion": "Comp 1 Año",
-  "ultima_actualizacion": "2026-02-21T00:20:56.805124",
+  "ultima_actualizacion": "2026-02-21T14:31:34.326102",
   "clasificacion": [
     {
       "equipo": "CBPORTUENSE EDASE",
@@ -16,7 +16,7 @@
     },
     {
       "equipo": "CADIZ CB GADES BLV PROYECT 2025",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 10,
       "partidos_perdidos": 1,
       "puntos_favor": 617,
@@ -27,13 +27,13 @@
     },
     {
       "equipo": "ENSO - MERGABLO",
-      "partidos_jugados": 11,
-      "partidos_ganados": 7,
+      "partidos_jugados": 12,
+      "partidos_ganados": 8,
       "partidos_perdidos": 4,
-      "puntos_favor": 635,
-      "puntos_contra": 481,
-      "diferencia": 154,
-      "puntos": 18,
+      "puntos_favor": 680,
+      "puntos_contra": 485,
+      "diferencia": 195,
+      "puntos": 20,
       "posicion": 3
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "equipo": "C.A.B.U. 5ºF",
-      "partidos_jugados": 9,
+      "partidos_jugados": 10,
       "partidos_ganados": 5,
       "partidos_perdidos": 4,
       "puntos_favor": 428,
@@ -68,6 +68,17 @@
       "diferencia": 8,
       "puntos": 14,
       "posicion": 6
+    },
+    {
+      "equipo": "ADESA 80",
+      "partidos_jugados": 11,
+      "partidos_ganados": 3,
+      "partidos_perdidos": 8,
+      "puntos_favor": 416,
+      "puntos_contra": 437,
+      "diferencia": -21,
+      "puntos": 14,
+      "posicion": 7
     },
     {
       "equipo": "CD ADC LA ALGAIDA",
@@ -78,39 +89,28 @@
       "puntos_contra": 477,
       "diferencia": -146,
       "puntos": 14,
-      "posicion": 7
-    },
-    {
-      "equipo": "ADESA 80",
-      "partidos_jugados": 10,
-      "partidos_ganados": 2,
-      "partidos_perdidos": 8,
-      "puntos_favor": 359,
-      "puntos_contra": 420,
-      "diferencia": -61,
-      "puntos": 12,
       "posicion": 8
     },
     {
       "equipo": "CD SAN FELIPE NERI",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 1,
-      "partidos_perdidos": 9,
-      "puntos_favor": 356,
-      "puntos_contra": 504,
-      "diferencia": -148,
-      "puntos": 11,
+      "partidos_perdidos": 10,
+      "puntos_favor": 373,
+      "puntos_contra": 561,
+      "diferencia": -188,
+      "puntos": 12,
       "posicion": 9
     },
     {
       "equipo": "Deportes Alcalá",
-      "partidos_jugados": 11,
+      "partidos_jugados": 12,
       "partidos_ganados": 0,
-      "partidos_perdidos": 11,
-      "puntos_favor": 96,
-      "puntos_contra": 543,
-      "diferencia": -447,
-      "puntos": 11,
+      "partidos_perdidos": 12,
+      "puntos_favor": 100,
+      "puntos_contra": 588,
+      "diferencia": -488,
+      "puntos": 12,
       "posicion": 10
     }
   ]

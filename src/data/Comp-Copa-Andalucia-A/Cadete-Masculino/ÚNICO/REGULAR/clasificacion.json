@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Masculino - REGULAR - ÚNICO",
   "competicion": "Comp Copa Andalucia A",
-  "ultima_actualizacion": "2026-02-21T00:09:57.248687",
+  "ultima_actualizacion": "2026-02-21T14:20:56.243349",
   "clasificacion": [
     {
       "equipo": "ISAVAL CBA",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "UBJerez GRIS",
+      "partidos_jugados": 17,
+      "partidos_ganados": 13,
+      "partidos_perdidos": 4,
+      "puntos_favor": 1212,
+      "puntos_contra": 821,
+      "diferencia": 391,
+      "puntos": 30,
+      "posicion": 2
+    },
+    {
       "equipo": "ADESA 80",
       "partidos_jugados": 17,
       "partidos_ganados": 13,
@@ -23,7 +34,7 @@
       "puntos_contra": 928,
       "diferencia": 372,
       "puntos": 30,
-      "posicion": 2
+      "posicion": 3
     },
     {
       "equipo": "ELEKÁ CB PUERTO REAL",
@@ -34,17 +45,6 @@
       "puntos_contra": 931,
       "diferencia": 340,
       "puntos": 30,
-      "posicion": 3
-    },
-    {
-      "equipo": "UBJerez GRIS",
-      "partidos_jugados": 16,
-      "partidos_ganados": 12,
-      "partidos_perdidos": 4,
-      "puntos_favor": 1122,
-      "puntos_contra": 809,
-      "diferencia": 313,
-      "puntos": 28,
       "posicion": 4
     },
     {
@@ -82,35 +82,35 @@
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 5,
-      "partidos_perdidos": 12,
-      "puntos_favor": 1047,
-      "puntos_contra": 1190,
-      "diferencia": -143,
-      "puntos": 22,
+      "partidos_perdidos": 13,
+      "puntos_favor": 1111,
+      "puntos_contra": 1255,
+      "diferencia": -144,
+      "puntos": 23,
       "posicion": 8
     },
     {
       "equipo": "CADIZ CB GADES",
-      "partidos_jugados": 17,
-      "partidos_ganados": 4,
+      "partidos_jugados": 18,
+      "partidos_ganados": 5,
       "partidos_perdidos": 13,
-      "puntos_favor": 841,
-      "puntos_contra": 1076,
-      "diferencia": -235,
-      "puntos": 21,
+      "puntos_favor": 906,
+      "puntos_contra": 1140,
+      "diferencia": -234,
+      "puntos": 23,
       "posicion": 9
     },
     {
       "equipo": "CB CIMBIS",
-      "partidos_jugados": 17,
+      "partidos_jugados": 18,
       "partidos_ganados": 0,
-      "partidos_perdidos": 17,
-      "puntos_favor": 408,
-      "puntos_contra": 1646,
-      "diferencia": -1238,
-      "puntos": 17,
+      "partidos_perdidos": 18,
+      "puntos_favor": 420,
+      "puntos_contra": 1736,
+      "diferencia": -1316,
+      "puntos": 18,
       "posicion": 10
     }
   ]

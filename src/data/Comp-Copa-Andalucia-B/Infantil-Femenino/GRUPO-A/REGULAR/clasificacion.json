@@ -1,17 +1,17 @@
 {
   "categoria": "Infantil Femenino - REGULAR - GRUPO A",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:17:06.664993",
+  "ultima_actualizacion": "2026-02-21T14:27:53.426400",
   "clasificacion": [
     {
       "equipo": "ELECT. ÁVILA CHICLANA-ITUCI",
-      "partidos_jugados": 11,
-      "partidos_ganados": 11,
+      "partidos_jugados": 12,
+      "partidos_ganados": 12,
       "partidos_perdidos": 0,
-      "puntos_favor": 720,
-      "puntos_contra": 314,
-      "diferencia": 406,
-      "puntos": 22,
+      "puntos_favor": 795,
+      "puntos_contra": 339,
+      "diferencia": 456,
+      "puntos": 24,
       "posicion": 1
     },
     {
@@ -38,13 +38,13 @@
     },
     {
       "equipo": "C.A.B.U.",
-      "partidos_jugados": 10,
-      "partidos_ganados": 5,
+      "partidos_jugados": 11,
+      "partidos_ganados": 6,
       "partidos_perdidos": 5,
-      "puntos_favor": 524,
-      "puntos_contra": 518,
-      "diferencia": 6,
-      "puntos": 15,
+      "puntos_favor": 580,
+      "puntos_contra": 524,
+      "diferencia": 56,
+      "puntos": 17,
       "posicion": 4
     },
     {
@@ -60,24 +60,24 @@
     },
     {
       "equipo": "GRUPO EXO CBA",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 3,
-      "partidos_perdidos": 7,
-      "puntos_favor": 422,
-      "puntos_contra": 545,
-      "diferencia": -123,
-      "puntos": 13,
+      "partidos_perdidos": 8,
+      "puntos_favor": 428,
+      "puntos_contra": 601,
+      "diferencia": -173,
+      "puntos": 14,
       "posicion": 6
     },
     {
       "equipo": "UNION LINENSE BALONCESTO",
-      "partidos_jugados": 10,
+      "partidos_jugados": 11,
       "partidos_ganados": 3,
-      "partidos_perdidos": 7,
-      "puntos_favor": 357,
-      "puntos_contra": 545,
-      "diferencia": -188,
-      "puntos": 13,
+      "partidos_perdidos": 8,
+      "puntos_favor": 382,
+      "puntos_contra": 620,
+      "diferencia": -238,
+      "puntos": 14,
       "posicion": 7
     },
     {

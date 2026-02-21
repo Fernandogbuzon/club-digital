@@ -1,17 +1,17 @@
 {
   "categoria": "Junior Masculino - 2ª FASE - GRUPO 4",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:12:59.546768",
+  "ultima_actualizacion": "2026-02-21T14:23:50.974503",
   "clasificacion": [
     {
       "equipo": "E.D.M. ARCOS BLANCO",
-      "partidos_jugados": 6,
-      "partidos_ganados": 4,
+      "partidos_jugados": 7,
+      "partidos_ganados": 5,
       "partidos_perdidos": 2,
-      "puntos_favor": 367,
-      "puntos_contra": 355,
-      "diferencia": 12,
-      "puntos": 10,
+      "puntos_favor": 448,
+      "puntos_contra": 413,
+      "diferencia": 35,
+      "puntos": 12,
       "posicion": 1
     },
     {
@@ -27,13 +27,13 @@
     },
     {
       "equipo": "EDM ARCOS ROJO",
-      "partidos_jugados": 7,
+      "partidos_jugados": 8,
       "partidos_ganados": 2,
-      "partidos_perdidos": 5,
-      "puntos_favor": 417,
-      "puntos_contra": 494,
-      "diferencia": -77,
-      "puntos": 9,
+      "partidos_perdidos": 6,
+      "puntos_favor": 475,
+      "puntos_contra": 575,
+      "diferencia": -100,
+      "puntos": 10,
       "posicion": 3
     },
     {

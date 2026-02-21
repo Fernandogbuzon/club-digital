@@ -15,20 +15,6 @@
   },
   {
     "equipo": "ADESA 80",
-    "rival": "CADIZ CB GADES",
-    "fecha": "21/02/2026",
-    "hora": "10:00",
-    "categoria": "Minibasket Mixto - 2ª FASE - GRUPO 3",
-    "ubicacion": "Visitante",
-    "id": "21022026_cadiz-cb-gades_adesa-80_minibasket-mixto-2-fase-grupo-3",
-    "comp_carpeta": "Comp-Copa-Andalucia-B",
-    "cat_carpeta": "Minibasket-Mixto",
-    "grupo_carpeta": "GRUPO-3",
-    "fase_carpeta": "2ª-FASE",
-    "json_path": "Comp-Copa-Andalucia-B/Minibasket-Mixto/GRUPO-3/2ª-FASE/adesa-80.json"
-  },
-  {
-    "equipo": "ADESA 80",
     "rival": "KARTING KR24-MERGABLO",
     "fecha": "21/02/2026",
     "hora": "10:30",
@@ -54,20 +40,6 @@
     "grupo_carpeta": "GRUPO-A",
     "fase_carpeta": "REGULAR",
     "json_path": "Comp-1-Año/Infantil-Mixto/GRUPO-A/REGULAR/adesa-80.json"
-  },
-  {
-    "equipo": "ADESA 80",
-    "rival": "CD SAN FELIPE NERI",
-    "fecha": "21/02/2026",
-    "hora": "10:30",
-    "categoria": "Minibasket Femenino - REGULAR - ÚNICO",
-    "ubicacion": "Local",
-    "id": "21022026_adesa-80_cd-san-felipe-neri_minibasket-femenino-regular-unico",
-    "comp_carpeta": "Comp-1-Año",
-    "cat_carpeta": "Minibasket-Femenino",
-    "grupo_carpeta": "ÚNICO",
-    "fase_carpeta": "REGULAR",
-    "json_path": "Comp-1-Año/Minibasket-Femenino/ÚNICO/REGULAR/adesa-80.json"
   },
   {
     "equipo": "ADESA 80",

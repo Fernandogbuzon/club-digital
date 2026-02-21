@@ -1,7 +1,7 @@
 {
   "categoria": "Cadete Femenino - REGULAR - GRUPO B",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:14:01.448451",
+  "ultima_actualizacion": "2026-02-21T14:24:50.390047",
   "clasificacion": [
     {
       "equipo": "SD CANDRAY SURHOGAR SERVICIOS INMOBILIARIOS",
@@ -16,35 +16,35 @@
     },
     {
       "equipo": "CBPORTUENSE EDASE",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 11,
-      "partidos_perdidos": 1,
-      "puntos_favor": 645,
-      "puntos_contra": 410,
-      "diferencia": 235,
-      "puntos": 23,
+      "partidos_perdidos": 2,
+      "puntos_favor": 687,
+      "puntos_contra": 468,
+      "diferencia": 219,
+      "puntos": 24,
       "posicion": 2
     },
     {
       "equipo": "CADIZ CB GADES ELECTROKOSTE",
-      "partidos_jugados": 13,
-      "partidos_ganados": 7,
+      "partidos_jugados": 14,
+      "partidos_ganados": 8,
       "partidos_perdidos": 6,
-      "puntos_favor": 583,
-      "puntos_contra": 549,
-      "diferencia": 34,
-      "puntos": 20,
+      "puntos_favor": 656,
+      "puntos_contra": 592,
+      "diferencia": 64,
+      "puntos": 22,
       "posicion": 3
     },
     {
       "equipo": "XEREZ CD BALONCESTO",
-      "partidos_jugados": 13,
-      "partidos_ganados": 7,
+      "partidos_jugados": 14,
+      "partidos_ganados": 8,
       "partidos_perdidos": 6,
-      "puntos_favor": 570,
-      "puntos_contra": 569,
-      "diferencia": 1,
-      "puntos": 20,
+      "puntos_favor": 628,
+      "puntos_contra": 611,
+      "diferencia": 17,
+      "puntos": 22,
       "posicion": 4
     },
     {
@@ -60,13 +60,13 @@
     },
     {
       "equipo": "CD SAN FELIPE NERI 2010",
-      "partidos_jugados": 12,
+      "partidos_jugados": 13,
       "partidos_ganados": 5,
-      "partidos_perdidos": 7,
-      "puntos_favor": 623,
-      "puntos_contra": 608,
-      "diferencia": 15,
-      "puntos": 17,
+      "partidos_perdidos": 8,
+      "puntos_favor": 666,
+      "puntos_contra": 681,
+      "diferencia": -15,
+      "puntos": 18,
       "posicion": 6
     },
     {

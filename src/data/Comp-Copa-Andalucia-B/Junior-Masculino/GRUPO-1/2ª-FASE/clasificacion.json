@@ -1,7 +1,7 @@
 {
   "categoria": "Junior Masculino - 2ª FASE - GRUPO 1",
   "competicion": "Comp Copa Andalucia B",
-  "ultima_actualizacion": "2026-02-21T00:12:42.602371",
+  "ultima_actualizacion": "2026-02-21T14:23:34.612000",
   "clasificacion": [
     {
       "equipo": "PUERTOPROFIT TRADING ACADEMY CB PUERTO REAL",
@@ -15,6 +15,17 @@
       "posicion": 1
     },
     {
+      "equipo": "TOYOTA TOMAX CBA AMARILLO",
+      "partidos_jugados": 8,
+      "partidos_ganados": 6,
+      "partidos_perdidos": 2,
+      "puntos_favor": 528,
+      "puntos_contra": 532,
+      "diferencia": -4,
+      "puntos": 14,
+      "posicion": 2
+    },
+    {
       "equipo": "ASFICON CB CHIPIONA",
       "partidos_jugados": 7,
       "partidos_ganados": 6,
@@ -23,28 +34,17 @@
       "puntos_contra": 361,
       "diferencia": 81,
       "puntos": 13,
-      "posicion": 2
-    },
-    {
-      "equipo": "TOYOTA TOMAX CBA AMARILLO",
-      "partidos_jugados": 7,
-      "partidos_ganados": 5,
-      "partidos_perdidos": 2,
-      "puntos_favor": 456,
-      "puntos_contra": 463,
-      "diferencia": -7,
-      "puntos": 12,
       "posicion": 3
     },
     {
       "equipo": "YARI DENTAL CENTURIAS",
-      "partidos_jugados": 8,
+      "partidos_jugados": 9,
       "partidos_ganados": 2,
-      "partidos_perdidos": 6,
-      "puntos_favor": 462,
-      "puntos_contra": 458,
-      "diferencia": 4,
-      "puntos": 10,
+      "partidos_perdidos": 7,
+      "puntos_favor": 531,
+      "puntos_contra": 530,
+      "diferencia": 1,
+      "puntos": 11,
       "posicion": 4
     },
     {
